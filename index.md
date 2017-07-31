@@ -1,8 +1,4 @@
----
-layout: home
-title: K's GitHub Site
----
-## Welcome?? to K's GitHub Site
+## K's GitHub Site(；´Д｀)
 
 どうなったんだろ
 
