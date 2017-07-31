@@ -1,5 +1,6 @@
 ---
 layout: archive
+author_profile : true
 author: Treetop
 title: "K's GitHub Site"
 ---
