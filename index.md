@@ -1,4 +1,5 @@
 ---
+layout: archive
 title: "K's GitHub Site"
 excerpt: "K's GitHub Site"
 ---
