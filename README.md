@@ -30,5 +30,7 @@ Tumblrで書き試ししたことはあったけど、改めて調べ直し。
 
 [Get Started - Font Awesome](http://fontawesome.io/get-started/)
 
-~で、Font Awesomeを使えるように寄り道したりして。~  
-一旦中断。
+~で、Font Awesomeを使えるように寄り道したりして。~    
+~一旦中断。~  
+
+なんか、デフォのMinimal MistakesでFont Awesomeが使えた。取り越し苦労。
