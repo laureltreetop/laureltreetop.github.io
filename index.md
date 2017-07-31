@@ -1,5 +1,5 @@
 ---
-layout: layout
+layout: home
 title: K's GitHub Site
 ---
 ## Welcome to GitHub Pages
