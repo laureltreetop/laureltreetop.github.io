@@ -4,28 +4,6 @@ title: "K's GitHub Site"
 ---
 ## どうなったんだろ
 
-本文なんてそれこそ、どうなっているんだろう。
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
+やっとトップページの作り方がわかった( ´Д｀)=3
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
