@@ -1,5 +1,6 @@
 ---
-layout: home
+layout: default
 author: Treetop
 title: "K's GitHub Site"
 ---
+ぺたり。
