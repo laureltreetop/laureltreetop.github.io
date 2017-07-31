@@ -12,9 +12,9 @@ title_separator          : "-"
 name                     : "Treetop"
 description              : "An amazing website."
 url                      : "https://github.treetop.to"
-baseurl                  : "/home"
+baseurl                  : "/index"
 repository               : "laureltreetop/laureltreetop.github.io"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser                   : "/assets/images/avatar.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
