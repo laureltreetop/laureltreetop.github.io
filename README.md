@@ -28,7 +28,7 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 Tumblrで書き試ししたことはあったけど、改めて調べ直し。
 
-[Get Started - Font Awesome](http://fontawesome.io/get-started/)
+~[Get Started - Font Awesome](http://fontawesome.io/get-started/)~
 
 ~で、Font Awesomeを使えるように寄り道したりして。~    
 ~一旦中断。~  
