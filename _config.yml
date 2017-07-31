@@ -11,7 +11,7 @@ title_separator          : "-"
 name                     : "Treetop"
 description              : "An amazing website."
 url                      : "https://github.treetop.to"
-baseurl                  : "/blog"
+baseurl                  : ""
 repository               : "laureltreetop/laureltreetop.github.io"
 teaser                   : "/assets/images/avatar.png"
 # breadcrumbs            : false # true, false (default)
