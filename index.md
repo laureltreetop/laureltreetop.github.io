@@ -1,3 +1,7 @@
+---
+layout: layout
+title: K's GitHub Site
+---
 ## Welcome to GitHub Pages
 
 ### Markdown
