@@ -7,9 +7,9 @@
 # Site Settings
 locale                   : "ja-JP"
 title                    : "K's GitHub Site"
-title_separator          : "-"
+title_separator          : "|"
 name                     : "Treetop"
-description              : "An amazing website."
+description              : "(=_=;)"
 url                      : "https://github.treetop.to"
 baseurl                  : ""
 repository               : "laureltreetop/laureltreetop.github.io"

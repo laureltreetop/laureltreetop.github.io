@@ -1,7 +1,7 @@
 ---
-layout: home
+layout: single
 author: Treetop
-permalink: /about/
+permalink: /about.html
 title: "about me"
 ---
 ## 自分のことかい?
