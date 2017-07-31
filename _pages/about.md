@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: single
 author: Treetop
 permalink: /about.html
 title: "about me"
