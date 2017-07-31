@@ -16,3 +16,7 @@
 [Markdown記法 チートシート](https://gist.github.com/mignonstyle/083c9e1651d7734f84c99b8cf49d57fa)
 
 Tumblrで書き試ししたことはあったけど、改めて調べ直し。
+
+[Get Started - Font Awesome](http://fontawesome.io/get-started/)
+
+で、Font Awesomeを使えるように寄り道したりして。
