@@ -6,14 +6,14 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 theme: jekyll-theme-minimal
 # Site Settings
-locale                   : "en"
-title                    : "Site Title"
+locale                   : "ja-JP"
+title                    : "K's GitHub Site"
 title_separator          : "-"
-name                     : "Your Name"
+name                     : "Treetop"
 description              : "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+url                      : "https://github.treetop.to"
+baseurl                  : "/home"
+repository               : "laureltreetop/laureltreetop.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -206,22 +206,22 @@ whitelist:
 #  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path/my-awesome-category/index.html ~> path: /
 category_archive:
-  type: liquid
+  type: jekyll-archives
   path: /categories/
 tag_archive:
-  type: liquid
+  type: jekyll-archives
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layouts:
+    category: archive-taxonomy
+    tag: archive-taxonomy
+    permalinks:
+    category: /categories/:name/
+    tag: /tags/:name/
 
 
 # HTML Compression
