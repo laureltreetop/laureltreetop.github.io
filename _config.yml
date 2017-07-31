@@ -13,7 +13,7 @@ description              : "(=_=;)"
 url                      : "https://github.treetop.to"
 baseurl                  : ""
 repository               : "laureltreetop/laureltreetop.github.io"
-teaser                   : "/img/treetop-avatar.png"
+teaser                   : "img/treetop-avatar.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
