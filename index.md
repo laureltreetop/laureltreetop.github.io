@@ -1,8 +1,6 @@
----
-layout: defalut
-title: K's GitHub Site
----
-## Welcome to GitHub Pages
+## K's GitHub Site(；´Д｀)
+
+どうなったんだろ
 
 ### Markdown
 
