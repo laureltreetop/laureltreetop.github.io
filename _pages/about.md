@@ -2,6 +2,7 @@
 layout: single
 author: Treetop
 title: "about me"
+permalink: /about.html
 ---
 ## 自分のことかい?
 
