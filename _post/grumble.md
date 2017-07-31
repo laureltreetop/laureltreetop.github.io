@@ -1,0 +1,12 @@
+# 愚痴
+もうね、ここまで来るのが大変だったの；；
+
+## 参考サイト
+どういう手順になったか判らないまま作ったので、見散らかしたサイトのリンクを。
+
+[Gem 化された Minimal Mistakes でブログシステムを構築するメモ](http://k11i.biz/blog/2017/01/02/gemified-minimal-mistakes/)  
+[Minimal Mistakes テーマではじめる Github Pages with Jekyll](http://k11i.biz/blog/2016/08/11/starting-jekyll-with-Minimal-Mistakes/)
+
+前者を参考にしつつ、後者で細かい設定を。  
+そもそも、最初から「デザインが( ；´Д｀)いやぁぁぁぁぁー!ちゃんとしたのにするー」から始まっているのが失敗の元。
+
