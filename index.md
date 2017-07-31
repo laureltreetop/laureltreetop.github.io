@@ -1,5 +1,5 @@
 ---
 layout: home
 author: Treetop
-title: "判ったような、判らないような"
+title: "K's GitHub Site"
 ---
