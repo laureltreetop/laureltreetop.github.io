@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: splash
 author: Treetop
 title: "about me"
 permalink: /about/
