@@ -32,3 +32,7 @@ Tumblrで書き試ししたことはあったけど、改めて調べ直し。
 ~一旦中断。~  
 
 なんか、デフォのMinimal MistakesでFont Awesomeが使えた。取り越し苦労。
+
+[minimal-mistakes/docs](https://github.com/mmistakes/minimal-mistakes/tree/master/docs)
+
+詰めはここを見ながらやってみたら、ブログっぽいものが作れるように。
