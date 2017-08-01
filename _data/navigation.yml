@@ -13,6 +13,10 @@ main:
     url: http://blog.treetop.to
   - title: "K's wiki"
     url: http://wiki.treetop.to
+  - title: "K's web ver.2017"
+    url: http://www.treetop.to
+  - title: "K's web ver.1995"
+    url: http://treetop.webcrow.jp
 
 # documentation links
 docs:
