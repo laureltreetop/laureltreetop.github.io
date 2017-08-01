@@ -244,3 +244,13 @@ defaults:
       comments: # true
       share: true
       related: true
+
+collections:
+  docs:
+    permalink: /:collection/:path/
+    output: true
+  posts:
+    permalink: /post/:year/:month/:day/:title/
+    output: true
+  tutorials:
+    output: true
