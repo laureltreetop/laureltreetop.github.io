@@ -4,8 +4,8 @@ main:
     url: http://blog.treetop.to
   - title: "K's wiki"
     url: http://wiki.treetop.to
-  # - title: "K's wiki"
-  #   url: /year-archive/
+  - title: "archives"
+    url: /year-archive/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
