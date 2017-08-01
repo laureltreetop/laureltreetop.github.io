@@ -33,6 +33,14 @@ Tumblrで書き試ししたことはあったけど、改めて調べ直し。
 
 なんか、デフォのMinimal MistakesでFont Awesomeが使えた。取り越し苦労。
 
+このあたり、いろいろやりすぎて記憶が曖昧。
+
+[Jikyll](http://jekyllrb.com/)  
+[Jikyll（日本語訳）](https://jekyllrb-ja.github.io/)
+
+英語地獄の中で、これは助かったかも。
+
+[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)  
 [minimal-mistakes/docs](https://github.com/mmistakes/minimal-mistakes/tree/master/docs)
 
-詰めはここを見ながらやってみたら、ブログっぽいものが作れるように。
+前者を見ながら後者で設定を確認しつつやってみたら、ブログっぽいものが作れるように。
