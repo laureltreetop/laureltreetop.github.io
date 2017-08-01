@@ -244,6 +244,8 @@ defaults:
       comments: # true
       share: true
       related: true
+    permalink: /post/:year/:month/:day/:title/
+    output: true
 
 collections:
   docs:
