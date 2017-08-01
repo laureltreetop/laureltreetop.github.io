@@ -3,4 +3,4 @@ layout: default
 author: Treetop
 title: "index?"
 ---
-ぺたり。
+index.mdの正体が謎のままだけど、まぁいいか。
