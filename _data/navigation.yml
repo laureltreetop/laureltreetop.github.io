@@ -1,12 +1,12 @@
 # main links
 main:
-  - title: "K's blog"
-    url: http://blog.treetop.to
-  - title: "K's wiki"
-    url: http://wiki.treetop.to
-  - title: "archives"
+  - title: "Archives"
     url: /year-archive/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+  - title: "K's blog"
+    url: http://blog.treetop.to
+  - title: "K's wiki"
+    url: http://wiki.treetop.to
