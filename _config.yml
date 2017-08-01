@@ -244,24 +244,24 @@ defaults:
       comments: # true
       share: true
       related: true
-  - scope:
-      path: "_posts"
-      type: posts
-    values:
-      layout: archive
-      permalink: /:collection/:path/
-      author_profile: true
-      read_time: true
-      comments: # true
-      share: true
-      related: true
+#  - scope:
+#      path: "_posts"
+#      type: posts
+#    values:
+#      layout: archive
+#      permalink: /:collection/:path/
+#      author_profile: true
+#      read_time: true
+#      comments: # true
+#      share: true
+#      related: true
 
 collections:
   docs:
     permalink: /:collection/:path/
     output: true
-#  posts:
-#    permalink: /post/:year/:month/:day/:title/
-#    output: true
+  posts:
+    permalink: /post/:year/:month/:day/:title/
+    output: true
   tutorials:
     output: true
