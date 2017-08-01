@@ -1,7 +1,7 @@
 ---
 layout: splash
 permalink: /
-title: "index"
+title: "index的なもの"
 ---
 
 {% include feature_row id="intro" type="center" %}
