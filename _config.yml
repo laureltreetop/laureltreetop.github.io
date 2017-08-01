@@ -244,17 +244,18 @@ defaults:
       comments: # true
       share: true
       related: true
-#  - scope:
-#      path: "_posts"
-#      type: posts
-#    values:
-#      layout: archive
-#      permalink: /:collection/:path/
-#      author_profile: true
-#      read_time: true
-#      comments: # true
-#      share: true
-#      related: true
+  # _docs
+  - scope:
+      path: ""
+      type: docs
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      sidebar:
+        nav: "docs"
 
 collections:
   docs:
