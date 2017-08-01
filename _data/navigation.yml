@@ -8,7 +8,10 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
-  - title: "K's blog"
-    url: http://blog.treetop.to
-  - title: "K's wiki"
-    url: http://wiki.treetop.to
+
+- title: K's Sites
+  children:
+    - title: "K's blog"
+      url: http://blog.treetop.to
+    - title: "K's wiki"
+      url: http://wiki.treetop.to
