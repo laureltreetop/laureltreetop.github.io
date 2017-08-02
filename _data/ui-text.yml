@@ -12,7 +12,7 @@ ja-JP: &DEFAULT_JP
   toc_label                  : "On This Page"
   ext_link_label             : "Direct Link"
   less_than                  : "ちょい"
-  minute_read                : "分まえに読んだみたい"
+  minute_read                : "分まえに読んだ"
   share_on_label             : "しぇあ"
   meta_label                 :
   tags_label                 : "たぐ:"
