@@ -2,11 +2,11 @@
 main:
 #  - title: "Pages"
 #    url: /page-archive/
-  - title: "Contents"
+  - title: "資料"
     url: /collection-archive/
-  - title: "Archive"
+  - title: "倉庫"
     url: /year-archive/
-  - title: "About"
+  - title: "自分?"
     url: /about/
 # - title: "Sitemap"
 #   url: /sitemap/
