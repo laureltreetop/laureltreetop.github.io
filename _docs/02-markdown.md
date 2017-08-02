@@ -1,3 +1,12 @@
+---
+layout: archive
+author: Treetop
+date:   2017-08-02 15:57:00 +0900
+title: "できたの?"
+permalink: /docs/start/
+categories: [Markdown]
+---
+## Markdown参照リンク
 [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/)
 
 [Markdownで行こう！](https://gist.github.com/wate/7072365)  
