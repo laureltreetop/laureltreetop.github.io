@@ -18,6 +18,6 @@ Settings→GitHub Pages→Custom domainに、ドメインを設定。
 DNSも設定しないとです。   
 github.treetop.toなCNAMEレコードに、***username*.github.io**なリポジトリ名を設定。
 
-## 環境構築@Windows
+## 環境構築 on Windows
 自分がそうなので。オレオレですみません。   
 [GitHub Desktop](https://desktop.github.com/)をインストール。
