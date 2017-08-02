@@ -1,6 +1,6 @@
 ---
 last_modified_at: 2017/08/02 23:02 +0900
-title: "GitHub Pages start"
+title: "GitHub start"
 permalink: /docs/github-start/
 ---
 ## GitHubの準備から
@@ -21,4 +21,3 @@ github.treetop.toなCNAMEレコードに、***username*.github.io**なリポジ�
 ## 環境構築@Windows
 自分がそうなので。オレオレですみません。   
 [GitHub Desktop](https://desktop.github.com/)をインストール。
-
