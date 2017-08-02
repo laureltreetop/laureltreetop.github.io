@@ -1,6 +1,6 @@
 ---
-last_modified_at: 2017/08/02 23:02 +0900
-title: "Minimal Mistakes"
+last_modified_at: 2017/08/02 23:10 +0900
+title: "Install Minimal Mistakes"
 permalink: /docs/minimal-mistakes/
 ---
 ## Minimal Mistakesを導入
