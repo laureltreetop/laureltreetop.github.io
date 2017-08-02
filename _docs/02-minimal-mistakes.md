@@ -10,3 +10,7 @@ permalink: /docs/minimal-mistakes/
 どうせデフォルトから選べるテーマはつまらないですから。   
 （ひどい。でもあちこちからそういう声が）
 
+[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)    
+↑からインストール。
+
+さて、このあたりはあとでゆっくり書こう。未だに試行錯誤だったりするし。
