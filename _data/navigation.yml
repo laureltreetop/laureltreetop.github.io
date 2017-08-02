@@ -4,7 +4,7 @@ main:
 #    url: /page-archive/
   - title: "資料"
     url: /collection-archive/
-  - title: "倉庫"
+  - title: "愚痴"
     url: /year-archive/
   - title: "自分?"
     url: /about/
