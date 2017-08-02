@@ -6,4 +6,4 @@ title: "できたの?"
 permalink: /docs/start/
 categories: [githubpages]
 ---
-# ドキュメントも書けるかテストー
+## ドキュメントも書けるかテスト
