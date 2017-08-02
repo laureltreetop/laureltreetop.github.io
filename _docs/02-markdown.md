@@ -1,10 +1,11 @@
 ---
-layout: single
-last_modified_at: 2017-08-02 19:51 +0900
-title: "Markdownとは何ぞや"
+last_modified_at: 2017-08-02 23:12 +0900
+title: "Markdown"
 permalink: /docs/markdown/
 ---
 ## Markdown参照リンク
+未だに勉強中。とりあえずリンクだけ張っていく。
+
 [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/)
 
 [Markdownで行こう！](https://gist.github.com/wate/7072365)  
