@@ -1,5 +1,5 @@
 ---
-layout: archive-taxonomy
+layout: single
 author: Treetop
 title: "GitHub Pages start"
 permalink: /docs/githubpages-start/
