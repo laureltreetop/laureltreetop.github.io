@@ -11,8 +11,8 @@ ja-JP: &DEFAULT_JP
   menu_label                 : "Toggle Menu"
   toc_label                  : "On This Page"
   ext_link_label             : "Direct Link"
-  less_than                  : "less than"
-  minute_read                : "minute read"
+  less_than                  : "ちょい"
+  minute_read                : "分まえに読んだみたい"
   share_on_label             : "しぇあ"
   meta_label                 :
   tags_label                 : "たぐ:"
