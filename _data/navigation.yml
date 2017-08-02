@@ -3,7 +3,7 @@ main:
 #  - title: "Pages"
 #    url: /page-archive/
   - title: "Collections"
-   url: /collection-archive/
+    url: /collection-archive/
   - title: "Archive"
     url: /year-archive/
   - title: "About"
