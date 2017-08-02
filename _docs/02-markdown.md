@@ -1,6 +1,6 @@
 ---
 layout: single
-last_modified_at: 2017-08-02 19:51 +9000
+last_modified_at: 2017-08-02 19:51 +0900
 title: "Markdownとは何ぞや"
 permalink: /docs/markdown/
 ---
