@@ -1,5 +1,5 @@
 ---
-layout: splash
+layout: archive
 author: Treetop
 title: "GitHub Pages start"
 permalink: /docs/githubpages-start/
