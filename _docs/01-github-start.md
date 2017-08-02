@@ -4,6 +4,8 @@ title: "GitHub start"
 permalink: /docs/github-start/
 ---
 {% include toc icon="gears" title="GitHub start" %}
+GitHub Pagesなのですから、当然最初はGitHubの準備や設定やら。
+
 ## GitHubの準備から
 [GitHub](https://github.com/)より登録。
 
