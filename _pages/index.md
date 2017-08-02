@@ -1,9 +1,10 @@
 ---
 layout: single
 permalink: /
-title: "index的なもの"
+title: "K's GitHub Site"
 ---
-## index的なもの?
+"GitHub"と付けているということは、他にもあちこちにサイトがあったり。
+
 ![OGP-GitHub](/assets/images/OGP-GitHub.png){: .align-center}
 {% include feature_row id="intro" type="center" %}
 
