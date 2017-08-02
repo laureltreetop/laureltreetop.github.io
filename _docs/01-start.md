@@ -1,7 +1,7 @@
 ---
 layout: single
 author: Treetop
-date:   2017-08-02 17:30:00 +0900
+last_modified_at: 2017-08-02 17:35:00 +09:00
 title: "GitHub Pages start"
 permalink: /docs/githubpages-start/
 ---
