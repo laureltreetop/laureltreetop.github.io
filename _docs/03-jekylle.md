@@ -14,4 +14,5 @@ permalink: /docs/jekyll/
 ついでに、楽に導入できたテーマも紹介しておく。これらならRuby要らず。
 
 [Agus Makmun](https://agusmakmun.github.io/)   
+[solo](https://chibicode.github.io/solo/)   
 ただし今回の用途ではちょーっとレイアウトが違うなーと見送り。
