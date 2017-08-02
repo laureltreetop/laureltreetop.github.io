@@ -1,0 +1,14 @@
+---
+last_modified_at: 2017/08/02 23:31 +0900
+title: "Ruby on Windows"
+permalink: /docs/ruby-windows/
+---
+## Rubyを導入@Windows
+
+オレオレですが、ほんとに苦労したので。っていうか、実は初めて触った。   
+途中までは回避していたのですが、好きなJekyllテーマをインストールするには必要になってくる。   
+というか、最初に入れたテーマがたまたま楽勝なやつだったから、甘く見ていたところはある。
+
+[Ruby Installer](https://rubyinstaller.org/)からダウンロードし、インストール。   
+
+試行錯誤中。
