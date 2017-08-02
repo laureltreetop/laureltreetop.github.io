@@ -2,12 +2,12 @@
 main:
 #  - title: "Pages"
 #    url: /page-archive/
+  - title: "Collections"
+   url: /collection-archive/
   - title: "Archive"
     url: /year-archive/
   - title: "About"
     url: /about/
-# - title: "Sample Collections"
-#   url: /collection-archive/
 # - title: "Sitemap"
 #   url: /sitemap/
 
