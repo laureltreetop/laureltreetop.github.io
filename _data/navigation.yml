@@ -1,7 +1,7 @@
 # main links
 main:
-  - title: "Document"
-    url: /page-archive/
+#  - title: "Document"
+#    url: /page-archive/
   - title: "Archive"
     url: /year-archive/
   - title: "About"
