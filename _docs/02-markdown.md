@@ -1,7 +1,8 @@
 ---
 layout: single
 # author: Treetop
-last_modified_at: "date"
+last_modified_at:
+  - type: "date"
 title: "Markdownとは何ぞや"
 permalink: /docs/markdown/
 ---
