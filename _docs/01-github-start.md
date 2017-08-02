@@ -1,5 +1,5 @@
 ---
-last_modified_at: 2017/08/02 18:38 +0900
+last_modified_at: 2017/08/02 23:02 +0900
 title: "GitHub Pages start"
 permalink: /docs/github-start/
 ---
