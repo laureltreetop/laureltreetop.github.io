@@ -25,7 +25,7 @@ docs:
   - title: GitHub Pages
     children:
       - title: "Start"
-        url: /docs/start/
+        url: /docs/githubpages-start/
       - title: "Markdown"
         url: /docs/markdown/
       - title: "Question"
