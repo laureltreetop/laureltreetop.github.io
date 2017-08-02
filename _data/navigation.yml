@@ -24,12 +24,14 @@ main:
 docs:
   - title: GitHub Pages
     children:
-      - title: "Start"
-        url: /docs/githubpages-start/
+      - title: "GitHub Start"
+        url: /docs/github-start/
+      - title: "Ruby on Windows"
+        url: /docs/ruby-windows/
+      - title: "Install Minimal Mistakes"
+        url: /docs/minimal-mistakes/
       - title: "Markdown"
         url: /docs/markdown/
-      - title: "Question"
-        url: /docs/question/
 #      - title: "Upgrading"
 #        url: /docs/upgrading/
         
