@@ -1,5 +1,5 @@
 ---
-layout: splash
+layout: home
 permalink: /
 title: "index的なもの"
 ---
