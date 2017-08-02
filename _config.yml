@@ -241,7 +241,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      read_time: false
       comments: # true
       share: true
       related: true
@@ -251,8 +251,8 @@ defaults:
       type: docs
     values:
       layout: single
-      read_time: true
       author_profile: false
+      read_time: false
       share: true
       comments: false
       sidebar:
@@ -264,7 +264,7 @@ defaults:
     values:
       layout: splash
       author_profile: true
-      read_time: true
+      read_time: false
       comments: # true
       share: true
       related: true
