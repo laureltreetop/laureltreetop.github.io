@@ -1,5 +1,7 @@
 # main links
 main:
+  - title: "Document"
+    url: /page-archive/
   - title: "Archive"
     url: /year-archive/
   - title: "About"
@@ -23,7 +25,7 @@ docs:
   - title: Getting Started
     children:
       - title: "Quick-Start Guide"
-        url: /docs/quick-start-guide/
+        url: /docs/start/
       - title: "Structure"
         url: /docs/structure/
       - title: "Installation"
