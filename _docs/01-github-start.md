@@ -11,5 +11,9 @@ permalink: /docs/github-start/
 最初からカスタムドメインで運用する前提で書きます。自分がそうだったので。  
 リポジトリ名はusername.github.ioで作成。
 
+Settings→GitHub Pages→Custom domainに、ドメインを設定。  
+例えば当方ならgithub.treetop.toという感じで。
+
 Windowsで環境を整えていきます。自分がそうなので。オレオレですみません。  
 [GitHub Desktop](https://desktop.github.com/)をインストール。
+
