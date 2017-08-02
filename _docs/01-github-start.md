@@ -8,15 +8,15 @@ permalink: /docs/github-start/
 
 ## リポジトリを作成
 最初からカスタムドメインで運用する前提で書きます。自分がそうだったので。   
-リポジトリ名はusername.github.ioで作成。
+リポジトリ名は***username*.github.io**で作成。
 
 Settings→GitHub Pages→Custom domainに、ドメインを設定。   
-例えば当方ならgithub.treetop.toという感じで。   
+例えば当方なら**github.treetop.to**という感じで。   
 リポジトリにCNAMEというファイルが作成されて、その中にカスタムドメインがぴろっと書かれていたら正解。
 
 ## DNS設定
 DNSも設定しないとです。   
-github.treetop.toなCNAMEレコードに、username.github.ioなリポジトリ名を設定。
+github.treetop.toなCNAMEレコードに、***username*.github.io**なリポジトリ名を設定。
 
 ## 環境構築@Windows
 自分がそうなので。オレオレですみません。   
