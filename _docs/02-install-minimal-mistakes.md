@@ -4,10 +4,9 @@ title: "Install Minimal Mistakes"
 permalink: /docs/minimal-mistakes/
 ---
 {% include toc icon="gears" title="Install Minimal Mistakes" %}
-はい、普通はついていけないですね。   
-しかし早い段階でテーマを決めて導入したほうが良かったりします。   
-デフォルトから選べるテーマはつまらない（言い切る。ひどい。でもあちこちで書かれてる）。   
-「デザインが( ；´Д｀)いやぁぁぁぁぁー!ちゃんとしたのにするー」が失敗の元とは思いつつ、やっちまいます。
+早い段階でテーマを決めて導入したほうが良かったりします。   
+デフォルトから選べるテーマはつまらない。   
+失敗の元とは思いつつ、やっちまいます。
 
 ## Minimal Mistakesを導入
 
