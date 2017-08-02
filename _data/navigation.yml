@@ -26,12 +26,14 @@ docs:
     children:
       - title: "GitHub Start"
         url: /docs/github-start/
+      - title: "Jekyll"
+        url: /docs/jekyll/
+      - title: "Markdown"
+        url: /docs/markdown/
       - title: "Ruby on Windows"
         url: /docs/ruby-windows/
       - title: "Install Minimal Mistakes"
         url: /docs/minimal-mistakes/
-      - title: "Markdown"
-        url: /docs/markdown/
 #      - title: "Upgrading"
 #        url: /docs/upgrading/
         
