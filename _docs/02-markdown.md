@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: single
 # author: Treetop
 date:   2017-08-02 15:57:00 +0900
 title: "Markdownとは何ぞや"
