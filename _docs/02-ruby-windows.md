@@ -3,7 +3,7 @@ last_modified_at: 2017/08/02 23:31 +0900
 title: "Ruby on Windows"
 permalink: /docs/ruby-windows/
 ---
-オレオレですが、ほんとに苦労したので。っていうか、実は初めて触った。{% include toc icon="gears" title="My Table of Contents" %}
+オレオレですが、ほんとに苦労したので。っていうか、実は初めて触った。{% include toc icon="gears" title="Ruby on Windows" %}
 
 ## Rubyを導入 on Windows
    
