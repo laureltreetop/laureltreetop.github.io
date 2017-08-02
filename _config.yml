@@ -250,7 +250,7 @@ defaults:
       type: docs
     values:
       layout: single
-      read_time: false
+      read_time: true
       author_profile: false
       share: true
       comments: false
