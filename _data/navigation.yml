@@ -21,17 +21,17 @@ main:
 #    url: http://treetop.webcrow.jp
 
 # documentation links
-docs:
+GitHub Pages:
   - title: Getting Started
     children:
-      - title: "Quick-Start Guide"
+      - title: "Start"
         url: /docs/start/
-      - title: "Structure"
-        url: /docs/structure/
-      - title: "Installation"
-        url: /docs/installation/
-      - title: "Upgrading"
-        url: /docs/upgrading/
+      - title: "Markdown"
+        url: /docs/markdown/
+#      - title: "Installation"
+#        url: /docs/installation/
+#      - title: "Upgrading"
+#        url: /docs/upgrading/
         
 # sidebar navigation list sample
 sidebar-sample:
