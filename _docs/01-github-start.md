@@ -3,7 +3,7 @@ last_modified_at: 2017/08/02 23:02 +0900
 title: "GitHub start"
 permalink: /docs/github-start/
 ---
-{% include toc icon="gears" title="GitHub start" %}
+{% include toc icon="github" title="GitHub start" %}
 GitHub Pagesなのですから、当然最初はGitHubの準備や設定やら。
 
 ## GitHubの準備から
