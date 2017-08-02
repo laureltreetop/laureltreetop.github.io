@@ -1,5 +1,5 @@
 ---
-last_modified_at: 2017/08/02 23:10 +0900
+last_modified_at: 2017/08/03 02:03 +0900
 title: "Install Minimal Mistakes"
 permalink: /docs/minimal-mistakes/
 ---
@@ -11,5 +11,12 @@ permalink: /docs/minimal-mistakes/
 
 [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)    
 ↑からインストール。
+
+## 設定
+[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)  
+[minimal-mistakes/docs](https://github.com/mmistakes/minimal-mistakes/tree/master/docs)
+
+前者を見ながら後者で設定を確認しつつやってみたら、ブログっぽいものが作れるように。
+
 
 さて、このあたりはあとでゆっくり書こう。未だに試行錯誤だったりするし。
