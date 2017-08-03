@@ -1,7 +1,7 @@
 ---
 last_modified_at: 2017/08/03 02:03 +0900
 title: "Minimal Mistakes"
-permalink: /docs/minimal-mistakes/
+permalink: /githubpages/minimal-mistakes/
 ---
 {% include toc icon="gears" title="Minimal Mistakes" %}
 デフォルトから選べるテーマはつまらない。   
