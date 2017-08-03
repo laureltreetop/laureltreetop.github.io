@@ -1,7 +1,7 @@
 ---
 last_modified_at: 2017-08-02 23:12 +0900
 title: "Markdown"
-permalink: /docs/markdown/
+permalink: /docs/github/markdown/
 ---
 {% include toc icon="gears" title="Markdown" %} 未だに勉強中。とりあえずリンクだけ張っていく。
 ## Markdown参照リンク
