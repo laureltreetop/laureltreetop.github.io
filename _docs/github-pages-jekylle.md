@@ -15,6 +15,7 @@ permalink: /docs/jekyll/
 - [jekyllthemes.io](https://jekyllthemes.io/)  
 
 当方は[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)を使っています。   
+詳しくは[Minimal Mistakes](/docs/minimal-mistakes/)（当サイト内）を参照。
 
 
 ## お手軽に導入できるテーマ
