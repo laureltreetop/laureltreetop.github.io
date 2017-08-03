@@ -1,5 +1,5 @@
 ---
-last_modified_at: 2017/08/03 15:48 +0900
+last_modified_at: 2017/08/03 18:54 +0900
 title: "Easy Custom"
 permalink: /tumblr/custom-easy/
 ---
@@ -12,6 +12,7 @@ Tumblr利用者以外には知ったこっちゃないので。
 ~~~css
 #tumblr_controls, .tmblr-iframe{display:none !important;}
 ~~~
+あとから大掛かりなカスタマイズをするときにCSSに記述しがちだが、ここに書いておくとデフォルトのモバイルテーマにも適用される。既存テーマへの乗り換えも楽。
 
 ## Spotifyのプレイヤーをすっきりと表示
 同じく`カスタムCSSを追加`に。
