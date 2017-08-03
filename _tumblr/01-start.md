@@ -16,16 +16,16 @@ permalink: /tumblr/start/
 
 ## DNS設定
 オレオレなので、さくっとカスタムドメインから。  
-サブドメインのCNAMEレコードに**domains.tumblr.com**を登録。  
+サブドメインのCNAMEレコードに`domains.tumblr.com`を登録。  
 ちなみにこの値は固有。  
 あと、時間がかかる。すごくかかる。なので先にDNSから設定しておく。
 
 ちなみに、[Cloudflare](https://www.cloudflare.com)にて設定している場合には、ちょいコツあり。   
-"DNS and HTTP proxy(CDN)"（オレンジ色の雲アイコン）ではなく、"DNS only"（グレーの雲アイコン）にしないといけない。   
+`DNS and HTTP proxy(CDN)`（オレンジ色の雲アイコン）ではなく、`DNS only`（グレーの雲アイコン）にしないといけない。   
 [Cloudflare公式にもそう書いてある](https://support.cloudflare.com/hc/en-us/articles/200168566-How-do-I-add-a-Tumblr-custom-domain-)ので、当分はそのままかも。
 
 ## カスタムドメイン設定
-「外観を編集」→「ユーザー名」→「独自ドメインを使用」よりカスタムドメインを登録。  
+`外観を編集`→`ユーザー名`→`独自ドメインを使用`よりカスタムドメインを登録。  
 「ドメインのテスト」を通れば完了だが、前述の通り時間がかかる。  
 座して待つ。
 
