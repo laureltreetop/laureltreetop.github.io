@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: splash
 permalink: /
 title: "K's GitHub Site"
 ---
