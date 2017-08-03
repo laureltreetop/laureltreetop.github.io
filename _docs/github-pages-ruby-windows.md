@@ -4,7 +4,8 @@ title: "Ruby on Windows"
 permalink: /docs/ruby-windows/
 ---
 {% include toc icon="gears" title="Ruby on Windows" %}
-オレオレですが、ほんとに苦労したので。っていうか、実は初めて触った。
+オレオレですが、ほんとに苦労したので。   
+っていうか、実は初めて触った。
 
 ## Rubyを導入 on Windows
    
