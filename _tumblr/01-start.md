@@ -29,3 +29,6 @@ permalink: /tumblr/start/
 「ドメインのテスト」を通れば完了だが、前述の通り時間がかかる。  
 座して待つ。
 
+## 記事投稿
+テキスト、写真（1枚でも複数でも可能）、オーディオ（[Spotify](https://www.spotify.com/jp/)など）、動画（[YouTube](https://www.youtube.com/)や直接投稿したり）、リンク、引用など、多数の投稿方法あり。
+
