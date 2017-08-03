@@ -5,7 +5,7 @@ main:
 #  - title: "資料"
 #    url: /collection-archive/
   - title: "GitHub Pages"
-    url: /docs/github-start/
+    url: /docs/github/
   - title: "愚痴"
     url: /year-archive/
   - title: "自分?"
@@ -16,12 +16,12 @@ docs:
   - title: GitHub Pages
     children:
       - title: "GitHub"
-        url: /docs/github-start/
+        url: /docs/github/
       - title: "Jekyll"
         url: /docs/jekyll/
-      - title: "Markdown"
-        url: /docs/markdown/
       - title: "Ruby on Windows"
         url: /docs/ruby-windows/
       - title: "Minimal Mistakes"
         url: /docs/minimal-mistakes/
+      - title: "Markdown"
+        url: /docs/markdown/
