@@ -12,3 +12,9 @@ Tumblr利用者以外には知ったこっちゃないので。
 ~~~css
 #tumblr_controls, .tmblr-iframe{display:none !important;}
 ~~~
+
+## Spotifyのプレイヤーをすっきりと表示
+同じく`カスタムCSSを追加`に。
+~~~css
+.spotify_audio_player { height: 80px !important; }
+~~~
