@@ -15,9 +15,9 @@ permalink: /tumblr/start/
 同じアカウントで複数のブログを作成可能。
 
 ## DNS設定
-オレオレなので、さくっとカスタムドメインから。   
-サブドメインのCNAMEレコードに**domains.tumblr.com**を登録。   
-ちなみにこの値は固有。   
+オレオレなので、さくっとカスタムドメインから。  
+サブドメインのCNAMEレコードに**domains.tumblr.com**を登録。  
+ちなみにこの値は固有。  
 あと、時間がかかる。すごくかかる。なので先にDNSから設定しておく。
 
 ちなみに、[Cloudflare](https://www.cloudflare.com)にて設定している場合には、ちょいコツあり。   
