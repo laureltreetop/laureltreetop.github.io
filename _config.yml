@@ -254,7 +254,7 @@ defaults:
       author_profile: false
       read_time: false
       share: true
-      comments: false
+      comments: true
       sidebar:
         nav: "docs"
   # _tumblr
@@ -266,7 +266,7 @@ defaults:
       author_profile: false
       read_time: false
       share: true
-      comments: false
+      comments: true
       sidebar:
         nav: "tumblr"
   # _pages
@@ -278,7 +278,7 @@ defaults:
       author_profile: true
       read_time: false
       comments: # true
-      share: true
+      share: false
       related: true
 
 collections:
