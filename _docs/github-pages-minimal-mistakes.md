@@ -12,10 +12,9 @@ permalink: /docs/minimal-mistakes/
 詳しくは[Minimal Mistakes](/docs/minimal-mistakes/)（当サイト内）を参照。
 
 ## 設定
-[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)  
 [minimal-mistakes/docs](https://github.com/mmistakes/minimal-mistakes/tree/master/docs)
 
-前者を見ながら後者で設定を確認しつつやってみたら、ブログっぽいものが作れるように。
+公式サイトを見ながら実際の構成を見て設定を確認しつつやってみたら、ブログっぽいものが作れるように。
 
 
 さて、このあたりはあとでゆっくり書こう。未だに試行錯誤だったりするし。
