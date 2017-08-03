@@ -34,30 +34,5 @@ docs:
         url: /docs/markdown/
       - title: "Ruby on Windows"
         url: /docs/ruby-windows/
-      - title: "Install Minimal Mistakes"
+      - title: "Minimal Mistakes"
         url: /docs/minimal-mistakes/
-#      - title: "Upgrading"
-#        url: /docs/upgrading/
-        
-sidebar:
-  - title: GitHub Pages
-    children:
-      - title: "Start"
-        url: /docs/start/
-      - title: "Markdown"
-        url: /docs/markdown/
-      - title: "Question"
-        url: /docs/question/
-
-# sidebar navigation list sample
-sidebar-sample:
-  - title: "Parent Page A"
-    children:
-      - title: "Child Page A1"
-        url: /
-      - title: "Child Page A2"
-        url: /
-      - title: "Child Page A3"
-        url: /
-      - title: "Child Page A4"
-        url: /
