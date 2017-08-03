@@ -10,23 +10,12 @@ main:
     url: /year-archive/
   - title: "自分?"
     url: /about/
-# - title: "Sitemap"
-#   url: /sitemap/
-
-  - title: "K's blog"
-    url: http://blog.treetop.to
-#  - title: "K's wiki"
-#    url: http://wiki.treetop.to
-#  - title: "K's web ver.2017"
-#    url: http://www.treetop.to
-#  - title: "K's web ver.1995"
-#    url: http://treetop.webcrow.jp
 
 # documentation links
 docs:
   - title: GitHub Pages
     children:
-      - title: "GitHub Start"
+      - title: "GitHub"
         url: /docs/github-start/
       - title: "Jekyll"
         url: /docs/jekyll/
