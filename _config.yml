@@ -268,7 +268,7 @@ defaults:
       share: true
       comments: true
       sidebar:
-        nav: "Tumblr"
+        nav: "tumblr"
   # _pages
   - scope:
       path: ""
@@ -282,7 +282,7 @@ defaults:
       related: true
 
 collections:
-  docs:
+  githubpages:
     permalink: /:collection/:path/
     output: true
   tumblr:
