@@ -1,7 +1,7 @@
 ---
 last_modified_at: 2017/08/02 23:02 +0900
 title: "GitHub start"
-permalink: /docs/github-start/
+permalink: /docs/githubpages/github/
 ---
 {% include toc icon="github" title="GitHub start" %}
 GitHub Pagesなのですから、当然最初はGitHubの準備や設定やら。
