@@ -14,6 +14,9 @@ permalink: /docs/jekyll/
 あちこちにいろいろ。   
 - [jekyllthemes.io](https://jekyllthemes.io/)  
 
+当方は[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)を使っています。   
+
+
 ## お手軽に導入できるテーマ
 ついでに、楽に導入できたテーマも紹介しておく。これらならRuby要らず。
 
