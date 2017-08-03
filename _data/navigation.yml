@@ -27,7 +27,7 @@ githubpages:
         url: /githubpages/minimal-mistakes/
       - title: "Markdown"
         url: /githubpages/markdown/
-Tumblr:
+tumblr:
   - title: "Tumblr"
     children:
       - title: "Start"
