@@ -2,8 +2,10 @@
 main:
 #  - title: "Pages"
 #    url: /page-archive/
-  - title: "資料"
-    url: /collection-archive/
+#  - title: "資料"
+#    url: /collection-archive/
+  - title: "GitHub Pages"
+    url: /docs/github-start/
   - title: "愚痴"
     url: /year-archive/
   - title: "自分?"
