@@ -32,4 +32,6 @@ tumblr:
     children:
       - title: "Start"
         url: /tumblr/start/
+      - title: "Easy Custom"
+        url: /tumblr/custom-easy/
         
