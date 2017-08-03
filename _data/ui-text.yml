@@ -3,10 +3,10 @@
 # me
 # -----------------
 ja-JP: &DEFAULT_JP
-  page                       : "Page"
+  page                       : "ぺーじ"
   pagination_previous        : "まえ"
   pagination_next            : "つぎ"
-  breadcrumb_home_label      : "Home"
+  breadcrumb_home_label      : "いちばんうえ"
   breadcrumb_separator       : "/"
   menu_label                 : "Toggle Menu"
   toc_label                  : "On This Page"
@@ -18,12 +18,12 @@ ja-JP: &DEFAULT_JP
   tags_label                 : "たぐ:"
   categories_label           : "かてごり:"
   date_label                 : "Updated:"
-  comments_label             : "Leave a Comment"
-  comments_title             : "Comments"
+  comments_label             : "こめんと、どうぞ"
+  comments_title             : "こめんと"
   more_label                 : "Learn More"
   related_label              : "You May Also Enjoy"
   follow_label               : "ふぉろー:"
-  feed_label                 : "Feed"
+  feed_label                 : "ふぃーど"
   powered_by                 : "Powered by"
   website_label              : "Website"
   email_label                : "Email"
