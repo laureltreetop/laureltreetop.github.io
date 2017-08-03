@@ -1,7 +1,7 @@
 ---
 last_modified_at: 2017/08/02 23:31 +0900
 title: "Ruby on Windows"
-permalink: /docs/githubpages/ruby-windows/
+permalink: /docs/ruby-windows/
 ---
 {% include toc icon="gears" title="Ruby on Windows" %}
 オレオレですが、ほんとに苦労したので。   
