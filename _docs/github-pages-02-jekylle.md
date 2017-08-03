@@ -1,7 +1,7 @@
 ---
 last_modified_at: 2017-08-03 01:13 +0900
 title: "Jekyll"
-permalink: /docs/jekyll/
+permalink: /docs/githubpages/jekyll/
 ---
 {% include toc icon="gears" title="Jekyll" %} 未だに勉強中。とりあえずリンクだけ張っていく。
 
