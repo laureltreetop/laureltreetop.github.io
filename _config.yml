@@ -245,10 +245,10 @@ defaults:
       comments: # true
       share: true
       related: true
-  # _docs
+  # _githubpages
   - scope:
       path: ""
-      type: docs
+      type: githubpages
     values:
       layout: single
       author_profile: false
@@ -256,7 +256,7 @@ defaults:
       share: true
       comments: true
       sidebar:
-        nav: "docs"
+        nav: "githubpages"
   # _tumblr
   - scope:
       path: ""
@@ -268,7 +268,7 @@ defaults:
       share: true
       comments: true
       sidebar:
-        nav: "tumblr"
+        nav: "Tumblr"
   # _pages
   - scope:
       path: ""
