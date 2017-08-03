@@ -10,9 +10,13 @@ permalink: /docs/jekyll/
 [Jekyll（日本語訳）](http://jekyllrb-ja.github.io/)   
 [Import your old & busted site or blog for use with Jekyll](http://import.jekyllrb.com/)
 
+## Jekyll用テーマ
++ https://jekyllthemes.io/   
+など、あちこちにいろいろ。
+
 ## お手軽に導入できるテーマ
 ついでに、楽に導入できたテーマも紹介しておく。これらならRuby要らず。
 
-[Agus Makmun](https://agusmakmun.github.io/)   
-[solo](https://chibicode.github.io/solo/)   
+- [Agus Makmun](https://agusmakmun.github.io/)   
+- [solo](https://chibicode.github.io/solo/)   
 ただし今回の用途ではちょーっとレイアウトが違うなーと見送り。
