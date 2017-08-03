@@ -9,5 +9,6 @@ permalink: /tumblr/custom-easy/
 ## 右上などににある「Edit Theme」などを非表示に
 Tumblr利用者以外には知ったこっちゃないので。
 `テーマの編集`→一番下の`詳細設定`→`カスタムCSSを追加`に以下を記述。
+~~~css
 #tumblr_controls, .tmblr-iframe{display:none !important;}
-
+~~~
