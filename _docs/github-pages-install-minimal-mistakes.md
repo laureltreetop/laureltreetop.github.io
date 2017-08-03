@@ -1,6 +1,6 @@
 ---
 last_modified_at: 2017/08/03 02:03 +0900
-title: "Install Minimal Mistakes"
+title: "Minimal Mistakes"
 permalink: /docs/minimal-mistakes/
 ---
 {% include toc icon="gears" title="Install Minimal Mistakes" %}
@@ -8,9 +8,8 @@ permalink: /docs/minimal-mistakes/
 早い段階でテーマを決めて導入したほうが良かったりします。
 
 ## Minimal Mistakesを導入
-
-[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)    
-↑からインストール。
+[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)からインストール。   
+詳しくは[Minimal Mistakes](/docs/minimal-mistakes/)（当サイト内）を参照。
 
 ## 設定
 [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)  
