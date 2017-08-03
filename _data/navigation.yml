@@ -6,6 +6,8 @@ main:
 #    url: /collection-archive/
   - title: "GitHub Pages"
     url: /docs/github/
+  - title: "Tumblr"
+    url: /tumblr/start/
   - title: "愚痴"
     url: /year-archive/
   - title: "自分?"
@@ -25,3 +27,9 @@ docs:
         url: /docs/minimal-mistakes/
       - title: "Markdown"
         url: /docs/markdown/
+tumblr:
+  - title: "Tumblr"
+    children:
+      - title: "Start"
+        url: /tumblr/start/
+        
