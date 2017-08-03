@@ -17,8 +17,7 @@ Settings→GitHub Pages→Custom domainに、ドメインを設定。
 例えば当方なら**github.treetop.to**という感じで。   
 リポジトリにCNAMEというファイルが作成されて、その中にカスタムドメインがぴろっと書かれていたら正解。
 
-## DNS設定  
-DNSも設定しないとです。   
+## DNS設定
 github.treetop.toなCNAMEレコードに、***username*.github.io**なリポジトリ名を設定。
 
 ## 環境構築 on Windows 
