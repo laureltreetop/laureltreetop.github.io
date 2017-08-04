@@ -1,5 +1,5 @@
 ---
-last_modified_at: 2017-08-03 01:13 +0900
+last_modified_at: {% last_modified_at %}
 title: "Jekyll"
 permalink: /githubpages/jekyll/
 ---
