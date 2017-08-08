@@ -34,4 +34,6 @@ tumblr:
         url: /tumblr/start/
       - title: "Easy Custom"
         url: /tumblr/custom-easy/
+      - title: "Open Graph protocol"
+        url: /tumblr/ogp/
         
