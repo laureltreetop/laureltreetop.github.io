@@ -36,4 +36,6 @@ tumblr:
         url: /tumblr/custom-easy/
       - title: "Open Graph protocol"
         url: /tumblr/ogp/
+      - title: "Before Custom"
+        url: /tumblr/custom-before/
         
