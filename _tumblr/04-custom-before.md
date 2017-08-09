@@ -7,7 +7,7 @@ permalink: /tumblr/custom-before/
 大掛かりなカスタマイズをする前に準備が必要・したほうがいい。
 
 ### JQuery
-カスタマイズの多くはJQueryを使うことが前提なので、呼び出しておく。  
+カスタマイズの多くはJQueryを使うことが前提なので、呼び出しておく。
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 ```
