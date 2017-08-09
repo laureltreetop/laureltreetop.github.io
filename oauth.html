@@ -14,7 +14,7 @@
   $(function() {
     $('#login').click(function() {
       OAuth.initialize('UCI2amBHsFC18Wl69ojJi0q6VENL8c7K');
-      OAuth.redirect('github', 'https://github.treetop.to/ghapp-on-ghpages/#callback');
+      OAuth.redirect('github', 'https://github.treetop.to/#callback');
     });
     if (location.hash === '#callback') {
       location.hash = '';
