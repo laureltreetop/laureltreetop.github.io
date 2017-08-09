@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GitHub App on GitHub Pages using Web Application Flow</title>
+</head>
+<body>
+  <h1>GitHub App on GitHub Pages using Web Application Flow</h1>
+  <input type="button" id="login" value="GitHub Login">
+  <div id="success"></div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/oauth-io/0.6.1/oauth.min.js"></script>
+  <script>
+  $(function() {
+    $('#login').click(function() {
+      OAuth.initialize('UCI2amBHsFC18Wl69ojJi0q6VENL8c7K');
+      OAuth.redirect('github', 'https://github.treetop.to/ghapp-on-ghpages/#callback');
+    });
+    if (location.hash === '#callback') {
+      location.hash = '';
+      OAuth.callback('github')
+        .done(function(res) {
+          res.get('/user')
+            .done(function(res) {
+              var result = $('<div>')
+                .append($('<div>').text('Hello, ' + res.login + '!'))
+                .append($('<img>').attr('src', res.avatar_url));
+              $('#success').html(result);
+            })
+            .fail(function(res) {
+              window.alert('Failed to get usre info: see console for details');
+              console.dir(err);
+            })
+        })
+        .fail(function(err) {
+          window.alert('Failed to authorization: see console for details');
+          console.dir(err);
+        });
+    }
+  });
+  </script>
+</body>
+</html>
