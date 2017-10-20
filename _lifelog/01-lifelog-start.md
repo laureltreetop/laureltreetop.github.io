@@ -18,8 +18,8 @@ Evernoteにまとめていく方向で。
 + Mythings（サービスが少ない）
 
 ## お天気系はMythings
-[Mythings](https://mythings.yahoo.co.jp/)で、その日の予報、警報など。  
-IFTTTの天気は英語なのでやっぱり見づらい。
+IFTTTの天気[Weather Underground](https://www.wunderground.com/)は英語なので見づらい。  
+[Mythings](https://mythings.yahoo.co.jp/) + [Yahoo!天気](https://weather.yahoo.co.jp/weather/)で、その日の予報や警報など。  
 
 ## 移動記録
 [Moves app](http://www.moves-app.com/)で記録、[Moves Export](http://www.moves-export.com/)で自動的に記録。  
@@ -27,6 +27,6 @@ IFTTTの天気は英語なのでやっぱり見づらい。
 試したもの :
 + IFTTTのButton Gadget（やっぱりめんどい）
 + [Foursquare](https://ja.foursquare.com/)（チェックインめんどい）
-+ Lifelog（Sonyなやつ。前はIFTTTで出力できたらしいが、現在はできない）
++ [Lifelog](http://www.sonymobile.co.jp/myxperia/app/lifelog/)（Sonyなやつ。前はIFTTTで出力できたらしいが、現在はできない）
 + Google Map（記録が正確だが、出力ができない?）
 + Moves app & Moves Export & Google Calender（惜しい。カレンダーよりもEvernoteのほうが良いかも?）
