@@ -1,5 +1,6 @@
 ---
-last_modified_at: 2017-10-20 16:42 +0900
+date: 2017-10-20 16:42 +0900
+last_modified_at: 2017-10-20 20:47 +0900
 title: "Lifelog start"
 permalink: /lifelog/start/
 ---
