@@ -8,7 +8,7 @@ main:
     url: /githubpages/github/
   - title: "Tumblr"
     url: /tumblr/start/
-  - title: "Ligelog"
+  - title: "Lifelog"
     url: /tumblr/lifelog/
   - title: "愚痴"
     url: /year-archive/
@@ -40,4 +40,9 @@ tumblr:
         url: /tumblr/ogp/
       - title: "Before Custom"
         url: /tumblr/custom-before/
-        
+lifelog:
+  - title: "Lifelog"
+    children:
+      - title: "Start"
+        url: /lifelog/start/
+
