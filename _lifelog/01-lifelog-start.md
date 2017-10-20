@@ -21,7 +21,7 @@ Evernoteにまとめていく方向で。
 IFTTTの天気[Weather Underground](https://www.wunderground.com/)は英語なので見づらい。  
 [Mythings](https://mythings.yahoo.co.jp/) + [Yahoo!天気](https://weather.yahoo.co.jp/weather/)で、その日の予報や警報など。  
 
-## 移動記録
+## Moves appで移動記録
 [Moves app](http://www.moves-app.com/)で記録、[Moves Export](http://www.moves-export.com/)で自動的に記録。  
 ただし、Evernoteには固定タイトルで出力されるのと、場所名が判らないので手動部分あり。  
 試したもの :
