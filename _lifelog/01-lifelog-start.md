@@ -26,7 +26,8 @@ IFTTTの天気[Weather Underground](https://www.wunderground.com/)は英語な�
 ただし、Evernoteには固定タイトルで出力されるのと、場所名が判らないので手動部分あり。  
 試したもの :
 + IFTTTのButton Gadget（やっぱりめんどい）
-+ [Foursquare](https://ja.foursquare.com/)（チェックインめんどい）
 + [Lifelog](http://www.sonymobile.co.jp/myxperia/app/lifelog/)（Sonyなやつ。前はIFTTTで出力できたらしいが、現在はできない）
 + Google Map（記録が正確だが、出力ができない?）
 + Moves app & Moves Export & Google Calender（惜しい。カレンダーよりもEvernoteのほうが良いかも?）
++ [Foursquare](https://ja.foursquare.com/) & Swarm（チェックインめんどい）  
+Foursquareを試すにあたりSwarmを入れていたが、[Foursquareの機能分割アプリ、Swarmで自宅がバレバレ注意！！]の記事を見つけた。一度アンインストールしたSwarmをもう一度インストール、適当な場所にチェックイン、そしてアンインストール…
