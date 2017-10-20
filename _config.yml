@@ -46,7 +46,7 @@ staticman:
         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 
 atom_feed:
-  path                   : /sitemap.xml # blank (default) uses feed.xml
+  path                   : # blank (default) uses feed.xml
 
 # SEO Related
 google_site_verification : "sNYlrDYSp0P3xsEeWz_vX9n5ps2SbT6TGjqgHFQDaHk"
@@ -194,11 +194,6 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jemoji
-
-# Use the following plug-ins
-gems:
-  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
-  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
 
 # Archives
 #  Type
