@@ -269,6 +269,18 @@ defaults:
       comments: true
       sidebar:
         nav: "tumblr"
+    # _ligelog
+  - scope:
+      path: ""
+      type: lifelog
+    values:
+      layout: single
+      author_profile: false
+      read_time: false
+      share: true
+      comments: true
+      sidebar:
+        nav: "lifelog"
   # _pages
   - scope:
       path: ""
