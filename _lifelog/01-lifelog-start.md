@@ -1,5 +1,5 @@
 ---
-last_modified_at: {{page.date}}
+last_modified_at: {page.date}
 title: "Lifelog start"
 permalink: /lifelog/start/
 ---
