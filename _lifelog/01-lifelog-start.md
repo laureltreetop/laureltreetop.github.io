@@ -8,3 +8,9 @@ Evernoteにまとめていく方向で。
 
 ## Evernoteの準備から
 [Evernote](https://evernote.com/intl/jp/)より登録（だったっけ?）。
+
+## 自動化の肝、IFTTT
+[IFTTT](https://ifttt.com)も登録。
+
+## 移動記録
+[Moves app](http://www.moves-app.com/)で記録、[Moves Export](http://www.moves-export.com/)で自動的に記録。
