@@ -1,5 +1,4 @@
 ---
-date: 2017-10-20 16:42 +0900
 last_modified_at: 2017-10-20 20:47 +0900
 title: "Lifelog start"
 permalink: /lifelog/start/
@@ -10,14 +9,14 @@ Evernoteにまとめていく方向で。
 ## Evernoteの準備から
 [Evernote](https://evernote.com/intl/jp/)より登録（だったっけ?）。  
 
-### 試したもの :
+試したもの :
 + 普通にブログ（めんどい）
 + Google Keep（付箋感覚だけど、時系列に何か欲しい）
 
 ## 自動化の肝、IFTTT
 [IFTTT](https://ifttt.com)も登録。  
 
-### 他のツールは? :
+他のツールは? :
 + Mythings（サービスが少ない）
 
 ## お天気系はMythings
@@ -28,7 +27,7 @@ IFTTTの天気[Weather Underground](https://www.wunderground.com/)は英語な�
 [Moves app](http://www.moves-app.com/)で記録、[Moves Export](http://www.moves-export.com/)で自動的に記録。  
 ただし、Evernoteには固定タイトルで出力されるのと、場所名が判らないので手動部分あり。  
 
-### 試したもの :
+試したもの :
 + IFTTTのButton Gadget（やっぱりめんどい）
 + [Lifelog](http://www.sonymobile.co.jp/myxperia/app/lifelog/)（Sonyなやつ。前はIFTTTで出力できたらしいが、現在はできない）
 + Google Map（記録が正確だが、出力ができない?）
