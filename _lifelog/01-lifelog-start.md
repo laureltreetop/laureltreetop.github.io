@@ -12,5 +12,8 @@ Evernoteにまとめていく方向で。
 ## 自動化の肝、IFTTT
 [IFTTT](https://ifttt.com)も登録。
 
+## お天気系はMythings
+[Mythings](https://mythings.yahoo.co.jp/)で、その日の予報、警報など。
+
 ## 移動記録
 [Moves app](http://www.moves-app.com/)で記録、[Moves Export](http://www.moves-export.com/)で自動的に記録。
