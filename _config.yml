@@ -306,3 +306,5 @@ collections:
   posts:
     permalink: /post/:year/:month/:day/:title/
     output: true
+
+minimal_mistakes_skin    : "default" # "air", "contrast", "dark", "dirt", "mint", "sunrise"
