@@ -1,5 +1,5 @@
 ---
-last_modified_at: 2017-10-20
+last_modified_at: {{ site }}
 title: "Lifelog start"
 permalink: /lifelog/start/
 ---
