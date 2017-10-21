@@ -308,3 +308,5 @@ collections:
   posts:
     permalink: /post/:year/:month/:day/:title/
     output: true
+
+github : [metadata]
