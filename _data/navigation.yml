@@ -48,7 +48,7 @@ Lifelog:
 
 # sidebar navigation list sample
 sidebar:
-  - title: GitHub Pages
+  - title: "GitHub Pages"
     children:
       - title: "GitHub"
         url: /githubpages/github/
