@@ -46,7 +46,7 @@ staticman:
 
 # https://leico.github.io/TechnicalNote/Jekyll/jekyll-atom
 atom_feed:
-  path                   : # /atom.xml # blank (default) uses feed.xml
+  path                   : /atom.xml # blank (default) uses feed.xml
 
 # SEO Related
 google_site_verification : "sNYlrDYSp0P3xsEeWz_vX9n5ps2SbT6TGjqgHFQDaHk"
