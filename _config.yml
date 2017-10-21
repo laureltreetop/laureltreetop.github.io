@@ -195,12 +195,6 @@ whitelist:
   - jemoji
 
 # 2017-10-21 https://github.com/mmistakes/minimal-mistakes/issues/417
-gems:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
   
 # Archives
 #  Type
