@@ -256,7 +256,7 @@ defaults:
       share: true
       comments: true
       sidebar:
-        nav: "githubpages"
+        nav: "GitHub Pages"
   # _tumblr
   - scope:
       path: ""
