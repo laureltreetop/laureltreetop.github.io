@@ -17,7 +17,7 @@ main:
 
 # documentation links
 GithubPages:
-  - title: GitHub Pages
+  - title: "GitHub Pages"
     children:
       - title: "GitHub"
         url: /githubpages/github/
