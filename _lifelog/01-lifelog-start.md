@@ -1,5 +1,5 @@
 ---
-last_modified_at: #{now.strftime('%Y-%m-%d %H:%M')} JST
+last_modified_at: 2017-10-21 15:42 JST
 title: "Lifelog start"
 permalink: /lifelog/start/
 ---
