@@ -273,7 +273,7 @@ defaults:
   # _ligelog
   - scope:
       path: ""
-      type: lifelog
+      type: posts
     values:
       layout: single
       author_profile: false
