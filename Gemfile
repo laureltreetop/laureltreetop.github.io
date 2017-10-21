@@ -12,4 +12,4 @@ gem "tzinfo-data"
 #   gem "jemoji"
 # end
 
-gem "minimal-mistakes-jekyll"
+# gem "minimal-mistakes-jekyll"
