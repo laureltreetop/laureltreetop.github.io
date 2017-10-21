@@ -272,7 +272,7 @@ defaults:
   # _lifelog
   - scope:
       path: ""
-      type: Lifelog
+      type: lifelog
     values:
       layout: single
       author_profile: false
@@ -301,7 +301,7 @@ collections:
   tumblr:
     permalink: /:collection/:path/
     output: true
-  Lifelog:
+  lifelog:
     permalink: /:collection/:path/
     output: true
   posts:
