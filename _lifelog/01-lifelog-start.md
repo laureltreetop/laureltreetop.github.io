@@ -33,4 +33,6 @@ IFTTTの天気[Weather Underground](https://www.wunderground.com/)は英語な�
 + Google Map（記録が正確だが、出力ができない?）
 + Moves app & Moves Export & Google Calender（惜しい。カレンダーよりもEvernoteのほうが良いかも?）
 + [Foursquare](https://ja.foursquare.com/) & Swarm（チェックインめんどい）  
-Foursquareを試すにあたりSwarmを入れていたが、[Foursquareの機能分割アプリ、Swarmで自宅がバレバレ注意！！](http://ch.nicovideo.jp/mochim9/blomaga/ar582615)の記事を見つけた。一度アンインストールしたSwarmをもう一度インストール、適当な場所にチェックイン、そしてアンインストール…
+Foursquareを試すにあたりSwarmを入れていたが、[Foursquareの機能分割アプリ、Swarmで自宅がバレバレ注意！！](http://ch.nicovideo.jp/mochim9/blomaga/ar582615)の記事を見つけた。一度アンインストールしたSwarmをもう一度インストール、適当な場所にチェックイン、そしてアンインストール…  
+
+迷走中。
