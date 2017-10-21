@@ -122,7 +122,7 @@
   (twitter, $twitter-color),
   (google-plus, $google-plus-color),
   (linkedin, $linkedin-color),
-  (pocket, $google-plus-color);
+  (pocket, #ef4056;);
 
   @each $socialnetwork, $color in $social {
     &--#{$socialnetwork} {
