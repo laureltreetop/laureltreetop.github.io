@@ -16,7 +16,7 @@ main:
     url: /about/
 
 # documentation links
-GithubPages:
+githubpPages:
   - title: "GitHub Pages"
     children:
       - title: "GitHub"
@@ -48,4 +48,4 @@ Lifelog:
 
 sidebar:
   title: "GitHub Pages"
-  nav: "GithubPages"
+  nav: "githubpages"
