@@ -3,6 +3,7 @@ last_modified_at: 2017-10-22
 title: "Lifelog start"
 permalink: /lifelog/start/
 ---
+<!-- Last modified at: {{ site.time }} -->
 {% include toc icon="file-text-o" title="Lifelog" %}
 Evernoteにまとめていく方向で。
 
