@@ -273,7 +273,7 @@ defaults:
   # _ligelog
   - scope:
       path: ""
-      type: pages
+      type: ligelog
     values:
       layout: single
       author_profile: false
