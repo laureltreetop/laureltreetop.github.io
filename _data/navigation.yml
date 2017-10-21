@@ -48,32 +48,14 @@ Lifelog:
 
 # sidebar navigation list sample
 sidebar:
-  - title: GitHub Pages
-    children:
-      - title: "GitHub"
-        url: /githubpages/github/
-      - title: "Jekyll"
-        url: /githubpages/jekyll/
-      - title: "Ruby on Windows"
-        url: /githubpages/ruby-windows/
-      - title: "Minimal Mistakes"
-        url: /githubpages/minimal-mistakes/
-      - title: "Markdown"
-        url: /githubpages/markdown/
-  - title: "Tumblr"
-    children:
-      - title: "Start"
-        url: /tumblr/start/
-      - title: "Easy Custom"
-        url: /tumblr/custom-easy/
-      - title: "Open Graph protocol"
-        url: /tumblr/ogp/
-      - title: "Before Custom"
-        url: /tumblr/custom-before/
-  - title: "Lifelog"
-    children:
-      - title: "Start"
-        url: /lifelog/start/
+  # _docs
+  - scope:
+      path: ""
+      type: githubpages
+    values:
+      sidebar:
+        nav: "GithubPages"
+
 
 # https://mmistakes.github.io/minimal-mistakes/docs/configuration/
 minimal_mistakes_skin    : "default" # "air", "contrast", "dark", "dirt", "mint", "sunrise"
