@@ -280,6 +280,7 @@ defaults:
       read_time: false
       share: true
       comments: true
+      related: true
       sidebar:
         nav: "lifelog"
   # _pages
