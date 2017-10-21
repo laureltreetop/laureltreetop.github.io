@@ -270,7 +270,7 @@ defaults:
       comments: true
       sidebar:
         nav: "tumblr"
-  # _Lifelog
+  # _lifelog
   - scope:
       path: ""
       type: lifelog
@@ -281,7 +281,7 @@ defaults:
       share: true
       comments: true
       sidebar:
-        nav: "Lifelog"
+        nav: "lifelog"
   # _pages
   - scope:
       path: ""
