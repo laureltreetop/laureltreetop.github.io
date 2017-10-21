@@ -45,3 +45,34 @@ Lifelog:
     children:
       - title: "Start"
         url: /lifelog/start/
+
+# sidebar navigation list sample
+sidebar-sample:
+  - title: GitHub Pages
+    children:
+      - title: "GitHub"
+        url: /githubpages/github/
+      - title: "Jekyll"
+        url: /githubpages/jekyll/
+      - title: "Ruby on Windows"
+        url: /githubpages/ruby-windows/
+      - title: "Minimal Mistakes"
+        url: /githubpages/minimal-mistakes/
+      - title: "Markdown"
+        url: /githubpages/markdown/
+Tumblr:
+  - title: "Tumblr"
+    children:
+      - title: "Start"
+        url: /tumblr/start/
+      - title: "Easy Custom"
+        url: /tumblr/custom-easy/
+      - title: "Open Graph protocol"
+        url: /tumblr/ogp/
+      - title: "Before Custom"
+        url: /tumblr/custom-before/
+Lifelog:
+  - title: "Lifelog"
+    children:
+      - title: "Start"
+        url: /lifelog/start/
