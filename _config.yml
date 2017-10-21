@@ -270,10 +270,10 @@ defaults:
       comments: true
       sidebar:
         nav: "tumblr"
-  # _lifelog
+  # _Lifelog
   - scope:
       path: ""
-      type: lifelog
+      type: Lifelog
     values:
       layout: single
       author_profile: false
@@ -301,7 +301,7 @@ collections:
   tumblr:
     permalink: /:collection/:path/
     output: true
-  lifelog:
+  Lifelog:
     permalink: /:collection/:path/
     output: true
   posts:
