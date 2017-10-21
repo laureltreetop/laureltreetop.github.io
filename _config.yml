@@ -270,10 +270,10 @@ defaults:
       comments: true
       sidebar:
         nav: "tumblr"
-  # _ligelog
+  # _lifelog
   - scope:
       path: ""
-      type: ligelog
+      type: lifelog
     values:
       layout: single
       author_profile: false
