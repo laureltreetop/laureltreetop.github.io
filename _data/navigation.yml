@@ -40,7 +40,7 @@ tumblr:
         url: /tumblr/ogp/
       - title: "Before Custom"
         url: /tumblr/custom-before/
-lifelog:
+Lifelog:
   - title: "Lifelog"
     children:
       - title: "Start"
