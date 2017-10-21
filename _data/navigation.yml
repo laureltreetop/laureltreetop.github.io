@@ -45,4 +45,6 @@ lifelog:
     children:
       - title: "Start"
         url: /lifelog/start/
+      - title: "Easy Custom"
+        url: /tumblr/custom-easy/
 
