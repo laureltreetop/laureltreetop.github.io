@@ -70,3 +70,7 @@ sidebar:
         url: /tumblr/ogp/
       - title: "Before Custom"
         url: /tumblr/custom-before/
+  - title: "Lifelog"
+    children:
+      - title: "Start"
+        url: /lifelog/start/
