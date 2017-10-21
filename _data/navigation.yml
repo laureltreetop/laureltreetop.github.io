@@ -74,3 +74,6 @@ sidebar:
     children:
       - title: "Start"
         url: /lifelog/start/
+
+# https://mmistakes.github.io/minimal-mistakes/docs/configuration/
+minimal_mistakes_skin    : "default" # "air", "contrast", "dark", "dirt", "mint", "sunrise"
