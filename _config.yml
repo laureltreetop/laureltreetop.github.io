@@ -281,7 +281,7 @@ defaults:
       share: true
       comments: true
       sidebar:
-        nav: "lifelog"
+        nav: "Lifelog"
   # _pages
   - scope:
       path: ""
