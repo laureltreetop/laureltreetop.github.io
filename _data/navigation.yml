@@ -46,16 +46,6 @@ Lifelog:
       - title: "Start"
         url: /lifelog/start/
 
-# sidebar navigation list sample
-sidebar:
-  # _docs
-  - scope:
-      path: ""
-      type: githubpages
-    values:
-      sidebar:
-        nav: "GithubPages"
-
 
 # https://mmistakes.github.io/minimal-mistakes/docs/configuration/
 minimal_mistakes_skin    : "default" # "air", "contrast", "dark", "dirt", "mint", "sunrise"
