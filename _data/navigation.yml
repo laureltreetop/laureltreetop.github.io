@@ -47,7 +47,7 @@ Lifelog:
         url: /lifelog/start/
 
 # sidebar navigation list sample
-sidebar-sample:
+sidebar:
   - title: GitHub Pages
     children:
       - title: "GitHub"
@@ -60,7 +60,6 @@ sidebar-sample:
         url: /githubpages/minimal-mistakes/
       - title: "Markdown"
         url: /githubpages/markdown/
-Tumblr:
   - title: "Tumblr"
     children:
       - title: "Start"
@@ -71,7 +70,6 @@ Tumblr:
         url: /tumblr/ogp/
       - title: "Before Custom"
         url: /tumblr/custom-before/
-Lifelog:
   - title: "Lifelog"
     children:
       - title: "Start"
