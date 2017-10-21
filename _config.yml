@@ -45,7 +45,7 @@ staticman:
         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 
 atom_feed:
-  path                   : feed-1.xml # blank (default) uses feed.xml
+  path                   : # blank (default) uses feed.xml
 
 # SEO Related
 google_site_verification : "sNYlrDYSp0P3xsEeWz_vX9n5ps2SbT6TGjqgHFQDaHk"
