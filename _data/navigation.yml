@@ -60,3 +60,13 @@ sidebar:
         url: /githubpages/minimal-mistakes/
       - title: "Markdown"
         url: /githubpages/markdown/
+  - title: "Tumblr"
+    children:
+      - title: "Start"
+        url: /tumblr/start/
+      - title: "Easy Custom"
+        url: /tumblr/custom-easy/
+      - title: "Open Graph protocol"
+        url: /tumblr/ogp/
+      - title: "Before Custom"
+        url: /tumblr/custom-before/
