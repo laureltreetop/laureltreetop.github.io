@@ -311,6 +311,7 @@ collections:
 github : [metadata]
 
 # https://genkami.github.io/2017/06/22/01-gh-pages-rss.html
+# https://github.com/gjtorikian/jekyll-last-modified-at
 gems:
   - jekyll-feed
   - jekyll-sitemap
