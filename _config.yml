@@ -310,3 +310,7 @@ collections:
     output: true
 
 github : [metadata]
+
+# https://genkami.github.io/2017/06/22/01-gh-pages-rss.html
+gems:
+  - jekyll-feed
