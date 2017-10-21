@@ -4,22 +4,37 @@ layout: null
 
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
+
   <title>{{ site.name }}</title>
   <link href="{{ site.url }}/atom.xml" rel="self" />
   <link href="{{ site.url }}/"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>{{ site.url }}</id>
   <author>
-    <name>{{ site.author.name }}</name>
-    <email>{{ site.author.email }}</email>
+    <name>{{ site.data.summary.author.name }}</name>
   </author>
-  {% for post in site.posts %}
+
+  {% assign docs = "" | split: "" %}
+  {% for collection in site.collections %}
+    {% for doc in collection.docs %}
+    
+    {% if doc.slug == 'index' %} {% continue %} {% endif %}
+    {% assign docs = docs | push: doc %}
+
+    {% endfor %}
+  {% endfor %}
+
+
+  {% assign docs = docs | sort: 'lastchange' | reverse %}
+  {% for doc in docs %}
     <entry>
-      <title>{{ post.title }}</title>
-      <link href="{{ site.url }}{{ post.url }}" />
-      <updated>{{ post.date | date_to_xmlschema }}</updated>
-      <id>{{ site.url }}{{ post.id }}</id>
-      <content type="html">{{ post.content | xml_escape }}</content>
+      <title>{{ doc.title }}</title>
+      <link href="{{ site.github.url }}{{ doc.url }}" />
+      <updated>
+        {{ doc.lastchange | date_to_xmlschema }}
+      </updated>
+      <id>{{ site.github.url }}{{ doc.id }}</id>
+      <summary>{{ doc.content | strip_html | newline_to_br | split:'<br />' | first }}</summary>
     </entry>
   {% endfor %}
 </feed>
