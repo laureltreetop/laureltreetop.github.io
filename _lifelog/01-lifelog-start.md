@@ -8,7 +8,7 @@ permalink: /lifelog/start/
 Evernoteにまとめていく方向で。
 
 ## Evernoteの準備から
-[Evernote](https://evernote.com/intl/jp/)より登録（だったっけ?）。  
+[Evernote](https://evernote.com/intl/jp/)より登録。  
 
 試したもの :
 + 普通にブログ（めんどい）
