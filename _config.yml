@@ -44,8 +44,9 @@ staticman:
       options:
         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 
+# https://leico.github.io/TechnicalNote/Jekyll/jekyll-atom
 atom_feed:
-  path                   : # blank (default) uses feed.xml
+  path                   : atom.xml # blank (default) uses feed.xml
 
 # SEO Related
 google_site_verification : "sNYlrDYSp0P3xsEeWz_vX9n5ps2SbT6TGjqgHFQDaHk"
@@ -193,8 +194,6 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jemoji
-
-# 2017-10-21 https://github.com/mmistakes/minimal-mistakes/issues/417
   
 # Archives
 #  Type
