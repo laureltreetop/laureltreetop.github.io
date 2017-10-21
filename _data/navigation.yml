@@ -16,7 +16,7 @@ main:
     url: /about/
 
 # documentation links
-githubpages:
+GithubPages:
   - title: GitHub Pages
     children:
       - title: "GitHub"
@@ -29,7 +29,7 @@ githubpages:
         url: /githubpages/minimal-mistakes/
       - title: "Markdown"
         url: /githubpages/markdown/
-tumblr:
+Tumblr:
   - title: "Tumblr"
     children:
       - title: "Start"
@@ -45,6 +45,3 @@ Lifelog:
     children:
       - title: "Start"
         url: /lifelog/start/
-      - title: "Easy Custom"
-        url: /tumblr/custom-easy/
-
