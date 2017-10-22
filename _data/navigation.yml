@@ -47,9 +47,4 @@ Lifelog:
         url: /lifelog/start/
 
 sidebar:
-  title: "GitHub Pages"
     nav: "githubpagess"
-  title: "Tumblr"
-    nav: "tumblr"
-  title: "Lifelog"
-    nav: "lifelog"
