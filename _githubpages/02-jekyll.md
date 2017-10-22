@@ -27,7 +27,5 @@ permalink: /githubpages/jekyll/
 ただし今回の用途ではちょーっとレイアウトが違うなーと見送り。
 
 ## ついでにローカルで確認しちゃう?
-いや、本当はそっちのほうがメインだと思うけど…
-```sh
-bundle exec jekyll serve
-```
+いや、本当はそっちのほうがメインだと思うけど…  
+コマンド`bundle exec jekyll serve`で立ち上げられる。
