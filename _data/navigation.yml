@@ -48,4 +48,8 @@ Lifelog:
 
 sidebar:
   title: "GitHub Pages"
-  nav: "githubpages"
+    nav: "githubpages"
+  title: "Tumblr"
+    nav: "tumblr"
+  title: "Lifelog"
+    nav: "lifelog"
