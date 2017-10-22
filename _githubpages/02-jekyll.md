@@ -25,3 +25,9 @@ permalink: /githubpages/jekyll/
 - [solo](https://chibicode.github.io/solo/)    
 
 ただし今回の用途ではちょーっとレイアウトが違うなーと見送り。
+
+## ついでにローカルで確認しちゃう?
+いや、本当はそっちのほうがメインだと思うけど…
+```sh
+bundle exec jekyll serve
+```
