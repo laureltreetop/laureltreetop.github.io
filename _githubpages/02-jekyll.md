@@ -28,4 +28,6 @@ permalink: /githubpages/jekyll/
 
 ## ついでにローカルで確認しちゃう?
 いや、本当はそっちのほうがメインだと思うけど…  
-コマンド`bundle exec jekyll serve`で立ち上げられる。
+コマンド`bundle exec jekyll serve`で立ち上げられる。  
+[Run Jekyll on Windows](http://jekyll-windows.juthilo.com/)が詳しい。  
+あとでこれもちゃんとまとめる。たぶん?
