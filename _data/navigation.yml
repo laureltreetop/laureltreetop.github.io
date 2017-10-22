@@ -45,6 +45,3 @@ Lifelog:
     children:
       - title: "Start"
         url: /lifelog/start/
-
-sidebar:
-    nav: "Github Pages"
