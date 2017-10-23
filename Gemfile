@@ -4,7 +4,6 @@ gem 'github-pages', group: :jekyll_plugins
 gem "tzinfo-data"
 gem 'wdm', '~> 0.1.1' if Gem.win_platform?
 
-# gem "minimal-mistakes-jekyll", :git => "https://github.com/mmistakes/minimal-mistakes.git", :branch => "susy-3-upgrade"
 # https://mmistakes.github.io/minimal-mistakes/docs/installation/
 gem "minimal-mistakes-jekyll", :github => "mmistakes/minimal-mistakes"
 
