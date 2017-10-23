@@ -33,7 +33,7 @@ permalink: /githubpages/jekyll-theme/
 
 ## おまけ? Soloを導入する場合
 - [solo](https://chibicode.github.io/solo/)  
-[Fork A Repo])(https://help.github.com/articles/fork-a-repo/)を見つつ、まずはFork（ってよく判ってない）。  
+[Fork A Repo](https://help.github.com/articles/fork-a-repo/)を見つつ、まずはFork（ってよく判ってない）。  
 その後コマンドで、
 ```sh
 $ git clone https://github.com/<em>user-name</em>/solo
