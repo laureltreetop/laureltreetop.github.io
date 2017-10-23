@@ -37,11 +37,10 @@ gem 'wdm', '~> 0.1.1' if Gem.win_platform?
 ```
 ## ローカルで確認しちゃう?
 コマンド`jekyll serve`または`bundle exec jekyll serve`で立ち上げられる。    
-http://127.0.0.1:4000/ で確認。
+`http://127.0.0.1:4000/`で確認。
 
 ### なんだかエラーが出るんですが。
 エラーメッセージを見ると、gem installしたやつがバージョンに合わないらしい。  
-`gem list hote`で確認して、合わないバージョンのは`gem uninstall -v x.x.x hoge`で削除。
-
+`gem list hoge`で確認して、合わないバージョンのは`gem uninstall -v x.x.x hoge`で削除。
 
 試行錯誤中。
