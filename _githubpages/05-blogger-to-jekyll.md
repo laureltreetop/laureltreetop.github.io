@@ -14,7 +14,7 @@ Rubyなんて扱ったことないから、これがコマンドなのかスク�
 
 最初に`gem install jekyll-import`を。てっきりスクリプトの名前がjekyll-importなのかと思ってた…  
 コマンドラインから以下を実行。
-```ruby
+```shell
 $ ruby -rubygems -e 'require "jekyll-import";
     JekyllImport::Importers::Blogger.run({
       "source"                => "blog-07-31-2017.xml",
