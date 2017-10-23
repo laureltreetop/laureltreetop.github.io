@@ -1,6 +1,6 @@
 ---
 date: 2017-10-21
-last_modified_at: 2017-10-22
+last_modified_at: {{ page.last_modified_at }}
 title: "Lifelog start"
 permalink: /lifelog/start/
 ---
