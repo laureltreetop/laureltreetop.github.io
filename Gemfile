@@ -5,3 +5,9 @@ gem "tzinfo-data"
 gem 'wdm', '~> 0.1.1' if Gem.win_platform?
 
 gem "minimal-mistakes-jekyll" #, :git => "https://github.com/mmistakes/minimal-mistakes.git", :branch => "susy-3-upgrade"
+
+# https://mmistakes.github.io/minimal-mistakes/docs/installation/
+# If you have any other plugins, put them here!
+group :jekyll_plugins do
+  gem "jekyll-last-modified-at"
+end
