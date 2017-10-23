@@ -7,17 +7,19 @@ permalink: /githubpages/blogger-to-jekyll/
 今までブログは、ブログなんて呼んでない頃からのHTML直書き→しばらく休止→Bloggerで時々書いたり書かなかったり→Tumblr、という流れ。  
 Bloggerの記事をJykillに取り込むのは簡単にできるらしいと知り、無謀にも挑戦。  
 
+## 取り込み
+Bloggerの`ブログ設定`→`その他`→`コンテンツをバックアップ`で取り込める。
 
 ## 変換
 元ネタはJekyllサイトにある[Blogger](http://import.jekyllrb.com/docs/blogger/)。  
 Rubyなんて扱ったことないから、これがコマンドなのかスクリプトなのか判らないという状態で数ヶ月止まったままだったが…  
 
 最初に`gem install jekyll-import`を。てっきりスクリプトの名前がjekyll-importなのかと思ってた…  
-コマンドラインから以下を実行。
+コマンドラインから以下を実行。"blog-MM-DD-YYYY.xml"はBloggerからエクスポートしたファイル名を。
 ```shell
 $ ruby -rubygems -e 'require "jekyll-import";
     JekyllImport::Importers::Blogger.run({
-      "source"                => "blog-07-31-2017.xml",
+      "source"                => "blog-MM-DD-YYYY.xml",
     })'
 ```
 思ったよりも静かに完了するが、_posts/にダーッとファイルが生成されてる。
