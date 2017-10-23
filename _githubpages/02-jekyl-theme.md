@@ -25,9 +25,3 @@ permalink: /githubpages/jekyll-theme/
 - [solo](https://chibicode.github.io/solo/)    
 
 ただし今回の用途ではちょーっとレイアウトが違うなーと見送り。
-
-## ついでにローカルで確認しちゃう?
-いや、本当はそっちのほうがメインだと思うけど…  
-コマンド`bundle exec jekyll serve`で立ち上げられる。  
-[Run Jekyll on Windows](http://jekyll-windows.juthilo.com/)が詳しい。  
-あとでこれもちゃんとまとめる。たぶん?
