@@ -8,7 +8,7 @@ permalink: /githubpages/blogger-to-jekyll/
 ## Bloggerの記事を取り込む
 
 ## 変換
-先に`gem install jekyll-inport`  
+先に`gem install jekyll-import`  
 コマンドラインから以下を実行。
 ```ruby
 $ ruby -rubygems -e 'require "jekyll-import";
