@@ -309,3 +309,4 @@ collections:
     output: true
 
 github : [metadata]
+minimal_mistakes_skin : "default" # "mint", "contrast", "dark", "dirt", "mint", "sunrise"
