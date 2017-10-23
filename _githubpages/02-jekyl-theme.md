@@ -18,7 +18,6 @@ permalink: /githubpages/jekyll-theme/
 ### お手軽に導入できるテーマ
 ついでに、楽に導入できたテーマも紹介しておく。
 - [Agus Makmun](https://agusmakmun.github.io/)
-- [solo](https://chibicode.github.io/solo/)    
 
 ただし今回の用途ではちょーっとレイアウトが違うなーと見送り。
 
@@ -32,4 +31,9 @@ permalink: /githubpages/jekyll-theme/
 
 公式サイトを見ながら実際の構成を見て設定を確認しつつやってみたら、ブログっぽいものが作れるように。
 
-
+## おまけ? Soloを導入する場合
+- [solo](https://chibicode.github.io/solo/)  
+```sh
+$ git clone https://github.com/*user-name*/solo
+$ jekyll new *your-repository*
+```
