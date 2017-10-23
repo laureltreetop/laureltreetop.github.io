@@ -6,10 +6,12 @@ permalink: /githubpages/blogger-to-jekyll/
 {% include toc icon="gears" title="Blogger to Jekyll" %}
 今までブログは、ブログなんて呼んでない頃からのHTML直書き→しばらく休止→Bloggerで時々書いたり書かなかったり→Tumblr、という流れ。  
 Bloggerの記事をJykillに取り込むのは簡単にできるらしいと知り、無謀にも挑戦。  
-Rubyなんて扱ったことないから、これがコマンドなのかスクリプトなのか判らないという状態で数ヶ月止まったままだったが…
+
 
 ## 変換
-先に`gem install jekyll-import`  
+Rubyなんて扱ったことないから、これがコマンドなのかスクリプトなのか判らないという状態で数ヶ月止まったままだったが…  
+
+最初にに`gem install jekyll-import`を。てっきりスクリプトの名前かと思ってた…  
 コマンドラインから以下を実行。
 ```ruby
 $ ruby -rubygems -e 'require "jekyll-import";
