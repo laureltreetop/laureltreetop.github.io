@@ -15,13 +15,21 @@ permalink: /githubpages/jekyll-theme/
 あちこちにいろいろ。   
 - [jekyllthemes.io](https://jekyllthemes.io/)  
 
-当方は[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)を使っています。   
-詳しくは[Minimal Mistakes](/docs/minimal-mistakes/)（当サイト内）を参照。
-
-
-## お手軽に導入できるテーマ
+### お手軽に導入できるテーマ
 ついでに、楽に導入できたテーマも紹介しておく。
 - [Agus Makmun](https://agusmakmun.github.io/)
 - [solo](https://chibicode.github.io/solo/)    
 
 ただし今回の用途ではちょーっとレイアウトが違うなーと見送り。
+
+当方は[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)を使うことに。   
+
+### Minimal Mistakesを導入
+[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)からインストール。
+
+## 設定
+[minimal-mistakes/docs](https://github.com/mmistakes/minimal-mistakes/tree/master/docs)
+
+公式サイトを見ながら実際の構成を見て設定を確認しつつやってみたら、ブログっぽいものが作れるように。
+
+
