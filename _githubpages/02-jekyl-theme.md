@@ -36,6 +36,8 @@ permalink: /githubpages/jekyll-theme/
 [Fork A Repo](https://help.github.com/articles/fork-a-repo/)を見つつ、まずはFork（ってよく判ってない）。  
 その後コマンドで、
 ```sh
-$ git clone https://github.com/<em>user-name</em>/solo
-$ jekyll new <em>your-repository</em>
+$ git clone https://github.com/user-name/solo
+$ jekyll new your-repository
 ```
+"new"ってくらいなので、既にコンテンツがある場合は怒られる。  
+敢えて真っさらから作る場合は`jekyll new -f your_repository`で。
