@@ -20,7 +20,7 @@ permalink: /githubpages/jekyll/
 
 
 ## お手軽に導入できるテーマ
-ついでに、楽に導入できたテーマも紹介しておく。これらならRuby要らず。
+ついでに、楽に導入できたテーマも紹介しておく。
 
 - [Agus Makmun](https://agusmakmun.github.io/)
 - [solo](https://chibicode.github.io/solo/)    
