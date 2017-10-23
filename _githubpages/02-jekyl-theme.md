@@ -25,8 +25,9 @@ permalink: /githubpages/jekyll-theme/
 
 公式サイトを見ながら実際の構成を見て設定を確認しつつやってみたら、ブログっぽいものが作れるように。
 
-## おまけ? [solo](https://chibicode.github.io/solo/)  を導入する場合
-[Fork A Repo](https://help.github.com/articles/fork-a-repo/)を見つつ、まずは[Fork](https://github.com/chibicode/solo/fork)（ってよく判ってない）。  
+## おまけ? [solo](https://chibicode.github.io/solo/)を導入する場合
+[Fork A Repo](https://help.github.com/articles/fork-a-repo/)を見つつ、まずは[Fork](https://github.com/chibicode/solo/fork)  
+（ってよく判ってない）。  
 その後コマンドで引っ張ってくる。  
 敢えて真っさらから作って見る。
 ```sh
@@ -35,5 +36,5 @@ $ git init
 $ jekyll new your_repository
 ```
 "new"ってくらいなので、既にコンテンツがある場合は怒られる。  
-敢えて真っさらから作る場合は`jekyll new -f your_repository`で。
+敢えて真っさらから作る場合は`jekyll new -f your_repository`で。  
 [Agus Makmun](https://agusmakmun.github.io/)も同じような手順。
