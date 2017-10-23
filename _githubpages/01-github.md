@@ -15,11 +15,14 @@ GitHub Pagesなのですから、当然最初はGitHubの準備や設定やら�
 
 `Settings`→`GitHub Pages`→`Custom domain`に、ドメインを設定。   
 例えば当方なら`github.treetop.to`という感じで。   
-リポジトリにCNAMEというファイルが作成されて、その中にカスタムドメインがぴろっと書かれていたら正解。
+リポジトリにCNAMEというファイルが作成されて、その中にカスタムドメインがぴろっと書かれていたら正解。  
+手元で管理できるようにリポジトリを.zipでローカルに展開。  
+`git init`で管理スタート。
 
 ## DNS設定
 github.treetop.toなCNAMEレコードに、`hoehoe.github.io`なリポジトリ名を設定。
 
 ## 環境構築 on Windows 
 自分がそうなので。オレオレですみません。   
-[GitHub Desktop](https://desktop.github.com/)をインストール。
+[GitHub Desktop](https://desktop.github.com/)をインストール。  
+
