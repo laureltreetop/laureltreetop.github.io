@@ -15,12 +15,6 @@ permalink: /githubpages/jekyll-theme/
 あちこちにいろいろ。   
 - [jekyllthemes.io](https://jekyllthemes.io/)  
 
-### お手軽に導入できるテーマ
-ついでに、楽に導入できたテーマも紹介しておく。
-- [Agus Makmun](https://agusmakmun.github.io/)
-
-ただし今回の用途ではちょーっとレイアウトが違うなーと見送り。
-
 当方は[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)を使うことに。   
 
 ### Minimal Mistakesを導入
@@ -36,7 +30,10 @@ permalink: /githubpages/jekyll-theme/
 その後コマンドで引っ張ってくる。
 ```sh
 $ git clone https://github.com/user-name/solo
+```
+
 $ jekyll new your-repository
 ```
 "new"ってくらいなので、既にコンテンツがある場合は怒られる。  
-敢えて真っさらから作る場合は`jekyll new -f your_repository`で。
+敢えて真っさらから作る場合は`git init`と`jekyll new -f your_repository`で。
+[Agus Makmun](https://agusmakmun.github.io/)も同じような手順。
