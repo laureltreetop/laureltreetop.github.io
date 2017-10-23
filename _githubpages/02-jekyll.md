@@ -1,5 +1,5 @@
 ---
-last_modified_at: 2017-10-22
+last_modified_at: 2017-10-23
 title: "Jekyll"
 permalink: /githubpages/jekyll/
 ---
@@ -9,6 +9,7 @@ permalink: /githubpages/jekyll/
 - [Jekyll](http://jekyllrb.com/)   
 - [Jekyll（日本語訳）](http://jekyllrb-ja.github.io/)   
 - [Import your old & busted site or blog for use with Jekyll](http://import.jekyllrb.com/)
+- [Run Jekyll on Window](http://jekyll-windows.juthilo.com/)
 
 ## Jekyll用テーマ
 あちこちにいろいろ。   
