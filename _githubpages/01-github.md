@@ -1,5 +1,6 @@
 ---
-last_modified_at: 2017-08-04 23:34 +0900
+date: 2017-08-04 23:34 +0900
+last_modified_at: 2017-10-24
 title: "GitHub start"
 permalink: /githubpages/github/
 ---
