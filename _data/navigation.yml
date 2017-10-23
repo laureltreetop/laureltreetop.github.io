@@ -22,9 +22,9 @@ githubpages:
       - title: "GitHub"
         url: /githubpages/github/
       - title: "Jekyll"
-        url: /githubpages/jekyll/
+        url: /githubpages/jekyll-theme/
       - title: "Ruby on Windows"
-        url: /githubpages/ruby-windows/
+        url: /githubpages/jekyll-windows/
       - title: "Minimal Mistakes"
         url: /githubpages/minimal-mistakes/
       - title: "Markdown"
