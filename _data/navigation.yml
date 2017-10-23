@@ -21,9 +21,9 @@ githubpages:
     children:
       - title: "GitHub"
         url: /githubpages/github/
-      - title: "Jekyll"
+      - title: "Jekyll Theme"
         url: /githubpages/jekyll-theme/
-      - title: "Ruby on Windows"
+      - title: "Jekyll on Windows"
         url: /githubpages/jekyll-windows/
       - title: "Minimal Mistakes"
         url: /githubpages/minimal-mistakes/
