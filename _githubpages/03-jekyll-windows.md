@@ -11,10 +11,10 @@ permalink: /githubpages/jekyll-windows/
 
 ## Ruby & DevKitを導入
 [Ruby Installer](https://rubyinstaller.org/)からRubyとDevKitをダウンロード。  
-## Ruby
+### Ruby
 途中でコマンドターミナルが出てきて、いろいろインストールしていく。  
 いいのかな、これで正解?  
-## Ruby DevKit
+### Ruby DevKit
 解凍するとき、インストール先のフォルダ名も指定しないと、たとえばダウンロードフォルダ中にそのまま散らばっちゃう…  
 要・フォルダ指定。
 
