@@ -1,7 +1,7 @@
 ---
 last_modified_at: 2017-10-23
-title: "Jekyll"
-permalink: /githubpages/jekyll/
+title: "Jekyll Theme"
+permalink: /githubpages/jekyll-theme/
 ---
 {% include toc icon="gears" title="Jekyll" %} 未だに勉強中。とりあえずリンクだけ張っていく。
 
@@ -21,7 +21,6 @@ permalink: /githubpages/jekyll/
 
 ## お手軽に導入できるテーマ
 ついでに、楽に導入できたテーマも紹介しておく。
-
 - [Agus Makmun](https://agusmakmun.github.io/)
 - [solo](https://chibicode.github.io/solo/)    
 
