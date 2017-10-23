@@ -11,7 +11,7 @@ Bloggerの記事をJykillに取り込むのは簡単にできるらしいと知�
 Bloggerの`ブログ設定`→`その他`→`コンテンツをバックアップ`で取り込める。
 
 ## 変換
-元ネタはJekyllサイトにある[Blogger](http://import.jekyllrb.com/docs/blogger/)。  
+元ネタは[Import your old & busted site or blog for use with Jekyll.]より。  
 Rubyなんて扱ったことないから、これがコマンドなのかスクリプトなのか判らないという状態で数ヶ月止まったままだったが…  
 
 最初に`gem install jekyll-import`を。てっきりスクリプトの名前がjekyll-importなのかと思ってた…  
