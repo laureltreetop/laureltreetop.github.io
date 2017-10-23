@@ -6,11 +6,11 @@ permalink: /githubpages/jekyll-windows/
 {% include toc icon="gears" title="Jekyll on Windows" %}
 オレオレですが、ほんとに苦労したので。   
 
-[Run Jekyll on Windows](http://jekyll-windows.juthilo.com/)が詳しい。  
+[Run Jekyll on Windows](http://jekyll-windows.juthilo.com/)が詳しい。  
 実はこのメモページは要らないのでは? でも記録用として残しておく。
 
 ## Rubyを導入
-[Ruby Installer](https://rubyinstaller.org/)からダウンロードし、インストール。  
+[Ruby Installer](https://rubyinstaller.org/)からダウンロードし、インストール。  
 途中でコマンドターミナルが出てきて、いろいろインストールしていく。  
 いいのかな、これで正解?  
 
