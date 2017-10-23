@@ -19,3 +19,10 @@ $ ruby -rubygems -e 'require "jekyll-import";
 思ったよりも静かに完了するが、_posts/にダーッとファイルが生成されてる。
 
 ## 手直し
+拡張子が.htmlになっているので、.mdなファイルにリネーム。  
+```sh
+$ ren *.html *.mb
+```
+自分用メモ
+>git shだと、renは動かないよ…
+
