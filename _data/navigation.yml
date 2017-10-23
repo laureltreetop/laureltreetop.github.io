@@ -27,6 +27,8 @@ githubpages:
         url: /githubpages/jekyll-windows/
       - title: "Markdown"
         url: /githubpages/markdown/
+      - title: "Blogger to Jykill"
+        url: /githubpages/blogger-to-jekyll/
 Tumblr:
   - title: "Tumblr"
     children:
