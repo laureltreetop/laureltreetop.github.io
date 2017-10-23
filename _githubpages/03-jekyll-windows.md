@@ -26,6 +26,10 @@ permalink: /githubpages/jekyll-windows/
 `gem install bundler`  
 その後`bundle update`が必要?
 
+## Gemflleに追加とか
+```ruby
+gem 'wdm', '~> 0.1.1' if Gem.win_platform?
+```
 ## ローカルで確認しちゃう?
 コマンド`bundle exec jekyll serve`で立ち上げられる。    
 
