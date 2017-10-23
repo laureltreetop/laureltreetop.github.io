@@ -4,7 +4,8 @@ title: "Jekyll on Windows"
 permalink: /githubpages/jekyll-windows/
 ---
 {% include toc icon="gears" title="Jekyll on Windows" %}
-オレオレですが、ほんとに苦労したので。   
+オレオレですが、ほんとに苦労したので。  
+しかもこの記事をまとめるために、いったんuninstallしました…  
 
 [Run Jekyll on Windows](http://jekyll-windows.juthilo.com/)が詳しい。  
 実はこのメモページは要らないのでは? でも記録用として残しておく。
@@ -19,7 +20,11 @@ permalink: /githubpages/jekyll-windows/
 要・フォルダ指定。
 
 ## Jekyllをインストール
-`gem install jekyll`でインストール。　　
+`gem install jekyll`でインストール。　
+```sh
+$ gem install jekyll
+```
+
 これまた大量にインストールされていきますなぁ…（←他人事）
 
 ## Bundler
