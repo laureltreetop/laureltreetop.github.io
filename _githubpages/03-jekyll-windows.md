@@ -15,8 +15,11 @@ permalink: /githubpages/jekyll-windows/
 いいのかな、これで正解?  
 
 ## Jekyllをインストール
-`gem install jekyll`でインストール。
+`gem install jekyll`でインストール。　　
+これまた大量にインストールされていきますなぁ…（←他人事）
 
+## Bundler
+`gem install bundler`でインストール。
 
 ## ローカルで確認しちゃう?
 コマンド`bundle exec jekyll serve`で立ち上げられる。    
