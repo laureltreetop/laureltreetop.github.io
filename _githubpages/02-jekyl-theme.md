@@ -17,10 +17,10 @@ permalink: /githubpages/jekyll-theme/
 
 当方は[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)を使うことに。   
 
-### Minimal Mistakesを導入
+## Minimal Mistakesを導入
 [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)からインストール。
 
-#### 設定
+### 設定
 [minimal-mistakes/docs](https://github.com/mmistakes/minimal-mistakes/tree/master/docs)
 
 公式サイトを見ながら実際の構成を見て設定を確認しつつやってみたら、ブログっぽいものが作れるように。
