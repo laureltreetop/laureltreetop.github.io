@@ -174,8 +174,8 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-# paginate: 5 # amount of posts to show
-# paginate_path: /page:num/
+paginate: 10 # amount of posts to show
+paginate_path: /blog/page:num/
 timezone: Asia/Tokyo
 
 
@@ -186,6 +186,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-archives
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -211,18 +212,30 @@ category_archive:
 tag_archive:
   type: liquid # jekyll-archives or liquid (default)
   path: /tags/
+year:
+  type: liquid # jekyll-archives or liquid (default)
+  path: /posts/  
 # https://github.com/jekyll/jekyll-archives
 jekyll-archives:
-  enabled:
-    - categories
-    - tags
-  layouts:
-    category: archive-taxonomy
-    tag: archive-taxonomy
-    permalinks:
+  enabled: []
+#     - categories
+#     - tags
+#     - year
+#     - month
+#     - day
+  layouts: archive-taxonomy
+#    category: archive-taxonomy
+#    tag: archive-taxonomy
+#    blog: archive-taxonomy
+#    year: archive-taxonomy
+#    month: archive-taxonomy
+#    day: archive-taxonomy
+  permalinks:
     category: /categories/:name/
     tag: /tags/:name/
-
+    year: /:year/
+    month: /:year/:month/
+    day: /:year/:month/:day/
 
 # HTML Compression
 # - http://jch.penibelst.de/

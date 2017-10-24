@@ -1,0 +1,15 @@
+---
+layout: splash
+permalink: /month-archive/
+title: "Posts by Year, Month"
+author_profile: true
+---
+{% capture written_year-month %}'None'{% endcapture %}
+{% for post in site.posts %}
+  {% capture year-month %}{{ post.date | date: '%Y-%m' }}{% endcapture %}
+  {% if year-month != written_year-month %}
+    <h3 id="{{ year-month | slugify }}" class="archive__subtitle">{{ year-month }}</h3>
+    {% capture written_year-month %}{{ year-month }}{% endcapture %}
+  {% endif %}
+  {% include archive-single.html %}
+{% endfor %}
