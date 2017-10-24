@@ -1,7 +1,7 @@
 ---
 layout: home
 author_profile: true
-permalink: "/blog/index.html"
+permalink: "/"
 header:
   overlay_image: /assets/images/github-header.png
   overlay_filter: rgba(255, 255, 255, 0.5)
@@ -9,35 +9,6 @@ pagination:
   enabled: true
 ---
 "GitHub"と付けているということは、他にもあちこちにサイトがあったり。
-
-<!-- ページ分割されたpostsに対してループ -->
-{% for post in paginator.posts %}
-  <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-  <p class="author">
-    <span class="date">{{ post.date }}</span>
-  </p>
-{% endfor %}
-
-ほえほえ
-
-{% if paginator.total_pages > 1 %}
-<ul>
-  {% if paginator.previous_page %}
-  <li>
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
-  </li>
-  {% endif %}
-  {% if paginator.next_page %}
-  <li>
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
-  </li>
-  {% endif %}
-</ul>
-{% endif %}
-
-
-
-{% include paginator.html %}
 
 {% include feature_row id="intro" type="center" %}
 
