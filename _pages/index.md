@@ -8,6 +8,10 @@ header:
 ---
 "GitHub"と付けているということは、他にもあちこちにサイトがあったり。
 
+{% for post in paginator.posts %}
+  {% include archive-single.html %}
+{% endfor %}
+
 {% include feature_row id="intro" type="center" %}
 
 {% include feature_row %}
