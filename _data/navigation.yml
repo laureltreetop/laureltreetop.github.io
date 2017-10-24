@@ -11,7 +11,7 @@ main:
   - title: "Lifelog"
     url: /lifelog/start/
   - title: "愚痴"
-    url: /year-archive/
+    url: /month-archive/
   - title: "自分?"
     url: /about/
 

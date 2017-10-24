@@ -12,6 +12,12 @@ header:
   {% include archive-single.html %}
 {% endfor %}
 
+{% include post_pagination.html %}
+
+{% include paginator.html %}
+
+
+
 {% include feature_row id="intro" type="center" %}
 
 {% include feature_row %}
