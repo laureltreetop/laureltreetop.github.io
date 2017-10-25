@@ -46,4 +46,5 @@ $ jekyll new your_repository
 repository: "username/repository-name"
 github: http://your-domain
 ```
-…追加しなくても動いたので、メモ書き程度に。
+…追加しなくても動いたので、メモ書き程度に。  
+あと、Jekyllさんに小言を言われないように、`gems:`を`plugins:`に書き換える。
