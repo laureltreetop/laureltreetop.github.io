@@ -186,6 +186,7 @@ plugins:
   - jekyll-feed
   - jemoji
   #- jekyll-paginate-v2
+# https://github.com/sverrirs/jekyll-paginate-v2
 
 # mimic GitHub Pages with --safe
 whitelist:
