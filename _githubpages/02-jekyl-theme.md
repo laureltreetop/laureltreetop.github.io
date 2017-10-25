@@ -40,9 +40,10 @@ $ jekyll new your_repository
 敢えて真っさらから作る場合は`jekyll new -f your_repository`で。  
 
 ## おまけ? その2 Agus Makmunを導入する場合
-[Agus Makmun](https://agusmakmun.github.io/)も基本的にはSoloと同じようにいけた。  
-ただ、ローカルで立ち上げるときに、_config.ymlにちょっと追加。  
-```jekyll
+[Agus Makmun](https://agusmakmun.github.io/)も基本的にはSoloと同じようにいけた。  
+<strike>ただ、ローカルで立ち上げるときに、_config.ymlにちょっと追加。 </strike>
+```
 repository: "username/repository-name"
 github: http://your-domain
 ```
+…追加しなくても動いたので、メモ書き程度に。
