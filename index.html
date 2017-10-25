@@ -1,17 +1,25 @@
 ---
-layout: home
+layout: archive
 author_profile: true
 permalink: "/"
+pagination: 
+  enabled: true
 header:
   overlay_image: /assets/images/github-header.png
   overlay_filter: rgba(255, 255, 255, 0.5)
-pagination:
-  enabled: true
 ---
-"GitHub"と付けているということは、他にもあちこちにサイトがあったり。
+{% capture written_year-month %}'None'{% endcapture %}
+{% for post in paginator.posts %}
+  {% capture year-month %}{{ post.date | date: '%Y-%m' }}{% endcapture %}
+  {% if year-month != written_year-month %}
+    <h3 id="{{ year-month | slugify }}" class="archive__subtitle">{{ year-month }}</h3>
+    {% capture written_year-month %}{{ year-month }}{% endcapture %}
+  {% endif %}
+  {% include archive-single.html %}
+{% endfor %}
+
+{% include paginator.html %}
 
 {% include feature_row id="intro" type="center" %}
 
 {% include feature_row %}
-
-

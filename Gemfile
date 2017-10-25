@@ -10,4 +10,5 @@ gem "minimal-mistakes-jekyll", :github => "mmistakes/minimal-mistakes"
 # https://mmistakes.github.io/minimal-mistakes/docs/installation/
 # If you have any other plugins, put them here!
 group :jekyll_plugins do
+    gem "jekyll-paginate-v2"
 end
