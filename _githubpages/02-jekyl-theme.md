@@ -37,4 +37,11 @@ $ jekyll new your_repository
 ```
 "new"ってくらいなので、既にコンテンツがある場合は怒られる。  
 敢えて真っさらから作る場合は`jekyll new -f your_repository`で。  
-[Agus Makmun](https://agusmakmun.github.io/)も同じような手順。
+
+## おまけ? その2 [Agus Makmun](https://agusmakmun.github.io/)を導入する場合
+基本的にはSoloと同じようにいけた。  
+ただ、ローカルで立ち上げるときに、_config.ymlにちょっと追加。  
+```yml
+repository               : "username/repository-name"
+github : [metadata]
+```
