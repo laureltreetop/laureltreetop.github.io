@@ -44,5 +44,5 @@ $ jekyll new your_repository
 ただ、ローカルで立ち上げるときに、_config.ymlにちょっと追加。  
 ```jekyll
 repository: "username/repository-name"
-github: [metadata]
+github: http://your-domain
 ```
