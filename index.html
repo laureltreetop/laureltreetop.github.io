@@ -8,6 +8,7 @@ header:
   overlay_image: /assets/images/github-header.png
   overlay_filter: rgba(255, 255, 255, 0.5)
 ---
+<!--
 {% capture written_year-month %}'None'{% endcapture %}
 {% for post in paginator.posts %}
   {% capture year-month %}{{ post.date | date: '%Y-%m' }}{% endcapture %}
@@ -19,7 +20,7 @@ header:
 {% endfor %}
 
 {% include paginator.html %}
-
+-->
 {% include feature_row id="intro" type="center" %}
 
 {% include feature_row %}
