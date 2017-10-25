@@ -277,19 +277,21 @@ autopages:
 
 # Plugins (previously gems:)
 plugins:
-  - jekyll-paginate
+  #- jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-paginate-v2
 
 # mimic GitHub Pages with --safe
 whitelist:
-  - jekyll-paginate
+  #- jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-paginate-v2
   
 # Archives
 #  Type
