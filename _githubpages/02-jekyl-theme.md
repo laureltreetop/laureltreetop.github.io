@@ -41,7 +41,7 @@ $ jekyll new your_repository
 
 ## おまけ? その2 Agus Makmunを導入する場合
 [Agus Makmun](https://agusmakmun.github.io/)も基本的にはSoloと同じようにいけた。  
-~~~ただ、ローカルで立ち上げるときに、_config.ymlにちょっと追加。 ~~~
+~~ただ、ローカルで立ち上げるときに、_config.ymlにちょっと追加。 ~~
 ```
 repository: "username/repository-name"
 github: http://your-domain
