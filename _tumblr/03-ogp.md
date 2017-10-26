@@ -9,18 +9,18 @@ permalink: /tumblr/ogp/
 ### Metaタグ・まとめて設定編
 少し見づらくなりますが、こんな感じで。
 
-~~~html
+```html
 <meta property="og:site_name" content="{Title}"/>
 <meta property="og:type" content="{block:IndexPage}website{/block:IndexPage}{block:PermalinkPage}article{/block:PermalinkPage}">
 <meta property="og:url" content="{block:IndexPage}{BlogURL}{block:SearchPage}search/{SearchQuery}{/block:SearchPage}{block:TagPage}tagged/{Tag}{/block:TagPage}{block:DayPage}day/{Year}/{MonthNumberWithZero}/{DayOfMonthWithZero}/{/block:DayPage}{/block:IndexPage}{block:PermalinkPage}{Permalink}{/block:PermalinkPage}"/>
 <meta property="og:title" content="{Title}{block:PostSummary} - {PostSummary}{/block:PostSummary}{block:SearchPage} - {lang:SearchResultCount results for SearchQuery}{/block:SearchPage}{block:TagPage} - {lang:Posts tagged Tag}{/block:TagPage}{block:DayPage} - {Year}.{MonthNumberWithZero}.{DayOfMonthWithZero}{/block:DayPage}"/>
 {block:IndexPage}<meta property="og:description" content="{MetaDescription}{block:PostSummary} - {PostSummary}{/block:PostSummary}">{/block:IndexPage}
-~~~
+```
 
 ### Metaタグ・個別設定編
 `og:image`がいちばんややこしい。
 
-~~~html
+```html
   {block:PermalinkPage}
  
     {block:Posts}
@@ -89,8 +89,7 @@ permalink: /tumblr/ogp/
     <meta property="og:description" content="{MetaDescription}"/>
     <meta property="og:image" content="{HeaderImage}"/>
   {/block:IndexPage}
-
-~~~
+```
 
 ### 確認
 [facebook for deveropers シェアデバッガー](https://developers.facebook.com/tools/debug/sharing/)で確認。  

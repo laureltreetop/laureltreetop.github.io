@@ -10,8 +10,8 @@ main:
     url: /tumblr/start/
   - title: "Lifelog"
     url: /lifelog/start/
-#   - title: "愚痴"
-#     url: /month-archive/
+  - title: "愚痴"
+    url: /month-archive/
   - title: "自分?"
     url: /about/
 
@@ -21,10 +21,10 @@ githubpages:
     children:
       - title: "GitHub"
         url: /githubpages/github/
-      - title: "Jekyll Theme"
-        url: /githubpages/jekyll-theme/
       - title: "Jekyll on Windows"
         url: /githubpages/jekyll-windows/
+      - title: "Jekyll Theme"
+        url: /githubpages/jekyll-theme/
       - title: "Markdown"
         url: /githubpages/markdown/
       - title: "Blogger to Jykill"
