@@ -2,12 +2,14 @@
 layout: archive
 author_profile: true
 permalink: "/"
-pagination:
-  enabled: true
-header:
-  overlay_image: /assets/images/github-header.png
-  overlay_filter: rgba(255, 255, 255, 0.5)
+#pagination:
+#  enabled: true
+#header:
+#  overlay_image: /assets/images/github-header.png
+#  overlay_filter: rgba(255, 255, 255, 0.5)
 ---
+
+{% comment %}
   <ul class="posts">
     {% for post in paginator.posts %}
       <li class="triangle"><a href="{{ post.url }}">{{ post.title }}</a> &raquo; <i><span>{{ post.date | date_to_string }}</span></i></li>
@@ -15,7 +17,7 @@ header:
   </ul>
 
 {% include paginator.html %}
-{% comment %}
+
 {% include feature_row id="intro" type="center" %}
 {% include feature_row %}
 {% endcomment %}
