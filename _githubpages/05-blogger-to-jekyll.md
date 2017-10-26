@@ -27,7 +27,7 @@ $ ruby -rubygems -e 'require "jekyll-import";
 ## 手直し
 拡張子が.htmlになっているので、.mdなファイルにリネーム。  
 ```sh
-$ ren *.html *.mb
+$ ren *.html *.md
 ```
 自分用メモ
 >git shだと、renは動かないよ…
