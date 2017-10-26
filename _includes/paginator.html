@@ -7,10 +7,19 @@
       {% if paginator.previous_page == 1 %}
         <li><a href="{{ first_page_path }}">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a></li>
       {% else %}
-        <li><a href="{{ site.paginate_path | replace: ':num', paginator.previous_page | replace: '//', '/' | absolute_url }}">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a></li>
+      <!-- 2017/10/26
+        <li><a href="{{ site.paginate_path | replace: ':num', paginator.previous_page | replace: '//', '/' | absolute_url }}">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</a>
+-->
+      <li><a href="{{ site.paginate_path | replace: ':num', paginator.previous_page | replace: '//', '/' | absolute_url }}"><i class="fa fa-angle-double-left"></i></a>
+      </li>
       {% endif %}
+    <!-- 2017/10/26 -->
+    <li><a href="/">さいしょ</a></li>
     {% else %}
+    <!--　2017/10/26
     <li><a href="#" class="disabled"><span aria-hidden="true">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</span></a></li>
+-->
+    <li><a href="#" class="disabled"><span aria-hidden="true"><i class="fa fa-angle-double-left"></i></span></a></li>
     {% endif %}
 
     {% comment %} First page {% endcomment %}
@@ -59,10 +68,17 @@
     {% endif %}
 
     {% comment %} Link next page {% endcomment %}
+    <li><a href="/page/{{ paginator.total_pages }}/">さいご</a></li>
     {% if paginator.next_page %}
+    <!-- 2017/10/26
       <li><a href="{{ site.paginate_path | replace: ':num', paginator.next_page | replace: '//', '/' | absolute_url }}">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</a></li>
+-->
+    <li><a href="{{ site.paginate_path | replace: ':num', paginator.next_page | replace: '//', '/' | absolute_url }}"><i class="fa fa-angle-double-right"></i></a></li>
     {% else %}
+    <!-- 2017/10/26
       <li><a href="#" class="disabled"><span aria-hidden="true">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</span></a></li>
+-->
+    <li><a href="#" class="disabled"><span aria-hidden="true"><i class="fa fa-angle-double-right"></i></span></a></li>
     {% endif %}
   </ul>
 </nav>
