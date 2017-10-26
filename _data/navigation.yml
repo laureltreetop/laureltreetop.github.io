@@ -10,8 +10,8 @@ main:
     url: /tumblr/start/
   - title: "Lifelog"
     url: /lifelog/start/
-  - title: "愚痴"
-    url: /month-archive/
+#   - title: "愚痴"
+#     url: /month-archive/
   - title: "自分?"
     url: /about/
 
