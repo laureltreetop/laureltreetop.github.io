@@ -14,10 +14,21 @@ GitHub Pagesなのですから、当然最初はGitHubの準備や設定やら�
 最初からカスタムドメインで運用する前提で書きます。自分がそうだったので。   
 リポジトリ名は`hoehoe.github.io`で作成。
 
+リポジトリを作成したら、とりあえずテーマ設定
+
+
 `Settings`→`GitHub Pages`→`Custom domain`に、ドメインを設定。   
 例えば当方なら`github.treetop.to`という感じで。   
+
+
 リポジトリにCNAMEというファイルが作成されて、その中にカスタムドメインがぴろっと書かれていたら正解。  
-手元で管理できるようにリポジトリを.zipでローカルに展開。  
+
+手元に持ってくる
+```
+git clone git@github.com:username/hoehoe.github.io.git
+```
+
+コピってきた中身があるディレクトリに移動。  
 `git init`で管理スタート。
 
 ## DNS設定

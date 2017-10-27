@@ -20,6 +20,37 @@ permalink: /githubpages/jekyll-theme/
 ## Minimal Mistakesを導入
 [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)からインストール。
 
+
+```
+git clone git@github.com:/minimal-mistakes.git
+```
+
+要らないファイルを削除
+[Quick Start Guide](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/)
+
+Gemfile書き換え。
+
+```
+source 'https://rubygems.org'
+gem 'github-pages', group: :jekyll_plugins
+
+gem "tzinfo-data"
+gem 'wdm', '~> 0.1.1' if Gem.win_platform?
+```
+_config.ymlに追記
+["No GitHub API authentication" error #399](https://github.com/github/pages-gem/issues/399)
+```
+github: [metadata]
+```
+環境変数を追加
+[http://fanblogs.jp/affiliate-nyuumon/archive/24/0](http://fanblogs.jp/affiliate-nyuumon/archive/24/0)
+RUBYOPT
+-Ku
+
+`bundle update`
+
+`bundle exec jekyll serve`
+
 ### 設定
 [minimal-mistakes/docs](https://github.com/mmistakes/minimal-mistakes/tree/master/docs)
 
