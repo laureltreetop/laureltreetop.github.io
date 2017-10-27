@@ -1,6 +1,9 @@
 ---
-layout: splash
+layout: single
 author: Treetop
+author_profile: true
+share: true
+comments: true
 title: "about me"
 permalink: /about/
 ---
