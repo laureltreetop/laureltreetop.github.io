@@ -1,5 +1,5 @@
 ---
-last_modified_at: 2017-10-23
+last_modified_at: 2017-10-28
 title: "Jekyll on Windows"
 permalink: /githubpages/jekyll-windows/
 ---
@@ -8,7 +8,14 @@ permalink: /githubpages/jekyll-windows/
 しかもこの記事をまとめるために、いったんuninstallしました…  
 
 [Run Jekyll on Windows](http://jekyll-windows.juthilo.com/)が詳しい。  
-実はこのメモページは要らないのでは? でも記録用として残しておく。
+実はこのメモページは要らないのでは? でも記録用として残しておく。  
+
+## Jekyll参照リンク
+- [Jekyll](http://jekyllrb.com/)   
+- [Jekyll（日本語訳）](http://jekyllrb-ja.github.io/)   
+- [Import your old & busted site or blog for use with Jekyll](http://import.jekyllrb.com/)
+- [Run Jekyll on Window](http://jekyll-windows.juthilo.com/)
+
 
 ## Ruby & DevKitを導入
 [Ruby Installer](https://rubyinstaller.org/)からRubyとDevKitをダウンロード。  
@@ -30,17 +37,5 @@ $ gem install jekyll
 ## Bundler
 `gem install bundler`  
 その後`bundle update`が必要?
-
-## Gemflleに追加とか
-```ruby
-gem 'wdm', '~> 0.1.1' if Gem.win_platform?
-```
-## ローカルで確認しちゃう?
-コマンド`jekyll serve`または`bundle exec jekyll serve`で立ち上げられる。    
-`http://127.0.0.1:4000/`で確認。
-
-### なんだかエラーが出るんですが。
-エラーメッセージを見ると、gem installしたやつがバージョンに合わないらしい。  
-`gem list hoge`で確認して、合わないバージョンのは`gem uninstall -v x.x.x hoge`で削除。
 
 試行錯誤中。
