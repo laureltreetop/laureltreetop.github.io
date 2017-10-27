@@ -21,59 +21,64 @@ permalink: /githubpages/jekyll-theme/
 [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)からインストール。
 
 
-```
-git clone git@github.com:/minimal-mistakes.git
+```sh
+$ git clone git@github.com:/minimal-mistakes.git
 ```
 
-要らないファイルを削除
-[Quick Start Guide](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/)
+[Quick Start Guide](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/)を参考に、要らないファイルを削除。  
 
 Gemfile書き換え。
 
-```
+```ruby
 source 'https://rubygems.org'
 gem 'github-pages', group: :jekyll_plugins
 
 gem "tzinfo-data"
 gem 'wdm', '~> 0.1.1' if Gem.win_platform?
 ```
-_config.ymlに追記
-["No GitHub API authentication" error #399](https://github.com/github/pages-gem/issues/399)
+で、コマンド実行。
+
+```shell
+$ bundle update
+$ bundle exec jekyll serve
 ```
+`No GitHub API authentication...`というエラーが出てきた。  
+["No GitHub API authentication" error #399](https://github.com/github/pages-gem/issues/399)を参考に、_config.ymlに追記
+```yaml
+repository: username/repository-name
 github: [metadata]
 ```
-環境変数を追加
-[http://fanblogs.jp/affiliate-nyuumon/archive/24/0](http://fanblogs.jp/affiliate-nyuumon/archive/24/0)
-RUBYOPT
--Ku
 
-`bundle update`
+今度は`invalid byte sequence in Windows-31J...`なエラーが出てきたので、
+[[ruby]jekyll server で 『invalid byte sequence in Windows-31J～』とエラーになった時の対処方法](http://d.hatena.ne.jp/osyo-manga/20140216/1392552409)を参考にし、環境変数`RUBYOPT`に`-Ku`を設定。
 
-`bundle exec jekyll serve`
 
 ### 設定
 [minimal-mistakes/docs](https://github.com/mmistakes/minimal-mistakes/tree/master/docs)
 
-公式サイトを見ながら実際の構成を見て設定を確認しつつやってみたら、ブログっぽいものが作れるように。
+公式サイトを見ながら実際の構成を見て設定を確認しつつやってみたら、ブログっぽいものが作れるように。  
+ただ、docs/の中にある_config.ymlを持ってこないと動かないっぽい?
+
 
 ## おまけ? soloを導入する場合
 [solo](https://chibicode.github.io/solo/)もやってみたので、メモ。  
-[Fork A Repo](https://help.github.com/articles/fork-a-repo/)を見つつ、まずは[Fork](https://github.com/chibicode/solo/fork)  
-（ってよく判ってない）。  
+[Fork A Repo](https://help.github.com/articles/fork-a-repo/)を見つつ、まずは[Fork](https://github.com/chibicode/solo/fork) （ってよく判ってない）。  
 その後コマンドで引っ張ってくる。  
-敢えて真っさらから作って見る。
-```sh
+```shell
 $ git clone https://github.com/user-name/solo
+```
+で、真っさらから作ってみる。
+```shell
 $ git init
 $ jekyll new your_repository
 ```
 "new"ってくらいなので、既にコンテンツがある場合は怒られる。  
-敢えて真っさらから作る場合は`jekyll new -f your_repository`で。  
+`jekyll new -f your_repository`で。  
 
 ## おまけ? その2 Agus Makmunを導入する場合
 [Agus Makmun](https://agusmakmun.github.io/)も基本的にはSoloと同じようにいけた。  
-~~~ただ、ローカルで立ち上げるときに、_config.ymlにちょっと追加。 ~~~
-```
+<strike>ただ、ローカルで立ち上げるときに、_config.ymlにちょっと追加。</strike>
+```yaml
 repository: "username/repository-name"
 github: http://your-domain
 ```

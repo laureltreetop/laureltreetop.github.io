@@ -27,7 +27,7 @@ githubpages:
         url: /githubpages/jekyll-theme/
       - title: "Markdown"
         url: /githubpages/markdown/
-      - title: "Blogger to Jykill"
+      - title: "Blogger to Jekyll"
         url: /githubpages/blogger-to-jekyll/
 Tumblr:
   - title: "Tumblr"
@@ -58,7 +58,7 @@ sidebar:
         url: /githubpages/jekyll-theme/
       - title: "Markdown"
         url: /githubpages/markdown/
-      - title: "Blogger to Jykill"
+      - title: "Blogger to Jekyll"
         url: /githubpages/blogger-to-jekyll/
   - title: "Tumblr"
     children:
