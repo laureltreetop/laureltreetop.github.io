@@ -13,11 +13,11 @@ GitHub Pagesなのですから、当然最初はGitHubの準備や設定やら�
 ## リポジトリを作成  
 最初からカスタムドメインで運用する前提で書きます。自分がそうだったので。   
 リポジトリ名は`hoehoe.github.io`で作成。
-![New Repository](/assets/images/github-new-repository.png)
-
+<a class="image-link" href="/assets/images/github-new-repository.png"><img src="/assets/images/github-new-repository.png"></a>
 リポジトリを作成したら、とりあえず適当なテーマを設定。
 
-手元に持ってくる
+手元に持ってくる。パターンはいくつかある。↓参照。
+<a class="image-link" href="/assets/images/github-clone.png"><img src="/assets/images/github-clone.png"></a>
 ```shell
 $ git clone git@github.com:username/hoehoe.github.io.git
 ```
