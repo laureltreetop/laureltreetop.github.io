@@ -5,6 +5,16 @@ permalink: /githubpages/minimal-mistakes/
 ---
 {% include toc icon="gears" title="Jekyll" %} いろいろカスタマイズしたり、Minimal Mistakesならではの使い方とか。
 
+## 記事を書くときのテクニック的な?
+### 画像をポップアップ
+こういうやつ。
+[![Header Image](/assets/images/github-header.png)](/assets/images/github-header.png)
+[Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/)というプラグインがすでに入っているので、うまく指定すれば可能。
+```markdown
+[![Header Image](/assets/images/github-header.png)](/assets/images/github-header.png)
+```
+プラグインがaタグにしか適用されないそうな。
+
 ## カスタマイズ
 ### シェアボタンを追加
  
