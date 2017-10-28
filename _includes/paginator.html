@@ -14,7 +14,7 @@
       </li>
       {% endif %}
     <!-- 2017/10/26 -->
-    <li><a href="/">さいしょ</a></li>
+    <li><a href="/">First</a></li>
     {% else %}
     <!--　2017/10/26
     <li><a href="#" class="disabled"><span aria-hidden="true">{{ site.data.ui-text[site.locale].pagination_previous | default: "Previous" }}</span></a></li>
@@ -69,7 +69,7 @@
     {% endif %}
 
     {% comment %} Link next page {% endcomment %}
-    <li><a href="/page/{{ paginator.total_pages }}/">さいご</a></li>
+    <li><a href="/page/{{ paginator.total_pages }}/">Last</a></li>
     {% if paginator.next_page %}
     <!-- 2017/10/26
       <li><a href="{{ site.paginate_path | replace: ':num', paginator.next_page | replace: '//', '/' | absolute_url }}">{{ site.data.ui-text[site.locale].pagination_next | default: "Next" }}</a></li>
