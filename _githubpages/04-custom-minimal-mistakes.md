@@ -36,9 +36,4 @@ assets/css/main.scss
     color: $pocket-color;
   }
 }
-.btn {
- /* button colors */
-  $buttoncolors:
-  (pocket, $pocket-color);
-}
 ```
