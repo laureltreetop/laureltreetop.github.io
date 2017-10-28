@@ -25,11 +25,11 @@ _includes/social-share.html
 <a href="http://getpocket.com/edit?url={ page.url | absolute_url }" class="btn btn--get-pocket" title="{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' } Pocket"><i class="fa fa-fw fa-get-pocket" aria-hidden="true"></i><span> Pocket</span></a>
 ```
 _sass/minimal-mistakes/_variables.scss
-```css
+```scss
 $pocket-color                 : #ef4056 !default;
 ```
 _sass/minimal-mistakes/_buttons.css
-```css
+```scss
 .btn {
 ...
   /* button colors */
@@ -40,7 +40,7 @@ _sass/minimal-mistakes/_buttons.css
   }
 ```
 assets/css/main.scss
-```css
+```scss
 .social-icons {
   .fa-get-pocket {
     color: $pocket-color;

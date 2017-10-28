@@ -16,9 +16,9 @@ GitHub Pagesなのですから、当然最初はGitHubの準備や設定やら�
 …と、調べた限りでは書いてあったのだが、`github.io`を付けなくてもカスタムドメインは作れるっぽい?  
 [![GitHub New Repository](/assets/images/github-new-repository.png)](/assets/images/github-new-repository.png)
 リポジトリを作成したら、とりあえず適当なテーマを設定。
-
+[![GitHub Clone Repository](/assets/images/github-set-theme.png)](/assets/images/github-set-theme.png)
 手元に持ってくる。パターンはいくつかある。↓参照。
-[![GitHub Clone Repository](/assets/images/github-clone.png)](/assets/images/github-clone.png)
+[![GitHub Set Theme](/assets/images/github-clone.png)](/assets/images/github-clone.png)
 今回は一番上の案を採用。HTTPSなりSSHなりの文字列をコピーして、`git clone`を実行。
 HTTPSパターンだとこういう感じで。
 ```shell
