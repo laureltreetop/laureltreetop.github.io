@@ -1,5 +1,5 @@
 ---
-last_modified_at: {{ page.last_modified_at | date: "%b %-d, %Y" }}
+last_modified_at: 2017-10-28
 title: "Jekyll Theme"
 permalink: /githubpages/minimal-mistakes/
 ---
