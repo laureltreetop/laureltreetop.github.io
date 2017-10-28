@@ -1,4 +1,5 @@
 ---
+last_modified_at: {{ page.last_modified_at | date: "%b %-d, %Y" }}
 title: "Jekyll Theme"
 permalink: /githubpages/minimal-mistakes/
 ---
