@@ -1,5 +1,4 @@
 ---
-last_modified_at: 2017-10-28
 title: "Jekyll Theme"
 permalink: /githubpages/minimal-mistakes/
 ---
