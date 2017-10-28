@@ -2,7 +2,7 @@
 
 # me
 # -----------------
-ja-JP: &DEFAULT_JP
+ja-JP_custom: &DEFAULT_JP
   page                       : "ぺーじ"
   pagination_previous        : "まえ"
   pagination_next            : "つぎ"
