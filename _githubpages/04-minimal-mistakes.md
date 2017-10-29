@@ -20,11 +20,9 @@ permalink: /githubpages/minimal-mistakes/
 [Pocket](https://getpocket.com)のシェアボタンを追加してみる。  
 色は[BrandColors](https://brandcolors.net/)を参照。  
 
-_includes/social-share.html  
-…の修正した部分を引用したいのだが、変数が含まれているために、ちょっといやぁんな表示になってしまう。  
-`{...}`の部分は二重に囲ってありますので、他のボタンを参考に。
+_includes/social-share.html
 ```html
-<a href="http://getpocket.com/edit?url={ page.url | absolute_url }" class="btn btn--get-pocket" title="{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' } Pocket"><i class="fa fa-fw fa-get-pocket" aria-hidden="true"></i><span> Pocket</span></a>
+{% raw %}<a href="http://getpocket.com/edit?url={{ page.url | absolute_url }}" class="btn btn--get-pocket" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Pocket"><i class="fa fa-fw fa-get-pocket" aria-hidden="true"></i><span> Pocket</span></a>{% endraw %}
 ```
 _sass/minimal-mistakes/_variables.scss
 ```scss
@@ -42,10 +40,10 @@ _sass/minimal-mistakes/_buttons.css
   }
 ```
 assets/css/main.scss
-```scss
+{% highlight scss linenos %}
 .social-icons {
   .fa-get-pocket {
     color: $pocket-color;
   }
 }
-```
+{% endhighlight %}
