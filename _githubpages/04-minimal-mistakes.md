@@ -1,9 +1,9 @@
 ---
 last_modified_at: 2017-10-29
-title: "Jekyll Theme"
+title: "Minimal Mistakes"
 permalink: /githubpages/minimal-mistakes/
 ---
-{% include toc icon="gears" title="Jekyll" %} いろいろカスタマイズしたり、Minimal Mistakesならではの使い方とか。
+{% include toc icon="gears" title="Minimal Mistakes" %} いろいろカスタマイズしたり、Minimal Mistakesならではの使い方とか。
 
 ## 記事を書くときのテクニック的な?
 ### 画像をポップアップ
