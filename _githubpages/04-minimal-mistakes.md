@@ -1,5 +1,5 @@
 ---
-last_modified_at: 2017-10-28
+last_modified_at: 2017-10-29
 title: "Jekyll Theme"
 permalink: /githubpages/minimal-mistakes/
 ---
@@ -17,7 +17,9 @@ permalink: /githubpages/minimal-mistakes/
 
 ## カスタマイズ
 ### シェアボタンを追加
- 
+[Pocket](https://getpocket.com)のシェアボタンを追加してみる。  
+色は[BrandColors](https://brandcolors.net/)を参照。  
+
 _includes/social-share.html  
 …の修正した部分を引用したいのだが、変数が含まれているために、ちょっといやぁんな表示になってしまう。  
 `{...}`の部分は二重に囲ってありますので、他のボタンを参考に。
