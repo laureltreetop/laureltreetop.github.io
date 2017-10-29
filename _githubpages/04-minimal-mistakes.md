@@ -24,10 +24,6 @@ _includes/social-share.html
 ```html
 {% raw %}<a href="http://getpocket.com/edit?url={{ page.url | absolute_url }}" class="btn btn--get-pocket" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Pocket"><i class="fa fa-fw fa-get-pocket" aria-hidden="true"></i><span> Pocket</span></a>{% endraw %}
 ```
-_sass/minimal-mistakes/_variables.scss
-```scss
-$pocket-color                 : #ef4056 !default;
-```
 _sass/minimal-mistakes/_buttons.css
 ```scss
 .btn {
@@ -39,11 +35,15 @@ _sass/minimal-mistakes/_buttons.css
   (pocket, $pocket-color);
   }
 ```
-assets/css/main.scss
-{% highlight scss linenos %}
+_sass/minimal-mistakes/_utilities.css
+```scss
 .social-icons {
   .fa-get-pocket {
     color: $pocket-color;
   }
 }
-{% endhighlight %}
+```
+_sass/minimal-mistakes/_variables.scss
+```scss
+$pocket-color                 : #ef4056 !default;
+```
