@@ -27,8 +27,6 @@ githubpages:
         url: /githubpages/jekyll-theme/
       - title: "Minimal Mistakes"
         url: /githubpages/minimal-mistakes/
-      - title: "Markdown"
-        url: /githubpages/markdown/
       - title: "Blogger to Jekyll"
         url: /githubpages/blogger-to-jekyll/
 Tumblr:
@@ -60,8 +58,6 @@ sidebar:
         url: /githubpages/jekyll-theme/
       - title: "Minimal Mistakes"
         url: /githubpages/minimal-mistakes/
-      - title: "Markdown"
-        url: /githubpages/markdown/
       - title: "Blogger to Jekyll"
         url: /githubpages/blogger-to-jekyll/
   - title: "Tumblr"
