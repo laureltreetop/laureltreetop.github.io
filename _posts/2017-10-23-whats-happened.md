@@ -1,5 +1,4 @@
 ---
-author: Treetop
 title: "あっという間に"
 categories:
   - GitHub Pages
