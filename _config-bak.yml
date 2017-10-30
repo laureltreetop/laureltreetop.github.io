@@ -5,7 +5,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-minimal_mistakes_skin    : "default" # "air", "contrast", "dark", "dirt", "mint", "sunrise"
+minimal_mistakes_skin    : "mint" # "air", "contrast", "dark", "dirt", "mint", "sunrise"
 
 # Site Settings
 locale                   : "ja-JP"
@@ -13,10 +13,10 @@ title                    : "K's GitHub Site"
 title_separator          : "|"
 name                     : "Treetop"
 description              : "(ΦωΦ)にゃ"
-url                      : "https://github.treetop.to" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "laureltreetop/laureltreetop.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : "/assets/images/avatar-treetop.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+url                      : "https://github.treetop.to"
+baseurl                  : ""
+repository               : "laureltreetop/laureltreetop.github.io"
+teaser                   : "/assets/images/avatar-treetop.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -88,7 +88,7 @@ author:
   bio              : "I am tired."
   location         : "Japan"
   email            :
-  uri              :
+  uri              : 
   bitbucket        :
   codepen          :
   dribbble         :
@@ -179,7 +179,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 2 # amount of posts to show
+paginate: 10 # amount of posts to show
 paginate_path: /page/:num/
 timezone: Asia/Tokyo # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
@@ -191,6 +191,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-last-modified-at
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -199,6 +200,7 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-last-modified-at
 
 
 # Archives
