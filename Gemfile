@@ -11,5 +11,4 @@ gem "minimal-mistakes-jekyll"
 # https://mmistakes.github.io/minimal-mistakes/docs/installation/
 # If you have any other plugins, put them here!
 group :jekyll_plugins do
-    gem "jekyll-last-modified-at"
 end
