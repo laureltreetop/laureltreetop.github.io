@@ -28,16 +28,18 @@ _sass/minimal-mistakes/_buttons.css
 ```scss
 .btn {
 ...
-  /* button colors */
+   /* button colors */
   $buttoncolors:
   (primary, $primary-color),
+  (inverse, #fff),
 ...
+  (linkedin, $linkedin-color),
   (pocket, $pocket-color);
-  }
 ```
 _sass/minimal-mistakes/_utilities.css
 ```css
 .social-icons {
+...
   .fa-get-pocket {
     color: $pocket-color;
   }
