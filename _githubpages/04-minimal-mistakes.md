@@ -36,7 +36,6 @@ _sass/minimal-mistakes/_buttons.css
   }
 ```
 _sass/minimal-mistakes/_utilities.css
-<script src="https://gist.github.com/laureltreetop/bc64b1280cc817d099850fcc315e5c48.js"></script>
 ```css
 .social-icons {
   .fa-get-pocket {
