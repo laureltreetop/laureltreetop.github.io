@@ -12,17 +12,9 @@
         <li><a href="{{ site.paginate_path | replace: ':num', paginator.previous_page | replace: '//', '/' | absolute_url }}"><i class="fa fa-angle-double-left"></i></a></li>
       {% endif %}
     {% else %}
-    <li><a href="#" class="disabled"><span aria-hidden="true"><i class="fa fa-angle-double-left"></i></span></a></li>
+      <li><a href="#" class="disabled"><span aria-hidden="true"><i class="fa fa-angle-double-left"></i></span></a></li>
     {% endif %}
       
-<!-- 2017/10/30 -->
-    {% comment %} First page {% endcomment %}
-    {% if paginator.page == 1 %}
-      <li><a href="#" class="disabled">First</a></li>
-    {% else %}
-      <li><a href="{{ site.first_page_path | replace: ':num', paginator.previous_page | replace: '//', '/' | absolute_url }}">First</a></li>
-    {% endif %}
-
     {% if paginator.page == 1 %}
       <li><a href="#" class="disabled current">1</a></li>
     {% else %}
@@ -67,14 +59,6 @@
       <li><a href="{{ site.paginate_path | replace: ':num', paginator.total_pages | replace: '//', '/' | absolute_url }}">{{ paginator.total_pages }}</a></li>
     {% endif %}
 
-<!-- 2017/10/30 -->
-    {% comment %} Link last page {% endcomment %}    
-    {% if paginator.page == paginator.total_pages %}
-      <li><a href="#" class="disabled">Last</a></li>
-    {% else %}
-      <li><a href="{{ site.paginate_path | replace: ':num', paginator.total_pages | replace: '//', '/' | absolute_url }}">Last</a></li>
-    {% endif %}
-    
 <!-- 2017/10/30 -->
     {% comment %} Link next page {% endcomment %}
     {% if paginator.next_page %}

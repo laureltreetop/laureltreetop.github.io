@@ -1,5 +1,5 @@
 ---
-last_modified_at: 2017/08/03 15:48 +0900
+last_modified_at: 2017-10-31
 title: "Tumblr start"
 permalink: /tumblr/start/
 ---
@@ -20,14 +20,25 @@ permalink: /tumblr/start/
 ちなみにこの値は固有。  
 あと、時間がかかる。すごくかかる。なので先にDNSから設定しておく。
 
-ちなみに、[Cloudflare](https://www.cloudflare.com)にて設定している場合には、ちょいコツあり。   
-`DNS and HTTP proxy(CDN)`（オレンジ色の雲アイコン）ではなく、`DNS only`（グレーの雲アイコン）にしないといけない。   
+ちなみに、[Cloudflare](https://www.cloudflare.com)にて設定している場合には、ちょいコツあり。 
+[![Cloud Flare Orange](/assets/images/tumblr-cloudflare-orange.png)](/assets/images/tumblr-cloudflare-orange.png)
+`DNS and HTTP proxy(CDN)`（オレンジ色の雲アイコン）ではなく、  
+[![Cloud Flare Gray](/assets/images/tumblr-cloudflare-gray.png)](/assets/images/tumblr-cloudflare-gray.png)
+`DNS only`（グレーの雲アイコン）にしないといけない。  
 [Cloudflare公式にもそう書いてある](https://support.cloudflare.com/hc/en-us/articles/200168566-How-do-I-add-a-Tumblr-custom-domain-)ので、当分はそのままかも。
 
 ### カスタムドメイン設定
-`外観を編集`→`ユーザー名`→`独自ドメインを使用`よりカスタムドメインを登録。  
+`外観を編集`→`ユーザー名`→`独自ドメインを使用`よりカスタムドメインを登録。 
+[![Tumblr custom dmain](/assets/images/Tumblr-to-custom-domain.png)](/assets/images/tumblr-Tumblr-to-custom-domain.png)
 「ドメインのテスト」を通れば完了だが、前述の通り時間がかかる。  
 座して待つ。
+
+### テーマ
+無料で、カスタマイズしやすいテーマをいくつか。
++ [Accent](https://www.tumblr.com/theme/29816)
++ [Sandy](https://www.tumblr.com/theme/39616)
++ [Anchor](https://www.tumblr.com/theme/28631)
++ [ZEN](https://www.tumblr.com/theme/38954)
 
 ### 記事投稿
 テキスト、写真（1枚でも複数でも可能）、オーディオ（[Spotify](https://www.spotify.com/jp/)など）、動画（[YouTube](https://www.youtube.com/)や直接投稿したり）、リンク、引用などの投稿方法がある。

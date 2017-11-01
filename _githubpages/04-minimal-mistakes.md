@@ -1,15 +1,19 @@
 ---
-last_modified_at: 2017-10-29
+last_modified_at: 2017-10-31
 title: "Minimal Mistakes"
 permalink: /githubpages/minimal-mistakes/
+toc: true
+toc_label: "Minimal Mistakes"
+toc_icon: "gears"
 ---
-{% include toc icon="gears" title="Minimal Mistakes" %} いろいろカスタマイズしたり、Minimal Mistakesならではの使い方とか。
+いろいろカスタマイズしたり、Minimal Mistakesならではの使い方とか。
 
 ## 記事を書くときのテクニック的な?
 ### 画像をポップアップ
 こういうやつ。
 [![Header Image](/assets/images/github-header.png)](/assets/images/github-header.png)
-[Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/)というプラグインがすでに入っているので、うまく指定すれば可能。
+[Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/)というプラグインがすでに入っているので、うまく指定すれば可能。  
+記事にはこういう感じで。   
 ```markdown
 [![Header Image](/assets/images/github-header.png)](/assets/images/github-header.png)
 ```
@@ -21,31 +25,14 @@ permalink: /githubpages/minimal-mistakes/
 色は[BrandColors](https://brandcolors.net/)を参照。  
 
 _includes/social-share.html
-```html
-{% raw %}<a href="http://getpocket.com/edit?url={{ page.url | absolute_url }}" class="btn btn--get-pocket" title="{{ site.data.ui-text[site.locale].share_on_label | default: 'Share on' }} Pocket"><i class="fa fa-fw fa-get-pocket" aria-hidden="true"></i><span> Pocket</span></a>{% endraw %}
-```
+<code data-gist-id="c122ffafea2a7e5c48d826a633e581f3" data-gist-hide-footer="true"></code>  
 _sass/minimal-mistakes/_buttons.css
-```scss
-.btn {
-...
-   /* button colors */
-  $buttoncolors:
-  (primary, $primary-color),
-  (inverse, #fff),
-...
-  (linkedin, $linkedin-color),
-  (pocket, $pocket-color);
-```
+<code data-gist-id="3d31245c521449bac3218c963184c6fd" data-gist-hide-footer="true"></code>
 _sass/minimal-mistakes/_utilities.css
-```css
-.social-icons {
-...
-  .fa-get-pocket {
-    color: $pocket-color;
-  }
-}
-```
+<code data-gist-id="bc64b1280cc817d099850fcc315e5c48" data-gist-hide-footer="true"></code>
 _sass/minimal-mistakes/_variables.scss
-```scss
-$pocket-color                 : #ef4056 !default;
-```
+<code data-gist-id="182cf5e2ddc4421de0f89144ea0e9b16" data-gist-hide-footer="true"></code>
+### 過去記事まとめに月ごとの見出し
+トップでやってるやつ。  
+_layouts/home.html
+<code data-gist-id="24f0acf4480f4eef8f6c027001b41dd0" data-gist-hide-footer="true"></code>

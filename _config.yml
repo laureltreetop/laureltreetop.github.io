@@ -315,3 +315,6 @@ collections:
     output: true
     
 github: [metadata]
+head_scripts:
+  - https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js
