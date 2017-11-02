@@ -25,6 +25,8 @@ githubpages:
         url: /githubpages/jekyll-windows/
       - title: "Jekyll Theme"
         url: /githubpages/jekyll-theme/
+      - title: "Theme Customize"
+        url: /githubpages/theme-custom/
       - title: "Minimal Mistakes"
         url: /githubpages/minimal-mistakes/
       - title: "Blogger to Jekyll"
@@ -54,6 +56,8 @@ sidebar:
         url: /githubpages/jekyll-windows/
       - title: "Jekyll Theme"
         url: /githubpages/jekyll-theme/
+      - title: "Theme Customize"
+        url: /githubpages/theme-custom/
       - title: "Minimal Mistakes"
         url: /githubpages/minimal-mistakes/
       - title: "Blogger to Jekyll"
