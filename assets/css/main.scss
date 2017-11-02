@@ -30,7 +30,7 @@ body .gist .gist-file {
     border-radius: 0;
 }
 
-.gist .gist-data {
+body .gist .gist-data {
     border-bottom: none;
     border-radius: 0;
     background-color: #f1f3f5;
@@ -69,5 +69,5 @@ body .gist .blob-num {
 }
 
 body .gist .gist-meta {
-    display: none;
+    display: none !important;
 }
