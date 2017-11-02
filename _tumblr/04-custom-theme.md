@@ -10,9 +10,7 @@ toc_icon: "tumblr-square"
 ## カスタム前に
 ### JQuery
 カスタマイズの多くはJQueryを使うことが前提なので、<head>...</head>の間で呼び出しておく。
-```html
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-```
+<span><script src="https://gist.github.com/laureltreetop/59d30a038a01d98a7fe6bc1c7bcc2a91.js"></script></span>{: .blob-num style="display: none !important;"}
 最新は[Google Hosted Libraries](https://developers.google.com/speed/libraries/)で確認。
 
 ### Tumblr APIキー
