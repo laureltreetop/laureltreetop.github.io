@@ -24,13 +24,11 @@ toc_icon: "tumblr-square"
 これを<head>...</head>内でやっておくと、FacebookやTwitterにシェアしてもらったときにいい感じに。
 ### Metaタグ・まとめて設定編
 少し見づらくなりますが、こんな感じで。  
-
-<code data-gist-id="652b06062008c3585ad51dbbdadbc0a9" data-gist-hide-footer="true" data-gist-line="1-5"></code> 
+<script src="https://gist.github.com/laureltreetop/652b06062008c3585ad51dbbdadbc0a9.js"></script>
 
 ### Metaタグ・個別設定編
 `og:image`がいちばんややこしい。  
-
-<code data-gist-id="652b06062008c3585ad51dbbdadbc0a9" data-gist-hide-footer="true" data-gist-line="7-75"></code>  
+<script src="https://gist.github.com/laureltreetop/05cb4864f65765bc4d7a5e190e679823.js"></script>
 
 ### 確認
 [facebook for deveropers シェアデバッガー](https://developers.facebook.com/tools/debug/sharing/)で確認。  
