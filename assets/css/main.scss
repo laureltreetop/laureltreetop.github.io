@@ -21,10 +21,8 @@ li.triangle:before {
   color: lightgrey; /*アイコン色*/
 }
 
-/* http://pineplanter.moo.jp/non-it-salaryman/2016/08/24/blog-source-gist-height/ */
 body .gist .gist-data {
     max-height: 400px;
-    overflow: auto;
 }
 body .gist .gist-meta {
     display: none !important;
@@ -33,7 +31,12 @@ body .gist .blob-num {
     color: #ced4da;
     background-color: #495057;
     pointer-events: none;
+    border: dashed 1px #888888;
 }
+body .gist .blob-code-inner {
+    border: dashed 1px #555555;
+}
+
 /* http://codersblock.com/blog/customizing-github-gists/ */
 body .gist .highlight {
     background: #272822;
