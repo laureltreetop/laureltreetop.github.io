@@ -20,9 +20,11 @@ li.triangle:before {
   /*left : 2em; /*左端からのアイコンまで*/
   color: lightgrey; /*アイコン色*/
 }
+
 /* http://pineplanter.moo.jp/non-it-salaryman/2016/08/24/blog-source-gist-height/ */
 body .gist .gist-data {
-    max-height: 400px; 
+    max-height: 400px;
+    overflow: auto;
 }
 body .gist .gist-meta {
     display: none !important;
