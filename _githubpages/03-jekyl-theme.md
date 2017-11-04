@@ -1,9 +1,12 @@
 ---
-last_modified_at: 2017-10-28
+last_modified_at: 2017-11-04
 title: "Jekyll Theme"
 permalink: /githubpages/jekyll-theme/
+toc: true
+toc_label: "Jekyll Theme"
+toc_icon: "gears"
 ---
-{% include toc icon="gears" title="Jekyll" %} 未だに勉強中。とりあえずリンクだけ張っていく。
+未だに勉強中。とりあえずリンクだけ張っていく。
 
 ## Jekyll用テーマ
 あちこちにいろいろ。   
@@ -22,14 +25,7 @@ $ git clone git@github.com:/minimal-mistakes.git
 [Quick Start Guide](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/)を参考に、要らないファイルを削除。  
 
 Gemfile書き換え。
-
-```ruby
-source 'https://rubygems.org'
-gem 'github-pages', group: :jekyll_plugins
-
-gem "tzinfo-data"
-gem 'wdm', '~> 0.1.1' if Gem.win_platform?
-```
+<script src="https://gist.github.com/laureltreetop/f54309da6c8c814512f5cc8fa0561021.js"></script>  
 で、コマンド実行。
 
 ```shell
@@ -44,11 +40,8 @@ $ bundle exec jekyll serve
 
 今度は`No GitHub API authentication...`というエラーが出てきた。  
 ["No GitHub API authentication" error #399](https://github.com/github/pages-gem/issues/399)を参考に、
-_config.ymlに追記。ついでにもう一個手直し。
-```yaml
-repository: username/repository-name
-github: [metadata]
-```
+_config.ymlに追記。ついでにもう一個手直し。  
+<script src="https://gist.github.com/laureltreetop/0da5ff11d755d035a5a9120fcc1b2a6c.js"></script>
 
 まだ出る…今度は`invalid byte sequence in Windows-31J...`なエラーが出てきたので、
 [[ruby]jekyll server で 『invalid byte sequence in Windows-31J～』とエラーになった時の対処方法](http://d.hatena.ne.jp/osyo-manga/20140216/1392552409)を参考にし、環境変数`RUBYOPT`に`-Ku`を設定。

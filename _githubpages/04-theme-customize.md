@@ -16,5 +16,7 @@ toc_icon: "gears"
 + 高さを固定した  
 [ブログに貼りつけたGitHub/Gistのソース埋め込みの高さ設定が簡単だった](http://pineplanter.moo.jp/non-it-salaryman/2016/08/24/blog-source-gist-height/)
 
+[Gist stylesheet full list](https://github.com/StylishThemes/GitHub-Dark/issues/197#issuecomment-63717143)
+
 /assets/css/main.scss
-<script src="https://gist.github.com/laureltreetop/468e23f74d085c8436137e54141e5d1d.js"></script>
+<script src="https://gist.github.com/laureltreetop/cd7ddbf84905fde3d997a96dfb246d94.js"></script>

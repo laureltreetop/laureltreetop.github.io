@@ -14,9 +14,7 @@ toc_icon: "gears"
 [![Header Image](/assets/images/github-header.png)](/assets/images/github-header.png)
 [Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/)というプラグインがすでに入っているので、うまく指定すれば可能。  
 記事にはこういう感じで。   
-```markdown
-[![Header Image](/assets/images/github-header.png)](/assets/images/github-header.png)
-```
+<script src="https://gist.github.com/laureltreetop/4e0ac206cf476e216dac9d6578f39387.js"></script>
 プラグインがaタグにしか適用されないそうな。
 
 ## カスタマイズ

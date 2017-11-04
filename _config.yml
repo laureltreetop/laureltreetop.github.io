@@ -315,3 +315,7 @@ collections:
     output: true
     
 github: [metadata]
+
+breadcrumbs: false  # disabled by default
+breadcrumb_home_label : "Home"
+breadcrumb_separator  : "/"
