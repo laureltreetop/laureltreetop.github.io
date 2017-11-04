@@ -22,15 +22,17 @@ li.triangle:before {
 }
 
 body .gist .gist-data {
-    max-height: 16.5em;
+    max-height: 400px;
 }
+
 body .gist .gist-meta {
     display: none !important;
 }
 body .gist .blob-num {
-    color: #ced4da;
-    background-color: #eeeeff;
+    /* color: #ced4da; */
+    background-color: rgba(98, 64, 128, 0.05);
     pointer-events: none;
+    border-right: solid thick rgba(98, 64, 128, 0.3);
 }
 
 body tr:nth-of-type(odd) {
@@ -101,7 +103,7 @@ body .gist .pl-pds,
 body .gist .pl-s,           /* storage */
 body .gist .pl-s1,
 body .gist .pl-sol {
-    color: #cccc00; /* #e6db74; */
+    color: #bbbb00; /* #e6db74; */
 }
 body .gist .pl-e,
 body .gist .pl-ef,          /* entity.function */
@@ -142,7 +144,7 @@ body .gist .pl-sre {
 }
 body .gist .pl-mb,          /* markup.bold */
 body .gist .pl-pdb {        /* punctuation.definition.bold */
-    color: #cccc00; /* #e6db74; */
+    color: #bbbb00; /* #e6db74; */
     font-weight: 700;
 }
 body .gist .pl-mi,          /* markup.italic */
@@ -172,7 +174,7 @@ body .gist .pl-mdhf {       /* meta.diff.header.from-file */
 }
 body .gist .pl-mdh,         /* meta.diff.header */
 body .gist .pl-mdi {        /* meta.diff.index */
-    color: #96dd2e; /* #a6e22e; */
+    color: #77bb00; /* #a6e22e; */
     font-weight: 400;
 }
 body .gist .pl-ib,          /* invalid.broken */
