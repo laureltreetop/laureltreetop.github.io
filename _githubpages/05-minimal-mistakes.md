@@ -1,5 +1,5 @@
 ---
-last_modified_at: 2017-11-02
+last_modified_at: 2017-11-05
 title: "Minimal Mistakes"
 permalink: /githubpages/minimal-mistakes/
 toc: true
@@ -34,3 +34,8 @@ _sass/minimal-mistakes/_variables.scss
 トップでやってるやつ。  
 _layouts/home.html
 <script src="https://gist.github.com/laureltreetop/24f0acf4480f4eef8f6c027001b41dd0.js"></script>
+
+タイトル一覧もいじってあるんでした。  
+リスト表示用の`class="triangle"`も込み。  
+_includes/archive-title.html
+<script src="https://gist.github.com/laureltreetop/90b30fb52d4041290791485bfc093ab0.js"></script>

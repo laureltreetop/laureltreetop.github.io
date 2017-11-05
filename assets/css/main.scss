@@ -28,8 +28,8 @@ body .gist .gist-data {
 body .gist .gist-meta {
     display: none !important;
 }
+
 body .gist .blob-num {
-    /* color: #ced4da; */
     background-color: rgba(98, 64, 128, 0.05);
     pointer-events: none;
     border-right: solid thick rgba(98, 64, 128, 0.3);
