@@ -1,5 +1,5 @@
 ---
-last_modified_at: 2017-11-06
+last_modified_at: 2017-11-07
 title: "Customize Minimal Mistakes"
 permalink: /githubpages/minimal-mistakes/
 toc: true
