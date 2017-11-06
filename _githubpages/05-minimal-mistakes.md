@@ -1,24 +1,14 @@
 ---
-last_modified_at: 2017-11-05
-title: "Minimal Mistakes"
+last_modified_at: 2017-11-06
+title: "Customize Minimal Mistakes"
 permalink: /githubpages/minimal-mistakes/
 toc: true
-toc_label: "Minimal Mistakes"
+toc_label: "Customize Minimal Mistakes"
 toc_icon: "gears"
 ---
-いろいろカスタマイズしたり、Minimal Mistakesならではの使い方とか。
+Minimal Mistakesをいろいろカスタマイズ。
 
-## 記事を書くときのテクニック的な?
-### 画像をポップアップ
-こういうやつ。
-[![Header Image](/assets/images/github-header.png)](/assets/images/github-header.png)
-[Magnific Popup](http://dimsemenov.com/plugins/magnific-popup/)というプラグインがすでに入っているので、うまく指定すれば可能。  
-記事にはこういう感じで。   
-<script src="https://gist.github.com/laureltreetop/4e0ac206cf476e216dac9d6578f39387.js"></script>
-プラグインがaタグにしか適用されないそうな。
-
-## カスタマイズ
-### シェアボタンを追加
+## シェアボタンを追加
 [Pocket](https://getpocket.com)のシェアボタンを追加してみる。  
 色は[BrandColors](https://brandcolors.net/)を参照。  
 
@@ -30,7 +20,7 @@ _sass/minimal-mistakes/_utilities.css
 <script src="https://gist.github.com/laureltreetop/bc64b1280cc817d099850fcc315e5c48.js"></script>  
 _sass/minimal-mistakes/_variables.scss
 <script src="https://gist.github.com/laureltreetop/182cf5e2ddc4421de0f89144ea0e9b16.js"></script>  
-### 過去記事まとめに月ごとの見出し
+## 過去記事まとめに月ごとの見出し
 トップでやってるやつ。  
 _layouts/home.html
 <script src="https://gist.github.com/laureltreetop/24f0acf4480f4eef8f6c027001b41dd0.js"></script>
@@ -39,3 +29,11 @@ _layouts/home.html
 リスト表示用の`class="triangle"`も込み。  
 _includes/archive-title.html
 <script src="https://gist.github.com/laureltreetop/90b30fb52d4041290791485bfc093ab0.js"></script>
+## TOCを固定
+TOCというのはTable Of Contentsの略で、記事の右側にある見出し一覧。  
+たとえばこのページだと、front matter（って言うのかぁ）にこういう記述をしてある。
+<script src="https://gist.github.com/laureltreetop/bc20d4d1a9882bb7f85d0a14bc2cb22b.js"></script>
+
+左側のサイドバーはスクロールしても固定されているので、TOCも同じようにstickyを追加。  
+_layouts/single.html
+<script src="https://gist.github.com/laureltreetop/0da5fd93ec335e5a5c41ca02c86dc31a.js"></script>

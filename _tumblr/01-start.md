@@ -2,8 +2,10 @@
 last_modified_at: 2017-10-31
 title: "Tumblr start"
 permalink: /tumblr/start/
+toc: true
+toc_label: "Start"
+toc_icon: "tumblr-square"
 ---
-{% include toc icon="tumblr-square" title="Start" %}
 最初はTumblrの準備や設定やら。
 
 ### Tumblr登録

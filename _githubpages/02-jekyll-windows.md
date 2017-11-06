@@ -1,9 +1,11 @@
 ---
-last_modified_at: 2017-10-28
+last_modified_at: 2017-11-06
 title: "Jekyll on Windows"
 permalink: /githubpages/jekyll-windows/
+toc: true
+toc_label: "Jekyll on Windows"
+toc_icon: "windows"
 ---
-{% include toc icon="gears" title="Jekyll on Windows" %}
 オレオレですが、ほんとに苦労したので。  
 しかもこの記事をまとめるために、いったんuninstallしました…  
 

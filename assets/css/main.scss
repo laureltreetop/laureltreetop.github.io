@@ -9,16 +9,14 @@
 
 li.triangle {
   line-height: 1.5;
-  padding: 0 0.5em 0 0;
   list-style-type: none!important;
 }
 
 li.triangle:before {
   font-family: FontAwesome;
-  content: "\f0da ";
-  /*position: absolute;*/
-  /*left : 2em; /*左端からのアイコンまで*/
-  color: lightgrey; /*アイコン色*/
+  content: "\f0da";
+  color: lightgrey;
+  padding: 0 0.5em 0 0;
 }
 
 body .gist .gist-data {
