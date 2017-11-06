@@ -12,8 +12,31 @@
 
 <div class="{{ include.type | default: "list" }}__item">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-<!-- 2017/10/26 --> 
-      <li class="triangle"><a href="{{ post.url }}">{{ post.title }}</a> &raquo; <i><span class="lightgray">{{ post.date | date_to_string }}</span></i></li>
+
+      
+    {% if include.type == "grid" and teaser %}
+      <div class="archive__item-teaser">
+        <img src=
+          {% if teaser contains "://" %}
+            "{{ teaser }}"
+          {% else %}
+            "{{ teaser | absolute_url }}"
+          {% endif %}
+          alt="">
+      </div>
+    {% endif %}
+
+    {% if include.type == "title" %}
+        <li class="triangle"><a href="{{ post.url }}">{{ post.title }}</a> &mdash; {{ post.date | date: "%B %d, %Y" }}</li>
+      
+    {% else %}
+      <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+    {% endif %}
+      
+    {% if post.read_time %}
+      <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
+    {% endif %}
+    {% if post.excerpt and include.type != "title"  %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 50 }}</p>{% endif %}
   </article>
 </div>
 
