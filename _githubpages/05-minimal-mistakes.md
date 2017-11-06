@@ -11,8 +11,6 @@ Minimal Mistakesをいろいろカスタマイズ。
 ## シェアボタンを追加
 [Pocket](https://getpocket.com)と[Pinterest](https://www.pinterest.jp/)のシェアボタンを追加してみる。  
 色は[BrandColors](https://brandcolors.net/)を参照。  
-
-数が多いので、`btn--small`を追加してボタンを小さめに。  
 _includes/social-share.html
 <script src="https://gist.github.com/laureltreetop/c122ffafea2a7e5c48d826a633e581f3.js"></script>
 _sass/minimal-mistakes/_buttons.css
@@ -23,6 +21,13 @@ _sass/minimal-mistakes/_utilities.css
 Pocketだけ追加。  
 _sass/minimal-mistakes/_variables.scss
 <script src="https://gist.github.com/laureltreetop/182cf5e2ddc4421de0f89144ea0e9b16.js"></script>
+
+## フォローボタンを追加
+[Pinterest](https://www.pinterest.jp/)のフォローボタンを追加してみる。  
+色やらアイコンやらは組み込み済みなので、_config.ymlにアカウント設定して以下を追記。  
+_includes/footer.html
+<script src="https://gist.github.com/laureltreetop/475361f9a90dd2f6c7ba7f5d65cf0f94.js"></script>
+
 ## 過去記事まとめに月ごとの見出し
 トップでやってるやつ。  
 _layouts/home.html
