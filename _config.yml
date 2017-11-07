@@ -95,19 +95,19 @@ author:
   flickr           :
   facebook         : "ginkgotreetop"
   foursquare       :
-  github           :
+  github           : # "laureltreetop"
   gitlab           :
-  google_plus      :
+  google_plus      : # "102882771271321040109"
   keybase          :
-  instagram        :
+  instagram        : # "laureltreetop"
   lastfm           :
-  linkedin         : # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
-  pinterest        : "treetop8383"
+  linkedin         : # "kozue-kuninaka" # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
+  pinterest        : # "treetop8383"
   soundcloud       :
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           : "laurel-treetop"
-  twitter          : "ginkgoTreetop"
+  twitter          : # "ginkgoTreetop"
   vine             :
   weibo            :
   xing             :
@@ -316,6 +316,5 @@ collections:
     
 github: [metadata]
 
-breadcrumbs: false  # disabled by default
-breadcrumb_home_label : "Home"
-breadcrumb_separator  : "/"
+head_scripts:
+  - https://apis.google.com/js/platform.js

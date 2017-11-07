@@ -7,7 +7,8 @@ toc_label: "Blogger to Jekyll"
 toc_icon: "gears"
 ---
 今までブログは、ブログなんて呼んでない頃からのHTML直書き→しばらく休止→Bloggerで時々書いたり書かなかったり→Tumblr、という流れ。  
-Bloggerの記事をJykillに取り込むのは簡単にできるらしいと知り、無謀にも挑戦。  
+Bloggerの記事をJykillに取り込むのは簡単にできるらしいと知り、無謀にも挑戦。
+{: .notice}
 
 ## 取り込み
 Bloggerの`ブログ設定`→`その他`→`コンテンツをバックアップ`で取り込める。

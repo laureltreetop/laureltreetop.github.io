@@ -6,7 +6,6 @@ toc: true
 toc_label: "Custom Theme"
 toc_icon: "tumblr-square"
 ---
-大掛かりなカスタマイズをする前に準備が必要・したほうがいい。
 ## カスタム前に
 ### JQuery
 カスタマイズの多くはJQueryを使うことが前提なので、<head>...</head>の間で呼び出しておく。

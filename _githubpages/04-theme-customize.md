@@ -7,7 +7,7 @@ toc_label: "Theme Customize"
 toc_icon: "gears"
 ---
 テーマ共通のカスタマイズなど。
-
+{: .notice}
 ## Gistの表示を変える
 + フッターを消してみた  
 [CUSTOMIZING GITHUB GISTS](http://codersblock.com/blog/customizing-github-gists/)

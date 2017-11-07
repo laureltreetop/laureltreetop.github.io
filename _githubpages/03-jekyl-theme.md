@@ -7,6 +7,7 @@ toc_label: "Jekyll Theme"
 toc_icon: "gears"
 ---
 未だに勉強中。とりあえずリンクだけ張っていく。
+{: .notice}
 
 ## Jekyll用テーマ
 あちこちにいろいろ。   

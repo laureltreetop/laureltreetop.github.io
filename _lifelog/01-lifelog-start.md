@@ -8,6 +8,7 @@ toc_label: "Lifelog"
 toc_icon: "gears"
 ---
 Evernoteにまとめていく方向で。
+{: .notice}
 
 ## Evernoteの準備から
 [Evernote](https://evernote.com/intl/jp/)より登録。  

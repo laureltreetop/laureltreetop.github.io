@@ -7,6 +7,7 @@ toc_label: "Customize Minimal Mistakes"
 toc_icon: "gears"
 ---
 Minimal Mistakesをいろいろカスタマイズ。
+{: .notice}
 
 ## シェアボタンを追加
 [Pocket](https://getpocket.com)と[Pinterest](https://www.pinterest.jp/)のシェアボタンを追加してみる。  

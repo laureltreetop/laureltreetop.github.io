@@ -8,6 +8,7 @@ toc_label: "GitHub start"
 toc_icon: "github"
 ---
 GitHub Pagesなのですから、当然最初はGitHubの準備や設定やら。
+{: .notice}
 
 ## GitHubの準備から
 [GitHub](https://github.com/)より登録。

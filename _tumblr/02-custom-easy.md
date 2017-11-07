@@ -7,6 +7,7 @@ toc_label: "Easy Custom"
 toc_icon: "tumblr-square"
 ---
 簡単なカスタマイズを先にぱぱっと。
+{: .notice}
 
 ### 右上などににある「Edit Theme」などを非表示に
 Tumblr利用者以外には知ったこっちゃないので。  

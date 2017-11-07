@@ -7,7 +7,8 @@ toc_label: "Jekyll on Windows"
 toc_icon: "windows"
 ---
 オレオレですが、ほんとに苦労したので。  
-しかもこの記事をまとめるために、いったんuninstallしました…  
+しかもこの記事をまとめるために、いったんuninstallしました… 
+{: .notice}
 
 [Run Jekyll on Windows](http://jekyll-windows.juthilo.com/)が詳しい。  
 実はこのメモページは要らないのでは? でも記録用として残しておく。  

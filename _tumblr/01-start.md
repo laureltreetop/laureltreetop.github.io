@@ -7,6 +7,7 @@ toc_label: "Start"
 toc_icon: "tumblr-square"
 ---
 最初はTumblrの準備や設定やら。
+{: .notice}
 
 ### Tumblr登録
 [tumblr.](https://www.tumblr.com/)より登録。   
