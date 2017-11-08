@@ -1,5 +1,4 @@
 ---
-date: 2017-08-04 23:34 +0900
 title: "GitHub start"
 permalink: /githubpages/github/
 toc: true
