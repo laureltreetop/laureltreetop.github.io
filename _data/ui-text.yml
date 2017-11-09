@@ -9,7 +9,7 @@ ja-JP: &DEFAULT_JP
   breadcrumb_home_label      : "Home"
   breadcrumb_separator       : "/"
   menu_label                 : "Toggle Menu"
-  toc_label                  : "Table of contents"
+  toc_label                  : "Contents"
   ext_link_label             : "Direct Link"
   less_than                  : "less than"
   minute_read                : "minute read"
