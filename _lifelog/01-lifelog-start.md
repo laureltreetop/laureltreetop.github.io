@@ -3,9 +3,7 @@ date: 2017-10-21
 last_modified_at: 2017-10-23
 title: "Lifelog start"
 permalink: /lifelog/start/
-toc: true
 toc_label: "Lifelog"
-toc_icon: "gears"
 ---
 Evernoteにまとめていく方向で。
 {: .notice}

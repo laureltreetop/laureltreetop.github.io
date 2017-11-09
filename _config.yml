@@ -267,6 +267,9 @@ defaults:
       comments: true
       sidebar:
         nav: "githubpages"
+      toc: true
+      # toc_label: 
+      toc_icon: "github"
   # _tumblr
   - scope:
       path: ""
@@ -279,7 +282,10 @@ defaults:
       comments: true
       sidebar:
         nav: "Tumblr"
-  # _lifelog
+      toc: true
+      # toc_label: 
+      toc_icon: "tumblr-square" 
+ # _lifelog
   - scope:
       path: ""
       type: lifelog
@@ -292,6 +298,9 @@ defaults:
       related: true
       sidebar:
         nav: "Lifelog"
+      toc: true
+      # toc_label: 
+      toc_icon: "gears"
   # _pages
   - scope:
       path: ""
