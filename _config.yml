@@ -192,6 +192,7 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-last-modified-at
+  - jekyll-git_metadata
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -201,6 +202,7 @@ whitelist:
   - jekyll-feed
   - jemoji
   - jekyll-last-modified-at
+  - jekyll-git_metadata
 
 
 # Archives
