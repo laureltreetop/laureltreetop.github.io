@@ -8,8 +8,8 @@ main:
     url: /githubpages/github/
   - title: "Tumblr"
     url: /tumblr/start/
-  - title: "Lifelog"
-    url: /lifelog/start/
+  - title: "... and more"
+    url: /collection-archive/
   - title: "愚痴"
     url: /month-archive/
   - title: "自分?"
@@ -40,15 +40,16 @@ Tumblr:
         url: /tumblr/custom-easy/
       - title: "Custom Theme"
         url: /tumblr/custom-theme/
-Lifelog:
-  - title: "Lifelog"
-    children:
-      - title: "Start"
-        url: /lifelog/start/
 
 # sidebar navigation
 sidebar:
-  - title: "GitHub Pages"
+  - title: "K's Sites"
+    children:
+      - title: "K's blog"
+        url: http://blog.treetop.to/
+      - title: "K's web contents ver.1995"
+        url: http://treetop.webcrow.jp/
+  - title: "memo - GitHub Pages"
     children:
       - title: "GitHub"
         url: /githubpages/github/
@@ -62,7 +63,7 @@ sidebar:
         url: /githubpages/minimal-mistakes/
       - title: "Blogger to Jekyll"
         url: /githubpages/blogger-to-jekyll/
-  - title: "Tumblr"
+  - title: "memo - Tumblr"
     children:
       - title: "Start"
         url: /tumblr/start/
@@ -70,7 +71,9 @@ sidebar:
         url: /tumblr/custom-easy/
       - title: "Custom Theme"
         url: /tumblr/custom-theme/
-  - title: "Lifelog"
+  - title: "memo - misc."
     children:
-      - title: "Start"
-        url: /lifelog/start/
+      - title: "Lifelog"
+        url: /misc/lifelog/
+      - title: "Firebase"
+        url: /misc/firebase/

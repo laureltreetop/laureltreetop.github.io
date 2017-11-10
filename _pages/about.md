@@ -17,7 +17,7 @@ permalink: /about/
 
 - [K's blog](http://blog.treetop.to)
 - [K's wiki](http://wiki.treetop.to)（当サイトに内容を移行予定）
-- ~~[K's web ver.2017](http://www.treetop.to)~~（さて、どうしよう…）
-- [K's web ver.1995](http://treetop.webcrow.jp)
+- [K's web ver.2017](https://2017.treetop.to/)（さて、どうしよう…）
+- [K's web contents ver.1995](http://treetop.webcrow.jp)
 
 他にも、上記以上に放置しているサイトあり。
