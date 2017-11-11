@@ -2,9 +2,8 @@
 last_modified_at: 2017-11-11
 title: "Custom Theme"
 permalink: /tumblr/custom-theme/
-toc_label: "Customize Theme"
 ---
-Tumblrに置いてあるK's blogを「無料のテーマを参考にしつつ、オリジナルデザインに」という方向でカスタマイズしてみる。  
+Tumblrに置いてある[K's blog](http://blog.treetop.to/)を「無料のテーマを参考にしつつ、オリジナルデザインに」という方向でカスタマイズしてみる。  
 Tumblrの内容だからTumblrサイトに書きたいけど、こういう内容はGoogleサイトやGitHub Pagesのほうが楽にできる。  
 {: .notice}
 ## カスタム前に
@@ -32,24 +31,22 @@ tumblrposts.jsはJs-tumblrposts.jsからダウンロード & テーマアセッ�
 
 [^classjs]: 2017/06/27追記・どうやらclass.jsがなくてもいいっぽい。  
 
-
 Script  
 元ネタからだいぶいじってある。  
 <script src="https://gist.github.com/laureltreetop/dfd5a854f3244eee66d99e0fca476f16.js"></script>
 
 `getTags("desc")`とすることで、投稿数の多い順にソートされる（[TumblrPosts.js が新しくなりました](https://blog.mach3.jp/2012/11/26/tumblrposts-js-1-3.html)）。  
-タグ一覧全部だと多いかな、と思い「投稿数が3つ以上のタグ」をデフォで、**"more tags"をクリックで「投稿数2つ以下のタグ」を表示**するように細工。
+タグ一覧全部だと多いかな、と思い「投稿数が6つ以上のタグ」をデフォで、**"more tags"をクリックで「投稿数5つ以下のタグ」を表示**するように細工。  
+[![Tags Off](/assets/images/Tumblr-toggle-switch-off.png)](/assets/images/Tumblr-toggle-switch-off.png) <i class="fa fa-arrows-h"></i> [![Tags On](/assets/images/Tumblr-toggle-switch-on.png)](/assets/images/Tumblr-toggle-switch-on.png)
 
 HTML 
 <script src="https://gist.github.com/laureltreetop/88da79c52453f7a7e0e870535895e322.js"></script>  
-<span>で囲ってあるのが「投稿数2つ以下のタグ」を見るためのリンクにしてある。
+`<span>`で囲ってあるのが「投稿数5つ以下のタグ」を見るためのリンク。
 
 CSS
 <script src="https://gist.github.com/laureltreetop/9081cabd74291eb4f43423368fbf7927.js"></script>  
-#more-tagsの高さを指定しておかないと、クリックで残りのタグを表示するときの動きが不自然になるので、適当に設定。  
-.btn-moreの設定は、ちょっとしたお遊びでFont Awesomeを使ったトグルスイッチになっている。HTML,etcあたりを見つつ既に設定してある前提。  
-
-[![Tags Off](/assets/images/Tumblr-toggle-switch-off.png)](/assets/images/Tumblr-toggle-switch-off.png) →　[![Tags On](/assets/images/Tumblr-toggle-switch-on.png)](/assets/images/Tumblr-toggle-switch-on.png)
+付箋紙やテープで貼り付けたような「紙感」のために、いろいろ突っ込んである。  
+.btn-moreの設定は、ちょっとしたお遊びでFont Awesomeを使ったトグルスイッチになっている。
 
 ## 新着記事一覧
 
@@ -71,7 +68,7 @@ HTML
 
 ## 関連記事一覧
 
-こういう感じの見た目になるようにカスタマイズ。デザインは「コピペで使えるリストデザイン例34選：CSSでおしゃれな箇条書きを作ろう」より。  
+こういう感じの見た目になるようにカスタマイズ。デザインは「[コピペで使えるリストデザイン例34選：CSSでおしゃれな箇条書きを作ろう](https://saruwakakun.com/html-css/reference/ul-ol-li-design)」より。  
 [![Related Posts](/assets/images/Tumblr-RelatedPosts.png)](/assets/images/Tumblr-RelatedPosts.png)
 {: .notice}
 
@@ -85,6 +82,7 @@ Script & HTML
 <script src="https://gist.github.com/laureltreetop/e7c6c629a687c2f2c394dff526381a25.js"></script>
 
 ## PhotosetページをLightboxに
+[こういう感じの記事](http://blog.treetop.to/post/161598628627/%E6%87%90%E3%81%8B%E3%81%97%E3%81%84-%E3%81%97%E3%81%8B%E3%82%82%E8%A8%80%E3%82%8F%E3%82%8C%E3%81%A6%E6%B0%97%E3%81%A5%E3%81%84%E3%81%9F%E3%81%91%E3%81%A9%E3%82%82%E3%81%8620%E5%B9%B4%E4%BB%A5%E4%B8%8A%E3%82%82%E5%89%8D%E3%81%AE%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0)に。  
 + [fancyBox3](http://fancyapps.com/fancybox/3/)
 + [Photoset Postsをスライドショーにしてみた](http://chips-tips.tumblr.com/post/15285874609/photoset-posts%E3%82%92%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E3%82%B7%E3%83%A7%E3%83%BC%E3%81%AB%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F)
 + [TumblrSlider](https://github.com/Baires/Tumblrslider)
@@ -97,19 +95,3 @@ Script & HTML
 オリジナルの`TumblrSlider.js`を変更。ってか、かなり変えたので**自分のメモ用**（←なので要注意）として晒しておく。  
 アセットにアップロードではなく、テーマHTMLに直書きしてある。
 <script src="https://gist.github.com/laureltreetop/8b4e90258134bc7f96d89437ae5e84e1.js"></script>
-
-## OPG(Open Graph protocol)設定
-これを<head>...</head>内でやっておくと、FacebookやTwitterにシェアしてもらったときにいい感じに。
-{: .notice}
-
-### Metaタグ・まとめて設定編
-少し見づらくなりますが、こんな感じで。  
-<script src="https://gist.github.com/laureltreetop/652b06062008c3585ad51dbbdadbc0a9.js"></script>
-
-### Metaタグ・個別設定編
-`og:image`がいちばんややこしい。  
-<script src="https://gist.github.com/laureltreetop/05cb4864f65765bc4d7a5e190e679823.js"></script>
-
-### 確認
-[facebook for deveropers シェアデバッガー](https://developers.facebook.com/tools/debug/sharing/)で確認。  
-エラーが出なくなるまで修正。
