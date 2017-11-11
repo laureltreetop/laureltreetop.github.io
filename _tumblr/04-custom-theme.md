@@ -33,7 +33,8 @@ tumblrposts.jsはJs-tumblrposts.jsからダウンロード & テーマアセッ�
 [^classjs]: 2017/06/27追記・どうやらclass.jsがなくてもいいっぽい。  
 
 
-Script部分。元ネタからだいぶいじってある。  
+Script  
+元ネタからだいぶいじってある。  
 <script src="https://gist.github.com/laureltreetop/dfd5a854f3244eee66d99e0fca476f16.js"></script>
 
 `getTags("desc")`とすることで、投稿数の多い順にソートされる（[TumblrPosts.js が新しくなりました](https://blog.mach3.jp/2012/11/26/tumblrposts-js-1-3.html)）。  
@@ -60,7 +61,7 @@ CSS
 CSS
 <script src="https://gist.github.com/laureltreetop/42b2ccb6a3885d17ace893c178555066.js"></script>
 
-Script
+Script  
 テキスト投稿のみを拾うようになっている
 <script src="https://gist.github.com/laureltreetop/a6fa854722bd0cf43a012de501b25112.js"></script>
 
@@ -74,11 +75,11 @@ HTML
 [![Related Posts](/assets/images/Tumblr-RelatedPosts.png)](/assets/images/Tumblr-RelatedPosts.png)
 {: .notice}
 
-CSS
+CSS  
 Font Awesomeが使える前提なので、環境を整えるか文字部分を変更するかが必要。
 <script src="https://gist.github.com/laureltreetop/295360b3e06fca1df7cbb62a6b7276a9.js"></script>
 
-Script & HTML
+Script & HTML  
 タグを参照する都合上、スクリプトは<body>の中に。  
 取得する投稿はテキストとリンク。`{block:Permalink}…{/block:Permalink}`内に置く。
 <script src="https://gist.github.com/laureltreetop/e7c6c629a687c2f2c394dff526381a25.js"></script>
