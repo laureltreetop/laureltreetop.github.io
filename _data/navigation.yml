@@ -36,9 +36,9 @@ Tumblr:
     children:
       - title: "Start"
         url: /tumblr/start/
-      - title: "Easy Custom"
+      - title: "Easy Customize"
         url: /tumblr/custom-easy/
-      - title: "Custom Theme"
+      - title: "Customize Theme"
         url: /tumblr/custom-theme/
 
 # sidebar navigation
@@ -67,9 +67,9 @@ sidebar:
     children:
       - title: "Start"
         url: /tumblr/start/
-      - title: "Easy Custom"
+      - title: "Easy Customize"
         url: /tumblr/custom-easy/
-      - title: "Custom Theme"
+      - title: "Customize Theme"
         url: /tumblr/custom-theme/
   - title: "memo - misc."
     children:
