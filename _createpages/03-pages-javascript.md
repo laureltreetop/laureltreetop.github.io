@@ -1,7 +1,6 @@
 ---
-last_modified_at: 2017-11-12
 title: "Jquery Plugins"
-permalink: /misc/javascript/
+permalink: /create-pages/javascript/
 ---
 今はタグ打ちなんてしなくてもできるねーと思っていたら、まさかの[Tumblrのテーマカスタマイズ](/tumblr/custom-theme/)でのタグ打ち。
 この機会にいろいろメモっておく。

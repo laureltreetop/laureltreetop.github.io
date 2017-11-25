@@ -4,6 +4,8 @@ main:
 #    url: /page-archive/
 #  - title: "資料"
 #    url: /collection-archive/
+  - title: "ページ作成"
+    url: /create-pages/base/
   - title: "GitHub Pages"
     url: /githubpages/github/
   - title: "Tumblr"
@@ -16,6 +18,15 @@ main:
     url: /about/
 
 # documentation links
+createpages:
+  - title: "Create Pages"
+    children:
+      - title: "Start"
+        url: /create-pages/base/
+      - title: "Fonts"
+        url: /create-pages/fonts/
+      - title: "JQuery Plugins"
+        url: /create-pages/javascript/
 githubpages:
   - title: "GitHub Pages"
     children:
@@ -51,6 +62,14 @@ sidebar:
         url: http://blog.treetop.to/
       - title: "K's web contents ver.1995"
         url: http://treetop.webcrow.jp/
+  - title: "memo - ページ作成"
+    children:
+      - title: "Start"
+        url: /create-pages/base/
+      - title: "Fonts"
+        url: /create-pages/fonts/
+      - title: "JQuery Plugins"
+        url: /create-pages/javascript/
   - title: "memo - GitHub Pages"
     children:
       - title: "GitHub"
@@ -77,10 +96,6 @@ sidebar:
         url: /tumblr/custom-theme/
   - title: "memo - misc."
     children:
-      - title: "CSS and misc."
-        url: /misc/create-pages/
-      - title: "JQuery Plugins"
-        url: /misc/javascript/
       - title: "Lifelog"
         url: /misc/lifelog/
       - title: "Firebase"

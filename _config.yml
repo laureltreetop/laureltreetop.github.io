@@ -255,6 +255,21 @@ defaults:
       comments: # true
       share: true
       related: true
+  # _createpages
+  - scope:
+      path: ""
+      type: createpages
+    values:
+      layout: single
+      author_profile: false
+      read_time: false
+      share: true
+      comments: true
+      sidebar:
+        nav: "createpages"
+      toc: true
+      # toc_label: 
+      toc_icon: "gears" 
   # _githubpages
   - scope:
       path: ""
@@ -314,6 +329,9 @@ defaults:
       related: true
 
 collections:
+  createpages:
+    permalink: /:collection/:path/
+    output: true
   githubpages:
     permalink: /:collection/:path/
     output: true
