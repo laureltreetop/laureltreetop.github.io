@@ -4,11 +4,9 @@ author: Treetop
 author_profile: true
 share: true
 comments: true
-title: "about me"
+title: "自分のことかい?"
 permalink: /about/
 ---
-## 自分のことかい?
-
 前線から完全撤退して…のはずが、技術系なものを試してつらつらとメモを書いておく。  
 ブログには愚痴多数。  
 「なら、やるな」という意見はごもっともですが、性分なのかな。
@@ -16,7 +14,7 @@ permalink: /about/
 あちこちにサイトを作りちらしています。
 
 - [K's blog](http://blog.treetop.to)
-- [K's wiki](http://wiki.treetop.to)（当サイトに内容を移行予定）
+- [K's blog@Blogger](https://blogger.treetop.to/)
 - [K's web ver.2017](https://2017.treetop.to/)（さて、どうしよう…）
 - [K's web contents ver.1995](http://treetop.webcrow.jp)
 

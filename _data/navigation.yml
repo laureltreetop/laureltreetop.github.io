@@ -77,6 +77,10 @@ sidebar:
         url: /tumblr/custom-theme/
   - title: "memo - misc."
     children:
+      - title: "CSS and misc."
+        url: /misc/create-pages/
+      - title: "JQuery Plugins"
+        url: /misc/javascript/
       - title: "Lifelog"
         url: /misc/lifelog/
       - title: "Firebase"
