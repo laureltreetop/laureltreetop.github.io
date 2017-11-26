@@ -8,10 +8,11 @@ Webフォントとかいろいろ。
 ## [Font Awesome](http://fontawesome.io/)
 
 こういうのとか。  
-<i class="fa fa-twitter"></i>
-<i class="fa fa-facebook-official"></i>
-<i class="fa fa-pinterest"></i>
-<i class="fa fa-get-pocket"></i>
+<i class="fa fa-twitter"></i> 
+<i class="fa fa-facebook-official"></i> 
+<i class="fa fa-google-plus google"></i> 
+<i class="fa fa-pinterest pintest"></i> 
+<i class="fa fa-get-pocket pocket"></i>
 {: .notice}
 
 ### 使い方
@@ -58,6 +59,12 @@ CSSで各色を設定。
 ### 合わせ技
 
 <span class="fa-stack fa-lg">
+  <i class="fa fa-thumbs-o-down fa-stack-1x"></i>
+  <i class="fa fa-ban fa-stack-2x text-danger" style="color:red;"></i>
+</span>
+fa-thumbs-o-down on fa-glass<br>
+
+<span class="fa-stack fa-lg">
   <i class="fa fa-comment-o fa-stack-2x"></i>
   <i class="fa fa-car fa-stack-1x"></i>
 </span>
@@ -91,7 +98,7 @@ Font Awesomeに無いアイコンもいろいろ。
 
 ## [IcoMoon](https://icomoon.io/)
 
-Font Awesome, Material Iconにもないブランドフォントが、[IcoMoon](https://icomoon.io/)の[IcoMoon Library](https://icomoon.io/app/#/select/library)にあったりする。しかも色付き。  
+Font Awesome, Material Iconにもないブランドフォントがあったりする。しかも色付き。  
 <span class="icon-hatebu"></span>
 <span class="icon-line"></span>
 <span class="icon-auth0"></span>
