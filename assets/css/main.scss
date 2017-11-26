@@ -7,6 +7,15 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
+// Font Awesome hatena bookmark 
+.fa-hatebu {
+     &:before {
+        content: "B!";
+        font-family: Verdana;
+        font-weight: bold;
+    }
+}
+
 li.triangle {
   line-height: 1.5;
   list-style-type: none!important;

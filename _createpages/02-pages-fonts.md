@@ -92,7 +92,7 @@ Font Awesomeに無いアイコンもいろいろ。
 ## [IcoMoon](https://icomoon.io/)
 
 Font Awesome, Material Iconにもないブランドフォントが、[IcoMoon](https://icomoon.io/)の[IcoMoon Library](https://icomoon.io/app/#/select/library)にあったりする。しかも色付き。  
-<span class="icon-hatena"></span>
+<span class="icon-hatebu"></span>
 <span class="icon-line"></span>
 <span class="icon-auth0"></span>
 <span class="icon-playstation"></span>

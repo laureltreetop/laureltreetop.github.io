@@ -10,7 +10,11 @@ Minimal Mistakesをいろいろカスタマイズ。
 {: .notice}
 
 ## シェアボタンを追加
-[Pocket](https://getpocket.com)と[Pinterest](https://www.pinterest.jp/)のシェアボタンを追加してみる。  
+
+### [Font Awesome](http://fontawesome.io/)と[IcoMoon](https://icomoon.io/)  
+
+[Font Awesome](http://fontawesome.io/)で[Pocket](https://getpocket.com)と[Pinterest](https://www.pinterest.jp/)のシェアボタンを追加。  
+
 色は[BrandColors](https://brandcolors.net/)を参照。  
 _includes/social-share.html
 <script src="https://gist.github.com/laureltreetop/c122ffafea2a7e5c48d826a633e581f3.js"></script>

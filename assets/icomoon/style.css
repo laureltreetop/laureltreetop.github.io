@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?6pm7sg');
-  src:  url('fonts/icomoon.eot?6pm7sg#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?6pm7sg') format('truetype'),
-    url('fonts/icomoon.woff?6pm7sg') format('woff'),
-    url('fonts/icomoon.svg?6pm7sg#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?jaa5f2');
+  src:  url('fonts/icomoon.eot?jaa5f2#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?jaa5f2') format('truetype'),
+    url('fonts/icomoon.woff?jaa5f2') format('woff'),
+    url('fonts/icomoon.svg?jaa5f2#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -28,10 +28,6 @@
   content: "\e901";
   color: #eb5424;
 }
-.icon-bitcoin:before {
-  content: "\e902";
-  color: #f7931a;
-}
 .icon-bitly:before {
   content: "\e903";
   color: #ee6123;
@@ -40,21 +36,13 @@
   content: "\e904";
   color: #f38936;
 }
-.icon-gmail:before {
-  content: "\e905";
-  color: #d14836;
-}
-.icon-hatena:before {
+.icon-hatebu:before {
   content: "\e906";
   color: #00a4de;
 }
 .icon-line:before {
   content: "\e907";
   color: #00c300;
-}
-.icon-paypal:before {
-  content: "\e908";
-  color: #00457c;
 }
 .icon-playstation:before {
   content: "\e909";
