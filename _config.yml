@@ -285,7 +285,22 @@ defaults:
       toc: true
       # toc_label: 
       toc_icon: "github"
-  # _tumblr
+  # _hatebu
+  - scope:
+      path: ""
+      type: hatebu
+    values:
+      layout: single
+      author_profile: false
+      read_time: false
+      share: true
+      comments: true
+      sidebar:
+        nav: "hatebu"
+      toc: true
+      # toc_label: 
+      toc_icon: "gears" 
+# _tumblr
   - scope:
       path: ""
       type: tumblr
@@ -333,6 +348,9 @@ collections:
     permalink: /:collection/:path/
     output: true
   githubpages:
+    permalink: /:collection/:path/
+    output: true
+  hatebu:
     permalink: /:collection/:path/
     output: true
   tumblr:

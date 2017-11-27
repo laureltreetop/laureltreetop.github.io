@@ -9,7 +9,7 @@ permalink: /create-pages/javascript/
 ## まずはJquery
 [JQuery][]を`<head>...</head>`の間で呼び出しておく。
 <span><script src="https://gist.github.com/laureltreetop/59d30a038a01d98a7fe6bc1c7bcc2a91.js"></script></span>
-最新は[Google Hosted Libraries](https://developers.google.com/speed/libraries/)で確認。  
+最新は[Google Hosted Libraries](https://developers.google.com/speed/libraries/#jquery)で確認。  
 プラグインの呼び出しはこの指定より下に。
 
 ## 画像などを拡大表示

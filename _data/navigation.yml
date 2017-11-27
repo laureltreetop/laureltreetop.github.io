@@ -8,6 +8,8 @@ main:
     url: /create-pages/base/
   - title: "GitHub Pages"
     url: /githubpages/github/
+  - title: "はてなブログ"
+    url: /hatebu/start/
   - title: "Tumblr"
     url: /tumblr/start/
   - title: "... and more"
@@ -42,6 +44,15 @@ githubpages:
         url: /githubpages/minimal-mistakes/
       - title: "Blogger to Jekyll"
         url: /githubpages/blogger-to-jekyll/
+hatebu:
+  - title: "はてなブログ"
+    children:
+      - title: "Start"
+        url: /hatebu/start/
+      - title: "Customize"
+        url: /hatebu/customize/
+      - title: "Customize Innocent"
+        url: /hatebu/innocent/
 Tumblr:
   - title: "Tumblr"
     children:
@@ -84,6 +95,14 @@ sidebar:
         url: /githubpages/minimal-mistakes/
       - title: "Blogger to Jekyll"
         url: /githubpages/blogger-to-jekyll/
+  - title: "memo - はてなブログ"
+    children:
+      - title: "Start"
+        url: /hatebu/start/
+      - title: "Customize"
+        url: /hatebu/customize/
+      - title: "Customize Innocent"
+        url: /hatebu/innocent/
   - title: "memo - Tumblr"
     children:
       - title: "Start"
