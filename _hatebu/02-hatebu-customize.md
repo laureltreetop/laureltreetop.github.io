@@ -38,6 +38,9 @@ permalink: /hatebu/customize/
 各ソーシャルパーツは全部チェックを外しちゃってください。
 <script src="https://gist.github.com/laureltreetop/2c3c2b5852c139bb65b8251ab2daabb1.js"></script>
 
+元ネタにはないPinterestボタンも追加してあります。
+[![HateBu Share](/assets/images/hatebu-share-icons.png)](/assets/images/hatebu-share-icons.png)
+
 参考
 + [【変更お願い!】コピペのみではてなブログのソーシャルボタンをシェア数付きでおしゃれにするカスタマイズvol.2](http://www.yukihy.com/entry/vol2-hatenablog-share-btn-custom)
 + [サイトの高速化に！Twitter、Facebook、Google＋、はてブのシェア数をJavaScriptで非同期に取得する方法まとめ](https://nelog.jp/sns-buttons-on-ajax)
