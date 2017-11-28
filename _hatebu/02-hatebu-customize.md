@@ -23,6 +23,10 @@ permalink: /hatebu/customize/
 `設定`→`詳細設定`→`検索エンジン最適化`→`headに要素を追加`に追加。  
 <script src="https://gist.github.com/laureltreetop/e8c228e14ccb0ee000be506947bf969e.js"></script>
 
+## 記事の下にあるIDと日付を非表示に
+
+<script src="https://gist.github.com/laureltreetop/e9468b986da746fe7625d783928e47bf.js"></script>
+
 ## シェアボタン
 
 レスポンシブ仕様で追加していきます。    
