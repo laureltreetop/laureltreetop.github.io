@@ -23,11 +23,6 @@ permalink: /hatebu/customize/
 `設定`→`詳細設定`→`検索エンジン最適化`→`headに要素を追加`に追加。  
 <script src="https://gist.github.com/laureltreetop/e8c228e14ccb0ee000be506947bf969e.js"></script>
 
-## 記事の下にあるIDと日付を非表示に
-
-`デザイン`→<i class="fa fa-wrench" aria-hidden="true"></i>→`デザインCSS`に追加。
-<script src="https://gist.github.com/laureltreetop/e9468b986da746fe7625d783928e47bf.js"></script>
-
 ## シェアボタン
 
 レスポンシブ仕様で追加していきます。    
@@ -67,3 +62,30 @@ permalink: /hatebu/customize/
 [![Amazon link](/assets/images/hatebu-amazon-link.png)](/assets/images/hatebu-amazon-link.png)
 
 [^amazonlink]: [厚さ測定定規](http://amzn.to/2iUae5o)へのリンクです。
+
+## 日付表示
+
+### 記事の下にあるIDと日付を非表示に
+
+`デザイン`→<i class="fa fa-wrench" aria-hidden="true"></i>→`デザインCSS`に追加。
+<script src="https://gist.github.com/laureltreetop/e9468b986da746fe7625d783928e47bf.js"></script>
+
+### 指定した年の記事はアーカイブから除外
+
+固定記事を過去日付や未来日付にしているときに便利。  
+`デザイン`→<i class="fa fa-wrench" aria-hidden="true"></i>→`デザインCSS`に追加。
+<script src="https://gist.github.com/laureltreetop/003bfae833a5424f7987183d247fdbfc.js"></script>
+
+### 指定した年の記事は投稿日時を表示しない
+
+`デザイン`→<i class="fa fa-wrench" aria-hidden="true"></i>→`デザインCSS`に追加[^postedtime]。
+<script src="https://gist.github.com/laureltreetop/224100198431263f2b751473fabdf32a.js"></script>
+
+[^postedtime]: 当方は固定記事の日付を2000年と2100年の1月1日にしているが、どうやら時差の関係で前年カウントされているらしい。
+
+## 更新日付も表示
+
++ [更新日自動表示のカスタマイズをアップデートしました、レスポンシブデザインの方はご確認ください](http://www.tsubasa-note.blog/entry/last-modified-customize-fix)
++ [リライト好きな方へおススメしたい最終更新日を自動で表示するカスタマイズ](http://www.tsubasa-note.blog/entry/last-modified-customize)
+
+コードは前者、スタイルは後者のほぼ記事通りでできます。
