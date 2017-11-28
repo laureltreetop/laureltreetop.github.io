@@ -25,6 +25,7 @@ permalink: /hatebu/customize/
 
 ## 記事の下にあるIDと日付を非表示に
 
+`デザイン`→<i class="fa fa-wrench" aria-hidden="true"></i>→`デザインCSS`に追加。
 <script src="https://gist.github.com/laureltreetop/e9468b986da746fe7625d783928e47bf.js"></script>
 
 ## シェアボタン
