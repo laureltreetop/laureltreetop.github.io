@@ -1,5 +1,5 @@
 ---
-title: "Customize"
+title: "はてブをカスタマイズ"
 permalink: /hatebu/customize/
 ---
 テーマ共通のカスタマイズ。
