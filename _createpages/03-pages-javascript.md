@@ -26,6 +26,19 @@ permalink: /create-pages/javascript/
 <script src="https://gist.github.com/laureltreetop/7e6d97ed4adbd3b9309b6d8c803714b7.js"></script>
 画像以外にも使えるので詳しくは[ドキュメント](http://fancyapps.com/fancybox/3/docs/)を参照。
 
+## トップに戻る
+
+上記の[JQuery][]とFont Awesome[^fontawesome]を追加し、判りやすいところ（ナビメニュー近辺とか）に追加。
+<script src="https://gist.github.com/laureltreetop/c32c117a913668c6ef625aee525d7f8d.js"></script>
+
+[^fontawesome]: [Fonts](create-pages/fonts/)参照。
+
+CSSに追加。デザインはお好みで。
+<script src="https://gist.github.com/laureltreetop/3201e4dfb093ef0cfecb1fe65d4d2c94.js"></script>
+
+あとはスクリプトを追加で完了。
+<script src="https://gist.github.com/laureltreetop/a2ad0f5f1adc4baa4364b03d09b98f59.js"></script>
+
 ## 無限スクロール
 ### Infinite Scroll
 
