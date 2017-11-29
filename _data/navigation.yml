@@ -49,6 +49,8 @@ hatebu:
     children:
       - title: "Start"
         url: /hatebu/start/
+      - title: "Customize CSS"
+        url: /hatebu/customize-css/
       - title: "Customize"
         url: /hatebu/customize/
       - title: "Customize Innocent"
@@ -99,6 +101,8 @@ sidebar:
     children:
       - title: "Start"
         url: /hatebu/start/
+      - title: "Customize CSS"
+        url: /hatebu/customize-css/
       - title: "Customize"
         url: /hatebu/customize/
       - title: "Customize Innocent"
