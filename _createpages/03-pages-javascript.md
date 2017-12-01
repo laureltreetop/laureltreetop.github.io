@@ -52,8 +52,6 @@ CSSに追加。デザインはお好みで。
 <script src="https://gist.github.com/laureltreetop/bf184996dadb4a4b7d059cf0f1239e68.js"></script>
 ロード中や完了のメッセージを変えたり、アニメーションGIFを置き換えてみたり。  
 
-
-
 ### Infinite Scroll + Masonry
 
 [Infinite Scroll][]と[Masonry][]と[imagesLoaded][]の相性が良いらしい。  
@@ -66,6 +64,11 @@ CSSに追加。デザインはお好みで。
 
 でもって設定。  
 <script src="https://gist.github.com/laureltreetop/c0e3d27195fbc57054f139a65f2e6af2.js"></script>
+
+## Popな見出し
+
+<p data-height="344" data-theme-id="0" data-slug-hash="KybYme" data-default-tab="result" data-user="laurel-treetop" data-embed-version="2" data-pen-title="Pop Lettering" class="codepen">See the Pen <a href="https://codepen.io/laurel-treetop/pen/KybYme/">Pop Lettering</a> by Laurel (<a href="https://codepen.io/laurel-treetop">@laurel-treetop</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 
 [JQuery]: https://jquery.com/
