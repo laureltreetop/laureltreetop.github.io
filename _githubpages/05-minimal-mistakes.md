@@ -9,20 +9,24 @@ Minimal Mistakesをいろいろカスタマイズ。
 
 ## シェアボタンを追加
 
-[Font Awesome](http://fontawesome.io/)で[Pocket](https://getpocket.com)と[Pinterest](https://www.pinterest.jp/)のシェアボタンを追加。  
+[Font Awesome](http://fontawesome.io/)で[Pocket](https://getpocket.com)と[Pinterest](https://www.pinterest.jp/)と[はてなブックマーク](http://b.hatena.ne.jp/)のシェアボタンを追加。  
+色は[BrandColors](https://brandcolors.net/)や[SNSやWebサービスなどのロゴの色（ブランドカラー）を調べてみた](http://weboook.blog22.fc2.com/blog-entry-399.html)を参照。  
+はてなブログっぽいロゴはどうやって探したんだっけ…  
 
-色は[BrandColors](https://brandcolors.net/)を参照。  
+PintestとPocketとはてブを追加。数が増えすぎたので文字を改行してある。  
 _includes/social-share.html
 <script src="https://gist.github.com/laureltreetop/c122ffafea2a7e5c48d826a633e581f3.js"></script>
 _sass/minimal-mistakes/_buttons.css
 <script src="https://gist.github.com/laureltreetop/3d31245c521449bac3218c963184c6fd.js"></script>
-Pocketだけ追加。  
+Pocketとはてブを追加。  
 _sass/minimal-mistakes/_utilities.css
 <script src="https://gist.github.com/laureltreetop/bc64b1280cc817d099850fcc315e5c48.js"></script>
-Pocketだけ追加。  
+Pocketとはてブを追加。  
 _sass/minimal-mistakes/_variables.scss
 <script src="https://gist.github.com/laureltreetop/182cf5e2ddc4421de0f89144ea0e9b16.js"></script>
-
+はてブっぽいロゴ指定と各ボタンの幅を設定。  
+assets/css/main.scss
+<script src="https://gist.github.com/laureltreetop/4634544d756caf48aba9bb479abcc77e.js"></script>
 ## フォローボタンを追加
 [Pinterest](https://www.pinterest.jp/)のフォローボタンを追加してみる。  
 色やらアイコンやらは組み込み済みなので、_config.ymlにアカウント設定して以下を追記。  
