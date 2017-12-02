@@ -52,6 +52,12 @@ permalink: /hatebu/customize/
 元ネタにはないシェアボタンも追加してあります。
 [![HateBu Share](/assets/images/hatebu-share-icons.png)](/assets/images/hatebu-share-icons.png)
 
+[CodePen](https://codepen.io/)バージョンも載せとく。  
+FontAwesomeは[Bootstrap](https://www.bootstrapcdn.com/fontawesome/)より。追加の仕方も@importにしてあります。  
+はてブとEvernoteのアイコンは、はてブ用アイコンなので表示されてません。
+<p data-height="336" data-theme-id="0" data-slug-hash="ZawGMW" data-default-tab="result" data-user="laurel-treetop" data-embed-version="2" data-pen-title="Share button for Hatebu" class="codepen">See the Pen <a href="https://codepen.io/laurel-treetop/pen/ZawGMW/">Share button for Hatebu</a> by Laurel (<a href="https://codepen.io/laurel-treetop">@laurel-treetop</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
 参考
 + [【変更お願い!】コピペのみではてなブログのソーシャルボタンをシェア数付きでおしゃれにするカスタマイズvol.2](http://www.yukihy.com/entry/vol2-hatenablog-share-btn-custom)
 + [サイトの高速化に！Twitter、Facebook、Google＋、はてブのシェア数をJavaScriptで非同期に取得する方法まとめ](https://nelog.jp/sns-buttons-on-ajax)
