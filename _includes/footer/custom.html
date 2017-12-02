@@ -1,3 +1,33 @@
 <!-- start custom footer snippets -->
+<script src="/assets/js/jquery.lettering-0.6.1.min.js"></script>
+<script>
+$("h1.page__title").text( 
+    $.trim(
+      $("h1.page__title").text()
+    )
+).lettering();
+    
+$(function() {
+    var topBtn = $('#page-top');    
+    topBtn.hide();
+    //スクロールが100に達したらボタン表示
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            topBtn.fadeIn();
+        } else {
+            topBtn.fadeOut();
+        }
+    });
+    //スクロールしてトップ
+    topBtn.click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
+});
 
+</script>
+
+<p id="page-top"><a href="#wrap"><i class="fa fa-angle-double-up fa-3x"></i></a></p>
 <!-- end custom footer snippets -->

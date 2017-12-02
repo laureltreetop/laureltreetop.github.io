@@ -1,12 +1,12 @@
 ---
-title: "Jquery Plugins"
+title: "JQuery Plugins"
 permalink: /create-pages/javascript/
 ---
 今はタグ打ちなんてしなくてもできるねーと思っていたら、まさかの[Tumblrのテーマカスタマイズ](/tumblr/custom-theme/)でのタグ打ち。
 この機会にいろいろメモっておく。
 {: .notice}
 
-## まずはJquery
+## まずはJQuery
 [JQuery][]を`<head>...</head>`の間で呼び出しておく。
 <span><script src="https://gist.github.com/laureltreetop/59d30a038a01d98a7fe6bc1c7bcc2a91.js"></script></span>
 最新は[Google Hosted Libraries](https://developers.google.com/speed/libraries/#jquery)で確認。  
@@ -39,6 +39,11 @@ CSSに追加。デザインはお好みで。
 あとはスクリプトを追加で完了。
 <script src="https://gist.github.com/laureltreetop/a2ad0f5f1adc4baa4364b03d09b98f59.js"></script>
 
+…と今までは説明してたけど、[CodePen](https://codepen.io/)だと動きが判るし便利なので、そっちバージョンも。
+<p data-height="400" data-theme-id="0" data-slug-hash="eexzzR" data-default-tab="result" data-user="laurel-treetop" data-embed-version="2" data-pen-title="Page top" class="codepen">See the Pen <a href="https://codepen.io/laurel-treetop/pen/eexzzR/">Page top</a> by Laurel (<a href="https://codepen.io/laurel-treetop">@laurel-treetop</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+
 ## 無限スクロール
 ### Infinite Scroll
 
@@ -67,6 +72,7 @@ CSSに追加。デザインはお好みで。
 
 ## Popな見出し
 
+[cssで実現！見出しで使えるタイトルロゴのデザイン](https://www.yuu-diaryblog.com/2017/03/17/headline-design/)参考。  
 <p data-height="344" data-theme-id="0" data-slug-hash="KybYme" data-default-tab="result" data-user="laurel-treetop" data-embed-version="2" data-pen-title="Pop Lettering" class="codepen">See the Pen <a href="https://codepen.io/laurel-treetop/pen/KybYme/">Pop Lettering</a> by Laurel (<a href="https://codepen.io/laurel-treetop">@laurel-treetop</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 

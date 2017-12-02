@@ -27,6 +27,65 @@
     }
 }
 
+@media screen and (min-width: 1200px) {
+.page__hero--overlay {
+h1.page__title {
+  color: #fff;
+  font-family: 'Baloo Bhaina', cursive;
+  font-size: 32px;
+}
+ 
+h1.page__title span{ 
+  background: #fbcdcf;
+  display: inline-block;
+  position: relative;
+  width: 1.4em;
+  height: 1.4em;
+  line-height: 1.2em;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2), inset -1px -1px 8px rgba(255,255,255,1),inset 1px 1px 8px rgba(255,255,255,1);
+  text-shadow: 0 0 1px rgba(0,0,0,0.3);
+  text-align: center;
+  margin: 0 8px 0 0;
+  -webkit-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+}
+ 
+h1.page__title span:nth-child(6n-4){
+  background: #eae4f1;
+  -webkit-transform: translateY(-3px) rotate(8deg);
+  -ms-transform: translateY(-3px) rotate(8deg);
+  transform: translateY(-3px) rotate(8deg);
+}
+h1.page__title span:nth-child(6n-3){
+  background: #ffd800;
+  -webkit-transform: translateY(3px) rotate(-4deg);
+  -ms-transform: translateY(3px) rotate(-4deg);
+  transform: translateY(3px) rotate(-4deg);
+}
+h1.page__title span:nth-child(6n-2){
+  background: #6dcff6;
+  -webkit-transform: rotate(6deg);
+  -ms-transform: rotate(6deg);
+  transform: rotate(6deg);
+}
+h1.page__title span:nth-child(6n-1){
+  background: #a2dcaa;
+  -webkit-transform: translateY(-2px) rotate(-6deg);
+  -ms-transform: translateY(-2px) rotate(-6deg);
+  transform: translateY(-2px) rotate(-6deg);
+}
+h1.page__title span:nth-child(6n){
+  background: #f9b563;
+  -webkit-transform: translateY(8px) rotate(12deg);
+  -ms-transform: translateY(8px) rotate(12deg);
+  transform: translateY(8px) rotate(12deg);
+}
+}
+}
+
 li.triangle {
   line-height: 1.5;
   list-style-type: none!important;
@@ -38,8 +97,29 @@ li.triangle:before {
   color: lightgrey;
 }
 
+#page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+#page-top a {
+    background: #666;
+    text-decoration: none;
+    color: #fff;
+    width: 60px;
+    padding: 5px 0;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+}
+#page-top a:hover {
+    text-decoration: none;
+    background: #999;
+}
+
 body .gist .gist-data {
     max-height: 400px;
+    overflow:auto;
 }
 
 body .gist .gist-meta {
@@ -52,7 +132,7 @@ body .gist .blob-num {
     border-right: solid thick rgba(98, 64, 128, 0.3);
 }
 
-body tr:nth-of-type(odd) {
+body .gist tr:nth-of-type(odd) {
     background: #f3f3ff;
 }
 
