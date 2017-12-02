@@ -11,7 +11,7 @@ Minimal Mistakesをいろいろカスタマイズ。
 
 [Font Awesome](http://fontawesome.io/)で[Pocket](https://getpocket.com)と[Pinterest](https://www.pinterest.jp/)と[はてなブックマーク](http://b.hatena.ne.jp/)のシェアボタンを追加。  
 色は[BrandColors](https://brandcolors.net/)や[SNSやWebサービスなどのロゴの色（ブランドカラー）を調べてみた](http://weboook.blog22.fc2.com/blog-entry-399.html)を参照。  
-はてなブログっぽいロゴはどうやって探したんだっけ…  
+はてなブログっぽいロゴは[Font Awesome などアイコンフォントにないはてなブックマークを自力で追加する簡単な方法](http://hayashikejinan.com/webwork/css/913/)より。  
 
 PintestとPocketとはてブを追加。数が増えすぎたので文字を改行してある。  
 _includes/social-share.html

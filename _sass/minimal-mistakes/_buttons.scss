@@ -43,7 +43,7 @@
   (linkedin, $linkedin-color),
   (pocket, $pocket-color),
   (pinterest, $pinterest-color),
-  (hatebu, $hatebu-color);
+  (hatena, $hatena-color);
 
   @each $buttoncolor, $color in $buttoncolors {
     &--#{$buttoncolor} {

@@ -7,8 +7,9 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-// Font Awesome like hatena bookmark 
-.fa-hatebu {
+/* customize */
+// Font Awesome like hatena bookmark
+.fa-hatena {
      &:before {
         content: "B!";
         font-family: Verdana;
@@ -16,8 +17,14 @@
     }
 }
 
-.page__share .btn {
-    width: 12% !important;
+.page__share {
+    .btn {
+        width: 13% !important;
+    }
+    span {
+        font-size: 90%;
+        font-weight: normal;
+    }
 }
 
 li.triangle {
