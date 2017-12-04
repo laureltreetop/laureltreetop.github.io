@@ -69,3 +69,11 @@ FontAwesomeは[Bootstrap](https://www.bootstrapcdn.com/fontawesome/)より。追
 + [リライト好きな方へおススメしたい最終更新日を自動で表示するカスタマイズ](http://www.tsubasa-note.blog/entry/last-modified-customize)
 
 コードは前者、スタイルは後者のほぼ記事通りでできます。
+
+## オートページャー
+
+無限スクロールとかInfinity Scrollとか言われてるやつ。  
+[はてなブログの記事一覧を無限スクロールさせる(オートページャー)](http://psn.hatenablog.jp/entry/2015/12/11/090001)に少しだけ手を加えて、次のページを表示したら「次へ」的なリンクを削除と言うか隠す。  
+元ネタではInfinite Scrollの記述はなかったけど、当方の環境では必須っぽい。  
+`デザイン`→<i class="fa fa-wrench" aria-hidden="true"></i>→`フッタ`に追加。
+<script src="https://gist.github.com/laureltreetop/158c07a10742f269b0695b96e19c2b80.js"></script>
