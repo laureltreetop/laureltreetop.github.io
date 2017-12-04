@@ -7,7 +7,7 @@ permalink: /hatebu/customize/
 
 ## [JQuery](https://jquery.com/)
 
-`設定`→`詳細設定`→`検索エンジン最適化`→`headに要素を追加`に追加。
+`デザイン`→<i class="fa fa-wrench" aria-hidden="true"></i>→`フッタ`に追加。
 <span><script src="https://gist.github.com/laureltreetop/59d30a038a01d98a7fe6bc1c7bcc2a91.js"></script></span>
 最新は[Google Hosted Libraries](https://developers.google.com/speed/libraries/#jquery)で確認。
 
