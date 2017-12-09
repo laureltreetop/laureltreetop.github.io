@@ -8,8 +8,18 @@
 @import "minimal-mistakes"; // main partials
 
 /* customize */
+    .social-icons {
+      .fa-get-pocket {
+        color: $pocket-color;
+      }
+      .fa-hatena {
+        color: $hatena-color;
+      }
+    }
+
+
 // Font Awesome like hatena bookmark
-.fa-hatena {
+.hatena {
      &:before {
         content: "B!";
         font-family: Verdana;
