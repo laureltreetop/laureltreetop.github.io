@@ -1,8 +1,8 @@
 ---
 title: "Sass"
 permalink: /create-pages/sass/
-date :
-update : 
+date : 2017-12-10
+update : 2017-12-11
 ---
 CSS書いていると頭が渋滞しがちだけど、これなら便利なのかも。
 {: .notice}
