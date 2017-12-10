@@ -27,6 +27,8 @@ createpages:
         url: /create-pages/base/
       - title: "Fonts"
         url: /create-pages/fonts/
+      - title: "Sass"
+        url: /create-pages/sass/
       - title: "JQuery Plugins"
         url: /create-pages/javascript/
 githubpages:
@@ -81,6 +83,8 @@ sidebar:
         url: /create-pages/base/
       - title: "Fonts"
         url: /create-pages/fonts/
+      - title: "Sass"
+        url: /create-pages/sass/
       - title: "JQuery Plugins"
         url: /create-pages/javascript/
   - title: "memo - GitHub Pages"
