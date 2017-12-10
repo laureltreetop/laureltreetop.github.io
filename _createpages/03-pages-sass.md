@@ -1,6 +1,8 @@
 ---
 title: "Sass"
 permalink: /create-pages/sass/
+date :
+update : 
 ---
 CSS書いていると頭が渋滞しがちだけど、これなら便利なのかも。
 {: .notice}
@@ -38,5 +40,5 @@ CSS書いていると頭が渋滞しがちだけど、これなら便利なの�
 [SassMeister](https://www.sassmeister.com/)というのが便利。プレビューもあるし。  
 試しにさきほどのSassを突っ込んでみると、サイズが変更できるかと。  
 作ったやつは[Gist](https://gist.github.com/)に保存しておけます。
-<p class="sassmeister" data-gist-id="17e4a289f8494c8406a0c5292cd524ba" data-height="480" data-theme="tomorrow"><a href="https://www.sassmeister.com/gist/17e4a289f8494c8406a0c5292cd524ba">Play with this gist on SassMeister.</a></p><script src="https://cdn.sassmeister.com/js/embed.js" async></script>
+<p class="sassmeister" data-gist-id="cb7966a209028677bb3ce4c4d8212ecf" data-height="480" data-theme="tomorrow"><a <script src="https://gist.github.com/laureltreetop/cb7966a209028677bb3ce4c4d8212ecf.js"></script>
 コードを貼り付けることもできますねぇ。
