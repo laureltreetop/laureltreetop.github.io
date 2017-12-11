@@ -55,3 +55,10 @@ CSS書いていると頭が渋滞しがちだけど、これなら便利なの�
 便利だなと思ったのを放り込んでおく。  
 たぶん見えない可能性が高いと思うが…
 <p class="sassmeister" data-gist-id="0f6dbe8c3f2e25dfdfab11a9b8a9213c" data-height="480" data-theme="tomorrow"><a href="https://www.sassmeister.com/gist/0f6dbe8c3f2e25dfdfab11a9b8a9213c">Play with this gist on SassMeister.</a></p><script src="https://cdn.sassmeister.com/js/embed.js" async></script>
+
+なので、Gist側からも貼っておく。
+変換前のSass
+<script src="https://gist.github.com/laureltreetop/0f6dbe8c3f2e25dfdfab11a9b8a9213c.js?file=SassMeister-input.scss"></script>
+
+変換後のCss
+<script src="https://gist.github.com/laureltreetop/0f6dbe8c3f2e25dfdfab11a9b8a9213c.js?file=SassMeister-output.css"></script>
