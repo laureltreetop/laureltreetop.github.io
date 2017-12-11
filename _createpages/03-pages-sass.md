@@ -39,7 +39,19 @@ CSS書いていると頭が渋滞しがちだけど、これなら便利なの�
 
 [SassMeister](https://www.sassmeister.com/)というのが便利。プレビューもあるし。  
 試しにさきほどのSassを突っ込んでみると、サイズが変更できるかと。  
-作ったやつは[Gist](https://gist.github.com/)に保存しておけます。
-<p class="sassmeister" data-gist-id="458966d78c3f3298ef363a07b3153ade" data-height="480" data-theme="tomorrow"><a href="https://www.sassmeister.com/gist/458966d78c3f3298ef363a07b3153ade">Play with this gist on SassMeister.</a></p><script src="https://cdn.sassmeister.com/js/embed.js" async></script>
-コードを貼り付けることもできますねぇ。  
-ただ、かなりの確率で404errorになる。
+作ったやつは[Gist](https://gist.github.com/)にSecret Gistとして保存しておけます。  
+`https://www.sassmeister.com/gist/`+gistのIDで開けます。  
+コードを貼り付けることもできますね。  
+<p class="sassmeister" data-gist-id="d9f98cddaaf413b1a655f04d0b1c8ba9" data-height="480" data-theme="tomorrow"><a href="https://www.sassmeister.com/gist/d9f98cddaaf413b1a655f04d0b1c8ba9">Play with this gist on SassMeister.</a></p><script src="https://cdn.sassmeister.com/js/embed.js" async></script>
+ただ、かなりの確率で404 errorになるのですが、なんなんでしょ…?
+
+## 書式
+
+いろいろ便利みたいだけど、とりあえず使ってみた範囲で。
+{: .notice}
+
+### とりあえずメモ
+
+便利だなと思ったのを放り込んでおく。  
+たぶん見えない可能性が高いと思うが…
+<p class="sassmeister" data-gist-id="0f6dbe8c3f2e25dfdfab11a9b8a9213c" data-height="480" data-theme="tomorrow"><a href="https://www.sassmeister.com/gist/0f6dbe8c3f2e25dfdfab11a9b8a9213c">Play with this gist on SassMeister.</a></p><script src="https://cdn.sassmeister.com/js/embed.js" async></script>
