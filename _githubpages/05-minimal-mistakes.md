@@ -15,18 +15,18 @@ Minimal Mistakesをいろいろカスタマイズ。
 
 PintestとPocketとはてブを追加。数が増えすぎたので文字を改行してある。  
 _includes/social-share.html
-<script src="https://gist.github.com/laureltreetop/c122ffafea2a7e5c48d826a633e581f3.js"></script>
+<script src="https://gist.github.com/laureltreetop/61c616b2741c041736241f89786351d0.js?file=_includes_social-share.html"></script>
 _sass/minimal-mistakes/_buttons.css
-<script src="https://gist.github.com/laureltreetop/3d31245c521449bac3218c963184c6fd.js"></script>
-Pocketとはてブを追加。  
-_sass/minimal-mistakes/_utilities.css
-<script src="https://gist.github.com/laureltreetop/bc64b1280cc817d099850fcc315e5c48.js"></script>
+<script src="https://gist.github.com/laureltreetop/61c616b2741c041736241f89786351d0.js?file=_sass_minimal-mistakes_buttons.css"></script>
 Pocketとはてブを追加。  
 _sass/minimal-mistakes/_variables.scss
-<script src="https://gist.github.com/laureltreetop/182cf5e2ddc4421de0f89144ea0e9b16.js"></script>
-はてブっぽいロゴ指定と各ボタンの幅を設定。  
+<script src="https://gist.github.com/laureltreetop/61c616b2741c041736241f89786351d0.js?file=_sass_minimal-mistakes_variables.scss"></script>
+Pocketとはてブを追加[^utilities]、はてブっぽいロゴ指定など。  
 assets/css/main.scss
-<script src="https://gist.github.com/laureltreetop/4634544d756caf48aba9bb479abcc77e.js"></script>
+<script src="https://gist.github.com/laureltreetop/61c616b2741c041736241f89786351d0.js?file=assets_css_main.scss"></script>
+
+[^utilities]: 前は_sass/minimal-mistakes/_utilities.cssを修正した分を、assets/css/main.scssに移動。
+
 ## フォローボタンを追加
 [Pinterest](https://www.pinterest.jp/)のフォローボタンを追加してみる。  
 色やらアイコンやらは組み込み済みなので、_config.ymlにアカウント設定して以下を追記。  
