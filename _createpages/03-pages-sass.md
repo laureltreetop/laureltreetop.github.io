@@ -25,13 +25,14 @@ CSS書いていると頭が渋滞しがちだけど、これなら便利なの�
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 `$size`の値を直せば、模様の伸縮自在になるわけです[^css2sass]。  
+SCSS表示のときに右下の`VIEW COMPILED`でScssとCssの切り替えができます。  
 今回はサンプルを持ってきたからややこしいのですが、自分で作るときに最初からSassで作っておけば便利かと。
 
 [^css2sass]: もっときれいにまとめられると思うけど、本題から逸れるので勘弁して下さい。
 
 ## 環境構築
 
-### ソフトをインストールする
+### アプリをインストールする
 
 …ってのは面倒くさい。なので次の方法で。
 
@@ -54,11 +55,11 @@ CSS書いていると頭が渋滞しがちだけど、これなら便利なの�
 
 便利だなと思ったのを放り込んでおく。  
 たぶん見えない可能性が高いと思うが…
-<p class="sassmeister" data-gist-id="0f6dbe8c3f2e25dfdfab11a9b8a9213c" data-height="480" data-theme="tomorrow"><a href="https://www.sassmeister.com/gist/0f6dbe8c3f2e25dfdfab11a9b8a9213c">Play with this gist on SassMeister.</a></p><script src="https://cdn.sassmeister.com/js/embed.js" async></script>
+<p class="sassmeister" data-gist-id="a5eb8ea45ea8da208e9b8836f3105b69" data-height="480" data-theme="tomorrow"><a href="https://www.sassmeister.com/gist/a5eb8ea45ea8da208e9b8836f3105b69">Play with this gist on SassMeister.</a></p><script src="https://cdn.sassmeister.com/js/embed.js" async></script>
 
-なので、Gist側からも貼っておく。
+なので、Gist側からも貼っておく。  
 変換前のSass
-<script src="https://gist.github.com/laureltreetop/0f6dbe8c3f2e25dfdfab11a9b8a9213c.js?file=SassMeister-input.scss"></script>
+<script src="https://gist.github.com/a5eb8ea45ea8da208e9b8836f3105b69.js?file=SassMeister-input.scss"></script>
 
 変換後のCss
-<script src="https://gist.github.com/laureltreetop/0f6dbe8c3f2e25dfdfab11a9b8a9213c.js?file=SassMeister-output.css"></script>
+<script src="https://gist.github.com/a5eb8ea45ea8da208e9b8836f3105b69.js?file=SassMeister-output.css"></script>
