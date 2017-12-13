@@ -2,7 +2,7 @@
 title: "Sass"
 permalink: /create-pages/sass/
 update : 2017-12-12
-toc_icon: "sass"
+toc_icon: "fab fa-sass"
 ---
 CSS書いていると頭が渋滞しがちだけど、これなら便利なのかも。
 {: .notice}
@@ -30,9 +30,10 @@ SCSS表示のときに右下の`VIEW COMPILED`でScssとCssの切り替えがで
 [^css2sass]: もっときれいにまとめられると思うけど、本題から逸れるので勘弁して下さい。
 
 色指定が楽になる、というのもあったり。
-<p data-height="300" data-theme-id="31931" data-slug-hash="vWbbLZ" data-default-tab="css,result" data-user="laurel-treetop" data-embed-version="2" data-pen-title="SlimMenu Color Template" class="codepen">See the Pen <a href="https://codepen.io/laurel-treetop/pen/vWbbLZ/">SlimMenu Color Template</a> by Laurel (<a href="https://codepen.io/laurel-treetop">@laurel-treetop</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="31931" data-slug-hash="LeYGXL" data-default-tab="css,result" data-user="laurel-treetop" data-embed-version="2" data-pen-title="SlimMenu Color Change" class="codepen">See the Pen <a href="https://codepen.io/laurel-treetop/pen/LeYGXL/">SlimMenu Color Change</a> by Laurel (<a href="https://codepen.io/laurel-treetop">@laurel-treetop</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 ちょっと見るのに苦労すると思いますが、実はこれ、色を指定しているのは2箇所、メニューバーの基本になっている色と、テキストの色だけ。  
+あとは基本の色を明るくしたり彩度を上げ下げしたりで調整してある。
 
 ### 欠点
 
@@ -84,9 +85,13 @@ SCSS表示のときに右下の`VIEW COMPILED`でScssとCssの切り替えがで
  : 公式のドキュメント
  + [Sass Meister](https://www.sassmeister.com/)
  : お試しだったり、Jekyllとかで環境が整っているところに追記するのに便利
+ + [Sassってなに？だった私がSassの使い方を解説してみた](http://creator.dwango.co.jp/9668.html)
+ : 判りやすい
  + [CSS To SCSS Converter](http://beautifytools.com/css-to-scss-converter.php)
  : 名前の通り
  + [css2scss](http://sebastianpontow.de/css2compass/)
  : [汚いcssを整形するWebアプリ「css2scss」でリファクタリングした際、「ヤバい」と感じた３つの機能と３つの点](https://qiita.com/koh-taka@github/items/bf638dd64c7c09e93557)
  + [sassでコーディング効率化！意外と知らなかった？関数いろいろ](http://satohmsys.info/sass-coding-tips-1/)
- : 具体例がたくさんある
+ + [sass×compassでコーディング効率化！意外と知らなかった？関数いろいろ](http://satohmsys.info/sass-coding-tips-with-compass/)
+ + [sass×compassでコーディング効率化！僕がよく使う自作mixin ※デモ付き](http://satohmsys.info/ssass-coding-tips-with-mixin/)
+ : この3つ、具体例がたくさんあったり、実用性があったり
