@@ -2,11 +2,12 @@
 title: "Sass"
 permalink: /create-pages/sass/
 update : 2017-12-12
+toc_icon: "sass"
 ---
 CSS書いていると頭が渋滞しがちだけど、これなら便利なのかも。
 {: .notice}
 
-## SASSとは
+## <i class="fab fa-sass"></i>SASSとは
 
 [Sass - Wikipedia](https://ja.wikipedia.org/wiki/Sass)というものらしい。  
 公式サイトは[Sass: Syntactically Awesome Style Sheets](http://sass-lang.com/)ですな。  
@@ -86,4 +87,6 @@ SCSS表示のときに右下の`VIEW COMPILED`でScssとCssの切り替えがで
  + [CSS To SCSS Converter](http://beautifytools.com/css-to-scss-converter.php)
  : 名前の通り
  + [css2scss](http://sebastianpontow.de/css2compass/)
- : 上に同じ
+ : [汚いcssを整形するWebアプリ「css2scss」でリファクタリングした際、「ヤバい」と感じた３つの機能と３つの点](https://qiita.com/koh-taka@github/items/bf638dd64c7c09e93557)
+ + [sassでコーディング効率化！意外と知らなかった？関数いろいろ](http://satohmsys.info/sass-coding-tips-1/)
+ : 具体例がたくさんある
