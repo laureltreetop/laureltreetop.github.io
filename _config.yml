@@ -372,3 +372,4 @@ github: [metadata]
 head_scripts:
   - https://apis.google.com/js/platform.js
 footer_scripts:
+#  - https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js
