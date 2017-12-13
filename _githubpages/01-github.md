@@ -1,5 +1,4 @@
 ---
-last_modified_at: 2017-11-09
 title: "GitHub start"
 permalink: /githubpages/github/
 toc_label: "GitHub start"
@@ -46,4 +45,15 @@ $ git clone git@github.com:username/hoehoe.github.io.git
 
 [^githubwindows]: でもGit&nbsp;Shellしか使ってないかも。
 
+## Brackets
 
+[Brackets](http://brackets.io/)なるテキストエディタに[Brackets-Git](https://github.com/brackets-userland/brackets-git)という拡張機能を追加すると、エディタからadd, commit, pushなどが可能。  
+今までは書き溜めたのをまとめてばーっとcommit→pushだったので、一度のcommitにコメントが渋滞してた。
+
+これだと簡単にファイル別にcommitできるし、Git Shellを行き来しなくてもpushできる。もちろんputも。  
+これでcommitログが見やすくなる。
+
+既にGit for Windowsなどでコマンドでのgitが使えていることが前提。  
+最初にgit.exeが見当たらないって怒られたけど、whereで調べた結果、`~\AppData\Local\`なフォルダにあったせい。いつもGit Shellで立ち上げてたから気にならなかった。  
+それをうまく設定してあげれば、かなり便利。  
+おまけに、今までlast_update_dateプラグインがGitHub Pagesで使えないため、手書きで日付を入れたりしてたけど、これだと自動で入れてくれる模様。
