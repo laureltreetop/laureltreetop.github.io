@@ -76,5 +76,15 @@ SCSS表示のときに右下の`VIEW COMPILED`でScssとCssの切り替えがで
 変換後のCss
 <script src="https://gist.github.com/a5eb8ea45ea8da208e9b8836f3105b69.js?file=SassMeister-output.css"></script>
 
-あと[JSFiddle](//jsfiddle.net/)とかも。
-<script async src="//jsfiddle.net/treetop/ba4mvyyd/1/embed/css/"></script>
+## リンク
+
+ + [Sass](http://sass-lang.com/)
+ : 公式
+ + [Sass Documentation](http://sass-lang.com/documentation/file.README.html)
+ : 公式のドキュメント
+ + [Sass Meister](https://www.sassmeister.com/)
+ : お試しだったり、Jekyllとかで環境が整っているところに追記するのに便利
+ + [CSS To SCSS Converter](http://beautifytools.com/css-to-scss-converter.php)
+ : 名前の通り
+ + [css2scss](http://sebastianpontow.de/css2compass/)
+ : 上に同じ
