@@ -2,7 +2,7 @@
 title: "GitHub start"
 permalink: /githubpages/github/
 toc_label: "GitHub start"
-date : 2017-12-10
+date : 2017-11-09
 update : 2017-12-10
 ---
 GitHub Pagesなのですから、当然最初はGitHubの準備や設定やら。
