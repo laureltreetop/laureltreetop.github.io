@@ -11,7 +11,6 @@ CSS書いていると頭が渋滞しがちだけど、これなら便利なの�
 
 [Sass - Wikipedia](https://ja.wikipedia.org/wiki/Sass)というものらしい。  
 公式サイトは[Sass: Syntactically Awesome Style Sheets](http://sass-lang.com/)ですな。  
-で、ブラウザがサクッと読んでくれるわけではなく、コンパイルが必要。  
 
 ### 利点
 なぜSass推しなのかというと、[CSS3 Patterns Gallery](http://lea.verou.me/css3patterns/)で見つけた模様を小さくしようとしたのですよ。
@@ -30,11 +29,24 @@ SCSS表示のときに右下の`VIEW COMPILED`でScssとCssの切り替えがで
 
 [^css2sass]: もっときれいにまとめられると思うけど、本題から逸れるので勘弁して下さい。
 
+色指定が楽になる、というのもあったり。
+<p data-height="300" data-theme-id="31931" data-slug-hash="vWbbLZ" data-default-tab="css,result" data-user="laurel-treetop" data-embed-version="2" data-pen-title="SlimMenu Color Template" class="codepen">See the Pen <a href="https://codepen.io/laurel-treetop/pen/vWbbLZ/">SlimMenu Color Template</a> by Laurel (<a href="https://codepen.io/laurel-treetop">@laurel-treetop</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+ちょっと見るのに苦労すると思いますが、実はこれ、色を指定しているのは2箇所、メニューバーの基本になっている色と、テキストの色だけ。  
+
+### 欠点
+
+ブラウザがサクッと読んでくれるわけではなく、コンパイルが必要。  
+ということはコンパイラが必要。  
+コンパイラの環境構築が面倒。  
+
 ## 環境構築
 
-### アプリをインストールする
+### コンパイラをインストールする
 
-…ってのは面倒くさい。なので次の方法で。
+…ってのは面倒くさい。なので次の方法で[^sasscompiler]。  
+
+[^sasscompiler]: といいつつ、そのうち整えるんでしょうねぇ。  
 
 ### オンラインエディタで編集
 
@@ -63,3 +75,6 @@ SCSS表示のときに右下の`VIEW COMPILED`でScssとCssの切り替えがで
 
 変換後のCss
 <script src="https://gist.github.com/a5eb8ea45ea8da208e9b8836f3105b69.js?file=SassMeister-output.css"></script>
+
+あと[JSFiddle](//jsfiddle.net/)とかも。
+<script async src="//jsfiddle.net/treetop/ba4mvyyd/1/embed/css/"></script>
