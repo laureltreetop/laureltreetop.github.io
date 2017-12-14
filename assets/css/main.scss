@@ -35,62 +35,87 @@
         font-weight: normal;
     }
 }
+.generate::before {
+	font-family: 'FontAwesome';
+}
+#zip01::before {
+	content: "〒";
+}
+
+
+@media only screen and (max-width: 480px) {
+	#rate_pc {
+		display: none !important;
+	}
+}
+@media only screen and (max-width: 780px) {
+	#rate_mp {
+		display: none !important;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	#rate_mp {
+		display: none !important;
+	}
+
+  .page__hero--overlay {
+	h1.page__title {
+		color: #fff;
+		font-family: 'Baloo Bhaina', cursive;
+		font-size: 32px;
+		span {
+			background: #fbcdcf;
+			display: inline-block;
+			position: relative;
+			width: 1.4em;
+			height: 1.4em;
+			line-height: 1.2em;
+			border: 2px solid #fff;
+			border-radius: 10px;
+			box-shadow: 0 0 6px rgba(0, 0, 0, 0.2), inset -1px -1px 8px rgba(255, 255, 255, 1), inset 1px 1px 8px rgba(255, 255, 255, 1);
+			text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+			text-align: center;
+			margin: 0 8px 0 0;
+			-webkit-transform: rotate(-10deg);
+			-ms-transform: rotate(-10deg);
+			transform: rotate(-10deg);
+				&:nth-child(6n-4) {
+				  background: #eae4f1;
+				  -webkit-transform: translateY(-3px) rotate(8deg);
+				  -ms-transform: translateY(-3px) rotate(8deg);
+				  transform: translateY(-3px) rotate(8deg);
+				}
+				&:nth-child(6n-3) {
+				  background: #ffd800;
+				  -webkit-transform: translateY(3px) rotate(-4deg);
+				  -ms-transform: translateY(3px) rotate(-4deg);
+				  transform: translateY(3px) rotate(-4deg);
+				}
+				&:nth-child(6n-2) {
+				  background: #6dcff6;
+				  -webkit-transform: rotate(6deg);
+				  -ms-transform: rotate(6deg);
+				  transform: rotate(6deg);
+				}
+				&:nth-child(6n-1) {
+				  background: #a2dcaa;
+				  -webkit-transform: translateY(-2px) rotate(-6deg);
+				  -ms-transform: translateY(-2px) rotate(-6deg);
+				  transform: translateY(-2px) rotate(-6deg);
+				}
+				&:nth-child(6n) {
+				  background: #f9b563;
+				  -webkit-transform: translateY(8px) rotate(12deg);
+				  -ms-transform: translateY(8px) rotate(12deg);
+				  transform: translateY(8px) rotate(12deg);
+				}
+			}
+		}
+	}
+}
 
 @media screen and (min-width: 1200px) {
-.page__hero--overlay {
-h1.page__title {
-  color: #fff;
-  font-family: 'Baloo Bhaina', cursive;
-  font-size: 32px;
-  span {
-    background: #fbcdcf;
-    display: inline-block;
-    position: relative;
-    width: 1.4em;
-    height: 1.4em;
-    line-height: 1.2em;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2), inset -1px -1px 8px rgba(255, 255, 255, 1), inset 1px 1px 8px rgba(255, 255, 255, 1);
-    text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    margin: 0 8px 0 0;
-    -webkit-transform: rotate(-10deg);
-    -ms-transform: rotate(-10deg);
-    transform: rotate(-10deg);
-    &:nth-child(6n-4) {
-      background: #eae4f1;
-      -webkit-transform: translateY(-3px) rotate(8deg);
-      -ms-transform: translateY(-3px) rotate(8deg);
-      transform: translateY(-3px) rotate(8deg);
-    }
-    &:nth-child(6n-3) {
-      background: #ffd800;
-      -webkit-transform: translateY(3px) rotate(-4deg);
-      -ms-transform: translateY(3px) rotate(-4deg);
-      transform: translateY(3px) rotate(-4deg);
-    }
-    &:nth-child(6n-2) {
-      background: #6dcff6;
-      -webkit-transform: rotate(6deg);
-      -ms-transform: rotate(6deg);
-      transform: rotate(6deg);
-    }
-    &:nth-child(6n-1) {
-      background: #a2dcaa;
-      -webkit-transform: translateY(-2px) rotate(-6deg);
-      -ms-transform: translateY(-2px) rotate(-6deg);
-      transform: translateY(-2px) rotate(-6deg);
-    }
-    &:nth-child(6n) {
-      background: #f9b563;
-      -webkit-transform: translateY(8px) rotate(12deg);
-      -ms-transform: translateY(8px) rotate(12deg);
-      transform: translateY(8px) rotate(12deg);
-    }
-  }
-}
-}
+
 }
 
 li.triangle {
@@ -123,6 +148,8 @@ li.triangle {
     }
   }
 }
+
+
 
 body .gist .gist-data {
     max-height: 400px;
