@@ -4,6 +4,8 @@ main:
 #    url: /page-archive/
 #  - title: "資料"
 #    url: /collection-archive/
+  - title: "QRコード作成"
+    url: /qr-code-entry.html
   - title: "ページ作成"
     url: /create-pages/base/
   - title: "GitHub Pages"
@@ -71,12 +73,12 @@ Tumblr:
 
 # sidebar navigation
 sidebar:
-  - title: "K's Sites"
+  - title: "Tool"
     children:
-      - title: "K's blog"
-        url: http://blog.treetop.to/
-      - title: "K's web contents ver.1995"
-        url: http://treetop.webcrow.jp/
+      - title: "電話帳登録用QRコード作成"
+        url: /qr-code-entry.html
+      - title: "テキスト用QRコード作成"
+        url: /qr-code-text.html
   - title: "memo - ページ作成"
     children:
       - title: "Start"
@@ -127,3 +129,9 @@ sidebar:
         url: /misc/lifelog/
       - title: "Firebase"
         url: /misc/firebase/
+  - title: "K's Sites"
+    children:
+      - title: "K's blog"
+        url: http://blog.treetop.to/
+      - title: "K's web contents ver.1995"
+        url: http://treetop.webcrow.jp/

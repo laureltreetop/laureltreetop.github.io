@@ -341,11 +341,13 @@ defaults:
       type: pages
     values:
       layout: splash
-      author_profile: true
+      author_profile: false
       read_time: false
-      comments: # true
       share: true
+      comments: true
       related: true
+      # sidebar:
+      #   nav: "sidebar"
 
 collections:
   createpages:

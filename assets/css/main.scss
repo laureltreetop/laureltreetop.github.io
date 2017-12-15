@@ -8,6 +8,7 @@
 @import "minimal-mistakes"; // main partials
 
 /* customize */
+
     .social-icons {
       .fa-get-pocket {
         color: $pocket-color;
@@ -35,14 +36,25 @@
         font-weight: normal;
     }
 }
-.generate::before {
-	font-family: 'FontAwesome';
-}
-#zip01::before {
-	content: "〒";
-}
 
-
+::-webkit-input-placeholder {
+  color: $light-gray;
+}
+::-moz-placeholder {
+  color: $light-gray;
+}
+:-ms-input-placeholder {
+  color: $light-gray;
+}
+::placeholder {
+  color: $light-gray;
+}
+#zipcode {
+	width: 5em;
+}
+#qrsize {
+	width: 5em;
+}
 @media only screen and (max-width: 480px) {
 	#rate_pc {
 		display: none !important;
