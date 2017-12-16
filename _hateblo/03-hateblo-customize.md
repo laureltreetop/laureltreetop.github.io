@@ -1,6 +1,6 @@
 ---
-title: "はてブをカスタマイズ がっつり編"
-permalink: /hatebu/customize/
+title: "はてなブログをカスタマイズ がっつり編"
+permalink: /hateblo/customize/
 ---
 デザインなど簡単なものは[CSS編](/hatebu/customize-css/)に。
 {: .notice}

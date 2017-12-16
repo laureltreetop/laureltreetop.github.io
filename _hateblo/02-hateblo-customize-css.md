@@ -1,6 +1,6 @@
 ---
-title: "はてブをカスタマイズ CSS編"
-permalink: /hatebu/customize-css/
+title: "はてなブログをカスタマイズ CSS編"
+permalink: /hateblo/customize-css/
 ---
 CSSだけでできるカスタマイズ集。  
 `デザイン`→<i class="fa fa-wrench" aria-hidden="true"></i>→`デザインCSS`に追加していきます。

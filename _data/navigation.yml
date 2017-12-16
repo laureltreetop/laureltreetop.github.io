@@ -11,7 +11,7 @@ main:
   - title: "GitHub Pages"
     url: /githubpages/index.html
   - title: "はてなブログ"
-    url: /hatebu/index.html
+    url: /hateblo/index.html
   - title: "Tumblr"
     url: /tumblr/index.html
   - title: "misc."
@@ -48,17 +48,17 @@ githubpages:
         url: /githubpages/minimal-mistakes/
       - title: "Blogger to Jekyll"
         url: /githubpages/blogger-to-jekyll/
-hatebu:
+hateblo:
   - title: "はてなブログ"
     children:
       - title: "Start"
-        url: /hatebu/start/
+        url: /hateblo/start/
       - title: "Customize CSS"
-        url: /hatebu/customize-css/
+        url: /hateblo/customize-css/
       - title: "Customize"
-        url: /hatebu/customize/
+        url: /hateblo/customize/
       - title: "Customize Innocent"
-        url: /hatebu/innocent/
+        url: /hateblo/innocent/
 Tumblr:
   - title: "Tumblr"
     children:
@@ -106,13 +106,13 @@ sidebar:
   - title: "memo - はてなブログ"
     children:
       - title: "Start"
-        url: /hatebu/start/
+        url: /hateblo/start/
       - title: "Customize CSS"
-        url: /hatebu/customize-css/
+        url: /hateblo/customize-css/
       - title: "Customize"
-        url: /hatebu/customize/
+        url: /hateblo/customize/
       - title: "Customize Innocent"
-        url: /hatebu/innocent/
+        url: /hateblo/innocent/
   - title: "memo - Tumblr"
     children:
       - title: "Start"

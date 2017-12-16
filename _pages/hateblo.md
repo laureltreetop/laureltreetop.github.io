@@ -1,7 +1,7 @@
 ---
 layout: splash
 title: "はてなブログ"
-permalink: /hatebu/index.html
+permalink: /hateblo/index.html
 share: false
 comments: false
 header:
@@ -9,7 +9,7 @@ header:
   overlay_filter: rgba(255, 255, 255, 0.5)
 ---
 
-{% for item in site.hatebu %}
+{% for item in site.hateblo %}
   + [{{ item.title }}]({{ item.url }})
   {: .triangle}
 {% endfor %}

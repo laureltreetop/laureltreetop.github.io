@@ -1,6 +1,6 @@
 ---
 title: "はてなブログ"
-permalink: /hatebu/start/
+permalink: /hateblo/start/
 ---
 とりあえずはメモりつつ作業。
 {: .notice}

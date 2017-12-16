@@ -1,6 +1,6 @@
 ---
 title: "Customize Innocent"
-permalink: /hatebu/innocent/
+permalink: /hateblo/innocent/
 ---
 [Innocent](http://blog.hatena.ne.jp/-/store/theme/6653586347149180725)をカスタマイズ。
 {: .notice}
