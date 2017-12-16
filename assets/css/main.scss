@@ -55,17 +55,17 @@
 #qrsize {
 	width: 5em;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: $small) {
 	#rate_pc {
 		display: none !important;
 	}
 }
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: $medium) {
 	#rate_mp {
 		display: none !important;
 	}
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: $x-large) {
 	#rate_mp {
 		display: none !important;
 	}
@@ -133,11 +133,17 @@
 li.triangle {
   line-height: 1.5;
   list-style-type: none !important;
+  margin-left: 0.3em;
   &:before {
     font-family: FontAwesome;
     content: "\f0da";
-    color: lightgrey;
+	margin-right: 0.3em;
+    color: $light-gray;
   }
+}
+
+.notice--info li {
+	margin-left: 1.0em;
 }
 
 #page-top {

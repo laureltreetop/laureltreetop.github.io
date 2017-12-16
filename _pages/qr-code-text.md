@@ -6,8 +6,6 @@ permalink: /qr-code-text.html
 sidebar:
   nav: "sidebar"
 ---
-+ 電話番号の前にTEL:をつけると、そのまま発信できます
-+ URLやメールアドレスはそのままで表示、送信できます
 <div id="qr-code-text" class="form-mimic">
 <div>
 	<label for="note">テキスト:</label>
@@ -23,3 +21,7 @@ sidebar:
 <div id="qr_text">
 </div>
 </div>
++ 電話番号の前にTEL:をつけると、そのまま発信できます
++ URLやメールアドレスはそのままで表示、送信できます
++ 必ず読み取りテストを行ってください
+{: .notice--info}
