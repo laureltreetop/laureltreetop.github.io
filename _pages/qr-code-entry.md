@@ -30,6 +30,7 @@ sidebar:
   <input type="text" id="extend-add" class="p-extended-address" placeholder="（建物名など）" />
   <input type="reset" value="住所クリア" class="btn">
 </form>
+<div>
 	<label for="MAIL1">E-mail:</label>
 	<input type="text" id="mail" value="" placeholder="">
 </div>
@@ -47,6 +48,7 @@ sidebar:
 <div id="qr_add">
 </div>
 </div>
+
 + 必ず読み取りテストを行ってください
 + 環境により、読み取りはできても登録されない項目もあります（メモなど）
 + 名前は姓名まとめて姓または名に登録されます
