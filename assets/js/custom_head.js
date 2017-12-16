@@ -60,7 +60,6 @@ function make_address_qr(data) {
 	result += "NAME2:" + data['kana'] + "\r\n";
 	result += "TEL1:" + data['tel'] + "\r\n";
 	result += "ADD:" + data['add'] + "\r\n";
-	result += "ZIP:" + $("#zip").val() + "\r\n";
 	result += "MAIL1:" + data['mail'] + "\r\n";
 	return result;
 }
