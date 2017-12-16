@@ -6,6 +6,9 @@ share: true
 comments: true
 title: "自分のことかい?"
 permalink: /about/
+header:
+  overlay_image: /assets/images/github-header.png
+  overlay_filter: rgba(255, 255, 255, 0.5)
 ---
 前線から完全撤退して…のはずが、技術系なものを試してつらつらとメモを書いておく。  
 ブログには愚痴多数。  
