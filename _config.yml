@@ -183,7 +183,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 10 # amount of posts to show
+paginate: 5 # amount of posts to show
 paginate_path: /page/:num/
 timezone: Asia/Tokyo # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
@@ -259,6 +259,21 @@ defaults:
       comments: # true
       share: true
       related: true
+  # tool
+  - scope:
+      path: ""
+      type: tool
+    values:
+      layout: single
+      author_profile: false
+      read_time: false
+      share: true
+      comments: true
+      sidebar:
+        nav: "sidebar"
+      #toc: true
+      # toc_label:
+      #toc_icon: "gears"
   # _createpages
   - scope:
       path: ""
@@ -350,6 +365,9 @@ defaults:
       #   nav: "sidebar"
 
 collections:
+  tool:
+    permalink: /:collection/:path/
+    output: true
   createpages:
     permalink: /:collection/:path/
     output: true

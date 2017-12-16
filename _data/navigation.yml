@@ -4,18 +4,18 @@ main:
 #    url: /page-archive/
 #  - title: "資料"
 #    url: /collection-archive/
-  - title: "QRコード作成"
-    url: /qr-code-entry.html
+  - title: "Tool"
+    url: /tool/index.html
   - title: "ページ作成"
-    url: /create-pages/base/
+    url: /createpages/index.html
   - title: "GitHub Pages"
-    url: /githubpages/github/
+    url: /githubpages/index.html
   - title: "はてなブログ"
-    url: /hatebu/start/
+    url: /hatebu/index.html
   - title: "Tumblr"
-    url: /tumblr/start/
-  - title: "... and more"
-    url: /collection-archive/
+    url: /tumblr/index.html
+  - title: "misc."
+    url: /misc/index.html
   - title: "愚痴"
     url: /month-archive/
   - title: "自分?"
@@ -76,9 +76,9 @@ sidebar:
   - title: "Tool"
     children:
       - title: "電話帳登録用QRコード作成"
-        url: /qr-code-entry.html
+        url: /tool/qr-code-entry.html
       - title: "テキスト用QRコード作成"
-        url: /qr-code-text.html
+        url: /tool/qr-code-text.html
   - title: "memo - ページ作成"
     children:
       - title: "Start"
@@ -129,9 +129,3 @@ sidebar:
         url: /misc/lifelog/
       - title: "Firebase"
         url: /misc/firebase/
-  - title: "K's Sites"
-    children:
-      - title: "K's blog"
-        url: http://blog.treetop.to/
-      - title: "K's web contents ver.1995"
-        url: http://treetop.webcrow.jp/
