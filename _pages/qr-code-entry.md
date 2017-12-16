@@ -24,9 +24,9 @@ sidebar:
 	住所:
   〒<input type="text" id="zipcode" class="p-postal-code" maxlength="8" /><br>
   <!--〒<input type="text" id="zipcode" name="zip" class="p-postal-code" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','pref','city','street');"><br-->
-  <input type="text" id="pref" name="pref" class="p-region" placeholder="（都道府県）" />
-  <input type="text" id="city" name="city" class="p-locality" placeholder="（市区町村）" /><br>
-  <input type="text" id="street" name="street" class="p-street-address" placeholder="（番地）" /><br>
+  <input type="text" id="pref" class="p-region" placeholder="（都道府県）" />
+  <input type="text" id="city" class="p-locality" placeholder="（市区町村）" /><br>
+  <input type="text" id="street" class="p-street-address" placeholder="（番地）" /><br>
   <input type="text" id="extend-add" class="p-extended-address" placeholder="（建物名など）" />
   <input type="reset" value="住所クリア" class="btn">
 </form>
