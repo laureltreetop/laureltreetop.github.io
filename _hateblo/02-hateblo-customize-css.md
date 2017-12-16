@@ -1,5 +1,6 @@
 ---
 title: "はてなブログをカスタマイズ CSS編"
+description: CSSだけでできるカスタマイズ集。
 permalink: /hateblo/customize-css/
 ---
 CSSだけでできるカスタマイズ集。  

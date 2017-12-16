@@ -1,5 +1,6 @@
 ---
 title: "Create Pages"
+description: ブログシステムを使っていても出てくる、タグやちょっとしたページ作成のメモ。
 permalink: /create-pages/base/
 ---
 今はタグ打ちなんてしなくてもできるねーと思っていたら、まさかの[Tumblrのテーマカスタマイズ](/tumblr/custom-theme/)でのタグ打ち。

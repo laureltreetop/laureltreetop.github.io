@@ -1,13 +1,10 @@
 ---
-last_modified_at: 2017-11-06
 title: "Jekyll on Windows"
+description: オレオレですが、ほんとに苦労したので。しかもこの記事をまとめるために、いったんuninstallしました…
 permalink: /githubpages/jekyll-windows/
-toc: true
-toc_label: "Jekyll on Windows"
 toc_icon: "windows"
 ---
-オレオレですが、ほんとに苦労したので。  
-しかもこの記事をまとめるために、いったんuninstallしました… 
+{{ page.description }}
 {: .notice}
 
 [Run Jekyll on Windows](http://jekyll-windows.juthilo.com/)が詳しい。  

@@ -1,9 +1,9 @@
 ---
 title: "GitHub start"
+description: GitHub Pagesなのですから、当然最初はGitHubの準備や設定やら。
 permalink: /githubpages/github/
-update : 2017-12-12
 ---
-GitHub Pagesなのですから、当然最初はGitHubの準備や設定やら。
+{{ page.description }}
 {: .notice}
 
 ## GitHubの準備から

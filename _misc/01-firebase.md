@@ -1,13 +1,13 @@
 ---
-last_modified_at: 2017-11-10
 title: "Firebase"
+description: OAuth関係とかリアルタイム処理とか探しているうちに見つけた"Firebase"。mBaaSと呼ばれる、無料で認証やらデータベースやらが揃ったサイトが作れるが、けっこう苦しみ中（と、放置中）。
 permalink: /misc/firebase/
 ---
 以下は、別サイトに書いておいた内容をそのまま持ってきただけで、確認不足のところばかりです。  
 たしか2017年春頃に書いた記憶が。それを踏まえてお読みください。
 {: .notice--warning}
 
-OAuth関係とかリアルタイム処理とか探しているうちに見つけた"Firebase"。mBaaSと呼ばれる、無料で認証やらデータベースやらが揃ったサイトが作れるが、けっこう苦しみ中（と、放置中）。
+{{ page.description }}
 {: .notice}
 
 ## mBaaSとは

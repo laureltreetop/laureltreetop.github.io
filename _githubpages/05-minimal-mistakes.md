@@ -1,10 +1,9 @@
 ---
 title: "Customize Minimal Mistakes"
+description: Minimal Mistakesをいろいろカスタマイズ。
 permalink: /githubpages/minimal-mistakes/
-toc: true
-toc_icon: "gears"
 ---
-Minimal Mistakesをいろいろカスタマイズ。
+{{ page.description }}
 {: .notice}
 
 ## シェアボタンを追加

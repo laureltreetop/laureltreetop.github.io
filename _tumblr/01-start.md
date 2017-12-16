@@ -1,12 +1,9 @@
 ---
-last_modified_at: 2017-10-31
 title: "Tumblr start"
+description: 最初はTumblrの準備や設定やら。
 permalink: /tumblr/start/
-toc: true
-toc_label: "Start"
-toc_icon: "tumblr-square"
 ---
-最初はTumblrの準備や設定やら。
+{{ page.description }}
 {: .notice}
 
 ### Tumblr登録

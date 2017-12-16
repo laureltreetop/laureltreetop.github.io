@@ -1,12 +1,9 @@
 ---
-last_modified_at: 2017/08/03 18:54 +0900
 title: "Easy Custom"
+description: 簡単なカスタマイズを先にぱぱっと。
 permalink: /tumblr/custom-easy/
-toc: true
-toc_label: "Easy Custom"
-toc_icon: "tumblr-square"
 ---
-簡単なカスタマイズを先にぱぱっと。
+{{ page.description }}
 {: .notice}
 
 ### 右上などににある「Edit Theme」などを非表示に

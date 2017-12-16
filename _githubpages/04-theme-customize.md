@@ -1,12 +1,9 @@
 ---
-last_modified_at: 2017-11-02
 title: "Theme Customize"
+description: テーマ共通のカスタマイズなど。
 permalink: /githubpages/theme-custom/
-toc: true
-toc_label: "Theme Customize"
-toc_icon: "gears"
 ---
-テーマ共通のカスタマイズなど。
+{{ page.description }}
 {: .notice}
 ## Gistの表示を変える
 + フッターを消してみた  

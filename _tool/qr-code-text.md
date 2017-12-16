@@ -2,10 +2,13 @@
 layout: single
 author_profile: false
 title: テキスト用QRコード作成
+description: 雑多なテキストをやり取りするためのQRコードを作成できます。
 permalink: /tool/qr-code-text.html
 sidebar:
   nav: "sidebar"
 ---
+{{ page.description }}
+{: .notice}
 <div id="qr-code-text" class="form-mimic">
 <div>
 	<label for="note">テキスト:</label>

@@ -1,8 +1,7 @@
 ---
-last_modified_at: 2017-10-23
 title: "Blogger to Jekyll"
+description: Bloggerの記事をJykillに取り込むのは簡単にできるらしいと知り、無謀にも挑戦。
 permalink: /githubpages/blogger-to-jekyll/
-toc_label: "Blogger to Jekyll"
 ---
 今までブログは、ブログなんて呼んでない頃からのHTML直書き→しばらく休止→Bloggerで時々書いたり書かなかったり→Tumblr、という流れ。  
 Bloggerの記事をJykillに取り込むのは簡単にできるらしいと知り、無謀にも挑戦。

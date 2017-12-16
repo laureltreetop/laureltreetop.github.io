@@ -1,10 +1,9 @@
 ---
-date: 2017-10-21
-last_modified_at: 2017-10-23
 title: "Lifelog start"
+description: Evernoteにまとめていく方向で。
 permalink: /misc/lifelog/
 ---
-Evernoteにまとめていく方向で。
+{{ page.description }}
 {: .notice}
 
 ## Evernoteの準備から

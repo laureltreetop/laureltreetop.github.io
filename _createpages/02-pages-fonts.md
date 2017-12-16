@@ -1,8 +1,9 @@
 ---
 title: "Fonts"
+description: Webフォントとかいろいろ。
 permalink: /create-pages/fonts/
 ---
-Webフォントとかいろいろ。
+{{ page.description }}
 {: .notice}
 
 ## [Font Awesome 5](https://fontawesome.com/)

@@ -1,12 +1,9 @@
 ---
-last_modified_at: 2017-11-04
 title: "Jekyll Theme"
+description: 未だに勉強中。とりあえずリンクだけ張っていく。
 permalink: /githubpages/jekyll-theme/
-toc: true
-toc_label: "Jekyll Theme"
-toc_icon: "gears"
 ---
-未だに勉強中。とりあえずリンクだけ張っていく。
+{{ page.description }}
 {: .notice}
 
 ## Jekyll用テーマ

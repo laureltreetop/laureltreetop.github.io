@@ -1,9 +1,9 @@
 ---
 title: "JQuery Plugins"
+description: Tumblrだろうがはてなブログだろうが、とにかくグリグリとJQueryでカスタマイズ。
 permalink: /create-pages/javascript/
 ---
-今はタグ打ちなんてしなくてもできるねーと思っていたら、まさかの[Tumblrのテーマカスタマイズ](/tumblr/custom-theme/)でのタグ打ち。
-この機会にいろいろメモっておく。
+{{ page.description }}
 {: .notice}
 
 ## まずはJQuery

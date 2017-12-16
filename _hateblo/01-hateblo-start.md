@@ -1,8 +1,9 @@
 ---
 title: "はてなブログ"
+description: とりあえずはメモりつつ作業。
 permalink: /hateblo/start/
 ---
-とりあえずはメモりつつ作業。
+{{ page.description }}
 {: .notice}
 
 ## テーマ

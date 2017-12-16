@@ -1,10 +1,10 @@
 ---
 title: "Sass"
 permalink: /create-pages/sass/
-update : 2017-12-12
+description: CSS書いていると頭が渋滞しがちだけど、これなら便利なのかも。  ただ、コンパイルはめんどい。
 toc_icon: "fab fa-sass"
 ---
-CSS書いていると頭が渋滞しがちだけど、これなら便利なのかも。
+{{ page.description }}
 {: .notice}
 
 ## <i class="fab fa-sass"></i>SASSとは

@@ -1,7 +1,9 @@
 ---
 title: "はてなブログをカスタマイズ がっつり編"
+description: CSSだけでは物足りない部分をカスタマイズ。
 permalink: /hateblo/customize/
 ---
+{{ page.description }}  
 デザインなど簡単なものは[CSS編](/hatebu/customize-css/)に。
 {: .notice}
 
