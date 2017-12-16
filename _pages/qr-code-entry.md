@@ -22,8 +22,8 @@ sidebar:
 <form class="h-adr">
   <span class="p-country-name" style="display:none;">Japan</span>
 	住所:
-  <!--〒<input type="text" class="p-postal-code" maxlength="8"><br-->
-  〒<input type="text" id="zipcode" name="zipcode" class="p-postal-code" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','pref','city','street');">（自動入力用）<br>
+  〒<input type="text" class="p-postal-code" maxlength="8"><br>
+  <!--〒<input type="text" id="zipcode" name="zipcode" class="p-postal-code" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','pref','city','street');">（自動入力用）<br-->
   <input type="text" id="pref" name="pref" class="p-region" placeholder="（都道府県）" />
   <input type="text" id="city" name="city" class="p-locality" placeholder="（市区町村）" /><br>
   <input type="text" id="street" name="street" class="p-street-address" placeholder="（番地）" /><br>
