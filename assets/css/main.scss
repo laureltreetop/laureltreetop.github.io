@@ -8,6 +8,9 @@
 @import "minimal-mistakes"; // main partials
 
 /* customize */
+a {
+	text-decoration: none;
+}
 
     .social-icons {
       .fa-get-pocket {
@@ -130,16 +133,16 @@
 
 }
 
-li.triangle {
-  line-height: 1.5;
-  list-style-type: none !important;
-  margin-left: 0.3em;
-  &:before {
-    font-family: FontAwesome;
-    content: "\f0da";
-	margin-right: 0.3em;
-    color: $light-gray;
-  }
+li.triangle, ul.triangle li {
+	line-height: 1.5;
+	list-style-type: none !important;
+	margin-left: 0.3em;
+	&:before {
+		font-family: FontAwesome;
+		content: "\f0da";
+		margin-right: 0.3em;
+		color: $light-gray;
+	}
 }
 
 .notice--info li {
