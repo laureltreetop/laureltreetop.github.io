@@ -2,7 +2,7 @@
 layout: single
 author_profile: false
 title: 電話帳登録用QRコード作成
-permalink: /qr-code-entry.html
+permalink: /tool/qr-code-entry.html
 sidebar:
   nav: "sidebar"
 ---

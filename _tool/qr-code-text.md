@@ -2,7 +2,7 @@
 layout: single
 author_profile: false
 title: テキスト用QRコード作成
-permalink: /qr-code-text.html
+permalink: /tool/qr-code-text.html
 sidebar:
   nav: "sidebar"
 ---
