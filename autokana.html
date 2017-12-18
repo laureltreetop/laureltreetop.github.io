@@ -1,0 +1,108 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/assets/js/jquery.autoKana.js"></script>
+<!--script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script-->
+<script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+<script src="/assets/js/custom_head.js"></script>
+
+<div id="qr-code-entry" class="form-mimic">
+<div>
+	<label for="NAME1">名前:</label>
+	<input type="text" id="name" value="" placeholder="">
+</div>
+<div>
+	<label for="NAME2">名前ふりがな:</label>
+	<input type="text" id="kana" value="" placeholder="">
+</div>
+<div>
+	<label for="TEL1">電話番号:</label>
+	<input type="text" id="tel" value="" placeholder="">
+</div>
+<form class="h-adr">
+  <span class="p-country-name" style="display:none;">Japan</span>
+	住所:
+  <!--〒<input type="text" class="p-postal-code" maxlength="8"><br-->
+  〒<input type="text" id="zipcode" name="zipcode" class="p-postal-code" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','pref','city','street');">（自動入力用）<br>
+  <input type="text" id="pref" name="pref" class="p-region" placeholder="（都道府県）" />
+  <input type="text" id="city" name="city" class="p-locality" placeholder="（市区町村）" /><br>
+  <input type="text" id="street" name="street" class="p-street-address" placeholder="（番地）" /><br>
+  <input type="text" id="extend-add" class="p-extended-address" placeholder="（建物名など）" />
+  <input type="reset" value="住所クリア" class="btn">
+</form>
+<div>
+	<label for="MAIL1">E-mail:</label>
+	<input type="text" id="mail" value="" placeholder="">
+</div>
+<div>
+	<label for="note">その他:</label>
+	<textarea type="textarea" id="note" value="" placeholder="メモ、URLなど"></textarea>
+</div>
+<div>
+	<label for="qrsize">QRコードサイズ（上限547px）:</label>
+	<input type="text" id="qrsize" value="200">px
+</div>
+<div>
+	<input id="create_qr_entry" type="button" value="QRコード生成" class="generate btn btn--primary">
+</div>
+<div id="qr_add">
+</div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(
+        function() {
+            $.fn.autoKana('#name', '#kana', {});
+    });
+
+$(function() {
+	$("#create_qr_entry").click(make_qr);
+});
+
+function make_qr() {
+	var data = new Array();
+	data['name'] = $("#name").val();
+	data['kana'] = $("#kana").val();
+	data['tel'] = $("#tel").val();
+	data['mail'] = $("#mail").val();
+	data['add'] = $("#pref").val() + $("#city").val() + $("#street").val() + $("#extend-add").val();
+	data['note'] = $("#note").val();
+	data['qrsize'] = $("#qrsize").val();
+
+	$("#qr_add").html('<img src="' + make_url(make_address_qr(data)) + '">');
+}
+
+function make_address_qr(data) {
+	var result = "";
+	result += "MECARD:N:" + data['name'] + ";";
+	result += "SOUND:" + data['kana'] + ";";
+	result += "TEL:" + data['tel'] + ";";
+	result += "ADR:" + data['add'] + ";";
+	result += "EMAIL:" + data['mail'] + ";";
+	result += "NOTE:" + data['note'] + ";;\r\n";
+	result += "MEMORY:" + data['note'] + "\r\n";
+	result += "NAME1:" + data['name'] + "\r\n";
+	result += "NAME2:" + data['kana'] + "\r\n";
+	result += "TEL1:" + data['tel'] + "\r\n";
+	result += "ADD:" + data['add'] + "\r\n";
+	result += "MAIL1:" + data['mail'] + "\r\n";
+	return result;
+}
+
+function make_url(data_string) {
+	var data_encoded = encodeURI(data_string);
+	var url = "http://chart.apis.google.com/chart?cht=qr&chs="+ $("#qrsize").val()+ "x"+ $("#qrsize").val()+ "&chld=M|5&choe=Shift_JIS&chl=";
+	url += data_encoded;
+	return url;
+}
+
+$(function() {
+	$("#create_qr_text").click(make_qr_text);
+});
+function make_qr_text() {
+	var data = new Array();
+	data['note'] = $("#note").val();
+	data['qrsize'] = $("#qrsize").val();
+
+	$("#qr_text").html('<img src="' + make_url(data['note']) + '">');
+}
+
+</script>
