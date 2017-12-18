@@ -11,56 +11,6 @@
 <meta name="theme-color" content="#ffffff">
 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<script defer src="https://use.fontawesome.com/releases/v5.0.1/css/all.css"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.1/js/v4-shims.js"></script>
 <link rel="stylesheet" href="/assets/icomoon/style.css">
-
-    <!--script type="text/javascript">
-        $(function() {
-            $("#create_qr").click(make_qr);
-        });
-
-        function make_qr() {
-            var data = new Array();
-            data['name_sei'] = $("#name_sei").val();
-            data['name_mei'] = $("#name_mei").val();
-            data['kana_sei'] = $("#kana_sei").val();
-            data['kana_mei'] = $("#kana_mei").val();
-            data['tel'] = $("#tel").val();
-            data['mail'] = $("#mail").val();
-            data['note'] = $("#note").val();
-
-            $("#qr_dc").html('<img src="' + make_url(make_docomo_qr(data)) + '">');
-            $("#qr_sb").html('<img src="' + make_url(make_softbank_qr(data)) + '">');
-        }
-
-        function make_docomo_qr(data) {
-            var result = "";
-            result += "MECARD:N:" + data['name_sei'] + "," + data['name_mei'] + ";";
-            result += "SOUND:" + data['kana_sei'] + "," + data['kana_mei'] + ";";
-            result += "TEL:" + data['tel'] + ";";
-            result += "EMAIL:" + data['mail'] + ";";
-            result += "NOTE:" + data['note'] + ";;";
-            return result;
-        }
-
-        function make_softbank_qr(data) {
-            var result = "";
-            result += "MEMORY:" + data['note'] + "\r\n";
-            result += "NAME1:" + data['name_sei'] + " " + data['name_mei'] + "\r\n";
-            result += "NAME2:" + data['kana_sei'] + " " + data['kana_mei'] + "\r\n";
-            result += "TEL1:" + data['tel'] + "\r\n";
-            result += "MAIL1:" + data['mail'] + "\r\n";
-            return result;
-        }
-
-        function make_url(data_string) {
-            var data_encoded = encodeURI(data_string);
-            var url = "http://chart.apis.google.com/chart?cht=qr&chs=120x120&chld=M|2&choe=Shift_JIS&chl=";
-            url += data_encoded;
-            return url;
-        }
-    </script-->
-
 
 <!-- end custom head snippets -->

@@ -5,6 +5,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
+# remote_theme             : mmistakes/minimal-mistakes
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
@@ -196,7 +197,7 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-last-modified-at
-  - jekyll-git_metadata
+
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -206,7 +207,6 @@ whitelist:
   - jekyll-feed
   - jemoji
   - jekyll-last-modified-at
-  - jekyll-git_metadata
 
 
 # Archives
@@ -390,7 +390,7 @@ collections:
 github: [metadata]
 
 head_scripts:
-  - https://apis.google.com/js/platform.js
+#  - https://apis.google.com/js/platform.js
 #  - /assets/js/custom_head.js
 footer_scripts:
 #  - https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js
