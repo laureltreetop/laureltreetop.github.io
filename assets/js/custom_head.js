@@ -24,6 +24,11 @@ $(function() {
 	});
 });
 
+$(document).ready(
+	function() {
+		$.fn.autoKana('#name', '#kana', {});
+});
+
 $(document).ready(function(){
 	$('textarea').autosize({
 		append: "\n"
