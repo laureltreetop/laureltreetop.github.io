@@ -129,5 +129,5 @@ sidebar:
         url: /misc/lifelog/
       - title: "Firebase"
         url: /misc/firebase/
-	  - title: "Generate QRcode"
-	    url: /misc/generate-qr-code/
+#	  - title: "Generate QRcode"
+#	    url: /misc/generate-qr-code/
