@@ -43,6 +43,12 @@ a {
     }
 }
 
+img {
+    margin-top: 5px; /* 画像の上の余白*/
+    display: inline-block;
+    box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.8); /*横方向　下方向　ぼかし　広がり　色 */
+}
+
 ::-webkit-input-placeholder {
   color: $light-gray;
 }
@@ -67,7 +73,7 @@ a {
 	}
 }
 @media only screen and (max-width: $medium) {
-	#rate_mp {
+	#rate_pc {
 		display: none !important;
 	}
 }
