@@ -29,6 +29,8 @@ createpages:
         url: /create-pages/base/
       - title: "Fonts"
         url: /create-pages/fonts/
+      - title: "CSS小技系"
+        url: /create-pages/css/
       - title: "Sass"
         url: /create-pages/sass/
       - title: "JQuery Plugins"
@@ -85,6 +87,8 @@ sidebar:
         url: /create-pages/base/
       - title: "Fonts"
         url: /create-pages/fonts/
+      - title: "CSS小技系"
+        url: /create-pages/css/
       - title: "Sass"
         url: /create-pages/sass/
       - title: "JQuery Plugins"
@@ -129,5 +133,5 @@ sidebar:
         url: /misc/lifelog/
       - title: "Firebase"
         url: /misc/firebase/
-#	  - title: "Generate QRcode"
-#	    url: /misc/generate-qr-code/
+      - title: "Generate QRcode"
+        url: /misc/generate-qr-code/

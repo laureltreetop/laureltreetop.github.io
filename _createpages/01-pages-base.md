@@ -29,23 +29,3 @@ Facebookアプリ要らないなぁ。面倒だし。
 <script src="https://gist.github.com/laureltreetop/46e35bc34a0511019c8be263acc1e627.js"></script>  
 
 [^minimal-opg]: ~~リンクさせるわけじゃないのにOGPってのは矛盾しているけど。~~ → 2017/12/20修正。シェアしてもらったとき全般、こっちのほうが見栄えが良くなるのでした。  
-
-## CSS小技系  
-
-### 上下左右ど真ん中
-<script src="https://gist.github.com/laureltreetop/7ad147e484ee34ae98e33846f5c7ef1f.js"></script>
-
-### サムネイル画像などをトリミング
-
-かなり簡単にできる。調べるのが難しかったくらい(=_=;)  
-[1行追加でOK！CSSだけで画像をトリミングできる「object-fit」プロパティー](https://www.webcreatorbox.com/tech/object-fit)  
-[![image clipping](/assets/images/pages-image-clippings.png)](/assets/images/pages-image-clippings.png)  
-<script src="https://gist.github.com/laureltreetop/fb356054c993e94f974e02ff5bd9922c.js"></script>
-
-### カーソルを当てるとふわっと浮かぶように
-
-Gist埋め込み[^gist]に使ってます。  
-[Webデザインにシャドウを取り入れる時のポイントいろいろ](https://www.webcreatorbox.com/tech/shadow)
-<script src="https://gist.github.com/laureltreetop/747f2e2c0885dec15df0c7604bf0cf7e.js"></script>
-
-[^gist]: [GitHub Pages - Theme Customize](/githubpages/theme-custom/)でSCSSを紹介してますが、ここではCSSにコンパイルしてあります。SCSSに関しては[SCSS](/create-pages/sass/)の記事参照。
