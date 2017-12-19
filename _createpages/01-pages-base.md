@@ -39,7 +39,7 @@ Facebookアプリ要らないなぁ。面倒だし。
 
 かなり簡単にできる。調べるのが難しかったくらい(=_=;)  
 [1行追加でOK！CSSだけで画像をトリミングできる「object-fit」プロパティー](https://www.webcreatorbox.com/tech/object-fit)  
-[![image clipping](/assets/images/pages-image-clippings.png)](/assets/images/pages-image-clippings.png)
+[![image clipping](/assets/images/pages-image-clippings.png)](/assets/images/pages-image-clippings.png)  
 <script src="https://gist.github.com/laureltreetop/fb356054c993e94f974e02ff5bd9922c.js"></script>
 
 ### カーソルを当てるとふわっと浮かぶように
