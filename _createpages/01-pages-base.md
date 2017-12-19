@@ -28,7 +28,7 @@ Facebookアプリ要らないなぁ。面倒だし。
 自分のTwitterとかFacebookとリンクさせるわけでなければ[^minimal-opg]、これくらいでいいのかな。    
 <script src="https://gist.github.com/laureltreetop/46e35bc34a0511019c8be263acc1e627.js"></script>  
 
-[^minimal-opg]: リンクさせるわけじゃないのにOGPってのは矛盾しているけど。  
+[^minimal-opg]: ~~リンクさせるわけじゃないのにOGPってのは矛盾しているけど。~~ → 2017/12/20修正。シェアしてもらったとき全般、こっちのほうが見栄えが良くなるのでした。  
 
 ## CSS小技系  
 
@@ -41,3 +41,11 @@ Facebookアプリ要らないなぁ。面倒だし。
 [1行追加でOK！CSSだけで画像をトリミングできる「object-fit」プロパティー](https://www.webcreatorbox.com/tech/object-fit)  
 [![image clipping](/assets/images/pages-image-clippings.png)](/assets/images/pages-image-clippings.png)
 <script src="https://gist.github.com/laureltreetop/fb356054c993e94f974e02ff5bd9922c.js"></script>
+
+### カーソルを当てるとふわっと浮かぶように
+
+Gist埋め込み[^gist]に使ってます。  
+[Webデザインにシャドウを取り入れる時のポイントいろいろ](https://www.webcreatorbox.com/tech/shadow)
+<script src="https://gist.github.com/laureltreetop/747f2e2c0885dec15df0c7604bf0cf7e.js"></script>
+
+[^gist]: [GitHub Pages - Theme Customize](/githubpages/theme-custom/)でSCSSを紹介してますが、ここではCSSにコンパイルしてあります。SCSSに関しては[SCSS](/create-pages/sass/)の記事参照。

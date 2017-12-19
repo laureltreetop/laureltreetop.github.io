@@ -7,11 +7,14 @@ permalink: /githubpages/theme-custom/
 {: .notice}
 ## Gistの表示を変える
 + フッターを消してみた  
-[CUSTOMIZING GITHUB GISTS](http://codersblock.com/blog/customizing-github-gists/)
+: [CUSTOMIZING GITHUB GISTS](http://codersblock.com/blog/customizing-github-gists/)
 + 色を変えた  
-[gist-syntax-themes/monokai.css](https://github.com/lonekorean/gist-syntax-themes/blob/master/stylesheets/monokai.css)
+: [gist-syntax-themes/monokai.css](https://github.com/lonekorean/gist-syntax-themes/blob/master/stylesheets/monokai.css)
 + 高さを固定した  
-[ブログに貼りつけたGitHub/Gistのソース埋め込みの高さ設定が簡単だった](http://pineplanter.moo.jp/non-it-salaryman/2016/08/24/blog-source-gist-height/)
+: [ブログに貼りつけたGitHub/Gistのソース埋め込みの高さ設定が簡単だった](http://pineplanter.moo.jp/non-it-salaryman/2016/08/24/blog-source-gist-height/)
++ カーソルを当てるとふわっと浮かぶように
+: [Webデザインにシャドウを取り入れる時のポイントいろいろ](https://www.webcreatorbox.com/tech/shadow)
+
 
 [Gist stylesheet full list](https://github.com/StylishThemes/GitHub-Dark/issues/197#issuecomment-63717143)
 
