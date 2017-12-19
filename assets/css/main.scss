@@ -184,13 +184,11 @@ body .gist .gist-data {
     max-height: 400px;
     overflow:auto;
 
-    margin-top: 5px; /* 画像の上の余白*/
-    display: inline-block;
-    box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.8); /*横方向　下方向　ぼかし　広がり　色 */
-
+	box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+	transition: .3s;
 	&:hover {
 		box-shadow: 0px 20px 40px rgba(0,0,0,0.4);
-		transform: scale(1.05,1.05);
+		transform: scale(1.02,1.02);
 	}
 
 }
