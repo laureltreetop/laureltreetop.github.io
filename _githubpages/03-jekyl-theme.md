@@ -8,7 +8,8 @@ permalink: /githubpages/jekyll-theme/
 
 ## Jekyll用テーマ
 あちこちにいろいろ。   
-[jekyllthemes.io](https://jekyllthemes.io/)  
++ [Jekyll Themes & Templates](https://jekyllthemes.io/)
++ [Jelyll Themes](http://jekyllthemes.org/)
 
 当方は[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)を使うことに。   
 
