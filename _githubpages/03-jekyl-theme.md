@@ -10,6 +10,8 @@ permalink: /githubpages/jekyll-theme/
 あちこちにいろいろ。   
 + [Jekyll Themes & Templates](https://jekyllthemes.io/)
 + [Jelyll Themes](http://jekyllthemes.org/)
++ [Jekyll Templates](https://learn.cloudcannon.com/jekyll-templates/)
++ [Dr. Jekyll’s Themes](http://drjekyllthemes.github.io/)
 
 当方は[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)を使うことに。   
 

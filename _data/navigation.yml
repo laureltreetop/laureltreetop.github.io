@@ -48,6 +48,8 @@ githubpages:
         url: /githubpages/theme-custom/
       - title: "Customize Minimal Mistakes"
         url: /githubpages/minimal-mistakes/
+      - title: "Customize Base"
+        url: /githubpages/theme-base/
       - title: "Blogger to Jekyll"
         url: /githubpages/blogger-to-jekyll/
 hateblo:
@@ -105,6 +107,8 @@ sidebar:
         url: /githubpages/theme-custom/
       - title: "Customize Minimal Mistakes"
         url: /githubpages/minimal-mistakes/
+      - title: "Customize Base"
+        url: /githubpages/theme-base/
       - title: "Blogger to Jekyll"
         url: /githubpages/blogger-to-jekyll/
   - title: "memo - はてなブログ"
