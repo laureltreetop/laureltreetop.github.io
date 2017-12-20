@@ -42,8 +42,15 @@ sidebar:
 	<textarea type="textarea" id="note" value="" placeholder="メモ、URLなど"></textarea>
 </div>
 <div>
-	<label for="qrsize">QRコードサイズ（上限547px）:</label>
-	<input type="text" id="qrsize" value="200">px
+	<label for="qrsize">QRコードサイズ:</label>
+	<input type="text" id="qrsize" value="200">
+</div>
+<div>
+	<label for="qrformat">画像形式:</label>
+	<select id="qrformat" name="qrformat">
+	<option value="png">PNG形式（Webに最適）</option>
+	<option value="svg">SVG形式（印刷物に最適）</option>
+	</select>
 </div>
 <div>
 	<input id="create_qr_entry" type="button" value="QRコード生成" class="generate btn btn--primary">
@@ -52,7 +59,7 @@ sidebar:
 </div>
 </div>
 
-+ 必ず読み取りテストを行ってください
++ 画像を保存する前に、必ず読み取りテストを行ってください
 + 環境により、読み取りはできても登録されない項目もあります（メモなど）
 + 名前は姓名まとめて姓または名に登録されます
 + 郵便番号は自動入力用で、電話帳には登録できません

@@ -48,6 +48,7 @@ function make_qr() {
 	data['add'] = $("#pref").val() + $("#city").val() + $("#street").val() + $("#extend-add").val();
 	data['note'] = $("#note").val();
 	data['qrsize'] = $("#qrsize").val();
+	data['qrformat'] = $("#qrformat").val();
 
 	$("#qr_add").html('<img src="' + make_url(make_address_qr(data)) + '">');
 }
@@ -71,7 +72,8 @@ function make_address_qr(data) {
 
 function make_url(data_string) {
 	var data_encoded = encodeURI(data_string);
-	var url = "http://chart.apis.google.com/chart?cht=qr&chs="+ $("#qrsize").val()+ "x"+ $("#qrsize").val()+ "&chld=M|5&choe=Shift_JIS&chl=";
+	//var url = "http://chart.apis.google.com/chart?cht=qr&chs="+ $("#qrsize").val()+ "x"+ $("#qrsize").val()+ "&chld=M|5&choe=Shift_JIS&chl=";
+	var url = "https://api.qrserver.com/v1/create-qr-code/?size=" + $("#qrsize").val() + "x"+ $("#qrsize").val() + "&qzone=3&format=" + $("#qrformat").val() + "&data=";
 	url += data_encoded;
 	return url;
 }
@@ -83,6 +85,7 @@ function make_qr_text() {
 	var data = new Array();
 	data['note'] = $("#note").val();
 	data['qrsize'] = $("#qrsize").val();
+	data['qrformat'] = $("#qrformat").val();
 
-	$("#qr_text").html('<img src="' + make_url(data['note']) + '">');
+	$("#qr_text").html('<img src="' + make_url(data['note']) + '"&format=' + data['qrformat'] + '>');
 }
