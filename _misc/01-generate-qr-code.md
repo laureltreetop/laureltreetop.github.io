@@ -42,6 +42,11 @@ permalink: /misc/generate-qr-code/
 …とまぁ、作成できるサイトも数知れずなのですが、ちょっと自分で作りたくなったので。  
 以上。
 
+## 困った。
+
+[QR code APIでQRコードを生成してみた!](http://wp.tech-style.info/archives/932)によると、Google ChartでQRコードを作成するのって非推奨なのですねぇ。  
+[QR Code Generator](http://goqr.me/api/)での作成に直していくかも。
+
 ## おまけ。
 
 作成フォームを作るにあたり、欲が出て搭載しちゃった機能もあります。
