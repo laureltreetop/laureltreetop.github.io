@@ -259,10 +259,10 @@ defaults:
       comments: # true
       share: true
       related: true
-  # tool
+  # gadget
   - scope:
       path: ""
-      type: tool
+      type: gadget
     values:
       layout: single
       author_profile: false
@@ -365,7 +365,7 @@ defaults:
       #   nav: "sidebar"
 
 collections:
-  tool:
+  gadget:
     permalink: /:collection/:path/
     output: true
   createpages:

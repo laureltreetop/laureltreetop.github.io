@@ -1,7 +1,7 @@
 ---
 layout: splash
-title: "Tool"
-permalink: /tool/index.html
+title: "Gadget"
+permalink: /gadget/index.html
 share: false
 comments: false
 header:
@@ -9,7 +9,7 @@ header:
   overlay_filter: rgba(255, 255, 255, 0.5)
 ---
 
-{% for item in site.tool %}
+{% for item in site.gadget %}
   + [{{ item.title }}]({{ item.url }})
   {: .triangle}
 {% endfor %}
