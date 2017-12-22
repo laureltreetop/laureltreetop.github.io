@@ -2,6 +2,12 @@
 title: "Customize Minimal Mistakes"
 description: Minimal Mistakesをいろいろカスタマイズ。
 permalink: /githubpages/minimal-mistakes/
+# categories:
+#   - GitHub Pages
+# tags:
+#   - Jekyll
+#   - Theme Customize
+#   - Minimal Mistakes
 ---
 {{ page.description }}
 {: .notice}

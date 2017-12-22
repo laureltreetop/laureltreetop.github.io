@@ -2,6 +2,12 @@
 title: "Customize Base"
 description: Baseもいろいろカスタマイズしてみる。
 permalink: /githubpages/theme-base/
+# categories:
+#   - GitHub Pages
+# tags:
+#   - Jekyll
+#   - Theme Customize
+#   - Base
 ---
 {{ page.description }}
 {: .notice}

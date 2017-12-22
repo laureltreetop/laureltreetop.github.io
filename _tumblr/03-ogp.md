@@ -2,6 +2,8 @@
 title: "OPG"
 description: OPG(Open Graph protocol)設定。これをやっておくと、FacebookやTwitterにシェアしてもらったときにいい感じに。
 permalink: /tumblr/ogp/
+# categories:
+#   - Tumblr
 ---
 {{ page.description }}
 {: .notice}

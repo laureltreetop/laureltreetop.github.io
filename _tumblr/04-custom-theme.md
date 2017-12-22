@@ -2,6 +2,8 @@
 title: "Custom Theme"
 description: Tumblrを「無料のテーマを参考にしつつ、オリジナルデザインに」という方向でカスタマイズしてみる。
 permalink: /tumblr/custom-theme/
+# categories:
+#   - Tumblr
 ---
 Tumblrに置いてある[K's blog](http://blog.treetop.to/)を「無料のテーマを参考にしつつ、オリジナルデザインに」という方向でカスタマイズしてみる。  
 Tumblrの内容だからTumblrサイトに書きたいけど、こういう内容はGoogleサイトやGitHub Pagesのほうが楽にできる。  

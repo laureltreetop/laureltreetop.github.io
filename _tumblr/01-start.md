@@ -2,6 +2,8 @@
 title: "Tumblr start"
 description: 最初はTumblrの準備や設定やら。
 permalink: /tumblr/start/
+# categories:
+#   - Tumblr
 ---
 {{ page.description }}
 {: .notice}

@@ -2,6 +2,8 @@
 title: "Easy Custom"
 description: 簡単なカスタマイズを先にぱぱっと。
 permalink: /tumblr/custom-easy/
+# categories:
+#   - Tumblr
 ---
 {{ page.description }}
 {: .notice}

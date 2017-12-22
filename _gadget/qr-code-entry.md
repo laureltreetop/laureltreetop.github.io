@@ -6,6 +6,10 @@ description: 読み取ると携帯・スマホのアドレス帳に登録でき�
 permalink: /gadget/qr-code-entry.html
 sidebar:
   nav: "sidebar"
+# categories:
+#   - Gadget
+# tags:
+#   - QRcode
 ---
 {{ page.description }}
 {: .notice}

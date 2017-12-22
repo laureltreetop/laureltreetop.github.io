@@ -2,6 +2,10 @@
 title: "GitHub start"
 description: GitHub Pagesなのですから、当然最初はGitHubの準備や設定やら。
 permalink: /githubpages/github/
+# categories:
+#   - GitHub Pages
+# tags:
+#   - GitHub
 ---
 {{ page.description }}
 {: .notice}

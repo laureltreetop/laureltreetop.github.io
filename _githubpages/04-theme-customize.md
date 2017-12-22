@@ -2,6 +2,12 @@
 title: "Theme Customize"
 description: テーマ共通のカスタマイズなど。
 permalink: /githubpages/theme-custom/
+# categories:
+#   - GitHub Pages
+# tags:
+#   - GitHub
+#   - Jekyll
+#   - Theme Customize
 ---
 {{ page.description }}
 {: .notice}

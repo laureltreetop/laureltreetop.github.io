@@ -6,6 +6,10 @@ description: 雑多なテキストをやり取りするためのQRコードを�
 permalink: /gadget/qr-code-text.html
 sidebar:
   nav: "sidebar"
+# categories:
+#   - Gadget
+# tags:
+#   - QRcode
 ---
 {{ page.description }}
 {: .notice}

@@ -2,6 +2,11 @@
 title: "Jekyll Theme"
 description: 未だに勉強中。とりあえずリンクだけ張っていく。
 permalink: /githubpages/jekyll-theme/
+# categories:
+#   - GitHub Pages
+# tags:
+#   - Jekyll
+#   - Theme Customize
 ---
 {{ page.description }}
 {: .notice}
@@ -71,3 +76,8 @@ $ jekyll new your_repository
 ## おまけ? その2 Agus Makmunを導入する場合
 [Agus Makmun](https://agusmakmun.github.io/)も基本的にはSoloと同じようにいけた。  
 ただ、Jekyllさんに小言を言われないように、`gems:`を`plugins:`に書き換える。
+
+## おまけ? その3 Baseを導入する場合
+[Base | CloudCannon Academy](https://learn.cloudcannon.com/templates/base/)の「**導入は**」簡単だった。  
+ソースが見やすくて一見カスタマイズしやすそうだけど、癖がすごい。  
+カスタマイズは[Customize Base](/githubpages/theme-base/)に書いてある通り。
