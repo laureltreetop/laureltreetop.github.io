@@ -10,6 +10,6 @@ header:
 ---
 
 {% for item in site.tumblr %}
-  + [{{ item.title }}]({{ item.url }})
-  {: .triangle}
+  [{{ item.title }}]({{ item.url }})
+  : {{ item.description }}
 {% endfor %}
