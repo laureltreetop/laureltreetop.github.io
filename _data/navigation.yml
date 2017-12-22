@@ -12,10 +12,12 @@ main:
     url: /githubpages/index.html
   - title: "はてなブログ"
     url: /hateblo/index.html
-  - title: "Tumblr"
-    url: /tumblr/index.html
-  - title: "misc."
-    url: /misc/index.html
+#  - title: "Tumblr"
+#    url: /tumblr/index.html
+#  - title: "misc."
+#    url: /misc/index.html
+  - title: "...and"
+    url: /collections.html
 #  - title: "愚痴"
 #    url: /month-archive/
   - title: "自分?"

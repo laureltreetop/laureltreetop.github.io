@@ -154,12 +154,77 @@ li.triangle, ul.triangle li {
 	}
 }
 
-.collect-box {
+@media only screen and (max-width: $small) {
+div.collect-box {
   display: inline-block;
-  width: 40%;
-  height: 100px;
-  margin: 1em;
-  padding-top: 0;
+  width: 100% !important;
+  vertical-align: top;
+}
+}
+@media only screen and (min-width: $small) and (max-width: $medium) {
+div.collect-box {
+  display: inline-block;
+  width: 100% !important;
+  vertical-align: top;
+}
+}
+@media only screen and (min-width: $medium) and (max-width: $medium-wide) {
+div.collect-box {
+  display: inline-block;
+  width: 48% !important;
+  vertical-align: top;
+}
+ul.collect-list {
+  height: 10em;
+  font-size: 90%;
+}
+}
+@media only screen and (min-width: $medium-wide) and (max-width: $large) {
+div.collect-box {
+  display: inline-block;
+  width: 48% !important;
+  vertical-align: top;
+}
+ul.collect-list {
+  height: 10em;
+  font-size: 90%;
+}
+}
+@media only screen and (min-width: $x-large) {
+div.collect-box {
+  display: inline-block;
+  width: 33% !important;
+  vertical-align: top;
+}
+ul.collect-list {
+  height: 10em;
+  font-size: 90%;
+}
+}
+
+
+
+li.file {
+	line-height: 1.5;
+	list-style-type: none !important;
+	margin-left: -1.3em;
+	&:before {
+		font-family: FontAwesome;
+		content: "\f15c";
+		margin-right: 0.5em;
+		color: $light-gray;
+	}
+}
+li.folder-close {
+	line-height: 1.5;
+	list-style-type: none !important;
+	margin-left: -1.3em;
+	&:before {
+		font-family: FontAwesome;
+		content: "\f07c";
+		margin-right: 0.5em;
+		color: $light-gray;
+	}
 }
 .notice--info li {
 	margin-left: 1.0em;
