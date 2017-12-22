@@ -20,7 +20,7 @@ header:
       {% capture written_label %}{{ label }}{% endcapture %}
     {% endif %}
   <ul class="collect-list">
-  {% assign collections = collection.docs | sort: "title" %}
+  {% assign collections = collection.docs %}
   {% for post in collections limit: 4 %}
     {% unless collection.output == false or collection.label == "posts" %}
 	  <li class="file"><a href="{{ site.baseurl }}/{{ post.url }}">{{ post.title }}</a></li>
