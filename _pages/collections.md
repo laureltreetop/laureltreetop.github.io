@@ -24,7 +24,6 @@ header:
   {% for post in collections limit: 4 %}
     {% unless collection.output == false or collection.label == "posts" %}
 	  <li class="file"><a href="{{ site.baseurl }}/{{ post.url }}">{{ post.title }}</a></li>
-      {% comment %}{% include archive-title.html type="title" %}{% endcomment %}
     {% endunless %}
   {% endfor %}
 

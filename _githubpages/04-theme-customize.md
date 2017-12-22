@@ -26,3 +26,14 @@ permalink: /githubpages/theme-custom/
 
 /assets/css/main.scss
 <script src="https://gist.github.com/laureltreetop/cd7ddbf84905fde3d997a96dfb246d94.js"></script>
+
+## Collection一覧
+
+[Base](https://learn.cloudcannon.com/templates/base/)のトップページにある記事一覧が欲しいなー、と。
+[![Jekyll theme Base](/assets/images/theme-base-prev.png)](/assets/images/theme-base-prev.png)
+
+[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)に組み込んでみたけど、共通で使えるんじゃないかなーと。
+<script src="https://gist.github.com/laureltreetop/f343294a35d9df506546b0180d8269d6.js"></script>
+リストアイコンに[Font Awesome 5](https://fontawesome.com/)も組み込んであるので、そのあたりはてきとーに。  
+
+できあがったのが[これ](/collections.html)。
