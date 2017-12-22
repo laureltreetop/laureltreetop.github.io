@@ -368,21 +368,27 @@ collections:
   gadget:
     permalink: /:collection/:path/
     output: true
+    title: "Gadget"
   createpages:
     permalink: /:collection/:path/
     output: true
+    title: "ページ作成"
   githubpages:
     permalink: /:collection/:path/
     output: true
+    title: "GitHub Pages"
   hateblo:
     permalink: /:collection/:path/
     output: true
+    title: "はてなブログ"
   tumblr:
     permalink: /:collection/:path/
     output: true
+    title: "Tumblr"
   misc:
     permalink: /:collection/:path/
     output: true
+    title: "misc."
   posts:
     permalink: /post/:year/:month/:day/:title/
     output: true
