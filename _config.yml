@@ -52,7 +52,7 @@ reCaptcha:
   secret                 :
 atom_feed:
   path                   : /atom.xml # blank (default) uses feed.xml
-search                   : # true, false (default)
+search                   : true # true, false (default)
 
 # SEO Related
 google_site_verification : "sNYlrDYSp0P3xsEeWz_vX9n5ps2SbT6TGjqgHFQDaHk"
@@ -269,6 +269,7 @@ defaults:
       read_time: false
       share: true
       comments: true
+      related: false
       sidebar:
         nav: "sidebar"
       #toc: true
@@ -284,6 +285,7 @@ defaults:
       read_time: false
       share: true
       comments: true
+      related: false
       sidebar:
         nav: "createpages"
       toc: true
@@ -299,6 +301,7 @@ defaults:
       read_time: false
       share: true
       comments: true
+      related: false
       sidebar:
         nav: "githubpages"
       toc: true
@@ -314,6 +317,7 @@ defaults:
       read_time: false
       share: true
       comments: true
+      related: false
       sidebar:
         nav: "hateblo"
       toc: true
@@ -329,6 +333,7 @@ defaults:
       read_time: false
       share: true
       comments: true
+      related: false
       sidebar:
         nav: "Tumblr"
       toc: true
@@ -344,7 +349,7 @@ defaults:
       read_time: false
       share: true
       comments: true
-      related: true
+      related: false
       sidebar:
         nav: "sidebar"
       toc: true
@@ -360,7 +365,7 @@ defaults:
       read_time: false
       share: true
       comments: true
-      related: true
+      related: false
       # sidebar:
       #   nav: "sidebar"
 
