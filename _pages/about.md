@@ -16,7 +16,7 @@ header:
 
 あちこちにサイトを作りちらしています。
 
-- [K's blog](http://blog.treetop.to)
+- [K's blog](https://blog.treetop.to)
 - [K's blog@Blogger](https://blogger.treetop.to/)
 - [K's web ver.2017](https://2017.treetop.to/)（さて、どうしよう…）
 - [K's web contents ver.1995](http://treetop.webcrow.jp)
