@@ -23,7 +23,7 @@ header:
   {% assign collections = collection.docs %}
   {% for post in collections limit: 4 %}
     {% unless collection.output == false or collection.label == "posts" %}
-	  <li class="file"><a href="{{ site.baseurl }}/{{ post.url }}">{{ post.title }}</a></li>
+	  <li class="file"><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endunless %}
   {% endfor %}
 
