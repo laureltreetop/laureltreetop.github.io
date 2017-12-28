@@ -8,7 +8,7 @@ permalink: /misc/generate-qr-code/
 
 ## QRコード作成の取っかかり
 
-[電話帳登録用QRコード作成](/tool/qr-code-entry.html)というのを作ってみました。  
+[電話帳登録用QRコード作成](/gadget/qr-code-entry.html)というのを作ってみました。  
 
 ### 簡単にQRコード作成
 もともとQRコードをさくっと作れるのは知っていたんですよね。
