@@ -1,15 +1,9 @@
 ---
 layout: splash
 permalink: /oauth-github.html
+title: GitHub App on GitHub Pages using Web Application Flow
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>GitHub App on GitHub Pages using Web Application Flow</title>
-</head>
-<body>
-  <h1>GitHub App on GitHub Pages using Web Application Flow</h1>
+  <h1>{{ page.title }}</h1>
   <input type="button" id="login" value="GitHub Login">
   <div id="success"></div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -18,7 +12,7 @@ permalink: /oauth-github.html
   $(function() {
     $('#login').click(function() {
       OAuth.initialize('UCI2amBHsFC18Wl69ojJi0q6VENL8c7K');
-      OAuth.redirect('github', 'https://github.treetop.to/page-archive/#callback');
+      OAuth.redirect('github', '/chart/index.html#callback');
     });
     if (location.hash === '#callback') {
       location.hash = '';
@@ -43,5 +37,3 @@ permalink: /oauth-github.html
     }
   });
   </script>
-</body>
-</html>
