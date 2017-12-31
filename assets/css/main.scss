@@ -105,41 +105,40 @@ img {
 			-webkit-transform: rotate(-10deg);
 			-ms-transform: rotate(-10deg);
 			transform: rotate(-10deg);
-				&:nth-child(6n-4) {
-				  background: #eae4f1;
-				  -webkit-transform: translateY(-3px) rotate(8deg);
-				  -ms-transform: translateY(-3px) rotate(8deg);
-				  transform: translateY(-3px) rotate(8deg);
-				}
-				&:nth-child(6n-3) {
-				  background: #ffd800;
-				  -webkit-transform: translateY(3px) rotate(-4deg);
-				  -ms-transform: translateY(3px) rotate(-4deg);
-				  transform: translateY(3px) rotate(-4deg);
-				}
-				&:nth-child(6n-2) {
-				  background: #6dcff6;
-				  -webkit-transform: rotate(6deg);
-				  -ms-transform: rotate(6deg);
-				  transform: rotate(6deg);
-				}
-				&:nth-child(6n-1) {
-				  background: #a2dcaa;
-				  -webkit-transform: translateY(-2px) rotate(-6deg);
-				  -ms-transform: translateY(-2px) rotate(-6deg);
-				  transform: translateY(-2px) rotate(-6deg);
-				}
-				&:nth-child(6n) {
-				  background: #f9b563;
-				  -webkit-transform: translateY(8px) rotate(12deg);
-				  -ms-transform: translateY(8px) rotate(12deg);
-				  transform: translateY(8px) rotate(12deg);
-				}
+
+			&:nth-child(6n-4) {
+			  background: #eae4f1;
+			  -webkit-transform: translateY(-3px) rotate(8deg);
+			  -ms-transform: translateY(-3px) rotate(8deg);
+			  transform: translateY(-3px) rotate(8deg);
+			}
+			&:nth-child(6n-3) {
+			  background: #ffd800;
+			  -webkit-transform: translateY(3px) rotate(-4deg);
+			  -ms-transform: translateY(3px) rotate(-4deg);
+			  transform: translateY(3px) rotate(-4deg);
+			}
+			&:nth-child(6n-2) {
+			  background: #6dcff6;
+			  -webkit-transform: rotate(6deg);
+			  -ms-transform: rotate(6deg);
+			  transform: rotate(6deg);
+			}
+			&:nth-child(6n-1) {
+			  background: #a2dcaa;
+			  -webkit-transform: translateY(-2px) rotate(-6deg);
+			  -ms-transform: translateY(-2px) rotate(-6deg);
+			  transform: translateY(-2px) rotate(-6deg);
+			}
+			&:nth-child(6n) {
+			  background: #f9b563;
+			  -webkit-transform: translateY(8px) rotate(12deg);
+			  -ms-transform: translateY(8px) rotate(12deg);
+			  transform: translateY(8px) rotate(12deg);
 			}
 		}
 	}
-
-
+}
 
 li.triangle, ul.triangle li {
 	line-height: 1.5;
