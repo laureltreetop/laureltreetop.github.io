@@ -48,7 +48,7 @@ img {
     display: inline-block;
     box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.8); /*横方向　下方向　ぼかし　広がり　色 */
 }
-/*
+
 ::-webkit-input-placeholder {
   color: $light-gray;
 }
@@ -61,7 +61,7 @@ img {
 ::placeholder {
   color: $light-gray;
 }
-*/
+
 #zipcode {
 	width: 5em;
 }
@@ -82,6 +82,7 @@ img {
 	#rate_mp {
 		display: none !important;
 	}
+}
 
   .page__hero--overlay {
 	h1.page__title {
