@@ -6,17 +6,17 @@ main:
 #    url: /collection-archive/
   - title: "Gadget"
     url: /gadget/index.html
-  - title: "ページ作成"
-    url: /createpages/index.html
-  - title: "GitHub Pages"
-    url: /githubpages/index.html
-  - title: "はてなブログ"
-    url: /hateblo/index.html
+#  - title: "ページ作成"
+#    url: /createpages/index.html
+#  - title: "GitHub Pages"
+#    url: /githubpages/index.html
+#  - title: "はてなブログ"
+#    url: /hateblo/index.html
 #  - title: "Tumblr"
 #    url: /tumblr/index.html
 #  - title: "misc."
 #    url: /misc/index.html
-  - title: "...and"
+  - title: "Collections"
     url: /collections.html
   - title: "愚痴"
     url: /month-archive/
