@@ -89,7 +89,3 @@ function make_qr_text() {
 
 	$("#qr_text").html('<img src="' + make_url(data['note']) + '"&format=' + data['qrformat'] + '>');
 }
-
-var idx = lunr(function () {
-  this.use(lunr.multiLanguage('en', 'jp'))
-})

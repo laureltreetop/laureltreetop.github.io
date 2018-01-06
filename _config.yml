@@ -284,8 +284,8 @@ defaults:
       sidebar:
         nav: "createpages"
       toc: true
-      toc_label: "Table of contents"
-      toc_icon: "gears" 
+      # toc_label: "Table of contents"
+      toc_icon: "cogs" 
   # _githubpages
   - scope:
       path: ""
@@ -300,8 +300,8 @@ defaults:
       sidebar:
         nav: "githubpages"
       toc: true
-      toc_label: "Table of contents"
-      toc_icon: "github"
+      # toc_label: "Table of contents"
+      # toc_icon: "github"
   # _hateblo
   - scope:
       path: ""
@@ -316,8 +316,8 @@ defaults:
       sidebar:
         nav: "hateblo"
       toc: true
-      toc_label: "Table of contents"
-      toc_icon: "gears" 
+      # toc_label: "Table of contents"
+      toc_icon: "cogs" 
 # _tumblr
   - scope:
       path: ""
@@ -332,8 +332,8 @@ defaults:
       sidebar:
         nav: "Tumblr"
       toc: true
-      toc_label: "Table of contents"
-      toc_icon: "tumblr-square" 
+      # toc_label: "Table of contents"
+      # toc_icon: "tumblr-square" 
  # _misc
   - scope:
       path: ""
@@ -348,8 +348,8 @@ defaults:
       sidebar:
         nav: "sidebar"
       toc: true
-      toc_label: "Table of contents"
-      toc_icon: "gears"
+      # toc_label: "Table of contents"
+      toc_icon: "cogs"
   # _pages
   - scope:
       path: ""

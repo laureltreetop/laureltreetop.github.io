@@ -19,17 +19,17 @@ header:
       <h2 id="{{ label | slugify }}" class="archive__subtitle"><i class="fas fa-folder-open"></i>&nbsp;{{ collection.title }}</h2>
       {% capture written_label %}{{ label }}{% endcapture %}
     {% endif %}
-  <ul class="collect-list">
+  <ul class="collect-list fa-ul">
   {% assign collections = collection.docs %}
   {% for post in collections limit: 4 %}
     {% unless collection.output == false or collection.label == "posts" %}
-	  <li class="file"><a href="{{ post.url }}">{{ post.title }}</a></li>
+	  <li><span class="fa-li"><i class="fas fa-file-alt"></i></span><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endunless %}
   {% endfor %}
 
   {% assign size = collection.docs | size %}
   {% if size > 4 %}
-    <li class="folder-close"><a href="{{ site.baseurl }}/{{ label }}/index.html">{{ size | minus: 4 }} more...</a></li>
+    <li><span class="fa-li"><i class="fas fa-folder-open"></i></span><a href="{{ site.baseurl }}/{{ label }}/index.html">{{ size | minus: 4 }} more...</a></li>
   {% endif %}
   </ul>
   </div>
