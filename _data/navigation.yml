@@ -16,8 +16,8 @@ main:
 #    url: /tumblr/index.html
 #  - title: "misc."
 #    url: /misc/index.html
-#  - title: "モノ関係"
-#    url: /inventory/index.html
+  - title: "モノ関係"
+    url: /inventory/index.html
   - title: "その他ざっくり"
     url: /collections.html
   - title: "愚痴"
