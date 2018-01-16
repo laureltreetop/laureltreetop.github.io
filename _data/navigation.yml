@@ -81,12 +81,12 @@ Tumblr:
 
 # sidebar navigation
 sidebar:
-  - title: "Wedget"
+  - title: "Widget"
     children:
       - title: "電話帳登録用QRコード作成"
-        url: /wedget/qr-code-entry.html
+        url: /widget/qr-code-entry.html
       - title: "テキスト用QRコード作成"
-        url: /wedget/qr-code-text.html
+        url: /widget/qr-code-text.html
   - title: "memo"
     children:
       - title: "ページ作成"

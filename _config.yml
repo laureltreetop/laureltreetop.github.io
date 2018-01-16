@@ -384,7 +384,7 @@ collections:
   widget:
     permalink: /:collection/:path/
     output: true
-    title: "widget"
+    title: "Widget"
   createpages:
     permalink: /:collection/:path/
     output: true
