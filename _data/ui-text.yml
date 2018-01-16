@@ -972,7 +972,7 @@ ja: &DEFAULT_JA
   search_placeholder_text    : "検索キーワードを入力してください..."
   results_found              : "件"
 ja-JP:
-  <<: *DEFAULT_JA
+  <<: *DEFAULT_EN
 
 # Another locale
 # --------------
