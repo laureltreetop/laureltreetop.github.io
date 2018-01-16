@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: splash
 permalink: /month-archive/
 title: "Posts by Year, Month"
 author_profile: true
@@ -11,5 +11,5 @@ author_profile: true
     <h3 id="{{ year-month | slugify }}" class="archive__subtitle">{{ year-month }}</h3>
     {% capture written_year-month %}{{ year-month }}{% endcapture %}
   {% endif %}
-  {% include archive-title.html %}
+  {% include archive-single.html %}
 {% endfor %}
