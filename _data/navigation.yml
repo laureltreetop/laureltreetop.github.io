@@ -4,8 +4,8 @@ main:
 #    url: /page-archive/
 #  - title: "資料"
 #    url: /collection-archive/
-  - title: "Gadget"
-    url: /gadget/index.html
+  - title: "Widget"
+    url: /widget/index.html
 #  - title: "ページ作成"
 #    url: /createpages/index.html
 #  - title: "GitHub Pages"
@@ -16,7 +16,9 @@ main:
 #    url: /tumblr/index.html
 #  - title: "misc."
 #    url: /misc/index.html
-  - title: "いろいろ"
+#  - title: "モノ関係"
+#    url: /inventory/index.html
+  - title: "その他ざっくり"
     url: /collections.html
   - title: "愚痴"
     url: /month-archive/
@@ -79,65 +81,21 @@ Tumblr:
 
 # sidebar navigation
 sidebar:
-  - title: "Gadget"
+  - title: "Wedget"
     children:
       - title: "電話帳登録用QRコード作成"
-        url: /gadget/qr-code-entry.html
+        url: /wedget/qr-code-entry.html
       - title: "テキスト用QRコード作成"
-        url: /gadget/qr-code-text.html
-  - title: "memo - ページ作成"
+        url: /wedget/qr-code-text.html
+  - title: "memo"
     children:
-      - title: "Start"
-        url: /create-pages/base/
-      - title: "Fonts"
-        url: /create-pages/fonts/
-      - title: "CSS小技系"
-        url: /create-pages/css/
-      - title: "Sass"
-        url: /create-pages/sass/
-      - title: "JQuery Plugins"
-        url: /create-pages/javascript/
-  - title: "memo - GitHub Pages"
-    children:
+      - title: "ページ作成"
+        url: /create-pages/index.html
       - title: "GitHub"
-        url: /githubpages/github/
-      - title: "Jekyll on Windows"
-        url: /githubpages/jekyll-windows/
-      - title: "Jekyll Theme"
-        url: /githubpages/jekyll-theme/
-      - title: "Theme Customize"
-        url: /githubpages/theme-custom/
-      - title: "Customize Minimal Mistakes"
-        url: /githubpages/minimal-mistakes/
-      - title: "Customize Base"
-        url: /githubpages/theme-base/
-      - title: "Blogger to Jekyll"
-        url: /githubpages/blogger-to-jekyll/
-  - title: "memo - はてなブログ"
-    children:
-      - title: "Start"
-        url: /hateblo/start/
-      - title: "Customize CSS"
-        url: /hateblo/customize-css/
-      - title: "Customize"
-        url: /hateblo/customize/
-      - title: "Customize Innocent"
-        url: /hateblo/innocent/
-  - title: "memo - Tumblr"
-    children:
-      - title: "Start"
-        url: /tumblr/start/
-      - title: "Easy Customize"
-        url: /tumblr/custom-easy/
-      - title: "OGP"
-        url: /tumblr/ogp/
-      - title: "Customize Theme"
-        url: /tumblr/custom-theme/
-  - title: "memo - misc."
-    children:
-      - title: "Lifelog"
-        url: /misc/lifelog/
-      - title: "Firebase"
-        url: /misc/firebase/
-      - title: "Generate QRcode"
-        url: /misc/generate-qr-code/
+        url: /githubpages/index.html
+      - title: "はてなブログ"
+        url: /hateblo/index.html
+      - title: "Tumblr"
+        url: /tumblr/index.html
+      - title: "misc."
+        url: /misc/index.html

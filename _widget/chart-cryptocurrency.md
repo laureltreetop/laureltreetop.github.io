@@ -1,7 +1,7 @@
 ---
 layout: splash
 title: 仮想通貨チャート
-permalink: /gadget/chart-cryptocurrency.html
+permalink: /widget/chart-cryptocurrency.html
 ---
 <div id="rate_pc" style="height:80vh;">
 <!-- TradingView Widget BEGIN -->

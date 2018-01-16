@@ -1,7 +1,7 @@
 ---
 layout: splash
 title: 貴金属チャート
-permalink: /gadget/chart-metal.html
+permalink: /widget/chart-metal.html
 search: false
 ---
 <script type="text/javascript" src="https://gold.bullionvault.jp/chart/bullionvaultchart.js?v=1" ></script>

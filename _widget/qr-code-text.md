@@ -3,11 +3,11 @@ layout: single
 author_profile: false
 title: テキスト用QRコード作成
 description: 雑多なテキストをやり取りするためのQRコードを作成できます。
-permalink: /gadget/qr-code-text.html
+permalink: /widget/qr-code-text.html
 sidebar:
   nav: "sidebar"
 # categories:
-#   - Gadget
+#   - Widget
 # tags:
 #   - QRcode
 ---

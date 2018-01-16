@@ -1,7 +1,7 @@
 ---
 layout: splash
 title: 仮想通貨チャート USD
-permalink: /gadget/chart-cryptocurrency-usd.html
+permalink: /widget/chart-cryptocurrency-usd.html
 search: false
 ---
 <div id="rate_pc" style="height:80vh;">
