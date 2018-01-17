@@ -101,5 +101,5 @@ sidebar:
         url: /collections.html
   - title: "Inventory"
     children:
-      - title: "モノ関係"
-        url: /inventory/index.html
+      - title: "KingWear KW88"
+        url: /inventory/kw88/
