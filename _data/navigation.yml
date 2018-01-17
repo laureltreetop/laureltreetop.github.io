@@ -91,7 +91,7 @@ sidebar:
     children:
       - title: "ページ作成"
         url: /create-pages/index.html
-      - title: "GitHub"
+      - title: "GitHub Pages"
         url: /githubpages/index.html
       - title: "はてなブログ"
         url: /hateblo/index.html
@@ -99,3 +99,7 @@ sidebar:
         url: /tumblr/index.html
       - title: "ざっくりと全部"
         url: /collections.html
+  - title: "Inventory"
+    children:
+      - title: "モノ関係"
+        url: /inventory/index.html
