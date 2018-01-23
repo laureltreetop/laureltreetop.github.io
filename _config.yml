@@ -5,7 +5,6 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
@@ -303,7 +302,7 @@ defaults:
       sidebar:
         nav: "githubpages"
       toc: true
-      # toc_icon: "github"
+      toc_icon: "cogs"
   # _hateblo
   - scope:
       path: ""
@@ -319,7 +318,7 @@ defaults:
         nav: "hateblo"
       toc: true
       toc_icon: "cogs" 
-# _tumblr
+  # _tumblr
   - scope:
       path: ""
       type: tumblr
@@ -333,7 +332,8 @@ defaults:
       sidebar:
         nav: "Tumblr"
       toc: true
- # _misc
+      toc_icon: "cogs"
+# _misc
   - scope:
       path: ""
       type: misc
@@ -348,7 +348,7 @@ defaults:
         nav: "sidebar"
       toc: true
       toc_icon: "cogs"
- # _inventory
+  # _inventory
   - scope:
       path: ""
       type: inventory
