@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 gem 'github-pages'
 # gem "github-pages", group: :jekyll_plugins
 
-require 'rbconfig'
+# require 'rbconfig'
 gem "tzinfo-data"
 gem 'wdm', '~> 0.1.1' if Gem.win_platform?
 # gem 'wdm', '~> 0.1.1' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw/i
