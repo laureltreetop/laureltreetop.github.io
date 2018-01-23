@@ -2,7 +2,6 @@
 title: "Jekyll on Windows"
 description: オレオレですが、ほんとに苦労したので。しかもこの記事をまとめるために、いったんuninstallしました…
 permalink: /githubpages/jekyll-windows/
-toc_icon: "windows"
 # categories:
 #   - GitHub Pages
 # tags:
@@ -25,15 +24,16 @@ toc_icon: "windows"
 
 ## Ruby & DevKitを導入
 [Ruby Installer](https://rubyinstaller.org/)からRubyとDevKitをダウンロード。  
-### Ruby
-途中でコマンドターミナルが出てきて、いろいろインストールしていく。  
+気になった点とかメモ。  
+
++ Ruby
+: 途中でコマンドターミナルが出てきて、いろいろインストールしていく。  
 いいのかな、これで正解?  
-### Ruby DevKit
-解凍するとき、インストール先のフォルダ名も指定しないと、たとえばダウンロードフォルダ中にそのまま散らばっちゃう…  
++ Ruby DevKit
+: 解凍するとき、インストール先のフォルダ名も指定しないと、たとえばダウンロードフォルダ中にそのまま散らばっちゃう…  
 要・フォルダ指定。
 
 ## Jekyllをインストール
-`gem install jekyll`でインストール。　
 ```sh
 $ gem install jekyll
 ```
@@ -41,7 +41,34 @@ $ gem install jekyll
 これまた大量にインストールされていきますなぁ…（←他人事）
 
 ## Bundler
-`gem install bundler`  
-その後`bundle update`が必要?
+```sh
+$ gem install bundler
+```
 
-試行錯誤中。
+## Jekyll起動
+
+Gemfileを弄ったあとは
+```sh
+$ bundle update
+```
+でもってやっと起動。
+```sh
+$ jekyll s
+```
+
+### errorなど対処
+
+```sh
+$ jekyll s
+WARN: Unresolved specs during Gem::Specification.reset:
+      rouge (< 3, >= 1.7)
+WARN: Clearing out unresolved specs.
+Please report a bug if this causes problems.
+```
+というのがでてきたら、
+```sh
+$ gem cleanup
+```
+とすれば片付けてくれる、のかな?
+
+試行錯誤中。思いついたらorぶち当たったら書こうっと。
