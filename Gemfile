@@ -8,5 +8,5 @@ gem 'wdm', '~> 0.1.1' if Gem.win_platform?
 
 # If you have any other plugins, put them here!
 group :jekyll_plugins do
-    gem "jekyll-last-modified-at"
+    # gem "jekyll-last-modified-at"
 end
