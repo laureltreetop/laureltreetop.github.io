@@ -53,6 +53,7 @@ reCaptcha:
 atom_feed:
   path                   : /atom.xml # blank (default) uses feed.xml
 search                   : true # true, false (default)
+search_full_content      : true
 
 # SEO Related
 google_site_verification : "sNYlrDYSp0P3xsEeWz_vX9n5ps2SbT6TGjqgHFQDaHk"
