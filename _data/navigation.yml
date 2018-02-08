@@ -12,7 +12,7 @@ main:
 #    url: /githubpages/index.html
 #  - title: "misc."
 #    url: /misc/index.html
-  - title: "ブログいろいろ"
+  - title: "blogいろいろ"
     url: /blogsystem/index.html
   - title: "モノ関係"
     url: /inventory/index.html
@@ -55,7 +55,7 @@ githubpages:
       - title: "Blogger to Jekyll"
         url: /githubpages/blogger-to-jekyll/
 blogsystem:
-  - title: "ブログいろいろ"
+  - title: "blogいろいろ"
     children:
       - title: "はてなブログ"
         url: /blogsystem/hateblo/
@@ -75,7 +75,7 @@ sidebar:
         url: /create-pages/index.html
       - title: "GitHub Pages"
         url: /githubpages/index.html
-      - title: "ブログいろいろ"
+      - title: "blogいろいろ"
         url: /blogsystem/index.html
       - title: "ざっくりと全部"
         url: /collections.html

@@ -1,5 +1,5 @@
 ---
-title: "「はてなブログ + Tumblr = ブログいろいろ」ということに"
+title: "「はてなブログ + Tumblr = blogいろいろ」ということに"
 categories:
   - Information
 tags:
@@ -9,4 +9,4 @@ tags:
 ---
 最近、ブログをTumblrからBloggerに戻した。  
 で、いろいろメモべきことがあるなーと思い、記事にしようとする前に、ブログ関係の記事が乱立していることに気づく。  
-なので、[ブログいろいろ](/blogsystem/)に統合。
+なので、[blogいろいろ](/blogsystem/)に統合。

@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "ブログいろいろ"
+title: "blogいろいろ"
 permalink: /blogsystem/index.html
 share: false
 comments: false
