@@ -31,7 +31,7 @@ permalink: /blogsystem/hateblo/
 ## カスタマイズ CSS編
 
 CSSだけでできるカスタマイズ集。  
-`デザイン`→<i class="fa fa-wrench" aria-hidden="true"></i>→`デザインCSS`に追加していきます。
+`デザイン`→<i class="fas fa-wrench" aria-hidden="true"></i>→`デザインCSS`に追加していきます。
 {: .notice}
 
 ### Amazon紹介リンク
@@ -66,33 +66,38 @@ CSSだけでできるカスタマイズ集。
 
 ## カスタマイズ がっつり編
 
-### [JQuery](https://jquery.com/)
+### 事前準備
 
-`デザイン`→<i class="fa fa-wrench" aria-hidden="true"></i>→`フッタ`に追加。
-<span><script src="https://gist.github.com/laureltreetop/59d30a038a01d98a7fe6bc1c7bcc2a91.js"></script></span>
-最新は[Google Hosted Libraries](https://developers.google.com/speed/libraries/#jquery)で確認。
+[JQuery](https://jquery.com/)を追加。  
+最新は[Google Hosted Libraries](https://developers.google.com/speed/libraries/#jquery)で確認。  
+`デザイン`→<i class="fas fa-wrench" aria-hidden="true"></i>→`フッタ`に追加。
+```html
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+```
 
-### [Font Awesome](http://fontawesome.io/)
+[Font Awesome](https://fontawesome.com/)も追加。  
 
-はてなブログ標準でもいろんなアイコンフォントが使えますが、後述のシェアボタンなどのようにFont Awesome前提のカスタマイズも多い。
-{: .notice--info}
+はてなブログ標準でもいろんなアイコンフォントが使えるが、後述のシェアボタンなどのようにFont Awesome前提のカスタマイズも多い。
+{: .notice}
 
-[Get Started](http://fontawesome.io/get-started/)からさくっと登録して埋め込みコードを手に入れるのが楽[^fontawesome] 。
-
-[^fontawesome]: [Fonts](/create-pages/fonts/)（当サイト記事）も参考にどうぞ。
-
-`設定`→`詳細設定`→`検索エンジン最適化`→`headに要素を追加`に追加。  
-<script src="https://gist.github.com/laureltreetop/e8c228e14ccb0ee000be506947bf969e.js"></script>
+[Get Started](https://fontawesome.com/get-started)からさくっと埋め込みコードを入手。  
+`設定`→`詳細設定`→`検索エンジン最適化`→`headに要素を追加`に追加。
+```html
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+```
+5.0からいろいろ変更になりました。[Fonts](/create-pages/fonts/)（当サイト記事）も参考にどうぞ。
 
 ### トップに戻る
 
-上記のJQueryとFont Awesomeを追加し、`デザイン`→<i class="fa fa-wrench" aria-hidden="true"></i>→`ヘッダ`に追加。
-<script src="https://gist.github.com/laureltreetop/c32c117a913668c6ef625aee525d7f8d.js"></script>
+上記のJQueryとFont Awesomeを追加し、`デザイン`→<i class="fas fa-wrench" aria-hidden="true"></i>→`ヘッダ`に追加。
+```html
+<p id="page-top"><a href="#wrap"><i class="fas fa-angle-double-up fa-3x"></i></a></p>
+```
 
-`デザイン`→<i class="fa fa-wrench" aria-hidden="true"></i>→`デザインCSS`に追加。デザインはお好みで。
+`デザイン`→<i class="fas fa-wrench" aria-hidden="true"></i>→`デザインCSS`に追加。デザインはお好みで。
 <script src="https://gist.github.com/laureltreetop/3201e4dfb093ef0cfecb1fe65d4d2c94.js"></script>
 
-あとはスクリプトを`デザイン`→<i class="fa fa-wrench" aria-hidden="true"></i>→`フッタ`に追加で完了。
+あとはスクリプトを`デザイン`→<i class="fas fa-wrench" aria-hidden="true"></i>→`フッタ`に追加で完了。
 <script src="https://gist.github.com/laureltreetop/a2ad0f5f1adc4baa4364b03d09b98f59.js"></script>
 
 ### シェアボタン
@@ -100,13 +105,13 @@ CSSだけでできるカスタマイズ集。
 レスポンシブ仕様で追加していきます。    
 まずは先述のJQueryとFont Awesomeを追加。  
 
-次に`デザイン`→<i class="fa fa-wrench" aria-hidden="true"></i>→`フッタ`に追加。  
+次に`デザイン`→<i class="fas fa-wrench" aria-hidden="true"></i>→`フッタ`に追加。  
 <script src="https://gist.github.com/laureltreetop/6cc3c83b1f1268fc29ebc98b90a74f6e.js"></script>
 
-`デザイン`→<i class="fa fa-wrench" aria-hidden="true"></i>→`デザインCSS`に追加。
+`デザイン`→<i class="fas fa-wrench" aria-hidden="true"></i>→`デザインCSS`に追加。
 <script src="https://gist.github.com/laureltreetop/895a30fcfff69189140de5d5f3be4792.js"></script>
 
-最後に`デザイン`→<i class="fa fa-wrench" aria-hidden="true"></i>→`記事`→`記事上`または`記事下`に追加。  
+最後に`デザイン`→<i class="fas fa-wrench" aria-hidden="true"></i>→`記事`→`記事上`または`記事下`に追加。  
 各ソーシャルパーツは全部チェックを外しちゃってください。
 <script src="https://gist.github.com/laureltreetop/2c3c2b5852c139bb65b8251ab2daabb1.js"></script>
 
@@ -136,7 +141,7 @@ FontAwesomeは[Bootstrap](https://www.bootstrapcdn.com/fontawesome/)より。追
 無限スクロールとかInfinity Scrollとか言われてるやつ。  
 [はてなブログの記事一覧を無限スクロールさせる(オートページャー)](http://psn.hatenablog.jp/entry/2015/12/11/090001)に少しだけ手を加えて、次のページを表示したら「次へ」的なリンクを削除と言うか隠す。  
 元ネタではInfinite Scrollの記述はなかったけど、当方の環境では必須っぽい。  
-`デザイン`→<i class="fa fa-wrench" aria-hidden="true"></i>→`フッタ`に追加。
+`デザイン`→<i class="fas fa-wrench" aria-hidden="true"></i>→`フッタ`に追加。
 <script src="https://gist.github.com/laureltreetop/158c07a10742f269b0695b96e19c2b80.js"></script>
 
 ## Innocent限定のカスタマイズ
@@ -149,14 +154,12 @@ FontAwesomeは[Bootstrap](https://www.bootstrapcdn.com/fontawesome/)より。追
 参照・[はてなブログテーマ「Innocent」のカスタマイズ（ナビゲーションバー編）](http://moonnote.hateblo.jp/entry/customize-innocent-navigation-bar)
 {: .notice--info}
 
-[JQuery](https://jquery.com/)を追加[^jquery]。
+[JQuery](https://jquery.com/)を追加。すでに追加している場合は、次の工程に。
 
-[^jquery]: 詳しくは[こちらの記事](/hatebu/customize/)へ。すでに追加している場合は、次の工程に。
-
-次に、`デザイン`→<i class="fa fa-wrench" aria-hidden="true"></i>→`フッタ`にスクリプトを追加。
+次に、`デザイン`→<i class="fas fa-wrench" aria-hidden="true"></i>→`フッタ`にスクリプトを追加。
 <script src="https://gist.github.com/laureltreetop/125855bb2fb7ed829836e2671be6851c.js"></script>
 
 ヘッダもスクリプト追加を。  
-`デザイン`→<i class="fa fa-wrench" aria-hidden="true"></i>→`ヘッダ`→`タイトル下`。
+`デザイン`→<i class="fas fa-wrench" aria-hidden="true"></i>→`ヘッダ`→`タイトル下`。
 <script src="https://gist.github.com/laureltreetop/d7a56677d7ea34c877d570af60e8f2e6.js"></script>
 
