@@ -57,6 +57,8 @@ githubpages:
 blogsystem:
   - title: "blogいろいろ"
     children:
+      - title: "Blogger"
+        url: /blogsystem/blogger/
       - title: "はてなブログ"
         url: /blogsystem/hateblo/
       - title: "Tumblr"
