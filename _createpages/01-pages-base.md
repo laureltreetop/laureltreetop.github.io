@@ -1,4 +1,5 @@
 ---
+layout: single
 title: "Create Pages"
 description: ブログシステムを使っていても出てくる、タグやちょっとしたページ作成のメモ。
 permalink: /create-pages/base/

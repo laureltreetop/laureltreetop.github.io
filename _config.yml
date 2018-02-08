@@ -300,10 +300,10 @@ defaults:
         nav: "githubpages"
       toc: true
       toc_icon: "cogs"
-  # _hateblo
+  # _blogsystem
   - scope:
       path: ""
-      type: hateblo
+      type: blogsystem
     values:
       layout: single
       author_profile: false
@@ -312,22 +312,7 @@ defaults:
       comments: true
       related: false
       sidebar:
-        nav: "hateblo"
-      toc: true
-      toc_icon: "cogs" 
-  # _tumblr
-  - scope:
-      path: ""
-      type: tumblr
-    values:
-      layout: single
-      author_profile: false
-      read_time: false
-      share: true
-      comments: true
-      related: false
-      sidebar:
-        nav: "Tumblr"
+        nav: "blogsystem"
       toc: true
       toc_icon: "cogs"
 # _misc
@@ -387,14 +372,10 @@ collections:
     permalink: /:collection/:path/
     output: true
     title: "GitHub Pages"
-  hateblo:
+  blogsystem:
     permalink: /:collection/:path/
     output: true
-    title: "はてなブログ"
-  tumblr:
-    permalink: /:collection/:path/
-    output: true
-    title: "Tumblr"
+    title: "blogいろいろ"
   misc:
     permalink: /:collection/:path/
     output: true

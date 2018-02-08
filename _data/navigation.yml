@@ -10,12 +10,10 @@ main:
 #    url: /createpages/index.html
 #  - title: "GitHub Pages"
 #    url: /githubpages/index.html
-#  - title: "はてなブログ"
-#    url: /hateblo/index.html
-#  - title: "Tumblr"
-#    url: /tumblr/index.html
 #  - title: "misc."
 #    url: /misc/index.html
+  - title: "ブログいろいろ"
+    url: /blogsystem/index.html
   - title: "モノ関係"
     url: /inventory/index.html
   - title: "その他ざっくり"
@@ -56,29 +54,13 @@ githubpages:
         url: /githubpages/theme-base/
       - title: "Blogger to Jekyll"
         url: /githubpages/blogger-to-jekyll/
-hateblo:
-  - title: "はてなブログ"
+blogsystem:
+  - title: "ブログいろいろ"
     children:
-      - title: "Start"
-        url: /hateblo/start/
-      - title: "Customize CSS"
-        url: /hateblo/customize-css/
-      - title: "Customize"
-        url: /hateblo/customize/
-      - title: "Customize Innocent"
-        url: /hateblo/innocent/
-Tumblr:
-  - title: "Tumblr"
-    children:
-      - title: "Start"
-        url: /tumblr/start/
-      - title: "Easy Customize"
-        url: /tumblr/custom-easy/
-      - title: "OGP"
-        url: /tumblr/ogp/
-      - title: "Customize Theme"
-        url: /tumblr/custom-theme/
-
+      - title: "はてなブログ"
+        url: /blogsystem/hateblo/
+      - title: "Tumblr"
+        url: /blogsystem/tumblr/
 # sidebar navigation
 sidebar:
   - title: "Widget"
@@ -93,10 +75,8 @@ sidebar:
         url: /create-pages/index.html
       - title: "GitHub Pages"
         url: /githubpages/index.html
-      - title: "はてなブログ"
-        url: /hateblo/index.html
-      - title: "Tumblr"
-        url: /tumblr/index.html
+      - title: "ブログいろいろ"
+        url: /blogsystem/index.html
       - title: "ざっくりと全部"
         url: /collections.html
   - title: "Inventory"

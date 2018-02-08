@@ -1,7 +1,7 @@
 ---
 layout: splash
-title: "Tumblr"
-permalink: /tumblr/index.html
+title: "ブログいろいろ"
+permalink: /blogsystem/index.html
 share: false
 comments: false
 header:
@@ -9,7 +9,7 @@ header:
   overlay_filter: rgba(255, 255, 255, 0.5)
 ---
 
-{% for item in site.tumblr %}
+{% for item in site.blogsystem %}
   [{{ item.title }}]({{ item.url }})
   : {{ item.description }}
 {% endfor %}
