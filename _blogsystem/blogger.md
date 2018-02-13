@@ -251,7 +251,7 @@ a.taglink:hover{color:$(articlelist.posttag.font);background:$(articlelist.postt
 ```
 #### ページナビ
 
-[Vaster2に番号付きページナビゲーションを導入する](http://ssbsblg.blogspot.jp/2017/10/26.html)とか[How To Add Next & Previous Numbered Pagination in Blogger](http://mrbloggertricks.blogspot.jp/2015/09/how-to-add-next-previous-numbered.html)に方法が。  
+[Vaster2に番号付きページナビゲーションを導入する](http://ssbsblg.blogspot.jp/2017/10/26.html)とか[【修正版】Vaster2カスタマイズ！番号付きページナビを設置する方法](http://www.kazulog-life.com/2018/01/numbered-page-navigation-modified-version.html)[How To Add Next & Previous Numbered Pagination in Blogger](http://mrbloggertricks.blogspot.jp/2015/09/how-to-add-next-previous-numbered.html)に方法が。  
 ラベルや検索での挙動が変だったのでハマったが、[bloggerテンプレートのラベル一覧でページング利用](http://namidameweb.repop.jp/2015/12/blogger.html)で原因が判ったので、数か所ほどある
 ```html
 <a expr:dir='data:blog.languageDirection' expr:href='data:label.url + &quot;?max-results=10&quot;'>
