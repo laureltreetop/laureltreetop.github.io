@@ -22,7 +22,7 @@ permalink: /blogsystem/blogger/
 #Attribution1{display: none;}
 ```
 
-## ガジェットででカスタマイズ
+## ガジェットでカスタマイズ
 
 JQueryは、他で設定している場合は不要。
 {: .notice}
