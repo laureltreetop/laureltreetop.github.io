@@ -2,6 +2,7 @@
 title: "Blogger"
 description: 大幅なカスタマイズは難しいけど、やはり安定のBloggerなのかも?
 permalink: /blogsystem/blogger/
+last_modified_at: 2018-02-14
 ---
 {{ page.description }}
 {: .notice}
@@ -30,6 +31,8 @@ JQueryは、他で設定している場合は不要。
 ### サイドバーをタブに
 
 元ネタは「[はてなブログで複数のサイドバーモジュールをタブメニューにして回遊率アップを狙うカスタマイズ](http://www.yukihy.com/entry/tab-menu-custom)」。  
+
+[![Cloud Flare Orange](/assets/images/blogger-tabs.gif)](/assets/images/blogger-tabs.gif)
 
 ガジェットの一番上に
 ```html
@@ -263,7 +266,6 @@ a.taglink:hover{color:$(articlelist.posttag.font);background:$(articlelist.postt
 に修正。  
 `?`のあとに`&amp;`を追加。
 
-
 #### SNSシェアボタン
 
 [Vaster2のSNSボタンのサイズ変更　Blogger·Vaster2カスタマイズ#13](https://pooh2roh.blogspot.jp/2017/10/vaster213-sns.html)
@@ -312,6 +314,29 @@ a.taglink:hover{color:$(articlelist.posttag.font);background:$(articlelist.postt
 
 Vaster2は後述のカスタム404ページに対応してないらしい。  
 [Bloggerテンプレート「Vaster2」で記事っぽい404ページの作り方](http://kakukaku.crosgre.com/2016/11/Blogger-404PageNotFound.html)
+
+#### 投稿日時
+
+そのままだと日付しか表示されない。ガジェット側で表示設定しているのだが…  
+トップ・カテゴリ・アーカイブ用と、記事ページ用のこれを、
+```html
+<abbr class='published' expr:title='data:post.timestampISO8601' itemprop='datePublished'><script type='text/javascript'>document.write(hiduke)</script></abbr>
+```
+こういうふうに編集。` <data:post.timestamp/>`を追加してある。
+```html
+<abbr class='published' expr:title='data:post.timestampISO8601' itemprop='datePublished'><script type='text/javascript'>document.write(hiduke)</script> <data:post.timestamp/></abbr>
+```
+
+#### OGP
+
+[OpenGraph for Blogger](https://gist.github.com/pathawks/1343315)を見ながらちょっと追加とか。
+
+#### その他
+
+自分の記事からこういうのも追加。
++ [CSS小技系](https://www.treetop.to/create-pages/css/)
++ [JQuery Plugins](https://www.treetop.to/create-pages/javascript/)
+
 
 ## 他にもカスタマイズ
 
