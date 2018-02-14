@@ -197,6 +197,7 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-data
+  - jekyll-seo-tag
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -206,6 +207,7 @@ whitelist:
   - jekyll-feed
   - jemoji
   - jekyll-data
+  - jekyll-seo-tag
 
 # Archives
 #  Type
