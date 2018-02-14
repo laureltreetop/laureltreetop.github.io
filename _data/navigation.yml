@@ -4,8 +4,8 @@ main:
 #    url: /page-archive/
 #  - title: "資料"
 #    url: /collection-archive/
-  - title: "Widget"
-    url: /widget/index.html
+#  - title: "Widget"
+#    url: /widget/index.html
 #  - title: "ページ作成"
 #    url: /createpages/index.html
 #  - title: "GitHub Pages"
@@ -14,8 +14,8 @@ main:
 #    url: /misc/index.html
   - title: "blogいろいろ"
     url: /blogsystem/index.html
-  - title: "モノ関係"
-    url: /inventory/index.html
+#  - title: "モノ関係"
+#    url: /inventory/index.html
   - title: "その他ざっくり"
     url: /collections.html
   - title: "愚痴"
