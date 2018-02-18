@@ -112,7 +112,7 @@ $("a.blog-pager-older-link").text(olderLinkTitle + " >>");//rgt
 
 ## テンプレートを直接変更
 
-#### テンプレートを初期化
+### テンプレートを初期化
 
 テーマを入れ替えたりしていると、中身がおかしくなってくることがあるので。  
 いったんバックアップを取った上で、HTMLをまるっと書き換える。
@@ -134,7 +134,7 @@ $("a.blog-pager-older-link").text(olderLinkTitle + " >>");//rgt
 </body></html>
 ```
 
-#### タイトル
+### タイトル
 
 SEO的にタイトルを変更。
 
@@ -148,6 +148,57 @@ SEO的にタイトルを変更。
     <title><data:blog.pageTitle/></title>
   </b:if>
 </b:if>
+```
+
+### 自動「もっと読む」
+
+長い文章の場合は要約を表示し、自動的に「もっと読む」リンクを付けるように。
+
++ [Bloggerのトップページを記事本文抜粋表示に変更](https://bonday.net/entry/easy-post-summaries-and-thumbnails-for)
++ [bloggerで投稿の要約（snippet）を表示して、readmoreリンクをつける](https://nokoshitamono.blogspot.jp/2013/04/bloggersnippetreadmore.html)
++ [asy Post Summaries and Thumbnails for Blogger Blogs - No JavaScript Required!](http://www.bloggerbuster.com/2011/03/easy-post-summaries-and-thumbnails-for.html)
++ [スニペット(<data:post.snippet/>等)の文字数を指定する方法](https://edit-blogger-theme.blogspot.jp/2017/06/blog-post_17.html)
++ [Bloggerの記事一覧で、記事を省略表示するHTMLの解説](https://oua-iea-programmer.blogspot.jp/2017/04/bloggerhtml.html)
++ [【第３回】これでわかった！Bloggerの制御タグ・データタグまとめ](http://bgt-48.blogspot.jp/2018/01/3blogger.html)
+
+…など、いろんな記事を参考にできあがったのが、これ。  
+
+シンプルテンプレートの場合には、この部分を
+```html
+      <data:post.body/>
+    <b:if cond='data:post.hasJumpLink'>
+      <div class='jump-link'>
+        <a expr:href='data:post.url + &quot;#more&quot;' expr:title='data:post.title'><data:post.jumpText/></a>
+      </div>
+    </b:if>
+```
+こういうふうに変更。  
+文字数を100文字までと指定し、それ以下の場合は「もっと読む」リンクを付けなかったり、いろいろ。
+
+```html
+   <b:if cond='data:blog.pageType in { &quot;index&quot;,&quot; archive&quot;}'>
+          <b:if cond='data:post.snippet'>
+          <b:if cond='data:post.thumbnailUrl'>
+              <div class='Image thumb'>
+                <img expr:src='data:post.thumbnailUrl'/>
+              </div>
+          </b:if>
+            <b:eval expr='snippet(data:post.body, {length: 100, links: false, linebreaks: false})'/>
+    <b:if cond='data:post.jumpLink != data:post.hasJumpLink'>
+
+      <div class='jump-link'>
+         <b:if cond='data:post.body.length &gt;= 100'>
+        <a expr:href='data:post.url' expr:title='data:post.title'><data:post.jumpText/></a>
+        </b:if>
+      </div>
+
+    </b:if>
+          <b:else/>
+            <data:post.body/>
+          </b:if>
+      <b:else/>
+      <data:post.body/>
+      </b:if>
 ```
 
 ## カスタマイズ保留中や削除など
@@ -340,7 +391,7 @@ Vaster2は後述のカスタム404ページに対応してないらしい。
 
 ## 他にもカスタマイズ
 
-### 404 Not Found.
+#### 404 Not Found.
 
 検索ができるように。  
 `設定`→`検索設定`→`エラーとリダイレクト`→`カスタム404ページ`に設定。
@@ -357,11 +408,11 @@ Vaster2は後述のカスタム404ページに対応してないらしい。
 </div>
 ```
 
-### タグごとの記事一覧
+#### タグごとの記事一覧
 
 [How To Add Stylish Sitemap For Blogger](https://techtspot.blogspot.jp/2017/10/how-to-add-stylish-sitemap-for-blogger.html)の通りに作ると、タグ毎にまとめられた記事一覧が。
 
-### 検索で記事一覧
+#### 検索で記事一覧
 
 [Blogger記事を一覧表示するページの作成方法](https://garafu.blogspot.jp/2013/07/blogger.html)の方法でも。
 
