@@ -88,6 +88,18 @@ CSSで各色を設定。
 
 …なんか嫌ですなぁ。
 
+### CSSで使う
+
+[【保存版】Font Awesomeの使い方：Webアイコンフォントを使おう](https://saruwakakun.com/html-css/basic/font-awesome)が、マジに保存版な件。
+
+```css
+.article-date:before {
+	font-family: "Font Awesome 5 Free";
+	content: '\f017';
+}
+```
+…とかやると、日付の前にアイコンを入れられたり。
+
 ## [Font Awesome 4.7.0](http://fontawesome.io/)
 
 [Font Awesome 5](https://fontawesome.com/)が出たため、情報が一気に古くなってしまった…  
