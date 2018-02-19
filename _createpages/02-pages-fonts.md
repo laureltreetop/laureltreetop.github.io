@@ -165,31 +165,45 @@ CSSで各色を設定。
 ```
 で、引用に使いたい場合は、こんな感じで[^mm-blockquote]。
 
-[^mm-blockquote]: 縦棒など、一部は当方のテーマ依存の部分です。
+[^mm-blockquote]: 一部は当方のテーマ依存部分を上書きしてます。
 
 ```css
 blockquote {
+    position: relative;
     font-style: italic;
     background: #f5f5f5;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14);
+    border-left: 0 !important;
+    padding: 20px;
+    margin: 0 !important;
 }
-
 blockquote::before {
     display: none;
+    font-family: 'Font Awesome 5 Solid';
     content: '\f10d';
-    font-family: 'Font Awesome 5 Solid';
 }
-
-blockquote::after {
-    display: none;
-    font-family: 'Font Awesome 5 Solid';
-    content: '\f10e';
+blockquote p {
+    padding: 0;
+    margin: 7px 0;
+    line-height: 1.7em;
+}
+blockquote cite {
+    display: block;
+    text-align: right;
+    color: #888888;
+    font-size: 0.9em;
+}
+blockquote .svg-inline--fa {
+    position: absolute;
+    font-size: 50px;
+    opacity: 0.2;
 }
 ```
 
-<blockquote> We’ve seen a lot of examples where adding markup like &lt;i class=&quot;fas fa-user&quot; /&gt; allows you to easily add icons to any site. But what if changing the markup or HTML is not possible?<br/>
-	CSS has a powerful features known as Pseudo-elements. Font Awesome has leveraged the ::before pseudo-element to add icons to a page since the very beginning. </blockquote>
-<cite><a href="https://fontawesome.com/how-to-use/web-fonts-with-css#pseudo-elements">CSS Pseudo-elements</a></cite> 
+<blockquote><p>We’ve seen a lot of examples where adding markup like &lt;i class=&quot;fas fa-user&quot; /&gt; allows you to easily add icons to any site. But what if changing the markup or HTML is not possible?<br/>
+	CSS has a powerful features known as Pseudo-elements. Font Awesome has leveraged the ::before pseudo-element to add icons to a page since the very beginning.</p><cite><a href="https://fontawesome.com/how-to-use/web-fonts-with-css#pseudo-elements">CSS Pseudo-elements</a></cite></blockquote>
+
+本当は右下にも記号を入れたい…
 
 ## [Material Icon](https://material.io/icons/)
 

@@ -63,30 +63,44 @@ img {
 }
 
 blockquote {
+	position: relative;
     font-style: italic;
     background: #f5f5f5;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14);
+	border-left: 0 !important;
+	padding: 20px;
+	margin: 0 !important;
 }
 blockquote::before {
     display: none;
-    content: '\f10d';
     font-family: 'Font Awesome 5 Solid';
+	content: '\f10d';
 }
+/*
 blockquote::after {
     display: none;
     font-family: 'Font Awesome 5 Solid';
     content: '\f10e';
+    padding-right: 0;
+    bottom: 0;
+	line-height:0em;
 }
+*/
 blockquote p {
     padding: 0;
     margin: 7px 0;
-    line-height: 1.7;
+    line-height: 1.7em;
 }
-cite {
+blockquote cite {
     display: block;
     text-align: right;
     color: #888888;
     font-size: 0.9em;
+}
+blockquote .svg-inline--fa {
+	position: absolute;
+	font-size: 50px;
+	opacity: 0.2;
 }
 #zipcode {
 	width: 5em;
