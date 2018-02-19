@@ -200,8 +200,7 @@ blockquote .svg-inline--fa {
 }
 ```
 
-<blockquote><p>We’ve seen a lot of examples where adding markup like &lt;i class=&quot;fas fa-user&quot; /&gt; allows you to easily add icons to any site. But what if changing the markup or HTML is not possible?<br/>
-	CSS has a powerful features known as Pseudo-elements. Font Awesome has leveraged the ::before pseudo-element to add icons to a page since the very beginning.</p><cite><a href="https://fontawesome.com/how-to-use/web-fonts-with-css#pseudo-elements">CSS Pseudo-elements</a></cite></blockquote>
+<blockquote><p>We’ve seen a lot of examples where adding markup like &lt;i class=&quot;fas fa-user&quot; /&gt; allows you to easily add icons to any site. But what if changing the markup or HTML is not possible?</p><cite><a href="https://fontawesome.com/how-to-use/web-fonts-with-css#pseudo-elements">CSS Pseudo-elements</a></cite></blockquote>
 
 本当は右下にも記号を入れたい…
 
