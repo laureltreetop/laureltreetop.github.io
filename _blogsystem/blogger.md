@@ -175,29 +175,27 @@ SEO的にタイトルを変更。
 文字数を100文字までと指定し、それ以下の場合は「もっと読む」リンクを付けなかったり、いろいろ。
 
 ```html
-   <b:if cond='data:blog.pageType in { &quot;index&quot;,&quot; archive&quot;}'>
-          <b:if cond='data:post.snippet'>
-          <b:if cond='data:post.thumbnailUrl'>
-              <div class='Image thumb'>
-                <img expr:src='data:post.thumbnailUrl'/>
-              </div>
-          </b:if>
-            <b:eval expr='snippet(data:post.body, {length: 100, links: false, linebreaks: false})'/>
-    <b:if cond='data:post.jumpLink != data:post.hasJumpLink'>
-
-      <div class='jump-link'>
-         <b:if cond='data:post.body.length &gt;= 100'>
-        <a expr:href='data:post.url' expr:title='data:post.title'><data:post.jumpText/></a>
+<b:if cond='data:blog.pageType in { &quot;index&quot;,&quot; archive&quot;}'>
+    <b:if cond='data:post.snippet'>
+        <b:if cond='data:post.thumbnailUrl'>
+            <div class='Image thumb'>
+            <img expr:src='data:post.thumbnailUrl'/>
+            </div>
         </b:if>
-      </div>
-
+        <b:eval expr='snippet(data:post.body, {length: 100, links: false, linebreaks: false})'/>
+        <b:if cond='data:post.jumpLink != data:post.hasJumpLink'>
+            <div class='jump-link'>
+                <b:if cond='data:post.snippet.length &gt;= 100'>
+                    <a expr:href='data:post.url' expr:title='data:post.title'><data:post.jumpText/></a>
+                </b:if>
+            </div>
+        </b:if>
+    <b:else/>
+        <data:post.body/>
     </b:if>
-          <b:else/>
-            <data:post.body/>
-          </b:if>
-      <b:else/>
-      <data:post.body/>
-      </b:if>
+<b:else/>
+    <data:post.body/>
+</b:if>
 ```
 
 ## カスタマイズ保留中や削除など
