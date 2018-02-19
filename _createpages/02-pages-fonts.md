@@ -14,15 +14,21 @@ permalink: /create-pages/fonts/
 
 ### 使い方
 
-新規で使い始める場合、この1行を`</body>`の直前や`<head>`内に追加。
-<script src="https://gist.github.com/laureltreetop/046ebf0e1096784c96aef89e32df2b8a.js"></script>
-
-すでにVersion 4を使っていて、混在させて使う場合はさらに1行、計2行を追加。
-<script src="https://gist.github.com/laureltreetop/8925ccb05768a84dca0f234f5102b8c4.js"></script>
+新規で使い始める場合、この1行を`</body>`の直前や`<head>`内に追加。  
+最新は[Get stared](https://fontawesome.com/get-started)より確認。
+```html
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+```
 
 あとは使いたいフォントを[Icons](https://fontawesome.com/icons)から探して、使いたいところにこんな感じで貼るだけ。  
 classの`fa-2x`は大きさ指定。
-<script src="https://gist.github.com/laureltreetop/5b3e0c533253c73c4fc56561b05f87ac.js"></script>
+```html
+<i class="fab fa-2x fa-twitter"></i>
+<i class="fab fa-2x fa-facebook"></i> 
+<i class="fab fa-2x fa-google-plus"></i> 
+<i class="fab fa-2x fa-pinterest"></i> 
+<i class="fab fa-2x fa-get-pocket"></i>
+```
 
 <i class="fab fa-2x fa-twitter"></i>
 <i class="fab fa-2x fa-facebook"></i> 
@@ -34,9 +40,44 @@ classの`fa-2x`は大きさ指定。
 
 TwitterとかFacebookのアイコンだと、やっぱり公式カラーにしたくなったり。[BrandColors](https://brandcolors.net/)のような資料もあるし。  
 CSSで各色を設定。
-<script src="https://gist.github.com/laureltreetop/3757401d0268c747415fb55c94fa1dad.js"></script>
+```css
+.twitter {
+    background: #55acee;   
+    color: #ffffff;
+}
+.facebook {
+    background: #3b5998;
+    color: #ffffff;
+}
+.google {
+    background: #dd4b39;
+    color: #ffffff;
+}
+.pinterest {
+    background: #bd081c;
+    color: #ffffff;
+}
+.tumblr {
+    background: #36465d;
+    color: #ffffff;
+}
+.rss {
+    background: #ff8c00;
+    color: #ffffff;
+}
+.pocket {
+    background: #ef3f56;
+    color: #ffffff;
+}
+```
 で、それぞれにclass指定。
-<script src="https://gist.github.com/laureltreetop/b0b8f628248ed3aa2906467a1446d3c3.js"></script>
+```html
+<i class="fab fa-2x fa-twitter twitter"></i>
+<i class="fab fa-2x fa-facebook facebook"></i> 
+<i class="fab fa-2x fa-google-plus google"></i> 
+<i class="fab fa-2x fa-pinterest pintest"></i> 
+<i class="fab fa-2x fa-get-pocket pocket"></i>
+```
 
 あとはclassを付加すれば色も変わる[^brand-colors]。  
 <i class="fab fa-2x fa-twitter twitter" style="color:#1da1f2;"></i>
@@ -65,7 +106,27 @@ CSSで各色を設定。
 
 ### 合わせ技
 
-<script src="https://gist.github.com/laureltreetop/d0f20c5d203a2da7d7af94a6dc0eda71.js"></script>
+```html
+<div class="fa-layers fa-fw fa-4x">
+    <i class="far fa-thumbs-down" data-fa-transform="shrink-6"></i>
+    <span class="fas fa-ban" style="color:red"></span>
+</div>
+
+<div class="fa-layers fa-fw fa-4x">
+    <i class="fab fa-line" style="color:#00c300;"></i>
+    <span class="fa-layers-counter" style="background:orange">1,024</span>
+</div>
+
+<div class="fa-layers fa-fw fa-4x">
+    <i class="far fa-envelope" style="color:darkgray"></i>
+    <span class="fa-layers-counter" style="background:orange">256</span>
+</div>
+
+<div class="fa-layers fa-fw fa-4x">
+    <i class="fas fa-phone-volume" data-fa-transform="rotate-210 shrink-3 flip-v flip-h" data-fa-mask="fas fa-circle" style="color:dodgerblue;"></i>
+    <span class="fa-layers-counter" style="background:orange">13</span>
+</div>
+```
 <div class="fa-layers fa-fw fa-4x">
     <i class="far fa-thumbs-down" data-fa-transform="shrink-6"></i>
     <span class="fas fa-ban" style="color:red"></span>
@@ -90,29 +151,45 @@ CSSで各色を設定。
 
 ### CSSで使う
 
-[【保存版】Font Awesomeの使い方：Webアイコンフォントを使おう](https://saruwakakun.com/html-css/basic/font-awesome)が、マジに保存版な件。
+引用に使えないかなーと思って苦労したが、下記の記事が参考になった。
++ [【保存版】Font Awesomeの使い方：Webアイコンフォントを使おう](https://saruwakakun.com/html-css/basic/font-awesome)
++ [Font Awesome 5 Freeで疑似要素(:after,:before)のcontent指定する場合](https://qiita.com/Garyuten/items/6d68da5cdac6dab9ba26)
++ [アイコン読み込みがJavaScript+SVG描画に変わった「Font Awesome 5」に変更してみた](https://creatorclip.info/2018/02/fontawesome-5-change/)
+
+まずはhead内に少し追加。
+```html
+<script>
+  FontAwesomeConfig = { searchPseudoElements: true };
+</script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+```
+で、引用に使いたい場合は、こんな感じで[^mm-blockquote]。
+
+[^mm-blockquote]: 縦棒など、一部は当方のテーマ依存の部分です。
 
 ```css
-.article-date:before {
-	font-family: "Font Awesome 5 Free";
-	content: '\f017';
+blockquote {
+    font-style: italic;
+    background: #f5f5f5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14);
+}
+
+blockquote::before {
+    display: none;
+    content: '\f10d';
+    font-family: 'Font Awesome 5 Solid';
+}
+
+blockquote::after {
+    display: none;
+    font-family: 'Font Awesome 5 Solid';
+    content: '\f10e';
 }
 ```
-…とかやると、日付の前にアイコンを入れられたり。
 
-## [Font Awesome 4.7.0](http://fontawesome.io/)
-
-[Font Awesome 5](https://fontawesome.com/)が出たため、情報が一気に古くなってしまった…  
-使い始めの説明だけ残しておく。
-{: .notice--danger}
-
-### 使い方
-
-[Font Awesome](http://fontawesome.io/)から必要なファイルをダウンロードするとか、[Bootstrap CDN Font Awesome](https://www.bootstrapcdn.com/fontawesome/)を呼び出すとかいろいろ方法があるけど、[Get Started](http://fontawesome.io/get-started/)からさくっと登録して埋め込みコードを手に入れるのが楽。
-<script src="https://gist.github.com/laureltreetop/e8c228e14ccb0ee000be506947bf969e.js"></script>
-
-あとは使いたいフォントを[The Icons](http://fontawesome.io/icons/)から探して、使いたいところにこんな感じで貼るだけ。  
-<script src="https://gist.github.com/laureltreetop/0a6ea6e1beacd67032e6306f2248fcff.js"></script>
+<blockquote> We’ve seen a lot of examples where adding markup like &lt;i class=&quot;fas fa-user&quot; /&gt; allows you to easily add icons to any site. But what if changing the markup or HTML is not possible?<br/>
+	CSS has a powerful features known as Pseudo-elements. Font Awesome has leveraged the ::before pseudo-element to add icons to a page since the very beginning. </blockquote>
+<cite><a href="https://fontawesome.com/how-to-use/web-fonts-with-css#pseudo-elements">CSS Pseudo-elements</a></cite> 
 
 ## [Material Icon](https://material.io/icons/)
 
@@ -125,12 +202,18 @@ Font Awesomeに無いアイコンもいろいろ。
 
 [Material Icon Guide](http://google.github.io/material-design-icons/)にある通り、画像としても使えたりする。  
 とりあえず今回はWebで使いたいので、`<head>～</head>`内で呼び出し。
-<script src="https://gist.github.com/laureltreetop/b4526e7bc9b02bf97d01985de2c5af09.js"></script>
+```html
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+```
 
 あとは使いたいアイコンを選んで、ニョキッと出てくるIcon Fontコードをコピーし、使いたいところに貼るだけ。
 [![Material Icon Select](/assets/images/material-icon-select.png)](/assets/images/material-icon-select.png)
-
-<script src="https://gist.github.com/laureltreetop/d22e06acc4b3df3f276fbfd3fe96685d.js"></script>
+```html
+<i class="material-icons">cast</i>
+<i class="material-icons">fingerprint</i>
+<i class="material-icons">phonelink_lock</i>
+<i class="material-icons">g_translate</i>
+```
 
 ## [IcoMoon](https://icomoon.io/)
 
@@ -151,7 +234,14 @@ Generate Fontから、判りやすいようにラベルを変更してダウン�
 [![IcoMoon label](/assets/images/icomoon-set-icon-label.png)](/assets/images/icomoon-set-icon-label.png)
 
 解凍したファイル群を、階層を維持したままで移動。でもって`<head>～</head>`内で`icomoon/style.css`を呼び出し。
-<script src="https://gist.github.com/laureltreetop/65876d3d2cab91fa8d90fe0bceed4426.js"></script>
+```html
+<link rel="stylesheet" href="/assets/icomoon/style.css">
+```
 
 使いたいところに貼るだけ。
-<script src="https://gist.github.com/laureltreetop/83b59e657e93eeb0ee48ecb3b69bad94.js"></script>
+```html
+<span class="icon-hatebu"></span>
+<span class="icon-line"></span>
+<span class="icon-auth0"></span>
+<span class="icon-playstation"></span>
+```
