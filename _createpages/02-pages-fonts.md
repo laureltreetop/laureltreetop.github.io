@@ -159,9 +159,9 @@ CSSで各色を設定。
 まずはhead内に少し追加。
 ```html
 <script>
-  FontAwesomeConfig = { searchPseudoElements: true };
+    FontAwesomeConfig = { searchPseudoElements: true };
 </script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<script defer src='https://use.fontawesome.com/releases/v5.0.6/js/all.js'/>
 ```
 で、引用に使いたい場合は、こんな感じで[^mm-blockquote]。
 
