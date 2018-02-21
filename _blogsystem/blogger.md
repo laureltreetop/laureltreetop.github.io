@@ -176,22 +176,23 @@ SEO的にタイトルを変更。
 
 ```html
 <b:if cond='data:blog.pageType in { &quot;index&quot;,&quot; archive&quot;}'>
-    <b:if cond='data:post.snippet'>
-        <b:if cond='data:post.thumbnailUrl'>
-            <div class='Image thumb'>
-            <img expr:src='data:post.thumbnailUrl'/>
-            </div>
-        </b:if>
-        <b:eval expr='snippet(data:post.body, {length: 100, links: false, linebreaks: false})'/>
-        <b:if cond='data:post.jumpLink != data:post.hasJumpLink'>
-            <div class='jump-link'>
-                <b:if cond='data:post.snippet.length &gt;= 100'>
-                    <a expr:href='data:post.url' expr:title='data:post.title'><data:post.jumpText/></a>
-                </b:if>
-            </div>
-        </b:if>
-    <b:else/>
+    <b:if cond='data:post.thumbnailUrl'>
+        <div class='Image thumb'>
+        <img expr:src='data:post.thumbnailUrl'/>
+        </div>
+    </b:if>
+    <b:if cond='data:post.snippet.length &lt;= 100'>
         <data:post.body/>
+        <b:if cond='data:post.hasJumpLink'>
+            <div class='jump-link'>
+            <a expr:href='data:post.url' expr:title='data:post.title'><data:post.jumpText/></a>
+            </div>
+         </b:if>
+    <b:else/>
+        <b:eval expr='snippet(data:post.body, {length: 100, links: true, linebreaks: true})'/>
+        <div class='jump-link'>
+        <a expr:href='data:post.url' expr:title='data:post.title'><data:post.jumpText/></a>
+        </div>
     </b:if>
 <b:else/>
     <data:post.body/>
