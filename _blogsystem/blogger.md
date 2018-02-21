@@ -257,11 +257,6 @@ img{max-width:100%; height:auto;}
 ```
 ただし、いわゆるSEO Friendlyではない。
 
-
-
-
-
-
 ## Vaster2をカスタマイズ
 
 カスタマイズに疲れてきたので、シンプルなレスポンシブテンプレートを導入。  
@@ -303,7 +298,10 @@ a.taglink:hover{color:$(articlelist.posttag.font);background:$(articlelist.postt
 ```
 #### ページナビ
 
-[Vaster2に番号付きページナビゲーションを導入する](http://ssbsblg.blogspot.jp/2017/10/26.html)とか[【修正版】Vaster2カスタマイズ！番号付きページナビを設置する方法](http://www.kazulog-life.com/2018/01/numbered-page-navigation-modified-version.html)[How To Add Next & Previous Numbered Pagination in Blogger](http://mrbloggertricks.blogspot.jp/2015/09/how-to-add-next-previous-numbered.html)に方法が。  
++ [Vaster2に番号付きページナビゲーションを導入する](http://ssbsblg.blogspot.jp/2017/10/26.html)
++ [【修正版】Vaster2カスタマイズ！番号付きページナビを設置する方法](http://www.kazulog-life.com/2018/01/numbered-page-navigation-modified-version.html)
++ [How To Add Next & Previous Numbered Pagination in Blogger](http://mrbloggertricks.blogspot.jp/2015/09/how-to-add-next-previous-numbered.html)
+…などに方法が。  
 ラベルや検索での挙動が変だったのでハマったが、[bloggerテンプレートのラベル一覧でページング利用](http://namidameweb.repop.jp/2015/12/blogger.html)で原因が判ったので、数か所ほどある
 ```html
 <a expr:dir='data:blog.languageDirection' expr:href='data:label.url + &quot;?max-results=10&quot;'>
@@ -340,6 +338,22 @@ a.taglink:hover{color:$(articlelist.posttag.font);background:$(articlelist.postt
 .main-outer{width:694px;}
 .sidebar {width:330px;}
 }
+```
+#### Font Awesome 5に
+
+```html
+<link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' rel='stylesheet'/>
+```
+まずはこれ↑をこれ↓に。
+```html
+<script>
+    FontAwesomeConfig = { searchPseudoElements: true };
+</script>
+<script defer='defer' src='https://use.fontawesome.com/releases/v5.0.6/js/all.js'/>
+```
+
+```html
+<i class="fas fa-tags"></i>
 ```
 
 #### ページ一覧
@@ -383,8 +397,9 @@ Vaster2は後述のカスタム404ページに対応してないらしい。
 #### その他
 
 自分の記事からこういうのも追加。
-+ [CSS小技系](https://www.treetop.to/create-pages/css/)
-+ [JQuery Plugins](https://www.treetop.to/create-pages/javascript/)
++ [CSS小技系](/create-pages/css/)
++ [JQuery Plugins](/create-pages/javascript/)
++ [Fonts](/create-pages/fonts/)
 
 
 ## 他にもカスタマイズ
