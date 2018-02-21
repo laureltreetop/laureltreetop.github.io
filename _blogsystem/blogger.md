@@ -138,15 +138,54 @@ $("a.blog-pager-older-link").text(olderLinkTitle + " >>");//rgt
 SEO的にタイトルを変更。
 
 ```html
-<b:if cond='data:blog.pageType == &quot;item&quot;'>
+<b:if cond='data:blog.pageType in { &quot;item&quot;,&quot;static_page&quot;} '>
   <title><data:blog.pageName/> | <data:blog.title/></title>
 <b:else/>
-  <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
-    <title><data:blog.pageName/> | <data:blog.title/></title>
-  <b:else/>
-    <title><data:blog.pageTitle/></title>
-  </b:if>
+  <title><data:blog.pageTitle/></title>
 </b:if>
+```
+### レスポンシブデザインに
+
+モバイル判定な場合はコンテンツを幅いっぱいに表示。
+```html
+<b:if cond='data:blog.isMobile'>
+  <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0' name='viewport'/>
+</b:if>
+```
+URLをカノニカルURL[^canonicalurl]に。
+```html
+<link expr:href='data:blog.canonicalUrl' rel='canonical'/>
+```
+[^canonicalurl]: [重複したURLを統合する](https://support.google.com/webmasters/answer/139066?visit_id=1-636547770842789424-3452404744&hl=ja)とかいろいろ参照。
+
+?m=1（モバイル用オプション）を?m=0（PC用オプション）に。
+```html
+<script type='text/javascript'>//<![CDATA[
+var curl = window.location.href;if (curl.indexOf('m=1') != -1) {curl = curl.replace('m=1', 'm=0');window.location.href = curl;}
+//]]></script>
+```
+
+CSSも、もにょもにょと。
+```css
+@media screen and (max-width: 768px){
+.limit-width{margin:0 auto;width:100%;overflow:hidden;}
+#outer{padding:0;}
+#main-outer{float:none;margin:0;}
+#main{margin:0 15px;}
+#forcus-category-outer{display:none;}
+#header-inner{padding:0px 0;}
+#header-inner h1{font-size:150%;}
+.post-header h2{font-size:130%;}
+.post-body iframe{width:95%;}
+#upper-nav-outer{display:none;}
+.index-pager .newer a, .index-pager .older a{padding:20px 20px;}
+#related-post span.label{display:none;}
+#footer-inner{padding:30px 0 15px 0;}
+#sidebar-outer{float:none;margin:10px 0 0 0;width:100%;}
+#related-post li{font-size:80%;}
+fixed-social-bottons{display:none;}
+img{max-width:100%; height:auto;}
+}
 ```
 
 ### 自動「もっと読む」
@@ -218,49 +257,10 @@ SEO的にタイトルを変更。
 ```
 ただし、いわゆるSEO Friendlyではない。
 
-#### レスポンシブデザインに
 
-モバイル判定な場合はコンテンツを幅いっぱいに表示。
-```html
-<b:if cond='data:blog.isMobile'>
-  <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0' name='viewport'/>
-</b:if>
-```
 
-#### ?m=1問題
 
-?m=1（モバイル用オプション）を?m=0（PC用オプション）に。
 
-```html
-<script type='text/javascript'>//<![CDATA[
-var curl = window.location.href;if (curl.indexOf('m=1') != -1) {curl = curl.replace('m=1', 'm=0');window.location.href = curl;}
-//]]></script>
-```
-
-URLをカノニカルURLに。
-```html
-<link expr:href='data:blog.canonicalUrl' rel='canonical'/>
-```
-
-```html
-<b:if cond='data:blog.isMobile'>
-<style>
-.limit-width{margin:0 auto;width:100%;overflow:hidden;}
-#outer{padding:0;}
-#main-outer{float:none;margin:0;}
-#main{margin:0;}
-#forcus-category-outer{display:none;}
-#header-inner{padding:10px 0;}
-#header-inner h1{font-size:150%;}
-.post-header h2{font-size:130%;}
-#upper-nav-outer{display:none;}
-.index-pager .newer a, .index-pager .older a{padding:20px 20px;}
-#related-post span.label{display:none;}
-#footer-inner{padding:30px 0 15px 0;}
-#sidebar-outer{float:none;margin:10px 0 0 0;width:100%;}
-</style>
-</b:if>
-```
 
 ## Vaster2をカスタマイズ
 
