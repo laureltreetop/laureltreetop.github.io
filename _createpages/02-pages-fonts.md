@@ -174,13 +174,18 @@ blockquote {
     background: #f5f5f5;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14);
     border-left: 0 !important;
-    padding: 20px;
+    padding: 20px 20px 5px 20px;
     margin: 0 !important;
 }
 blockquote::before {
     display: none;
     font-family: 'Font Awesome 5 Solid';
     content: '\f10d';
+}
+blockquote::after {
+    display: none;
+    font-family: 'Font Awesome 5 Solid';
+    content: '\f10e';
 }
 blockquote p {
     padding: 0;
@@ -198,11 +203,21 @@ blockquote .svg-inline--fa {
     font-size: 50px;
     opacity: 0.2;
 }
+blockquote .svg-inline--fa:last-of-type {
+    bottom: 20px;
+    right: 10px;
+}
 ```
+> We’ve seen a lot of examples where adding markup like &lt;i class=&quot;fas fa-user&quot; /&gt; allows you to easily add icons to any site. But what if changing the markup or HTML is not possible?  
 
-<blockquote><p>We’ve seen a lot of examples where adding markup like &lt;i class=&quot;fas fa-user&quot; /&gt; allows you to easily add icons to any site. But what if changing the markup or HTML is not possible?</p><cite><a href="https://fontawesome.com/how-to-use/web-fonts-with-css#pseudo-elements">CSS Pseudo-elements</a></cite></blockquote>
+右下にも記号を入れるのに苦労した…  
 
-本当は右下にも記号を入れたい…
+> display: none;で消すのは、先ほど説明したようにSVGに置換されるため疑似要素があると2重でアイコンが表示されるため。SVGとセットで<i>タグも生成されるため、一緒に消しておくことを忘れずに！
+>
+> スタイルを当てるときはSVGタグ（.svg-inline--fa）に色なりマージンなり追加して下さい。  
+> <cite><a href="https://creatorclip.info/2018/02/fontawesome-5-change/">アイコン読み込みがJavaScript+SVG描画に変わった「Font Awesome 5」に変更してみた</a></cite>
+
+…というのがキーポイントに。
 
 ## [Material Icon](https://material.io/icons/)
 
