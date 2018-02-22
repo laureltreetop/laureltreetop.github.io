@@ -95,10 +95,30 @@ blockquote cite {
 blockquote .svg-inline--fa {
     position: absolute;
     font-size: 50px;
-    opacity: 0.2;
+    opacity: 0.1;
 }
 blockquote .svg-inline--fa:last-of-type {
     bottom: 20px;
+    right: 10px;
+}
+blockquote a[href*="twitter.com"]::before{
+    display: none;
+    font-family: 'Font Awesome 5 Brands';
+    content: '\f099';
+}
+blockquote a[href*="wikipedia"]::before{
+    display: none;
+    font-family: 'Font Awesome 5 Brands';
+    content: '\f266';
+}
+blockquote .svg-inline--fa.fa-twitter {
+    color: #55acee;
+    top: 10px;
+    right: 10px;
+}
+blockquote .svg-inline--fa.fa-wikipedia-w {
+    color: #636466;
+    top: 10px;
     right: 10px;
 }
 #zipcode {
