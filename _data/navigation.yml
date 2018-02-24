@@ -85,3 +85,5 @@ sidebar:
     children:
       - title: "KingWear KW88"
         url: /inventory/kw88/
+      - title: "USBドライブ"
+        url: /inventory/usb-drive/

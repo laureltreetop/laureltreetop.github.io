@@ -1,0 +1,84 @@
+---
+title: "USBドライブを使い倒す"
+description: "出先でも好きな環境で作業したいと思い、いろいろ揃えてみた。例によってWindowsでオレオレ的に。"
+permalink: /inventory/usb-drive/
+---
+{{ page.description }}
+{: .notice}
+
+## 使う前に
+
+ややこしくならないように、ドライブ文字（ドライブレター）固定。  
+
+Windows7の場合
+1. `コンピューター`→`コンピューターの管理`
+1. `記憶域`→`ディスクの管理`
+1. USBドライブを右クリック→`ドライブ文字とパスの変更`
+1. 使いやすい文字を割り当てる
+
+## Portableアプリ
+
+### PortableApps系
+
+[PortableApps](https://portableapps.com/)と、それで管理できるアプリ。  
+以下、現在使ってるやつ。  
+面倒なので"Portable"は省略。
+
++ Internet
+  + [Google Chrome](https://portableapps.com/apps/internet/google_chrome_portable)
+  + [Mozilla Firefox](https://portableapps.com/apps/internet/firefox_portable)
++ Office
+  + [Apache OpenOffice](https://portableapps.com/apps/office/openoffice_portable)
+  + [LibreOffice](https://portableapps.com/apps/office/libreoffice_portable)
++ Security 
+  + [Kaspersky TDSSKiller](https://portableapps.com/apps/security/kaspersky-tdsskiller-portable)
+  : [アンチルートキットユーティリティ TDSSKiller](https://support.kaspersky.co.jp/viruses/disinfection/5350)参照。
++ Utilities
+  + [7-Zip](https://portableapps.com/apps/utilities/7-zip_portable)
++ Graphics & Pictures
+  + [GIMP](https://portableapps.com/apps/graphics_pictures/gimp_portable)
+  + [IrfanView](https://portableapps.com/apps/graphics_pictures/irfanview_portable)
++ Development
+  + [Brackets](https://github.com/sagiegurari/brackets-portable/releases/tag/v1.11.0.1)
+  + [Git](https://github.com/sheabunge/GitPortable)
+ 
+### その他
+
+[Appetizer](http://appetizer.cozic.net/)などのランチャーにまとめるといいかも。
+
++ [KeePass Password Safe](https://keepass.info/)
+: PortableAppsにもあるが、2.xx系がない。
++ [NexusFont](http://www.xiles.net/)
+: フォント管理。使い方は次項にて。
++ [DropboxPortableAHK](http://nionsoftware.com/dbpahk/)
+
+## フォントを持ち歩く
+
+これが本題だったり…  
+
+### 一時的にフォントを使えるように
+
+1. 使いたいフォントをUSBドライブに放り込む
+1. [NexusFont](http://www.xiles.net/)起動
+1. `ライブラリ`を右クリック→`グループに追加`
+1. `グループ`を右クリック→`フォルダを追加`→放り込みたいフォントフォルダを指定
+
+…としておくと、[NexusFont](http://www.xiles.net/)を起動してグループを開いている間は、フォントが一時的に使えるように。  
+
+ジャンルで分けたいときは
+
+1. `ライブラリ`右クリック→`セットに追加`
+1. グループを選んでおく
+1. フォントを選んで、セットにドロップ
+
+…で、選んでいるフォントが一時的に使える。  
+
+### GIMPでフォントを使う
+
+ただ困ったことに、上記の方法は[GIMP](https://portableapps.com/apps/graphics_pictures/gimp_portable)では使えない。  
+GIMPからフォントフォルダを認識するように設定する。
+
+1. `編集`→`設定を開く`
+1. `フォルダー`→`フォント`で、フォントが入っているフォルダも追加
+
+これでGIMPでも使えるようになるが、起動は遅くなりますねぇ。
