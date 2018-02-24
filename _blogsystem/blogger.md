@@ -10,13 +10,13 @@ permalink: /blogsystem/blogger/
 
 スタイルシートは`テーマ`→`カスタマイズ`→`上級者向け`→`CSSを追加`→`カスタムCSSを追加`で追加。
 
-### 「登録: 投稿 (Atom)」を非表示に
+#### 「登録: 投稿 (Atom)」を非表示に
 
 ```css
 .feed-links {display:none !important;}
 ```
 
-### 「Powered by Blogger」を非表示に
+#### 「Powered by Blogger」を非表示に
 
 ```css
 #Attribution1{display: none;}
@@ -339,6 +339,7 @@ a.taglink:hover{color:$(articlelist.posttag.font);background:$(articlelist.postt
 .sidebar {width:330px;}
 }
 ```
+{% comment %}
 #### Font Awesome 5に
 
 ```html
@@ -354,6 +355,17 @@ a.taglink:hover{color:$(articlelist.posttag.font);background:$(articlelist.postt
 
 ```html
 <i class="fas fa-tags"></i>
+```
+{% endcomment %}
+
+#### Spotify
+
+記事への表示をカスタマイズ。横幅いっぱいに。
+```css
+.post-body iframe[src*="spotify.com"] {
+    width: 100% !important;
+    height: 380px !important;
+}
 ```
 
 #### ページ一覧
