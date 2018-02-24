@@ -1,0 +1,10 @@
+---
+title: "USBドライブで遊んでみる"
+categories:
+  - Information
+tags:
+  - inventory
+---
+[USBドライブを使い倒す](/inventory/usb-drive/)を追加。  
+出先で作業してて「んがーっ」って思ったので、最初はデータのやり取り用に使っていただけなのだが、ポータブルアプリが結構入れられる。  
+しかも、かなり幸せに。
