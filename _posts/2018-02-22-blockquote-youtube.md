@@ -17,3 +17,5 @@ tags:
 {% include video id="Hy8kmNEo1i8" provider="youtube" %}
 
 って、これも（略
+
+<iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWYQelb54GZmT" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
