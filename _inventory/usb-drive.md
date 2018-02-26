@@ -25,22 +25,22 @@ Windows7の場合
 面倒なので"Portable"は省略。
 
 + Internet
-  + [Google Chrome](https://portableapps.com/apps/internet/google_chrome_portable)
-  + [Mozilla Firefox](https://portableapps.com/apps/internet/firefox_portable)
+  + [Google Chrome](https://portableapps.com/apps/internet/google_chrome_portable)（[元ネタ](https://www.google.com/chrome/)）
+  + [Mozilla Firefox](https://portableapps.com/apps/internet/firefox_portable)（[元ネタ](https://www.mozilla.org/ja/firefox/)）
 + Office
-  + [Apache OpenOffice](https://portableapps.com/apps/office/openoffice_portable)
-  + [LibreOffice](https://portableapps.com/apps/office/libreoffice_portable)
+  + [Apache OpenOffice](https://portableapps.com/apps/office/openoffice_portable)（[元ネタ](https://www.openoffice.org/)）
+  + [LibreOffice](https://portableapps.com/apps/office/libreoffice_portable)（[元ネタ](https://ja.libreoffice.org/)）
 + Security 
   + [Kaspersky TDSSKiller](https://portableapps.com/apps/security/kaspersky-tdsskiller-portable)
-  : [アンチルートキットユーティリティ TDSSKiller](https://support.kaspersky.co.jp/viruses/disinfection/5350)参照。
+  （[元ネタ](https://support.kaspersky.co.jp/viruses/disinfection/5350)）
 + Utilities
-  + [7-Zip](https://portableapps.com/apps/utilities/7-zip_portable)
+  + [7-Zip](https://portableapps.com/apps/utilities/7-zip_portable)（[元ネタ](https://sevenzip.osdn.jp/)）
 + Graphics & Pictures
-  + [GIMP](https://portableapps.com/apps/graphics_pictures/gimp_portable)
-  + [IrfanView](https://portableapps.com/apps/graphics_pictures/irfanview_portable)
+  + [GIMP](https://portableapps.com/apps/graphics_pictures/gimp_portable)（[元ネタ](https://www.gimp.org/)）
+  + [IrfanView](https://portableapps.com/apps/graphics_pictures/irfanview_portable)（[元ネタ](http://www.irfanview.com/)）
 + Development
-  + [Brackets](https://github.com/sagiegurari/brackets-portable/releases/tag/v1.11.0.1)
-  + [Git](https://github.com/sheabunge/GitPortable)
+  + [Brackets](https://github.com/sagiegurari/brackets-portable/releases/tag/v1.11.0.1)（[元ネタ](http://brackets.io/)）
+  + [Git](https://github.com/sheabunge/GitPortable)（[元ネタ](https://gitforwindows.org/)）
  
 ### その他
 
@@ -55,6 +55,7 @@ Windows7の場合
 ## フォントを持ち歩く
 
 これが本題だったり…  
+{: .notice}
 
 ### 一時的にフォントを使えるように
 
