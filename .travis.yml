@@ -1,5 +1,7 @@
-language: ruby
-rvm:
- - 2.2
- - jruby
- - rbx-3
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: O6VaEScmmOnPaMuHK2QdGQ  # Set in travis-ci.org dashboard, marked secure
+  keep-history: true
+  on:
+    branch: master
