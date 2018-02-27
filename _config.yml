@@ -59,7 +59,6 @@ algolia:
   index_name             : index # YOUR_INDEX_NAME
   search_only_api_key    : 427722d5f092087b5283f91ca1d247ec # YOUR_SEARCH_ONLY_API_KEY
   powered_by             : # true (default), false
-  files_to_exclude       : []
 
 # SEO Related
 google_site_verification : "sNYlrDYSp0P3xsEeWz_vX9n5ps2SbT6TGjqgHFQDaHk"
