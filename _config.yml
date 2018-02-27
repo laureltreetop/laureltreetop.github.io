@@ -53,11 +53,11 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : true # true, false (default)
 search_full_content      : true # true, false (default)
-search_provider          : algolia # lunr (default), algolia
+search_provider          : "algolia" # lunr (default), algolia
 algolia:
-  application_id         : LGXCDI20T6 # YOUR_APPLICATION_ID
-  index_name             : index # YOUR_INDEX_NAME
-  search_only_api_key    : 427722d5f092087b5283f91ca1d247ec # YOUR_SEARCH_ONLY_API_KEY
+  application_id         : "LGXCDI20T6" # YOUR_APPLICATION_ID
+  index_name             : "index" # YOUR_INDEX_NAME
+  search_only_api_key    : "427722d5f092087b5283f91ca1d247ec" # YOUR_SEARCH_ONLY_API_KEY
   powered_by             : # true (default), false
 
 # SEO Related
