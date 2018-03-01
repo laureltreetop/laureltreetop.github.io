@@ -6,15 +6,15 @@ main:
 #    url: /collection-archive/
 #  - title: "Widget"
 #    url: /widget/index.html
-#  - title: "GitHub Pages"
-#    url: /githubpages/index.html
 #  - title: "misc."
 #    url: /misc/index.html
   - title: "ページ作成"
     url: /createpages/index.html
   - title: "blogいろいろ"
     url: /blogsystem/index.html
-# - title: "モノ関係"
+  - title: "GitHub Pages"
+    url: /githubpages/index.html
+#  - title: "モノ関係"
 #    url: /inventory/index.html
   - title: "その他ざっくり"
     url: /collections.html
@@ -52,6 +52,8 @@ githubpages:
         url: /githubpages/minimal-mistakes/
       - title: "Customize Base"
         url: /githubpages/theme-base/
+      - title: "Algolia and GitHub"
+        url: /githubpages/algolia-github/
       - title: "Blogger to Jekyll"
         url: /githubpages/blogger-to-jekyll/
 blogsystem:
