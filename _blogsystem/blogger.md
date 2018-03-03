@@ -468,3 +468,30 @@ Bloggerからも指定されるけど、とりあえずこういう値が必要�
 |@	|A	|216.239.38.21|
 |www|CNAME	|ghs.googlehosted.com|
 |固有の値|CNAME|固有の値|
+
+## Algoliaで全文検索
+
+### Algoliaの設定
+
+…の設定は、[Algolia](/createpages/algolia/)を参照。
+
+### index取得
+
+`<head>`内から呼び出し。
+```html
+<script src='https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js'/>
+```
+
+んで、取得用のスクリプト。
+
+<script src="https://gist.github.com/laureltreetop/00b85783c30c5f9142e45f1e2344a3e4.js"></script>
+
+この記事群がかなり参考になったというか、土台にした
+。
++ [Bloggerに投稿された記事をAPIを使って取得してWordPressに登録する](https://ka2.org/import-to-wordpress-from-blogger-posts-by-api/)
++ [Blogger API v3の使い方（ソースコードあり）](http://boardge.blogspot.jp/2014/01/blogger-api-v3.html)
++ [Blogger API](https://developers.google.com/blogger/)
+
+### 検索
+
+…は、頓挫。とりあえずここまでできたよ、ってことで。

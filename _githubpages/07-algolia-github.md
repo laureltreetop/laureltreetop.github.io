@@ -1,5 +1,5 @@
 ---
-title: "Algolia and GitHub"
+title: "Algolia"
 description: 全文検索できるよ。日本語もOKだったり。
 permalink: /githubpages/algolia-github/
 ---
@@ -8,12 +8,7 @@ permalink: /githubpages/algolia-github/
 
 ## Algolia
 
-1. [Algolia](https://www.algolia.com/)のアカウント作成
-1. `New Appligacion`からAPPSを作成
-  + アプリ名はあとからでも変えられるが、混乱しそうだったらアプリ名を入れるのも可
-  + 地域を選んで`CONTINUE WITH JAPAN AS MAIN DATA CENTER`へ
-  + Dashbordが出てくるが、Community(free) planを使うには[Brand Assets](https://www.algolia.com/press#resources)が必須
-1. algoliaのダッシュボードに戻ってindex（というか判りやすい名前でOK）を作成。先に入っているgetstarted_actorsは消してもいいというか、消さないと混乱するかも?
+…の設定は、[ページ作成のAlgolia](/createpages/algolia/)を参照。
 
 ## Jekyll
 
@@ -32,6 +27,14 @@ group :jekyll_plugins do
 end
 ```
 1. でもって`bundle update`を叩く
+
+## Netlify
+
+「GitHubの内容をGitHub PagesではなくNetlifyで公開する」というものらしい。  
+ってことはGitHub Pagesってジャンルじゃないよね…  
+GitHub Pagesにて既にサイトを公開している場合は、カスタムドメインを削除しておくべし。
+{: .notice--info}
+
 1. 先にnetlify.tomlを作成
 ```toml
 # netlify.toml
@@ -41,72 +44,67 @@ end
   publish = "_site"
 ```
 
-## Netlify
-
-「GitHubの内容をGitHub PagesではなくNetlifyで公開する」というものらしい。  
-ってことはGitHub Pagesってジャンルじゃないよね…  
-{: .notice}
-
 1. [Netlify](https://www.netlify.com/)のアカウントを作成
 
 1. `Sites`→`New site from Git`でサイト設定
 
   1. `Continuous Deployment`でGitHubを選ぶ
   1. repository一覧が出るので選ぶ
-  1. `Deploy settings for`なんちゃら、を設定して`Deploy site`
+  1. `Deploy settings forなんちゃら`、を設定して`Deploy site`
 
     + `Build command`に`jekyll build`
     + `Publish directory`に`_site`
+    + このタイミングでGitHubリポジトリのDeploy keysやwebhooksにNetlifyが追加されてる
 
-1. GitHubと連携させる
-  + このタイミングでGitHubリポジトリのDeploy keysにNetlifyが追加されてる
-  + `Setting`→`Webhooks`→`Payload URL`にも追加されてる
-```
-https://api.netlify.com/hooks/github
-```
-
+1. お好みで`Default subdomain`を分かりやすい名前に変えたり
 1. `Build & deploy`→`Continuous Deployment`→`Build environment variables`に`ALGOLIA_API_KEY
 `を設定。値はAlgoliaの`APPS`→作成したアプリ→`API Keys`→`Admin API Key`
 
 1. `Dmain management`→`Domains`→`Custom domains`→`Add custom domain`へ
    1. カスタムドメインを入力
    1. `Check DNS configuration`と怒られているので<i class="fas fa-ellipsis-h"></i>からGo to DNS settingへ
-   1. 既にNETLIFYと紐付いている
+   1. 自動でDNSにこういうレコードができてる
 
-1. `Build & deploy`→`Deploy notifications`で、`Add notification`
-   1. `GitHub commit status`
-   1. `Event to listen for`で`Deploy started`を選ぶ
-   1. `Generate access token in GitHub`でトークンを取得し、Save
-   
+   | name | Type    | Target          |
+   |------|---------|-----------------|
+   | @    | NETLIFY | www.netlify.com |
+   | www  | NETLIFY | www.netlify.com |
+
+1. `Deploys`→`Trigger deploy`で叩いてみる
+
 たぶん、このあたりまで作業したらalgoliaのダッシュボードでコンテンツが取り込まれてるのが確認できるかと。
 {: .notice}
 
-### ついでにHTTPSの設定も
+### DNSサーバへの設定
 
-せっかく(?)なのでHTTPS設定をするもよし。
+先に自動で作られてたレコード以外にも追加を。
 
-#### パターンその1
++ `Domain management`→`Domains`→`Custom domains`で、`Add custom domain`
++ この状態だと、<i class="fas fa-exclamation-triangle" style="color: orange"></i> Check DNS configurationというのが出てくる
++ DNS configurationで、どちらかで設定を追加する
+  + 既に使っているDNSサーバへ設定だと、こういうレコードを追加
+```
+www CNAME [サイト名].netlify.com.
+```
+  + NetlifyのDNSサービスも使える。ボタンをポチポチと押していき、最後に出てくるネームサーバ（複数パターンあり）でドメイン側に設定する
 
-Netlify側で設定…したいのだが、Force HTTPSがうまくいかない。Betaだからかな?  
-DNS設定はこんな感じで。
+### ついでにHTTPS
 
-| name | Type  | Target            |
-|------|-------|-------------------|
-| @    | A     | 104.198.14.52     |
-| www  | CNAME | ユーザID.github.io |
+せっかく(?)なのでHTTPS設定も。  
+`Domain management`→`HTTPS`→`Verify DNS configuration`でLet's Encryptな証明書を作成できる[^lets-encrypt]
 
-#### パターンその2
+[^lets-encrypt]: DNS設定の流れですぐに設定しようとしたら、最低1時間くらいは待ちやがれ、と怒られた(´・ω・`)
 
-NetlifyでDNS設定も可能。まだ試してないけど。
+#### 余談
 
-#### パターンその3
+カスタムドメインに関しては[Netlify builds, deploys, and hosts your front end.](https://www.netlify.com/docs/custom-domains/)参照。
+NetlifyのDNSを使わずに設定したい場合はこの設定らしい。
 
-別サイトで設定中。
-   1. [SSLなう!](https://sslnow.ml/)にてLet's Encryptに登録
-   1. 生成時に使ったRSAと発行された証明書を準備しておく
-   1. `Dmain management`→`HTTPS`でcustom certificateを選択
-   1. 生成したやつをペタペタと貼る
-
+| name | Type  | Target                |
+|------|-------|-----------------------|
+| @    | A     | 104.198.14.52         |
+| www  | CNAME | [サイト名].netlify.com |
+   
 ## ローカルテスト
 
 1. ローカルでコマンドを叩く
@@ -118,7 +116,7 @@ $ ALGOLIA_API_KEY='Admin API Key' bundle exec jekyll algolia
 Processing site...                                                              
 Extracting records...                                                           
 Updating records in index index...                                              
-Records to delete: 390                                                          
+Records to delete: 0                                                          
 Records to add:    390                                                          
 ✔ Indexing complete
 ```
