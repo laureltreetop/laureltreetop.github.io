@@ -43,6 +43,18 @@ $ git clone git@github.com:username/hoehoe.github.io.git
 [![GitHub Custom Domain](/assets/images/github-custom-domain.png)](/assets/images/github-custom-domain.png)
 リポジトリにCNAMEというファイルが作成されて、その中にカスタムドメインがぴろっと書かれていたら正解。  
 
+よく行方不明になるHelpを。
++ [Setting up an apex domain](https://help.github.com/articles/setting-up-an-apex-domain/)
++ [Setting up a www subdomain](https://help.github.com/articles/setting-up-a-www-subdomain/)
+
+| name | Type  | Target            |
+|------|-------|-------------------|
+| @    | A     | 192.30.252.153    |
+| @    | A     | 192.30.252.154    |
+| www  | CNAME | ユーザID.github.io |
+
+同じユーザIDで別リポジトリを別ドメインで立ち上げるときも、上記設定でいけるみたい。
+
 ## 環境構築 on Windows 
 自分がそうなので。オレオレですみません。   
 [GitHub Desktop](https://desktop.github.com/)をインストール[^githubwindows]。  
