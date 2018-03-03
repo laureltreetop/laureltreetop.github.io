@@ -37,6 +37,8 @@ createpages:
         url: /create-pages/sass/
       - title: "JQuery Plugins"
         url: /create-pages/javascript/
+      - title: "Algolia with Javascrpt"
+        url: /createpages/algolia/
 githubpages:
   - title: "GitHub Pages"
     children:
