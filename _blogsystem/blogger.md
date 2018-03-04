@@ -477,14 +477,20 @@ Bloggerからも指定されるけど、とりあえずこういう値が必要�
 
 ### index取得
 
-`<head>`内から呼び出し。
+1. まずは[Google API Key](https://console.developers.google.com/)へ（要ログイン）
+1. APIライブラリからBlogger API v3を探して、有効にする
+1. ダッシュボードの`認証情報`からAPIキーを作成
+1. キーを制限する(HTTPリファラーでbloggerアドレスのみを設定)
+1. `<head>`内から呼び出し
 ```html
 <script src='https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js'/>
 ```
-
-んで、取得用のスクリプト。
-
+1. 取得用のスクリプト
 <script src="https://gist.github.com/laureltreetop/00b85783c30c5f9142e45f1e2344a3e4.js"></script>
+  + Blogger APIキー
+  + BloggerID（ダッシュボードの上にblogIDがある）
+  + AlgoliaのアプリIDとAPIキーとindex名
+1. Bloggerサイトをリロードすると、Algoliaにデータが流れ込んでくる
 
 この記事群がかなり参考になったというか、土台にした
 。
