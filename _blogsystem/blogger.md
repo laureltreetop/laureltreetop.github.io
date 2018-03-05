@@ -471,11 +471,11 @@ Bloggerからも指定されるけど、とりあえずこういう値が必要�
 
 ## Algoliaで全文検索
 
-### Algoliaの設定
+##### Algoliaの設定
 
 …の設定は、[Algolia](/createpages/algolia/)を参照。
 
-### index取得
+##### index取得
 
 1. まずは[Google API Key](https://console.developers.google.com/)へ（要ログイン）
 1. APIライブラリからBlogger API v3を探して、有効にする
@@ -498,6 +498,60 @@ Bloggerからも指定されるけど、とりあえずこういう値が必要�
 + [Blogger API v3の使い方（ソースコードあり）](http://boardge.blogspot.jp/2014/01/blogger-api-v3.html)
 + [Blogger API](https://developers.google.com/blogger/)
 
-### 検索
+本当ならhtml入りの本文からうまく検索できそうだけど、正規表現でhtmlタグを抜いた文章をインデックスに放り込むことにした。
+{: .notice--info}
 
-…は、頓挫。とりあえずここまでできたよ、ってことで。
+##### 検索
+
+まずは呼び出し系。
+```html
+<script src='https://cdn.jsdelivr.net/npm/instantsearch.js@1/dist/instantsearch.min.js'/>
+<link href='https://cdn.jsdelivr.net/npm/instantsearch.js@2.5.2/dist/instantsearch.min.css' rel='stylesheet' type='text/css'/>
+<script src='https://cdn.jsdelivr.net/npm/instantsearch.js@2.5.2'/>
+<link href='https://cdn.jsdelivr.net/npm/instantsearch.js@2.5.2/dist/instantsearch-theme-algolia.min.css' rel='stylesheet' type='text/css'/>
+```
+
+検索のスクリプト。
+<script src="https://gist.github.com/laureltreetop/60f51db46c2e9d94225df71f0e6d84e6.js"></script>
+
+で、検索窓を置きたいところに、PC用と、
+```html
+<input id='algolia-search' type='text'/>
+```
+モバイル用をそれぞれ置く。
+```html
+<input id='algolia-search-mobile' type='text'/>
+```
+id指定はもちろん、class指定でも検索窓は複数置けないので、PCとモバイル用にそれぞれ置いてある。
+
+##### CSSで装飾
+
+あとは見た目を整えたりいろいろお好みで。  
+テーマはVaster2を使っているので、色は変数設定で。
+```css
+.ais-hits div {
+  margin: 15px 0;
+}
+.ais-hits__empty div {
+  margin: 15px 0;
+}
+.ais-hits--item div {
+  margin: 15px 0;
+}
+.ais-hits--item a {
+  color: $(popular.color);
+}
+.ais-hits--item em {
+  color: $(popular.color.hover);
+  font-weight: bold;
+  font-style: normal;
+}
+.ais-pagination--link a:not(.ais-pagination--item__active) {
+  color: $(pager.color);
+  background: $(pager.background);
+}
+.ais-pagination--item__active {
+  color: $(pager.color.hover) !important;
+  background: $(pager.background.hover) !important;
+}
+```
