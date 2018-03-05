@@ -26,6 +26,16 @@ permalink: /githubpages/theme-custom/
 
 /assets/css/main.scss
 <script src="https://gist.github.com/laureltreetop/cd7ddbf84905fde3d997a96dfb246d94.js"></script>
+…と、がりがりカスタマイズしてこういうふうにしていたのだが、
+[![Gist custm old](/assets/images/github-custom-gist-old.png)](/assets/images/github-custom-gist-old.png)
+
+一転してさっくりとシンプルに。
+```css
+/* https://github.com/lonekorean/gist-syntax-themes */
+@import url('https://cdn.rawgit.com/lonekorean/gist-syntax-themes/848d6580/stylesheets/monokai.css');
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+```
 
 ## Collection一覧
 
