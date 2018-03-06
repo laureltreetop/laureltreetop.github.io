@@ -73,3 +73,39 @@ USBメモリに持ち歩くために探したのが[Git Portable](https://github
 既にGit for Windowsなどでコマンドでのgitが使えていることが前提。  
 最初にgit.exeが見当たらないって怒られたけど、whereで調べた結果、`~\AppData\Local\`なフォルダにあったせい。いつもGit Shellで立ち上げてたから気にならなかった。  
 それをうまく設定してあげれば、かなり便利。  
+
+## 迷子なURL対策
+
+かなり前というか、1995年から作っていたサイトに、今でもLinux系のリンク経由で飛んできていたのにびっくり。  
+ありがとう、[Check your website's backlinks -SEO Toolbox](https://toolbox.seositecheckup.com/apps/backlinks)  
+なので、GitHubからリダイレクトするように設定してみた。
+{: .notice}
+
+_layouts/redirected.htmlに、こういうファイルを作成。
+<script src="https://gist.github.com/laureltreetop/7582df7a84f3912a1db3f75986f0a8b7.js"></script>
+
+Gemfileにも追加。
+```
+group :jekyll_plugins do
+	gem 'jekyll-algolia', '~> 1.0'
+	gem 'jekyll-redirect-from'
+end
+```
+_config.ymlに追加。
+```yml
+plugins:
+  - jekyll-redirect-from
+```
+リダイレクトしたいURLのある場所に、ファイルを設置。  
+例としてあげたのは、実際に最近も廻ってきているらしい、Linux関係の設定。  
+どこにも書いてなかったが、フォルダは`/_Linux/`ではなく、アンダーバー無しの`/Linux/`に置くべし。
+```yml
+---
+layout: redirected
+sitemap: false
+permalink: /Linux/
+redirect_to: http://treetop.webcrow.jp/Linux/
+---
+```
+あとは通常通りに`bundle update`やら`jekyll `sやらでできた。  
+お試しで[/Linux/index](/Linux/index)にアクセスすると、スパーンっとリダイレクトされるように。
