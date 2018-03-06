@@ -492,8 +492,15 @@ Bloggerからも指定されるけど、とりあえずこういう値が必要�
   + AlgoliaのアプリIDとAPIキーとindex名
 1. Bloggerサイトをリロードすると、Algoliaにデータが流れ込んでくる
 
-この記事群がかなり参考になったというか、土台にした
-。
+```js
+	var apiUrl = BASE_URL + BLOG_ID + '/posts?&orderBy=published&key=' + API_KEY;			// 初回のみ
+	//var apiUrl = BASE_URL + BLOG_ID + '/posts?&maxResults=5&orderBy=published&key=' + API_KEY;	// 以降は新しい記事5件だけ
+```
+…の部分は、初回だけ全件取得し、以降はコメントアウトして`&maxResults=5`付きのAPI urlにしておかないと、ブログを見るたびに全データ更新してしまい、エラい事になります。ってか、なりました。  
+テストしている間に、AlgoliaのFreeで使える限度の半分まで使ってしまった…あと27日あるのに(　= =) 遠い目
+
+この記事群がかなり参考になったというか、土台にした。
+
 + [Bloggerに投稿された記事をAPIを使って取得してWordPressに登録する](https://ka2.org/import-to-wordpress-from-blogger-posts-by-api/)
 + [Blogger API v3の使い方（ソースコードあり）](http://boardge.blogspot.jp/2014/01/blogger-api-v3.html)
 + [Blogger API](https://developers.google.com/blogger/)
