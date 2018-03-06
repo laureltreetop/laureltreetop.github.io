@@ -85,9 +85,8 @@ _layouts/redirected.htmlに、こういうファイルを作成。
 <script src="https://gist.github.com/laureltreetop/7582df7a84f3912a1db3f75986f0a8b7.js"></script>
 
 Gemfileにも追加。
-```
+```rb
 group :jekyll_plugins do
-	gem 'jekyll-algolia', '~> 1.0'
 	gem 'jekyll-redirect-from'
 end
 ```
@@ -96,6 +95,7 @@ _config.ymlに追加。
 plugins:
   - jekyll-redirect-from
 ```
+
 リダイレクトしたいURLのある場所に、ファイルを設置。  
 例としてあげたのは、実際に最近も廻ってきているらしい、Linux関係の設定。  
 どこにも書いてなかったが、フォルダは`/_Linux/`ではなく、アンダーバー無しの`/Linux/`に置くべし。
