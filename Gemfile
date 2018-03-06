@@ -9,4 +9,5 @@ group :jekyll_plugins do
     gem 'jekyll-last-modified-at'
 	gem 'jekyll-algolia', '~> 1.0'
 	gem 'jekyll-archives'
+	gem 'jekyll-redirect-from'
 end
