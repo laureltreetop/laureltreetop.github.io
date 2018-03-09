@@ -164,14 +164,14 @@ CSSで各色を設定。
 <script defer src='https://use.fontawesome.com/releases/v5.0.6/js/all.js'/>
 ```
 で、引用に使いたい場合は、scssやcssではこんな感じで[^mm-blockquote]。  
-Twitterは例外にしたり、Wikipediaからの引用だったら右上にアイコンを入れたりしてます。
+TwitterやWikipediaからの引用だったら右上にアイコンを入れたりしてます。
 
 [^mm-blockquote]: 一部は当方のテーマ依存部分を上書きしてます。
 
 cssバージョン。
-<script src="https://gist.github.com/laureltreetop/fe2aa4e9636cbd784e0b517076de2a50.js?file=custom-blockquote.css"></script>
+<script src="https://gist.github.com/laureltreetop/85655027ff1846841ec8e8d48e1ec37f.js?file=SassMeister-output.css"></script>
 sassだと少しすっきり書けるかな。
-<script src="https://gist.github.com/laureltreetop/fe2aa4e9636cbd784e0b517076de2a50.js?file=custom-blockquote.scss"></script>
+<script src="https://gist.github.com/laureltreetop/85655027ff1846841ec8e8d48e1ec37f.js?file=SassMeister-input.scss"></script>
 
 > We’ve seen a lot of examples where adding markup like &lt;i class=&quot;fas fa-user&quot; /&gt; allows you to easily add icons to any site. But what if changing the markup or HTML is not possible?  
 
