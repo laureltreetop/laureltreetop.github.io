@@ -63,56 +63,66 @@ img {
 }
 
 blockquote {
-  border-left: 0 !important;
-  margin: 0 !important;
-  &:not(.twitter-tweet) {
-    position: relative;
-    font-style: italic;
-    background: #f5f5f5;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14);
-    padding: 20px 20px 5px 20px;
-    &::before {
-      display: none;
-      font-family: 'Font Awesome 5 Solid';
-      content: '\f10d';
-    }
-    &::after {
-      display: none;
-      font-family: 'Font Awesome 5 Solid';
-      content: '\f10e';
-    }
-    p {
-      padding: 0;
-      margin: 7px 0;
-      line-height: 1.7em;
-    }
-    cite {
-      display: block;
-      text-align: right;
-      color: #888888;
-      font-size: 0.9em;
-    }
-    .svg-inline--fa {
-      position: absolute;
-      font-size: 50px;
-      opacity: 0.1;
-      &:last-of-type {
-        bottom: 20px;
-        right: 10px;
-      }
-    }
-    a[href*="wikipedia"]::before {
-      display: none;
-      font-family: 'Font Awesome 5 Brands';
-      content: '\f266';
-    }
-    .svg-inline--fa.fa-wikipedia-w {
-      color: #636466;
-      top: 10px;
-      right: 10px;
-    }
-  }
+	border-left: 0 !important;
+	margin: 0 !important;
 }
+
+blockquote:not(.twitter-tweet) {
+	position: relative;
+	font-style: italic;
+	background: #f5f5f5;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14);
+	padding: 20px 20px 5px 20px;
+}
+
+blockquote:not(.twitter-tweet)::before {
+	display: none;
+	font-family: 'Font Awesome 5 Solid';
+	content: '\f10d';
+}
+
+blockquote:not(.twitter-tweet)::after {
+	display: none;
+	font-family: 'Font Awesome 5 Solid';
+	content: '\f10e';
+}
+
+blockquote:not(.twitter-tweet) p {
+	padding: 0;
+	margin: 7px 0;
+	line-height: 1.7em;
+}
+
+blockquote:not(.twitter-tweet) cite {
+	display: block;
+	text-align: right;
+	color: #888888;
+	font-size: 0.9em;
+}
+
+blockquote:not(.twitter-tweet) .svg-inline--fa {
+	position: absolute;
+	font-size: 50px;
+	opacity: 0.1;
+}
+
+blockquote:not(.twitter-tweet) .svg-inline--fa:last-of-type {
+	bottom: 20px;
+	right: 10px;
+}
+
+blockquote:not(.twitter-tweet) a[href*="wikipedia"]::before {
+	display: none;
+	font-family: 'Font Awesome 5 Brands';
+	content: '\f266';
+}
+
+blockquote:not(.twitter-tweet) .svg-inline--fa.fa-wikipedia-w {
+	color: #636466;
+	top: 10px;
+	right: 10px;
+}
+
 
 #zipcode {
 	width: 5em;
