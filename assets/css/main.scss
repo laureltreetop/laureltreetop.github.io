@@ -62,17 +62,14 @@ img {
   color: $light-gray;
 }
 
-blockquote {
-	border-left: 0 !important;
-	margin: 0 !important;
-}
-
 blockquote:not(.twitter-tweet) {
 	position: relative;
 	font-style: italic;
 	background: #f5f5f5;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14);
 	padding: 20px 20px 5px 20px;
+	border-left: 0 !important;
+	margin: 0 !important;
 }
 
 blockquote:not(.twitter-tweet)::before {
