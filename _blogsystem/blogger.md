@@ -458,6 +458,8 @@ Vaster2は後述のカスタム404ページに対応してないらしい。
 
 ## 独自ドメインを設定
 
+### DNS設定
+
 Bloggerからも指定されるけど、とりあえずこういう値が必要、と。
 
 |Name|Type|Value|
@@ -468,6 +470,21 @@ Bloggerからも指定されるけど、とりあえずこういう値が必要�
 |@	|A	|216.239.38.21|
 |www|CNAME	|ghs.googlehosted.com|
 |固有の値|CNAME|固有の値|
+
+### 独自ドメインでもHTTPS化
+
+こんな記事を発見。  
+[独自ドメインのBloggerでHTTPSを有効にする設定方法](https://www.blogging-life.com/blogger-custom-domain-https/)  
+
+マジか?
+
+試しに[https://draft.blogger.com/](https://draft.blogger.com/)を開いてみたら、本当にあった…
+
+テスト用やら何やらで3つの独自ドメインでBloggerを運用しているのだが、ほぼテーマを弄っていないブログが一番先に対応できるように。  
+記事数はメインブログと同じなので、カスタマイズされっぷりで違ってくるかも?
+
+`設定`→`ユーザー設定`→`BloggerDraftを使用する`、ってこれのことだったのか…
+新しもの好きとしてはこれからこっちの方でいろいろ遊んでみる。
 
 ## Algoliaで全文検索
 
