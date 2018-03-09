@@ -149,7 +149,7 @@ CSSで各色を設定。
 
 …なんか嫌ですなぁ。
 
-### CSSで使う
+### cssやscssで使う
 
 引用に使えないかなーと思って苦労したが、下記の記事が参考になった。
 + [【保存版】Font Awesomeの使い方：Webアイコンフォントを使おう](https://saruwakakun.com/html-css/basic/font-awesome)
@@ -163,51 +163,16 @@ CSSで各色を設定。
 </script>
 <script defer src='https://use.fontawesome.com/releases/v5.0.6/js/all.js'/>
 ```
-で、引用に使いたい場合は、こんな感じで[^mm-blockquote]。
+で、引用に使いたい場合は、scssやcssではこんな感じで[^mm-blockquote]。  
+Twitterは例外にしたり、Wikipediaからの引用だったら右上にアイコンを入れたりしてます。
 
 [^mm-blockquote]: 一部は当方のテーマ依存部分を上書きしてます。
 
-```css
-blockquote {
-    position: relative;
-    font-style: italic;
-    background: #f5f5f5;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14);
-    border-left: 0 !important;
-    padding: 20px 20px 5px 20px;
-    margin: 0 !important;
-}
-blockquote::before {
-    display: none;
-    font-family: 'Font Awesome 5 Solid';
-    content: '\f10d';
-}
-blockquote::after {
-    display: none;
-    font-family: 'Font Awesome 5 Solid';
-    content: '\f10e';
-}
-blockquote p {
-    padding: 0;
-    margin: 7px 0;
-    line-height: 1.7em;
-}
-blockquote cite {
-    display: block;
-    text-align: right;
-    color: #888888;
-    font-size: 0.9em;
-}
-blockquote .svg-inline--fa {
-    position: absolute;
-    font-size: 50px;
-    opacity: 0.2;
-}
-blockquote .svg-inline--fa:last-of-type {
-    bottom: 20px;
-    right: 10px;
-}
-```
+cssバージョン。
+<script src="https://gist.github.com/laureltreetop/fe2aa4e9636cbd784e0b517076de2a50.js?file=custom-blockquote.css"></script>
+sassだと少しすっきり書けるかな。
+<script src="https://gist.github.com/laureltreetop/fe2aa4e9636cbd784e0b517076de2a50.js?file=custom-blockquote.scss"></script>
+
 > We’ve seen a lot of examples where adding markup like &lt;i class=&quot;fas fa-user&quot; /&gt; allows you to easily add icons to any site. But what if changing the markup or HTML is not possible?  
 
 右下にも記号を入れるのに苦労した…  
