@@ -16,7 +16,7 @@ main:
     url: /githubpages/index.html
 #  - title: "モノ関係"
 #    url: /inventory/index.html
-  - title: "その他ざっくり"
+  - title: "ざっくりと全部"
     url: /collections.html
   - title: "愚痴"
     url: /month-archive/
@@ -69,12 +69,12 @@ blogsystem:
         url: /blogsystem/tumblr/
 # sidebar navigation
 sidebar:
-  - title: "Widget"
-    children:
-      - title: "電話帳登録用QRコード作成"
-        url: /widget/qr-code-entry.html
-      - title: "テキスト用QRコード作成"
-        url: /widget/qr-code-text.html
+#  - title: "Widget"
+#    children:
+#      - title: "電話帳登録用QRコード作成"
+#        url: /widget/qr-code-entry.html
+#      - title: "テキスト用QRコード作成"
+#        url: /widget/qr-code-text.html
   - title: "memo"
     children:
       - title: "ページ作成"
