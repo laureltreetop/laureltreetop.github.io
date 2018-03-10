@@ -1,32 +1,63 @@
 ---
-title: "Firebase"
-description: OAuth関係とかリアルタイム処理とか探しているうちに見つけた"Firebase"。mBaaSと呼ばれる、無料で認証やらデータベースやらが揃ったサイトが作れるが、けっこう苦しみ中（と、放置中）。
-permalink: /misc/firebase/
+title: "Firebase with Windows"
+description: 無料で認証やらデータベースやらが揃ったサイトが作れるが、放置したりまた弄りだしたり。
 ---
-以下は、別サイトに書いておいた内容をそのまま持ってきただけで、確認不足のところばかりです。  
-たしか2017年春頃に書いた記憶が。それを踏まえてお読みください。
-{: .notice--warning}
-
 {{ page.description }}
 {: .notice}
 
-## mBaaSとは
-[mBaaS（mobile backend as a Service）とは、スマートフォンアプリでよく利用される汎用的な機能をクラウドから提供するサービス](http://mb.cloud.nifty.com/about.htm)だそうで。  
-あちこちでmBaaSキテるよね的なページがあるけど、判んなかったっす…このリンクであっさり判ったです…  
-「[Firebaseの始め方](https://qiita.com/kohashi/items/43ea22f61ade45972881)」ではさらに突っ込んで説明してあるのですが、やはりちょっとややこしや。でも手順も細かく書いてくれてます。
-
 ## 設定
-今回は「[Firebaseを用いて5分でセキュアなWebサイトを公開する](https://qiita.com/potato4d/items/95eaf2e41404711e621e)」に習って設定。  
-Node.jpがすでに設定されている前提で書かれているが、そのページにリンクが載っている「[nvmでnode.jsの環境をつくる。](https://qiita.com/544/items/7237a32c68619236f446)」を見ながら設定できるかと。  
-最初から高機能なサイトを作ろうとすると失敗します。自分がその例。
 
-### まずは静的サイト公開を目指す
-…となると、マジで書き足すようなことが一切ない。  
-スタイルシートだのHTMLタグだの画像だので横道それてたから、なかなか進まなかっただけのようで。  
-includeが使えるので、直タグ打ちで作ってても（まっさらよりは）苦労しない。
+1. [Firebaseコンソール](https://console.firebase.google.com/?hl=ja)より、プロジェクトを作成したりドメイン設定をしたり（謎の優先順位）
 
-### 独自ドメイン設定
+1. [Node.js](https://nodejs.org/ja/)をここからダウンロード
+1. （WindowsメニューのNode.jsではなく）Node.js command promptがあるので、開く
 
-設定のHosting→ダッシュボードより、独自ドメインで運用できる設定がある。  
-今回は初めてこのサイトを作るってことで「クイックセットアップ」で設定してみたが、うまく行かず。  
-現在は「詳細設定」で指示されたとおりにTXTレコードを作成して、認証待ち。
+1. インストールされているか確認
+```sh
+$ node --version
+$ npm --version
+```
+
+1. インストール
+```sh
+$ npm install -g firebase-tools
+```
+
+1. ログイン（前に設定したのが残ってたのか、それともそのままいけたのか）
+```sh
+$ firebase login
+```
+1. プロジェクトの確認
+```sh
+$ firebase list
+```
+1. 初期化
+```sh
+$ firebase init
+```
+
+1. 作成先を聞かれたり
+  1. 5択の中から上下キーで選び、まずSpaceキーで選択
+  1. `Hosting: Configure deploy Firebase Hosting sites`を選択
+  1. Enterキーで決定
+
+1. publicフォルダを聞かれるので、そのままenter
+1. いろいろ作成されてる
+```
+firebase
+ ├─ public
+ |   └─ index.html
+ ├─ .firebaserc
+ └─ firebase.json
+```
+1. `http://localhost:5000/`で確認
+```sh
+$ firebase serve
+```
+1. できた  
+[![Firebase init site](/assets/images/firebase_init-site.png)](/assets/images/firebase_init-site.png)
+
+1. そのままアップしてみる
+```sh
+$ firebase deploy
+```
