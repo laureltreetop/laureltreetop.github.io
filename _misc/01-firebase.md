@@ -1,16 +1,17 @@
 ---
 title: "Firebase with Windows"
 description: 無料で認証やらデータベースやらが揃ったサイトが作れるが、放置したりまた弄りだしたり。
+permalink: /misc/firebase/
 ---
 {{ page.description }}
 {: .notice}
 
 ## 設定
 
-1. [Firebaseコンソール](https://console.firebase.google.com/?hl=ja)より、プロジェクトを作成したりドメイン設定をしたり（謎の優先順位）
+1. [Firebase](https://firebase.google.com/)の[コンソール](https://console.firebase.google.com/?hl=ja)より、プロジェクトを作成したりドメイン設定をしたり（謎の優先順位）
 
 1. [Node.js](https://nodejs.org/ja/)をここからダウンロード
-1. （WindowsメニューのNode.jsではなく）Node.js command promptがあるので、開く
+1. （WindowsメニューのNode.jsではなく）`Node.js command prompt`があるので、開く
 
 1. インストールされているか確認
 ```sh
