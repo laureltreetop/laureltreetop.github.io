@@ -193,8 +193,6 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-
-
 paginate: 5 # amount of posts to show
 paginate_path: /page/:num/
 timezone: Asia/Tokyo # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -209,7 +207,7 @@ plugins:
   - jemoji
   - jekyll-data
   - jekyll-seo-tag
-  - jekyll-redirect-from
+#  - jekyll-redirect-from
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -220,7 +218,7 @@ whitelist:
   - jemoji
   - jekyll-data
   - jekyll-seo-tag
-  - jekyll-redirect-from
+#  - jekyll-redirect-from
 
 # Archives
 #  Type
@@ -233,22 +231,22 @@ whitelist:
 #  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path/my-awesome-category/index.html ~> path: /
 category_archive:
-  type: jekyll-archives
+  type: liquid
   path: /categories/
 tag_archive:
-  type: jekyll-archives
+  type: liquid
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
-jekyll-archives:
-  enabled:
-    - categories
-    - tags
-  layouts:
-    category: archive-taxonomy
-    tag: archive-taxonomy
-  permalinks:
-    category: /categories/:name/
-    tag: /tags/:name/
+#jekyll-archives:
+#  enabled:
+#    - categories
+#    - tags
+#  layouts:
+#    category: archive-taxonomy
+#    tag: archive-taxonomy
+#  permalinks:
+#    category: /categories/:name/
+#    tag: /tags/:name/
 
 # HTML Compression
 # - http://jch.penibelst.de/
