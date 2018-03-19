@@ -65,10 +65,12 @@ blogsystem:
         url: /blogsystem/blogger/
       - title: "はてなブログ"
         url: /blogsystem/hateblo/
+      - title: "WordPress"
+        url: /blogsystem/wordpress/
       - title: "Tumblr"
         url: /blogsystem/tumblr/
 # sidebar navigation
-sidebar:
+misc:
 #  - title: "Widget"
 #    children:
 #      - title: "電話帳登録用QRコード作成"
@@ -77,12 +79,21 @@ sidebar:
 #        url: /widget/qr-code-text.html
   - title: "memo"
     children:
-      - title: "ページ作成"
-        url: /create-pages/index.html
-      - title: "GitHub Pages"
-        url: /githubpages/index.html
-      - title: "blogいろいろ"
-        url: /blogsystem/index.html
+      - title: "ざっくりと全部"
+        url: /collections.html
+  - title: "misc"
+    children:
+      - title: "Freenom"
+        url: /misc/freenom/
+      - title: "カスタムドメインメール"
+        url: /misc/xrea-mail/
+      - title: "Firebase"
+        url: /misc/firebase/
+      - title: "QRコード作成"
+        url: /misc/generate-qr-code/
+inventory:
+  - title: "memo"
+    children:
       - title: "ざっくりと全部"
         url: /collections.html
   - title: "Inventory"

@@ -344,10 +344,10 @@ defaults:
       comments: true
       related: false
       sidebar:
-        nav: "sidebar"
+        nav: "misc"
       toc: true
       toc_icon: "cogs"
-  # _inventory
+# _inventory
   - scope:
       path: ""
       type: inventory
@@ -359,7 +359,7 @@ defaults:
       comments: true
       related: false
       sidebar:
-        nav: "sidebar"
+        nav: "inventory"
       toc: true
       toc_icon: "cogs"
   # _pages
