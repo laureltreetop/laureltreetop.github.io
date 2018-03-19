@@ -1,10 +1,10 @@
 ---
 title: "Tumblr"
-description: 最初はTumblrの準備や設定やら。
+description: "現在はAPIが使えなくなったりしているようだが、いろいろと興味が失せたので、SSL証明書がついてくること以外の検証は未定。こういう事をしてたという回顧録、的な。"
 permalink: /blogsystem/tumblr/
 ---
 {{ page.description }}
-{: .notice}
+{: .notice--danger}
 
 ## Tumblr Start
 [tumblr.](https://www.tumblr.com/)より登録。   
@@ -18,14 +18,18 @@ permalink: /blogsystem/tumblr/
 オレオレなので、さくっとカスタムドメインから。  
 サブドメインのCNAMEレコードに`domains.tumblr.com`を登録。  
 ちなみにこの値は固有。  
-あと、時間がかかる。すごくかかる。なので先にDNSから設定しておく。
+あと、時間がかかる。すごくかかる。なので先にDNSから設定しておく。  
+[カスタムドメイン](https://tumblr.zendesk.com/hc/ja/articles/231256548-Custom-domains)な記事も参照。
 
-ちなみに、[Cloudflare](https://www.cloudflare.com)にて設定している場合には、ちょいコツあり。 
-[![Cloud Flare Orange](/assets/images/tumblr-cloudflare-orange.png)](/assets/images/tumblr-cloudflare-orange.png)
-`DNS and HTTP proxy(CDN)`（オレンジ色の雲アイコン）ではなく、  
-[![Cloud Flare Gray](/assets/images/tumblr-cloudflare-gray.png)](/assets/images/tumblr-cloudflare-gray.png)
-`DNS only`（グレーの雲アイコン）にしないといけない。  
-[Cloudflare公式にもそう書いてある](https://support.cloudflare.com/hc/en-us/articles/200168566-How-do-I-add-a-Tumblr-custom-domain-)ので、当分はそのままかも。
+かつては…
+> ちなみに、[Cloudflare](https://www.cloudflare.com)にて設定している場合には、ちょいコツあり。  
+> [![Cloud Flare Orange](/assets/images/tumblr-cloudflare-orange.png)](/assets/images/tumblr-cloudflare-orange.png)
+> `DNS and HTTP proxy(CDN)`（オレンジ色の雲アイコン）ではなく、  
+> [![Cloud Flare Gray](/assets/images/tumblr-cloudflare-gray.png)](/assets/images/tumblr-cloudflare-gray.png)
+> `DNS only`（グレーの雲アイコン）にしないといけない。  
+> [Cloudflare公式にもそう書いてある](https://support.cloudflare.com/hc/en-us/articles/200168566-How-do-I-add-a-Tumblr-custom-domain-)ので、当分はそのままかも。
+
+…としていたけど、現在はグレーのアイコンにしたままにしておけば、独自ドメインのSSL証明書があるという。
 
 ### カスタムドメイン設定
 `外を編集`→`ユーザー名`→`独自ドメインを使用`よりカスタムドメインを登録。 
