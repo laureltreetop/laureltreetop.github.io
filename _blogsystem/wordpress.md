@@ -53,7 +53,7 @@ permalink: /blogsystem/wordpress/
 ### 403 error
 
 + タイミング的に「http://」を「https://」に変えた直後
-+ [CloudFlase](https://www.cloudflare.com/)でPage Rulesに`SSL: Full`に変更したら見えるように
++ [CloudFlare](https://www.cloudflare.com/)でPage Rulesに`SSL: Full`に変更したら見えるように
 + 管理画面には入れない
 + [Sixcore（シックスコア）に「WordPress国外IPアクセス制限」機能が追加されていた！](https://gori.me/wordpress/29316)によると、`WordPressログイン制限`が怪しそう→OFFにしたら繋がった
 
