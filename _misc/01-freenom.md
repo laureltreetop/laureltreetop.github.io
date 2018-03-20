@@ -42,10 +42,12 @@ permalink: /misc/freenom/
 ### デメリット
 
 + ある程度のアクセス数がないとドメインが抹消される
-+ 契約時に12か月（1年ではないことに注意）で取得できるが、14日前からしか更新できない
++ 契約時に12か月（1年ではないことに注意）で取得できるが、14日前からしか更新できない[^renew]
 + やっぱり少し抵抗があったり?
   + [.tk ドメインが乗っ取られたっぽい](https://blog.kksg.net/posts/tk-domain-fraud)
   + [FREENOM is a scam and thiefs](https://www.namepros.com/threads/freenom-is-a-scam-and-thiefs.938824/)
+  
+[^renew]: [Domain Renewals](https://my.freenom.com/domains.php?a=renewals)（要ログイン）でチェックすべし。
 
 ## メールも使いたいよね
 
