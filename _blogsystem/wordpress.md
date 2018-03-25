@@ -163,14 +163,6 @@ permalink: /blogsystem/wordpress/
 [![WordPress Pre-setting](/assets/images/wordpress_pre-setting.png)](/assets/images/wordpress_pre-setting.png)
 {% endcomment %}
 
-## カスタマイズ
-
-### Favicon設定
-
-+ プラグイン追加? 直接テーマを弄る?
-+ ダッシュボード→外観→カスタマイズ→サイト基本情報→サイトアイコン、で設定
-+ 512x512以上の正方形画像って…準備してないので新しく作成
-
 ## プラグイン
 
 実はWordPress.comにアカウント作成済みなので、まっさらな状態とはちょっと違ってくるかと。
