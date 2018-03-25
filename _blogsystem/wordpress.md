@@ -6,6 +6,8 @@ permalink: /blogsystem/wordpress/
 {{ page.description }}
 {: .notice}
 
+[WordPress Codex 日本語版](https://wpdocs.osdn.jp/Main_Page)というのもあるけど、自分で試したのをいろいろメモ。
+
 ## XREA編
 
 #### サーバ設定
@@ -146,7 +148,7 @@ permalink: /blogsystem/wordpress/
 {% comment %}
 ## BIZ.NF
 
-1. 登録
+1. [BIZ.NF](https://www.biz.nf/)より登録
 1. ドメインマネージャでドメインを登録
 1. Zacky Toos Installerへ（WordPressのインストールが隠れてる）
 [![biz.nf zacky tools](/assets/images/biz_nf_choice-zakcy-tools.png)](/assets/images/biz_nf_choice-zakcy-tools.png)
