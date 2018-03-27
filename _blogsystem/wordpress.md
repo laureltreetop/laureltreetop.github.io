@@ -226,6 +226,15 @@ permalink: /blogsystem/wordpress/
 
 以降、使い方は[WordPressの記事に、個別にCSSやJSを追加する高機能プラグイン](http://beginnersdomain.net/plugin/css-javascript-toolbox/)を参照
 
+#### Infinite Scroll
+
+何種類かあるけど、[Infinite-Scroll](https://wordpress.org/plugins/infinite-scroll/)だとテーマによっては何も設定しなくても無限インストールできるように。  
+JQueryで仕込んだことがある人には、こっちのほうが判りやすいかも。
+
+#### Google Analytics for WordPress
+
+[Google Analytics for WordPress by MonsterInsights](https://wordpress.org/plugins/google-analytics-for-wordpress/)だと、Googleアカウントに紐付けられたやつをするするん、っと。
+
 ## 他から引っ越し
 
 ### ライブドアより
