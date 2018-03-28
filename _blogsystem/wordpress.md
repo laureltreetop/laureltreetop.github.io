@@ -145,16 +145,12 @@ permalink: /blogsystem/wordpress/
 [![000webhost new database](/assets/images/000webhost-database-config.png)](/assets/images/000webhost-database-config.png)
 {% endcomment %}
 
-{% comment %}
+
 ## BIZ.NF
 
-1. [BIZ.NF](https://www.biz.nf/)より登録
-1. ドメインマネージャでドメインを登録
-1. Zacky Toos Installerへ（WordPressのインストールが隠れてる）
-[![biz.nf zacky tools](/assets/images/biz_nf_choice-zakcy-tools.png)](/assets/images/biz_nf_choice-zakcy-tools.png)
-1. いた
-[![biz.nf wordpress](/assets/images/biz_nf_choice-wordpress.png)](/assets/images/biz_nf_choice-wordpress.png)
+[BIZ.NF](/misc/biz-nf/)にまとめておきます。
 
+{% comment %}
 ## その他試したやつ
 
 1. [WordPress.org 日本語](https://ja.wordpress.org/)よりダウンロード
@@ -170,70 +166,58 @@ permalink: /blogsystem/wordpress/
 実はWordPress.comにアカウント作成済みなので、まっさらな状態とはちょっと違ってくるかと。
 {: .notice}
 
-#### Jetpack by WordPress.com
++ [Jetpack](https://jetpack.com/?from=automattic)
+: インストールし、WordPress.comと連携、以上。
 
-[Jetpack](https://jetpack.com/?from=automattic)をインストールし、WordPress.comと連携、以上。
-
-#### Akismet
-
-1. [Akismet Anti-Spam](https://wordpress.org/plugins/akismet/)を入れようとしたら、[アカウントを設定](https://akismet.com/account/)しないといけないらしい
-1. Jetpack経由で連携
-1. [Account](https://akismet.com/account/)でAdd Subscription
-1. Personalを選択が正解のなのだろうが、`Name your price`とはなんぞや[^name-your-price]
-1. <i class="fas fa-yen-sign"></i>6,000/YEARだと…?  
++ [Akismet Anti-Spam](https://wordpress.org/plugins/akismet/)
+  1. [Akismet Anti-Spam](https://wordpress.org/plugins/akismet/)を入れようとしたら、[アカウントを設定](https://akismet.com/account/)しないといけないらしい
+  1. Jetpack経由で連携
+  1. [Account](https://akismet.com/account/)でAdd Subscription
+  1. Personalを選択が正解のなのだろうが、`Name your price`とはなんぞや[^name-your-price]
+  1. <i class="fas fa-yen-sign"></i>6,000/YEARだと…?  
 [![WordPress Akismet 6000yen](/assets/images/wordpress_akismet-subscription-personal-6000yen.png)](/assets/images/wordpress_akismet-subscription-personal-6000yen.png)
-1. 価格のスライダーを左端に寄せたら、無料設定になったっぽい  
+  1. 価格のスライダーを左端に寄せたら、無料設定になったっぽい  
 [![WordPress Akismet 0yen](/assets/images/wordpress_akismet-subscription-personal-0yen.png)](/assets/images/wordpress_akismet-subscription-personal-0yen.png)
 
 [^name-your-price]: これって自由価格設定という意味らしいね。
 
-#### Automatic Post Thumbnail
++ [Batch Cat](https://ja.wordpress.org/plugins/batch-cat/)
+: カテゴリをまとめて編集したり。特にカテゴリがない記事をインポートしたときに便利。
+  1. 先に移動先のカテゴリを作っておく
+  1. Batch Catプラグインをインストール
+  1. ツール→Batch Cat
+  1. カテゴリ「未分類」を選んでSearch
+  1. カテゴリを選んで`Set categories to posts`
+  1. カテゴリから「未分類」を削除するには`Drop categories from posts`
 
-記事の最初にある記事をアイキャッチとして設定してくれるのが[Automatic Post Thumbnail](http://www.sanisoft.com/blog/2010/04/19/wordpress-plugin-automatic-post-thumbnail/)なのだが、お引越しにも普段遣いにも便利。  
++ [Automatic Post Thumbnail](http://www.sanisoft.com/blog/2010/04/19/wordpress-plugin-automatic-post-thumbnail/)
+: 記事の最初にある記事をアイキャッチとして設定してくれるのがなのだが、お引越しにも普段遣いにも便利。  
 `設定`→`Automatic Post Thumbnail`で一括設定してくれる。
 
-#### Batch Cat
++ [Pz-LinkCard](https://wordpress.org/plugins/pz-linkcard/)
+: 使い方は[WordPressでリンクをカード形式で表示する Pz-LinkCard](https://popozure.info/pz-linkcard)
 
-カテゴリをまとめて編集したり。  
-特にカテゴリがない記事をインポートしたときに便利。
++ [Featured Image From URL](https://ja.wordpress.org/plugins/featured-image-from-url/)
 
-1. 先に移動先のカテゴリを作っておく
-1. Batch Catプラグインをインストール
-1. ツール→Batch Cat
-1. カテゴリ「未分類」を選んでSearch
-1. カテゴリを選んで`Set categories to posts`
-1. カテゴリから「未分類」を削除するには`Drop categories from posts`
++ [Browser Shots](https://ja.wordpress.org/plugins/browser-shots/)
+: 外部リンクを貼りたいときにを使うと、リンク先のプレビューを画像で載せてくれるのが便利。
 
-#### Browser Shots
-
-外部リンクを貼りたいときに[Browser Shots](https://ja.wordpress.org/plugins/browser-shots/)を使うと、リンク先のプレビューを画像で載せてくれるのが便利。  
-ショートコードの使い方を知らなくても、編集画面でサクッと使えるのが便利。
-
-#### CSS & JavaScript Toolbox
-
-テーマをグリグリカスタマイズするときに便利。
-
-インストールすると、プラグイン一覧にこういうのが出てくる
++ [CSS & JavaScript Toolbox](https://ja.wordpress.org/plugins/css-javascript-toolbox/)
+: テーマをグリグリカスタマイズするときに便利。
+  1. インストールすると、プラグイン一覧にこういうのが出てくる
 > CJT Plugin has been installed throught Wordpress Plugins manager page. In order for CJT Plugin to work correctly you must install it throught	CJT-Instalaltion page.
 > Please or you can go to the installation page directly through the	CSS & Javascript Toolbox page.
 > Dismiss
+  1. `CJT-Instalaltion page`リンクから確認画面が出るのでインストール
+  1. さっそくスクリプトを追加しようと`New Code Block`から作成しようとしたら、カスペルさんがフィッシングサイトへのポップアップということでブロックされた…  
+  1. と思いきや、設定の下にメニューが追加されてて、先ほど名前をつけたCode Blockもあった
+  1. 以降、使い方は[WordPressの記事に、個別にCSSやJSを追加する高機能プラグイン](http://beginnersdomain.net/plugin/css-javascript-toolbox/)を参照
 
-`CJT-Instalaltion page`リンクから確認画面が出るのでインストール
++ [Infinite-Scroll](https://wordpress.org/plugins/infinite-scroll/)
+: 無限インストールプラグインは何種類かあるけど、JQueryで仕込んだことがある人には、こっちのほうが判りやすいかも。
 
-さっそくスクリプトを追加しようと`New Code Block`から作成しようとしたら、カスペルさんがフィッシングサイトへのポップアップということでブロックされた…  
-
-と思いきや、設定の下にメニューが追加されてて、先ほど名前をつけたCode Blockもあった
-
-以降、使い方は[WordPressの記事に、個別にCSSやJSを追加する高機能プラグイン](http://beginnersdomain.net/plugin/css-javascript-toolbox/)を参照
-
-#### Infinite Scroll
-
-何種類かあるけど、[Infinite-Scroll](https://wordpress.org/plugins/infinite-scroll/)だとテーマによっては何も設定しなくても無限インストールできるように。  
-JQueryで仕込んだことがある人には、こっちのほうが判りやすいかも。
-
-#### Google Analytics for WordPress
-
-[Google Analytics for WordPress by MonsterInsights](https://wordpress.org/plugins/google-analytics-for-wordpress/)だと、Googleアカウントに紐付けられたやつをするするん、っと。
++ [Google Analytics for WordPress by MonsterInsights](https://wordpress.org/plugins/google-analytics-for-wordpress/)
+: Googleアカウントに紐付けられたやつをするするん、っと。
 
 ## 他から引っ越し
 
