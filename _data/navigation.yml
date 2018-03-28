@@ -85,6 +85,8 @@ misc:
     children:
       - title: "Freenom"
         url: /misc/freenom/
+      - title: "BIZ.NF"
+        url: /misc/biz-nf/
       - title: "カスタムドメインメール"
         url: /misc/xrea-mail/
       - title: "Firebase"
