@@ -70,7 +70,8 @@ algolia:
     - index.html
     - index.md
     - collections.html
-    - subdirectory/*.html
+	- month-archive/index.html
+    - Linux/*.html
 # SEO Related
 google_site_verification : "sNYlrDYSp0P3xsEeWz_vX9n5ps2SbT6TGjqgHFQDaHk"
 bing_site_verification   :
