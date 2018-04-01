@@ -205,47 +205,15 @@ li.none {
 .fa-li {
 	color: $light-gray;
 }
-
-@media only screen and (max-width: $small) {
 div.collect-box {
-  display: inline-block;
-  width: 100% !important;
+  display: inline-grid;
+  grid-template-columns: repeat(auto-fill, minmax(min-content, 400px));
+  /*grid-template-columns: repeat(auto-fit, 400px);*/
+  /*justify-content: space-between;*/
   vertical-align: top;
 }
-}
-@media only screen and (min-width: $small) and (max-width: $medium) {
-div.collect-box {
-  display: inline-block;
-  width: 100% !important;
-  vertical-align: top;
-}
-}
-@media only screen and (min-width: $medium) and (max-width: $medium-wide) {
-div.collect-box {
-  display: inline-block;
-  width: 48% !important;
-  vertical-align: top;
-}
-}
-@media only screen and (min-width: $medium-wide) and (max-width: $large) {
-div.collect-box {
-  display: inline-block;
-  width: 48% !important;
-  vertical-align: top;
-}
-}
-@media only screen and (min-width: $x-large) {
-div.collect-box {
-  display: inline-block;
-  width: 33% !important;
-  vertical-align: top;
-}
-}
-
 ul.collect-list {
-  height: 10em;
-  margin-left: 1.5em;
-  font-size: $type-size-6;
+	margin-left: 1.5em;
 }
 /*
 li.file {
@@ -271,6 +239,7 @@ li.folder-close {
 	}
 }
 */
+
 .notice--info li {
 	margin-left: 1.0em;
 }
