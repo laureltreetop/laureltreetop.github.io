@@ -5,14 +5,21 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
+# Theme Settings
+#
+# Review documentation to determine if you should use `theme` or `remote_theme`
+# https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
+
+# theme                  : "minimal-mistakes-jekyll"
+# remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "ja-JP"
 title                    : "K's website"
 title_separator          : "-"
-name                     : "Treetop"
-description              : "前線から完全撤退して…のはずが、技術系なものを試してつらつらとメモを書いておく。ブログには愚痴多数。"
+name                     : &name "Treetop"
+description              : &description "前線から完全撤退して…のはずが、技術系なものを試してつらつらとメモを書いておく。ブログには愚痴多数。"
 url                      : "https://www.treetop.to" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "laureltreetop/laureltreetop.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -59,10 +66,11 @@ algolia:
   index_name             : "index" # YOUR_INDEX_NAME
   search_only_api_key    : "427722d5f092087b5283f91ca1d247ec" # YOUR_SEARCH_ONLY_API_KEY
   powered_by             : # true (default), false
-#  files_to_exclude:
-#    - index.html
-#    - index.md
-#    - subdirectory/*.html
+  files_to_exclude:
+    - index.html
+    - index.md
+    - collections.html
+    - subdirectory/*.html
 # SEO Related
 google_site_verification : "sNYlrDYSp0P3xsEeWz_vX9n5ps2SbT6TGjqgHFQDaHk"
 bing_site_verification   :
@@ -102,7 +110,7 @@ author:
   bio              : "I am tired."
   location         : "Japan"
   email            :
-  uri              : "https://www.treetop.to/"
+  uri              : "https://www.treetop.to"
   bitbucket        :
   codepen          : "laurel-treetop"
   dribbble         :
@@ -207,7 +215,6 @@ plugins:
   - jemoji
   - jekyll-data
   - jekyll-seo-tag
-#  - jekyll-redirect-from
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -218,7 +225,6 @@ whitelist:
   - jemoji
   - jekyll-data
   - jekyll-seo-tag
-#  - jekyll-redirect-from
 
 # Archives
 #  Type
