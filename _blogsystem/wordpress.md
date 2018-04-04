@@ -190,6 +190,9 @@ permalink: /blogsystem/wordpress/
   1. カテゴリを選んで`Set categories to posts`
   1. カテゴリから「未分類」を削除するには`Drop categories from posts`
 
++ [All-in-One WP Migration](https://ja.wordpress.org/plugins/all-in-one-wp-migration/)
+: 後述の通り、まるっと中身のバックアップを取ってくれる。
+
 + [Automatic Post Thumbnail](http://www.sanisoft.com/blog/2010/04/19/wordpress-plugin-automatic-post-thumbnail/)
 : 記事の最初にある記事をアイキャッチとして設定してくれるのがなのだが、お引越しにも普段遣いにも便利。  
 `設定`→`Automatic Post Thumbnail`で一括設定してくれる。
@@ -304,4 +307,22 @@ Tumblrの記事に「カテゴリ」という概念がない。
 1. すべて選択して、変換実行
 1. あとは前述のBatch Catを使ったり
 
+## まるごとお引越し
+
+アドレスはそのままでサーバ間のお引越し。
 {: .notice}
+
+1. [All-in-One WP Migration](https://ja.wordpress.org/plugins/all-in-one-wp-migration/)というプラグインをインストール
+1. `All-in-One WP Migration`→`エクスポート`より、エクスポート先を選ぶ
+[![All-in-One　export 1](/assets/images/wordpress-all-in-one-export-1.png)](/assets/images/wordpress-all-in-one-export-1.png)
+1. エクスポート先は`ファイル`を選択
+[![All-in-One　export 2](/assets/images/wordpress-all-in-one-export-2.png)](/assets/images/wordpress-all-in-one-export-2.png)
+1. .wpressなファイルのダウンロードをしばし待つ
+1. 終わったら**旧サーバとアドレスの紐付けを切り離す**
+1. **新サーバとアドレスを紐付ける**
+1. WordPressをインストール
+1. 最低限で[All-in-One WP Migration](https://ja.wordpress.org/plugins/all-in-one-wp-migration/)だけインストール
+[![All-in-One import](/assets/images/wordpress-all-in-one-import.png)](/assets/images/wordpress-all-in-one-import.png)
+1. これで中身のお引越し完了
++ 念のため、パーマネントリンクの設定とかをチェック
++ URLは`http://`なのか`https://`なのか、とか
