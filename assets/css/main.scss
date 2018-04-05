@@ -241,6 +241,9 @@ li.folder-close {
 
 .toc__items {
 	a:link, a:visited { color: $text-color; }
+	ul > li > ul > li {
+		padding-left: 1em;
+	}
 }
 
 .notice--info li {
