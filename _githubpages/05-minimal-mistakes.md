@@ -48,11 +48,30 @@ _layouts/home.html
 リスト表示用の`class="triangle"`も込み。  
 _includes/archive-title.html
 <script src="https://gist.github.com/laureltreetop/90b30fb52d4041290791485bfc093ab0.js"></script>
-## TOCを固定
+
+## TOC
+
 TOCというのはTable Of Contentsの略で、記事の右側にある見出し一覧。  
 たとえばこのページだと、front matter（って言うのかぁ）にこういう記述をしてある。
 <script src="https://gist.github.com/laureltreetop/bc20d4d1a9882bb7f85d0a14bc2cb22b.js"></script>
 
+### TOCを右側に固定
 左側のサイドバーはスクロールしても固定されているので、TOCも同じようにstickyを追加。  
 _layouts/single.html
 <script src="https://gist.github.com/laureltreetop/0da5fd93ec335e5a5c41ca02c86dc31a.js"></script>
+
+### TOCを左サイドバーへ
+[Wide Single Layout Page](https://mmistakes.github.io/minimal-mistakes/markup-text-readability-wide-page/)なるレイアウトが出てきたので、便利だけど場所を食ってしまうTOCを左側のサイドバーへ押しやってみる。  
+{: .notice}
+
+/includes/sidebar.html  
+`{% raw %}{% if page.sidebar.nav %}{% endraw %}`の上あたりに追加する。  
+ページナビなど他のリストとも揃えたいので、`<h3 class="nav__title" style="padding-left: 0;">`にしてみたり。
+<script src="https://gist.github.com/laureltreetop/ceb3edbf1c04ad98a7dec09ee6ad123f.js"></script>
+
+/layouts/single.htmlからTOCをコメントアウト
+<script src="https://gist.github.com/laureltreetop/b067472931d585d8a55f78cad5eeebac.js"></script>
+
+あとはmain.scssで体裁を整えたり、記事のfront matterに`classes: wide`を追加したりなど。  
+/assets/css/main.scss
+<script src="https://gist.github.com/laureltreetop/344e18e0c7f5aced6caac3f49bf803a6.js"></script>
