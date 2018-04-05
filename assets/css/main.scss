@@ -244,6 +244,12 @@ li.folder-close {
 	ul > li > ul > li {
 		padding-left: 1em;
 	}
+	:target {
+		font-weight: bold;
+	}
+	:not(:target) {
+		font-weight: italic;
+	}
 }
 
 .notice--info li {
