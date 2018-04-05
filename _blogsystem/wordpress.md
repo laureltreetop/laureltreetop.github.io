@@ -2,6 +2,7 @@
 title: "WordPress"
 description: "今までWordPress.comしか知らなかった。カスタムドメインでも無料で作れるとは…"
 permalink: /blogsystem/wordpress/
+classes: wide
 ---
 {{ page.description }}
 {: .notice}

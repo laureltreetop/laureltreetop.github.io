@@ -239,6 +239,10 @@ li.folder-close {
 }
 */
 
+.toc__items {
+	a:link, a:visited { color: $text-color; }
+}
+
 .notice--info li {
 	margin-left: 1.0em;
 }
