@@ -2,6 +2,7 @@
 title: "はてなブログ"
 description: とりあえずはメモりつつ作業。
 permalink: /blogsystem/hateblo/
+classes: wide
 ---
 {{ page.description }}
 {: .notice}

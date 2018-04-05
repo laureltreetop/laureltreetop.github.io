@@ -2,6 +2,7 @@
 title: "CSS小技系"
 description: CSS小技系を集めてみました。
 permalink: /create-pages/css/
+classes: wide
 ---
 {{ page.description }}
 {: .notice}

@@ -2,6 +2,7 @@
 title: "Freenom & e.t.c."
 description: "無料でカスタムドメインを作成したり、サイト作ったり、メールアドレス作ったり。"
 permalink: /misc/freenom/
+classes: wide
 ---
 {{ page.description }}
 {: .notice}

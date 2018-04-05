@@ -2,6 +2,7 @@
 title: "Blogger to Jekyll"
 description: Bloggerの記事をJykillに取り込むのは簡単にできるらしいと知り、無謀にも挑戦。
 permalink: /githubpages/blogger-to-jekyll/
+classes: wide
 # categories:
 #   - GitHub Pages
 # tags:

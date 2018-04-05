@@ -2,6 +2,7 @@
 title: "GitHub start"
 description: GitHub Pagesなのですから、当然最初はGitHubの準備や設定やら。
 permalink: /githubpages/github/
+classes: wide
 # categories:
 #   - GitHub Pages
 # tags:

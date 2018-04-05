@@ -2,6 +2,7 @@
 title: "JQuery Plugins"
 description: Tumblrだろうがはてなブログだろうが、とにかくグリグリとJQueryでカスタマイズ。
 permalink: /create-pages/javascript/
+classes: wide
 ---
 {{ page.description }}
 {: .notice}

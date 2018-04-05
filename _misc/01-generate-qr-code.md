@@ -2,6 +2,7 @@
 title: "QRコード作成について"
 description: 実は簡単に作れるのですよ。だけど「電話帳に登録」はちょっとめんどくさい。ので作ってみたときのメモ。
 permalink: /misc/generate-qr-code/
+classes: wide
 ---
 {{ page.description }}
 {: .notice}

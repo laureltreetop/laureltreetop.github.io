@@ -2,6 +2,7 @@
 title: "USBドライブを使い倒す"
 description: "出先でも好きな環境で作業したいと思い、いろいろ揃えてみた。例によってWindowsでオレオレ的に。"
 permalink: /inventory/usb-drive/
+classes: wide
 ---
 {{ page.description }}
 {: .notice}

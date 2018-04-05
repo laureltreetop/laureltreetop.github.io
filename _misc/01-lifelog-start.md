@@ -2,6 +2,7 @@
 title: "Lifelog start"
 description: Evernoteにまとめていく方向で。
 permalink: /misc/lifelog/
+classes: wide
 ---
 {{ page.description }}
 {: .notice}

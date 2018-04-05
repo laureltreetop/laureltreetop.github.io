@@ -2,6 +2,7 @@
 title: "Algolia with Javascrpt"
 description: 全文検索できるよ。日本語もOKだったり。
 permalink: /createpages/algolia/
+classes: wide
 ---
 {{ page.description }}
 {: .notice}

@@ -2,6 +2,7 @@
 title: "Customize Minimal Mistakes"
 description: Minimal Mistakesをいろいろカスタマイズ。
 permalink: /githubpages/minimal-mistakes/
+classes: wide
 # categories:
 #   - GitHub Pages
 # tags:

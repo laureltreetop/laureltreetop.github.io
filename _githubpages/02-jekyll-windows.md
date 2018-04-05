@@ -2,6 +2,7 @@
 title: "Jekyll on Windows"
 description: オレオレですが、ほんとに苦労したので。しかもこの記事をまとめるために、いったんuninstallしました…
 permalink: /githubpages/jekyll-windows/
+classes: wide
 # categories:
 #   - GitHub Pages
 # tags:

@@ -2,6 +2,7 @@
 title: "Fonts"
 description: Webフォントとかいろいろ。
 permalink: /create-pages/fonts/
+classes: wide
 ---
 {{ page.description }}
 {: .notice}

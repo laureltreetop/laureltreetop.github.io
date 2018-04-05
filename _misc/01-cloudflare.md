@@ -3,6 +3,7 @@ title: "CloudFlare"
 description: "元々はGitHub Pagesを独自ドメインでHTTPS化ってことで知った[CloudFlare](https://www.cloudflare.com/)なのだが、いろいろできる子。  
 今では最後の難関だったBloggerが[Blogger Draft](https://draft.blogger.com/)によってHTTPS対応になったりしたのだが、もうすっかり他に乗り換えられない環境になってしまった気が。"
 permalink: /misc/cloudflare/
+classes: wide
 ---
 {{ page.description }}
 {: .notice}

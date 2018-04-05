@@ -2,6 +2,7 @@
 title: "Tumblr"
 description: "現在はAPIが使えなくなったりしているようだが、いろいろと興味が失せたので、SSL証明書がついてくること以外の検証は未定。こういう事をしてたという回顧録、的な。"
 permalink: /blogsystem/tumblr/
+classes: wide
 ---
 {{ page.description }}
 {: .notice--danger}

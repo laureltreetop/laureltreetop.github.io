@@ -2,6 +2,7 @@
 title: "カスタムドメインメール"
 description: "無料でカスタムドメインなメールアドレス作ったり。XREAに頼りまくり。"
 permalink: /misc/xrea-mail/
+classes: wide
 ---
 {{ page.description }}
 {: .notice}

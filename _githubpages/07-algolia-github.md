@@ -2,6 +2,7 @@
 title: "Algolia"
 description: 全文検索できるよ。日本語もOKだったり。
 permalink: /githubpages/algolia-github/
+classes: wide
 ---
 後述のように[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)だと設置は楽。設定が大変なのは変わり無し。
 {: .notice}

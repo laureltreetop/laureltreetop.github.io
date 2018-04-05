@@ -3,6 +3,7 @@ title: "Sass"
 permalink: /create-pages/sass/
 description: CSS書いていると頭が渋滞しがちだけど、これなら便利なのかも。  ただ、コンパイルはめんどい。
 toc_icon: "fab fa-sass"
+classes: wide
 ---
 {{ page.description }}
 {: .notice}

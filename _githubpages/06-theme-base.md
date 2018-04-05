@@ -2,6 +2,7 @@
 title: "Customize Base"
 description: Baseもいろいろカスタマイズしてみる。
 permalink: /githubpages/theme-base/
+classes: wide
 # categories:
 #   - GitHub Pages
 # tags:

@@ -2,6 +2,7 @@
 title: "Blogger"
 description: 大幅なカスタマイズは難しいけど、やはり安定のBloggerなのかも?
 permalink: /blogsystem/blogger/
+classes: wide
 ---
 {{ page.description }}
 {: .notice}

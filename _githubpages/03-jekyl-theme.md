@@ -2,6 +2,7 @@
 title: "Jekyll Theme"
 description: 未だに勉強中。とりあえずリンクだけ張っていく。
 permalink: /githubpages/jekyll-theme/
+classes: wide
 # categories:
 #   - GitHub Pages
 # tags:
