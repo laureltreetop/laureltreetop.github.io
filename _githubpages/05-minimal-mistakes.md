@@ -75,3 +75,7 @@ _layouts/single.html
 あとはmain.scssで体裁を整えたり、記事のfront matterに`classes: wide`を追加したりなど。  
 /assets/css/main.scss
 <script src="https://gist.github.com/laureltreetop/344e18e0c7f5aced6caac3f49bf803a6.js"></script>
+
+ついでなので「日本語の見出しだとスムーススクロールになってくれない問題」に着手。  
+カスタムスクリプトとして追加。
+<script src="https://gist.github.com/laureltreetop/bdd7f282f5dee6939fe4a84e547486fd.js"></script>
