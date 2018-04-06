@@ -1,3 +1,4 @@
+// $('a').smoothScroll();
 $(function(){
 	$('a[href^="#"]').click(function(){
 		var speed = 500;
@@ -27,12 +28,13 @@ $(function() {
 		}
 	});
 	//スクロールしてトップ
-	topBtn.click(function() {
+	/*topBtn.click(function() {
 		$('body,html').animate({
 			scrollTop: 0
 		}, 500);
 		return false;
 	});
+	*/
 });
 
 $(document).ready(
