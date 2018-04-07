@@ -1,6 +1,6 @@
 // $('a').smoothScroll();
 //$('a[href^="#"]:not([href$="#"])').smoothScroll();
-/*
+
 $(function(){
 	$('a[href^="#"]').click(function(){
 		var speed = 500;
@@ -11,7 +11,7 @@ $(function(){
 		return false;
 	});
 });
-*/
+
 $("h1.page__title").text(
 	$.trim(
 		$("h1.page__title").text()
