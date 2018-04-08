@@ -20,8 +20,8 @@ main:
     url: /misc/index.html
   - title: "ざっくりと全部"
     url: /collections.html
-#  - title: "愚痴"
-#    url: /month-archive/
+  - title: "愚痴"
+    url: /month-archive/
   - title: "自分?"
     url: /about/
 
