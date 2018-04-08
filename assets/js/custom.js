@@ -1,8 +1,8 @@
 // $('a').smoothScroll();
 //$('a[href^="#"]:not([href$="#"])').smoothScroll();
+
 $(function(){
-   // #で始まるアンカーをクリックした場合に処理
-   $('a[href^="#"]').click(function() {
+   $('a[href^="#"]:not([href$="#"])').click(function() {
       var speed = 400;
       var href= $(this).attr("href");
       var target = $(href == "#" || href == "" ? 'html' : href);
