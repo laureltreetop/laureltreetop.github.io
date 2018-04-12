@@ -19,7 +19,7 @@ classes: wide
 色は[BrandColors](https://brandcolors.net/)や[SNSやWebサービスなどのロゴの色（ブランドカラー）を調べてみた](http://weboook.blog22.fc2.com/blog-entry-399.html)を参照。  
 はてなブログっぽいロゴは[Font Awesome などアイコンフォントにないはてなブックマークを自力で追加する簡単な方法](http://hayashikejinan.com/webwork/css/913/)より。  
 
-PintestとPocketとはてブを追加。数が増えすぎたので文字を改行してある。  
+PintestとPocketとはてブを追加。  
 _includes/social-share.html
 <script src="https://gist.github.com/laureltreetop/61c616b2741c041736241f89786351d0.js?file=_includes_social-share.html"></script>
 _sass/minimal-mistakes/_buttons.css

@@ -15,23 +15,24 @@ a {
 	}
 }
 
-    .social-icons {
-      .fa-get-pocket {
-        color: $pocket-color;
-      }
-      .fa-hatena {
-        color: $hatena-color;
-      }
-      .fa-blogger {
-        color: $blogger-color;
-      }
-    }
+.social-icons {
+	.fa-get-pocket {
+	color: $pocket-color;
+	}
+	.fa-hatena {
+	color: $hatena-color;
+	}
+	.fa-blogger {
+	color: $blogger-color;
+	}
+}
 
 // Font Awesome like hatena bookmark
 .hatena {
-    &::before {
-        content: "B! ";
+    &:before {
+        content: "B!";
         font-family: Verdana;
+		font-style: normal;
         font-weight: bold;
     }
 }
