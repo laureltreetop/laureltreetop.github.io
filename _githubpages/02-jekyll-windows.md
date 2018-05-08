@@ -60,7 +60,11 @@ Please report a bug if this causes problems.
 ```
 というのがでてきたら、
 ```sh
-$ gem cleanup
+$ gem uninstall rouge
+```
+で不要なversionのをuninstallして、
+```sh
+$ gem update && gem cleanup
 ```
 とすれば片付けてくれる、のかな?
 
