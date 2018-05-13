@@ -34,6 +34,8 @@ Windows7の場合
 + Security 
   + [Kaspersky TDSSKiller](https://portableapps.com/apps/security/kaspersky-tdsskiller-portable)
   （[元ネタ](https://support.kaspersky.co.jp/viruses/disinfection/5350)）
+  + [KeePass Pro Password Safe](https://portableapps.com/apps/utilities/keepass-pro-portable)
+  （[元ネタ](https://keepass.info/)）
 + Utilities
   + [7-Zip](https://portableapps.com/apps/utilities/7-zip_portable)（[元ネタ](https://sevenzip.osdn.jp/)）
 + Graphics & Pictures
@@ -47,8 +49,6 @@ Windows7の場合
 
 [Appetizer](http://appetizer.cozic.net/)などのランチャーにまとめるといいかも。
 
-+ [KeePass Password Safe](https://keepass.info/)
-: PortableAppsにもあるが、2.xx系がない。
 + [NexusFont](http://www.xiles.net/)
 : フォント管理。使い方は次項にて。
 + [DropboxPortableAHK](http://nionsoftware.com/dbpahk/)
