@@ -29,15 +29,15 @@ Windows7の場合
   + [Google Chrome](https://portableapps.com/apps/internet/google_chrome_portable)（[元ネタ](https://www.google.com/chrome/)）
   + [Mozilla Firefox](https://portableapps.com/apps/internet/firefox_portable)（[元ネタ](https://www.mozilla.org/ja/firefox/)）
 + Office
-  + [Apache OpenOffice](https://portableapps.com/apps/office/openoffice_portable)（[元ネタ](https://www.openoffice.org/)）
   + [LibreOffice](https://portableapps.com/apps/office/libreoffice_portable)（[元ネタ](https://ja.libreoffice.org/)）
 + Security 
   + [Kaspersky TDSSKiller](https://portableapps.com/apps/security/kaspersky-tdsskiller-portable)
   （[元ネタ](https://support.kaspersky.co.jp/viruses/disinfection/5350)）
-  + [KeePass Pro Password Safe](https://portableapps.com/apps/utilities/keepass-pro-portable)
-  （[元ネタ](https://keepass.info/)）
+  + [KeePass Pro Password Safe](https://portableapps.com/apps/utilities/keepass-pro-portable)（[元ネタ](https://keepass.info/)）
+  : 一緒に[KeeAnywhere](https://github.com/Kyrodan/KeeAnywhere)というプラグインを入れておけば便利。
 + Utilities
   + [7-Zip](https://portableapps.com/apps/utilities/7-zip_portable)（[元ネタ](https://sevenzip.osdn.jp/)）
+  + [NexusFont](https://portableapps.com/node/26433)（[元ネタ](http://www.xiles.net/)）
 + Graphics & Pictures
   + [GIMP](https://portableapps.com/apps/graphics_pictures/gimp_portable)（[元ネタ](https://www.gimp.org/)）
   + [IrfanView](https://portableapps.com/apps/graphics_pictures/irfanview_portable)（[元ネタ](http://www.irfanview.com/)）
@@ -47,11 +47,13 @@ Windows7の場合
  
 ### その他
 
-[Appetizer](http://appetizer.cozic.net/)などのランチャーにまとめるといいかも。
+[Appetizer](http://appetizer.cozic.net/)などのランチャーにまとめるといいかも。  
+…だったけど、使いそうなアイテムはほぼPortableAppsでイケる状態に。
 
-+ [NexusFont](http://www.xiles.net/)
-: フォント管理。使い方は次項にて。
 + [DropboxPortableAHK](http://nionsoftware.com/dbpahk/)
+: KeePassのファイルを引っ張るだけなら上記のKeyAnywhereだけでも問題ないので、他に用途があれば使うかも、程度。
++ [Git for Windows](https://github.com/git-for-windows/git/releases/tag/v2.17.0.windows.1)（[元ネタ](https://git-scm.com/)）
+: Git Bashを使いたい場合。
 
 ## フォントを持ち歩く
 
