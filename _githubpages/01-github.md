@@ -59,8 +59,16 @@ $ git clone git@github.com:username/hoehoe.github.io.git
 ## 環境構築 on Windows 
 自分がそうなので。オレオレですみません。   
 [GitHub Desktop](https://desktop.github.com/)をインストール[^githubwindows]。  
-[git for wijdows](https://gitforwindows.org/)をインストールするとコマンド画面で作業できる。  
-USBメモリに持ち歩くために探したのが[Git Portable](https://github.com/sheabunge/GitPortable)。
+[git for windows](https://gitforwindows.org/)をインストールするとコマンド画面で作業できる。  
+USBメモリに持ち歩くために探したのが[Git Portable](https://github.com/sheabunge/GitPortable)とか[Git for Windows Portable](https://portableapps.com/node/36346)とか。
+
+{% comment %}
+key生成
+```sh
+ssh-keygen -t rsa -b 4096 -C "mail@domain"
+```
+パスフレーズはお好みで
+{% endcomment %}
 
 [^githubwindows]: でもGit&nbsp;Shellしか使ってないかも。
 
