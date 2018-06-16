@@ -11,50 +11,73 @@ classes: wide
 {{ page.description }}
 {: .notice}
 
+慌ててHTTPS対応の設定をメモったので、ドメインとリポジトリ名と画像がちぐはぐになってますが、うまく解釈してくれると~~楽、じゃなくて~~助かります。
+{: .notice--warning}
+
 ## GitHubの準備から
 [GitHub](https://github.com/)より登録。
 
 ## リポジトリを作成  
 最初からカスタムドメインで運用する前提で書きます。自分がそうだったので。   
-リポジトリ名は`hoehoe.github.io`で作成[^repogitory]。
+リポジトリ名は`hoehoe`で作成（説明画像では`hogehoge`）[^repogitory]。
 
-[^repogitory]: と、調べた限りでは書いてあったのだが、`github.io`を付けなくてもカスタムドメインは作れるっぽい?
+[^repogitory]: 古い記事だと"xxx.github.io"で作るように書いてあったのだが、"github.io"を付けなくてもカスタムドメインは作れるっぽいっていうか、作れた。
 
 [![GitHub New Repository](/assets/images/github-new-repository.png)](/assets/images/github-new-repository.png)
 
+{% comment %}
 リポジトリを作成したら、とりあえず適当なテーマを設定。
 [![GitHub Clone Repository](/assets/images/github-set-theme.png)](/assets/images/github-set-theme.png)
+{% endcomment %}
 
-手元に持ってくる。パターンはいくつかある。↓参照。
-[![GitHub Set Theme](/assets/images/github-clone.png)](/assets/images/github-clone.png)
+手元に持ってくる。パターンはいくつかある。↓参照（説明画像では`hogehoge`）。
+[![GitHub Set Theme](/assets/images/github-clone-hogehoge.png)](/assets/images/github-clone-hogehoge.png)
 
 今回は一番上の案を採用。HTTPSなりSSHなりの文字列をコピーして、`git clone`を実行。
 HTTPSパターンだとこういう感じで。
 ```shell
-$ git clone https://github.com/username/hoehoe.github.io.git
+$ git clone https://github.com/ユーザID/hoehoe.git
 ```
 SSHパターン。
 ```shell
-$ git clone git@github.com:username/hoehoe.github.io.git
+$ git clone git@github.com:ユーザID/hoehoe.git
 ```
-## DNS設定
-`hoehoe.treetop.to`なCNAMEレコードに、`hoehoe.github.io`なリポジトリ名を設定。
+## DNS設定(HTTPS対応)
+`www.hoehoe.tk`なCNAMEレコードに、`ユーザID.github.io`な値を設定。
 
-`Settings`→`GitHub Pages`→`Custom domain`に、`hoehoe.treetop.to`という感じでドメインを設定。  
-[![GitHub Custom Domain](/assets/images/github-custom-domain.png)](/assets/images/github-custom-domain.png)
+`Settings`→`GitHub Pages`→`Custom domain`に、`www.hoehoe.tk`という感じでドメインを設定。   
+[![GitHub Custom Domain](/assets/images/github-custom-domain-enforce-yet.png)](/assets/images/github-custom-domain-enforce-yet.png)  
 リポジトリにCNAMEというファイルが作成されて、その中にカスタムドメインがぴろっと書かれていたら正解。  
+`Enforce HTTPS`にチェックが付けられないのは後述。  
 
 よく行方不明になるHelpを。
 + [Setting up an apex domain](https://help.github.com/articles/setting-up-an-apex-domain/)
 + [Setting up a www subdomain](https://help.github.com/articles/setting-up-a-www-subdomain/)
 
-| name | Type  | Target            |
-|------|-------|-------------------|
-| @    | A     | 192.30.252.153    |
-| @    | A     | 192.30.252.154    |
-| www  | CNAME | ユーザID.github.io |
+あと、こういう記事も。カスタムドメインのHTTPSひゃっほー、なのです。
++ [Custom domains on GitHub Pages gain support for HTTPS](https://blog.github.com/2018-05-01-github-pages-custom-domains-https/)
 
-同じユーザIDで別リポジトリを別ドメインで立ち上げるときも、上記設定でいけるみたい。
+それを踏まえてDNSにこういう設定を。  
+CAAレコードの値は[CAA Record Helper](https://sslmate.com/caa/)で生成できる。  
+CAAレコードが使えないDNSサービスでCAA抜きで設定をしてもイケた。  
+[CNET Japanの記事](https://japan.cnet.com/release/30208036/)によると、  
+> CAAレコードが指定されていない場合は、どの認証局（CA）でも証明書を発行できます。
+<cite>2017年9月8日よりSSLサーバ証明書発行時のDNSのCAAレコードチェックが必須に - CNET Japan</cite>  
+
+ということなので、そういうことなのかな。  
+何度かセキュアじゃないという警告が出たのはそのせい?
+
+| name | Type  | Target                    |
+|------|-------|---------------------------|
+| @    | A     | 185.199.108.153           |
+| @    | A     | 185.199.109.153           |
+| @    | A     | 185.199.110.153           |
+| @    | A     | 185.199.111.153           |
+| www  | CNAME | ユーザID.github.io         |
+| www  | CAA   | 0 issue "letsencrypt.org" |
+
+これでしばらく待つと`Enforce HTTPS`にチェックを付けられるようになるので、忘れずにチェックを。
+[![GitHub Custom Domain](/assets/images/github-custom-domain-enforce-done.png)](/assets/images/github-custom-domain-enforce-done.png)
 
 ## 環境構築 on Windows 
 自分がそうなので。オレオレですみません。   
