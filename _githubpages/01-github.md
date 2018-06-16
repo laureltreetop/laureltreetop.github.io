@@ -59,13 +59,6 @@ $ git clone git@github.com:ユーザID/hoehoe.git
 
 それを踏まえてDNSにこういう設定を。  
 CAAレコードの値は[CAA Record Helper](https://sslmate.com/caa/)で生成できる。  
-CAAレコードが使えないDNSサービスでCAA抜きで設定をしてもイケた。  
-[CNET Japanの記事](https://japan.cnet.com/release/30208036/)によると、  
-> CAAレコードが指定されていない場合は、どの認証局（CA）でも証明書を発行できます。
-<cite>2017年9月8日よりSSLサーバ証明書発行時のDNSのCAAレコードチェックが必須に - CNET Japan</cite>  
-
-ということなので、そういうことなのかな。  
-何度かセキュアじゃないという警告が出たのはそのせい?
 
 | name | Type  | Target                    |
 |------|-------|---------------------------|
@@ -75,6 +68,14 @@ CAAレコードが使えないDNSサービスでCAA抜きで設定をしても�
 | @    | A     | 185.199.111.153           |
 | www  | CNAME | ユーザID.github.io         |
 | www  | CAA   | 0 issue "letsencrypt.org" |
+
+CAAレコードが使えないDNSサービスでCAA抜きで設定をしてもイケた。  
+[CNET Japanの記事](https://japan.cnet.com/release/30208036/)によると、  
+> CAAレコードが指定されていない場合は、どの認証局（CA）でも証明書を発行できます。
+<cite>2017年9月8日よりSSLサーバ証明書発行時のDNSのCAAレコードチェックが必須に - CNET Japan</cite>  
+
+ということなので、そういうことなのかな。  
+何度かセキュアじゃないという警告が出たのはそのせい?
 
 これでしばらく待つと`Enforce HTTPS`にチェックを付けられるようになるので、忘れずにチェックを。
 [![GitHub Custom Domain](/assets/images/github-custom-domain-enforce-done.png)](/assets/images/github-custom-domain-enforce-done.png)
@@ -100,7 +101,7 @@ ssh-keygen -t rsa -b 4096 -C "mail@domain"
 [Brackets](http://brackets.io/)なるテキストエディタに[Brackets-Git](https://github.com/brackets-userland/brackets-git)という拡張機能を追加すると、エディタからadd, commit, pushなどが可能。  
 今までは書き溜めたのをまとめてばーっとcommit→pushだったので、一度のcommitにコメントが渋滞してた。
 
-これだと簡単にファイル別にcommitできるし、Git Shellを行き来しなくてもpushできる。もちろんputも。  
+これだと簡単にファイル別にcommitできるし、Git Shellを行き来しなくてもpushできる。もちろんpullも。  
 これでcommitログが見やすくなる。
 
 既にGit for Windowsなどでコマンドでのgitが使えていることが前提。  
