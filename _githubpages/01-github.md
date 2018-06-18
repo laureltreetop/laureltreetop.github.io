@@ -132,13 +132,15 @@ plugins:
 
 リダイレクトしたいURLのある場所に、ファイルを設置。  
 例としてあげたのは、実際に最近も廻ってきているらしい、Linux関係の設定。  
-どこにも書いてなかったが、フォルダは`/_Linux/`ではなく、アンダーバー無しの`/Linux/`に置くべし。
+~~どこにも書いてなかったが、フォルダは`/_Linux/`ではなく、アンダーバー無しの`/Linux/`に置くべし。~~  
+嘘ですごめんなさい、フォルダは自由です。`permalink`さえちゃんと設定されていれば、どこに置いても問題無しです。  
+自分の場合は`redirected`フォルダに放り込んであります。
 ```yml
 ---
 layout: redirected
 sitemap: false
 permalink: /Linux/
-redirect_to: http://treetop.webcrow.jp/Linux/
+redirect_to: https://1995.treetop.to/Linux/
 ---
 ```
 あとは通常通りに`bundle update`やら`jekyll `sやらでできた。  
