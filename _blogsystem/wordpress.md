@@ -9,7 +9,9 @@ classes: wide
 
 [WordPress Codex 日本語版](https://wpdocs.osdn.jp/Main_Page)というのもあるけど、自分で試したのをいろいろメモ。
 
-## XREA編
+## WordPressが使えるサービス
+
+### XREA編
 
 #### サーバ設定
 
@@ -62,7 +64,10 @@ classes: wide
 + 管理画面には入れない
 + [Sixcore（シックスコア）に「WordPress国外IPアクセス制限」機能が追加されていた！](https://gori.me/wordpress/29316)によると、`WordPressログイン制限`が怪しそう→OFFにしたら繋がった
 
-## StarServer編
+### StarServer編
+
+.tkドメインは登録できない。.mlはできたし.gaや.cfも可能かと。
+{: .notice--warning}
 
 #### 登録→設定
 
@@ -85,7 +90,10 @@ classes: wide
 
 とにかく、サクッと完了。
 
-## Xdomain編
+### Xdomain編
+
+.tkドメインは登録できない。.mlはできたし.gaや.cfも可能かと。
+{: .notice--warning}
 
 1. [Xdomain](https://www.xdomain.ne.jp/)ユーザ登録
 1. 無料レンタルサーバより登録
@@ -93,7 +101,7 @@ classes: wide
 1. カスタムドメイン追加（サブドメインは後から）
 1. WordPress新規インストール（ここでサブドメインを指定可能）
 
-## 000webhost
+### 000webhost
 
 海外サイトで[000webhost](https://www.000webhost.com/)というのもある。
 
@@ -147,7 +155,7 @@ classes: wide
 {% endcomment %}
 
 
-## BIZ.NF
+### BIZ.NF
 
 [BIZ.NF](/misc/biz-nf/)にまとめておきます。
 
@@ -195,7 +203,7 @@ classes: wide
 : 後述の通り、まるっと中身のバックアップを取ってくれる。
 
 + [Automatic Post Thumbnail](http://www.sanisoft.com/blog/2010/04/19/wordpress-plugin-automatic-post-thumbnail/)
-: 記事の最初にある記事をアイキャッチとして設定してくれるのがなのだが、お引越しにも普段遣いにも便利。  
+: 記事の最初にある記事をアイキャッチとして設定してくれるのだが、お引越しにも普段遣いにも便利。  
 `設定`→`Automatic Post Thumbnail`で一括設定してくれる。
 
 + [Pz-LinkCard](https://wordpress.org/plugins/pz-linkcard/)
@@ -221,7 +229,22 @@ classes: wide
 : 無限インストールプラグインは何種類かあるけど、JQueryで仕込んだことがある人には、こっちのほうが判りやすいかも。
 
 + [Google Analytics for WordPress by MonsterInsights](https://wordpress.org/plugins/google-analytics-for-wordpress/)
-: Googleアカウントに紐付けられたやつをするするん、っと。
+: Googleアカウントに紐付けられたやつをするするん、っと。ただし現在は後述のやつを使用中。
+
++ [Google Analytics Dashboard for WP by ExactMetrics (formerly GADWP)](https://ja.wordpress.org/plugins/google-analytics-dashboard-for-wp/)
+: MonsterInsightsではなくこっちのが良さそう。
+
++ [Collapsing Archives](https://ja.wordpress.org/plugins/collapsing-archives/)
+: アーカイブの表示をアコーディオンメニュー的な感じにする。
+
++ [Collapsing Categories](https://wordpress.org/plugins/collapsing-categories/)
+: カテゴリの表示をア（以下略）。
+
++ [Pixabay Images](https://ja.wordpress.org/plugins/pixabay-images/)
+: ちょっと画像が欲しいなーというときに[Pixabay](https://pixabay.com/)から引っ張ってくる。
+
++ [Under Construction](https://ja.wordpress.org/plugins/under-construction-page/)
+: 簡単なので、ちょっとだけ工事中というときに便利。
 
 ## 他から引っ越し
 
@@ -327,3 +350,8 @@ Tumblrの記事に「カテゴリ」という概念がない。
 1. これで中身のお引越し完了
 + 念のため、パーマネントリンクの設定とかをチェック
 + URLは`http://`なのか`https://`なのか、とか
+
+## その他
+
++ [mod_rewriteでWordPressの管理画面だけアクセスを許可する設定](https://resource-sharing.co.jp/mod-rewrite-redirect-setting/)
++ [リダイレクトを使用してWordPressのログイン画面などのセキュリティを向上させる](https://blue-leaf81.net/archives/1377/)
