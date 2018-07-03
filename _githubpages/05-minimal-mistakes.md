@@ -93,7 +93,8 @@ assets/css/main.scss
 
 ## 記事毎にog:imageを設定
 
-[Post: Teaser Image with OpenGraph Override](https://mmistakes.github.io/minimal-mistakes/layout/uncategorized/post-teaser-image-og-override/)ということなので、全体というかデフォの画像は_config.tmlで設定済み。  
+デフォの画像は_config.ymlで設定済み。  
+[Post: Teaser Image with OpenGraph Override](https://mmistakes.github.io/minimal-mistakes/layout/uncategorized/post-teaser-image-og-override/)ということなので、各記事に追加。  
 
 各記事の頭に追加。↓はこの記事の場合。
 ```yml
