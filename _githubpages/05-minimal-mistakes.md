@@ -102,3 +102,26 @@ header:
   teaser: /assets/images/minimal-mistakes_edit-toc.png
   og_image: /assets/images/minimal-mistakes_edit-toc.png
 ```
+
+[Facebookシェアデバッガー](https://developers.facebook.com/tools/debug/sharing/)で確認できるかと。
+
+## 検索エンジンをGoogleに
+
+1. [Googleカスタム検索](https://cse.google.com/cse/all)（要Googleログイン）にサイトを登録
+1. 検索エンジンの編集→デザイン→レイアウトで「結果のみ」を設定
+1. 保存してコードを取得
+1. Minimal Mistakesの場合はコードがあればOKなので、必要なのはこれ
+```js
+    var cx = 'nnnnnnnnnnnn:xxxxxxxx';
+```
+
+_config.ymlに設定すると、Google検索が可能に。
+```yml
+search                   : true # true, false (default)
+search_full_content      : true # true, false (default)
+search_provider          : "google" # lunr (default), algolia, google
+
+google:
+  search_engine_id       : "nnnnnnnnnnnn:xxxxxxxx" # YOUR_SEARCH_ENGINE_ID
+  instant_search         : true # false (default), true
+```
