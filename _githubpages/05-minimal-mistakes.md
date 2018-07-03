@@ -35,6 +35,17 @@ assets/css/main.scss
 _includes/footer.html
 <script src="https://gist.github.com/laureltreetop/475361f9a90dd2f6c7ba7f5d65cf0f94.js"></script>
 
+## AuthorにBloggerを追加
+
+_includes/author-profile-custom-links.html
+```html
+  <li>
+    <a href="https://blog.treetop.to/" itemprop="name">
+      <i class="fab fa-fw fa-blogger" aria-hidden="true"></i> Blogger
+    </a>
+  </li>
+```
+
 ## 過去記事まとめに月ごとの見出し
 トップでやってるやつ。  
 _layouts/home.html
