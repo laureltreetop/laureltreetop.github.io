@@ -23,7 +23,7 @@ description              : &description "前線から完全撤退して…のは
 url                      : "https://www.treetop.to" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "laureltreetop/laureltreetop.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : "/assets/images/gi01a201409240100.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser                   : "/assets/images/gi01a201409240100_white75.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs              : # true, false (default)
 words_per_minute         : 200
 comments:
