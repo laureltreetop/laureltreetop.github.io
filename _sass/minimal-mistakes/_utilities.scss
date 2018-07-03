@@ -224,6 +224,10 @@ body:hover .visually-hidden button {
     color: $github-color;
   }
 
+  .fa-gitlab {
+    color: $gitlab-color;
+  }
+
   .fa-google-plus,
   .fa-google-plus-square,
   .fa-google-plus-g {
@@ -291,6 +295,17 @@ body:hover .visually-hidden button {
   .fa-xing,
   .fa-xing-square {
     color: $xing-color;
+  }
+
+  /* customize */
+  .fa-get-pocket {
+	color: $pocket-color;
+  }
+  .fa-hatena {
+   color: $hatena-color;
+  }
+  .fa-blogger {
+	color: $blogger-color;
   }
 }
 

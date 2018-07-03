@@ -23,7 +23,7 @@ description              : &description "前線から完全撤退して…のは
 url                      : "https://www.treetop.to" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "laureltreetop/laureltreetop.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : # "/assets/images/avatar-treetop.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser                   : "/assets/images/gi01a201409240100.png" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs              : # true, false (default)
 words_per_minute         : 200
 comments:
@@ -60,7 +60,7 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 search                   : true # true, false (default)
 search_full_content      : true # true, false (default)
-search_provider          : "algolia" # lunr (default), algolia
+search_provider          : "google" # lunr (default), algolia, google
 algolia:
   application_id         : "LGXCDI20T6" # YOUR_APPLICATION_ID
   index_name             : "index" # YOUR_INDEX_NAME
@@ -72,6 +72,9 @@ algolia:
     - collections.html
     - month-archive/index.html
     - Linux/*.html
+google:
+  search_engine_id       : "014151305394849351663:sapnw1h20hy" # YOUR_SEARCH_ENGINE_ID
+  instant_search         : true # false (default), true
 # SEO Related
 google_site_verification : "sNYlrDYSp0P3xsEeWz_vX9n5ps2SbT6TGjqgHFQDaHk"
 bing_site_verification   :
