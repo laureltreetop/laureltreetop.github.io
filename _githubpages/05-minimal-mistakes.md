@@ -109,6 +109,15 @@ header:
 
 1. [Googleカスタム検索](https://cse.google.com/cse/all)（要Googleログイン）にサイトを登録
 1. 検索エンジンの編集→デザイン→レイアウトで「結果のみ」を設定
+1. 設定→基本→詳細設定をクリック
+1. 除外するサイトにアーカイブなどのURLを設定  
+（pageの設定が **paginate_path: /page/:num/** の場合）
+```
+https://domain/month-archive/
+https://domain/page/
+https://domain/categories/
+https://domain/tags/
+```
 1. 保存してコードを取得
 1. Minimal Mistakesの場合はコードがあればOKなので、必要なのはこれ
 ```js
