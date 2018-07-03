@@ -137,10 +137,8 @@ google:
 
 ## インデックスでpostsの本文を省略
 
-### posts
-
 _includes/archive-single.html  
 **truncate: 160** の数字を変える  
-```
-    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 60 }}</p>{% endif %}
+```md
+{% raw %}{% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 60 }}</p>{% endif %}{% endraw %}
 ```
