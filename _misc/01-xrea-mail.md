@@ -3,6 +3,9 @@ title: "カスタムドメインメール"
 description: "無料でカスタムドメインなメールアドレス作ったり。XREAに頼りまくり。"
 permalink: /misc/xrea-mail/
 classes: wide
+header:
+  teaser: /assets/images/xrea-add-new-domain.png
+  og_image: /assets/images/xrea-add-new-domain.png
 ---
 {{ page.description }}
 {: .notice}

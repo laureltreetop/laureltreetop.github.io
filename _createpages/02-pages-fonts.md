@@ -3,6 +3,9 @@ title: "Fonts"
 description: Webフォントとかいろいろ。
 permalink: /create-pages/fonts/
 classes: wide
+header:
+  teaser: /assets/images/material-icon-select.png
+  og_image: /assets/images/material-icon-select.png
 ---
 {{ page.description }}
 {: .notice}

@@ -3,6 +3,9 @@ title: "Freenom & e.t.c."
 description: "無料でカスタムドメインを作成したり、サイト作ったり、メールアドレス作ったり。"
 permalink: /misc/freenom/
 classes: wide
+header:
+  teaser: /assets/images/freenom-new-domains.png
+  og_image: /assets/images/freenom-new-domains.png
 ---
 {{ page.description }}
 {: .notice}

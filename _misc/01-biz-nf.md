@@ -3,6 +3,9 @@ title: "BIZ.NF"
 description: "無料ドメインを作れて、無料でWordPressサイトを立ち上げたり、メールアドレス作ったり、ってどこかでも同じことを書いたような。"
 permalink: /misc/biz-nf/
 classes: wide
+header:
+  teaser: /assets/images/biz-nf-order-plan.png
+  og_image: /assets/images/biz-nf-order-plan.png
 ---
 {{ page.description }}
 {: .notice}

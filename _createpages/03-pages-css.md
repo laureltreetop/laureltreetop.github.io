@@ -3,6 +3,9 @@ title: "CSS小技系"
 description: CSS小技系を集めてみました。
 permalink: /create-pages/css/
 classes: wide
+header:
+  teaser: /assets/images/pages-image-clippings.png
+  og_image: /assets/images/pages-image-clippings.png
 ---
 {{ page.description }}
 {: .notice}

@@ -3,6 +3,9 @@ title: "はてなブログ"
 description: とりあえずはメモりつつ作業。
 permalink: /blogsystem/hateblo/
 classes: wide
+header:
+  teaser: /assets/images/hatebu-share-icons.png
+  og_image: /assets/images/hatebu-share-icons.png
 ---
 {{ page.description }}
 {: .notice}

@@ -3,6 +3,9 @@ title: "Blogger"
 description: 大幅なカスタマイズは難しいけど、やはり安定のBloggerなのかも?
 permalink: /blogsystem/blogger/
 classes: wide
+header:
+  teaser: /assets/images/blogger-tabs.gif
+  og_image: /assets/images/blogger-tabs.gif
 ---
 {{ page.description }}
 {: .notice}

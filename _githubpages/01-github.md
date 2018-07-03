@@ -3,10 +3,9 @@ title: "GitHub"
 description: GitHub Pagesなのですから、当然最初はGitHubの準備や設定やら。
 permalink: /githubpages/github/
 classes: wide
-# categories:
-#   - GitHub Pages
-# tags:
-#   - GitHub
+header:
+  teaser: /assets/images/github-new-repository.png
+  og_image: /assets/images/github-new-repository.png
 ---
 {{ page.description }}
 {: .notice}

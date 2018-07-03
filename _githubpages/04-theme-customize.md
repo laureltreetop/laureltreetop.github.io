@@ -3,12 +3,9 @@ title: "Theme Customize"
 description: テーマ共通のカスタマイズなど。
 permalink: /githubpages/theme-custom/
 classes: wide
-# categories:
-#   - GitHub Pages
-# tags:
-#   - GitHub
-#   - Jekyll
-#   - Theme Customize
+header:
+  teaser: /assets/images/github-custom-gist-old.png
+  og_image: /assets/images/github-custom-gist-old.png
 ---
 {{ page.description }}
 {: .notice}
