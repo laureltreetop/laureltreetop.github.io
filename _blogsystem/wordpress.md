@@ -3,6 +3,9 @@ title: "WordPress"
 description: "今までWordPress.comしか知らなかった。カスタムドメインでも無料で作れるとは…"
 permalink: /blogsystem/wordpress/
 classes: wide
+header:
+  teaser: /assets/images/xrea-wordpress-config.png
+  og_image: /assets/images/xrea-wordpress-config.png
 ---
 {{ page.description }}
 {: .notice}
