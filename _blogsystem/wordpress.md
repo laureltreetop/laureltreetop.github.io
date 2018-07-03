@@ -92,7 +92,8 @@ classes: wide
 
 ### Xdomain編
 
-.tkドメインは登録できない。.mlはできたし.gaや.cfも可能かと。
+.tkドメインは登録できない。.mlはできたし.gaや.cfも可能かと。  
+[CloudFlare](https://www.cloudflare.com/)を噛ませてSSL Flexibleにしてあると、ビジュアルエディタが使えなかったり、プラグインの組み合わせによってはテキストエディタすら使えない状態に。対策方法は今のところ謎。
 {: .notice--warning}
 
 1. [Xdomain](https://www.xdomain.ne.jp/)ユーザ登録
@@ -228,6 +229,20 @@ classes: wide
 + [Infinite-Scroll](https://wordpress.org/plugins/infinite-scroll/)
 : 無限インストールプラグインは何種類かあるけど、JQueryで仕込んだことがある人には、こっちのほうが判りやすいかも。
 
+  + [Coldbox](https://coldbox.miruc.co/)  
+  
+    | item               | value                            |
+    |--------------------|----------------------------------|
+    | Content Selector   | .content-inner                   |
+    | Navigation Selector| .page-numbers                    |
+    | Next Selector      | .page-numbers a.next.page-numbers|
+    | Item Selector      | article                          |
+    | Behavior           | Masonry/Isotope                  |
+
+   （無限インストールの話のついでに）[Baskerville 2](https://wordpress.com/theme/baskerville-2)だと、プラグインで[Jetpack by WordPress.com](https://ja.wordpress.org/plugins/jetpack/)を入れておくと、ダッシュボード→Jetpack→執筆→テーマの拡張→無限スクロール→読者のスクロールに合わせて投稿をさらに読み込む（長い…）で無限スクロールに。
+    {: .notice--info}
+
+
 + [Google Analytics for WordPress by MonsterInsights](https://wordpress.org/plugins/google-analytics-for-wordpress/)
 : Googleアカウントに紐付けられたやつをするするん、っと。ただし現在は後述のやつを使用中。
 
@@ -245,6 +260,9 @@ classes: wide
 
 + [Under Construction](https://ja.wordpress.org/plugins/under-construction-page/)
 : 簡単なので、ちょっとだけ工事中というときに便利。
+
++ [Organize Media Library by Folders](https://ja.wordpress.org/plugins/organize-media-library/)
+: メディアファイルのフォルダを変更できる。各ファイル毎にフォルダを仕分けることも可。
 
 ## 他から引っ越し
 
@@ -355,3 +373,7 @@ Tumblrの記事に「カテゴリ」という概念がない。
 
 + [mod_rewriteでWordPressの管理画面だけアクセスを許可する設定](https://resource-sharing.co.jp/mod-rewrite-redirect-setting/)
 + [リダイレクトを使用してWordPressのログイン画面などのセキュリティを向上させる](https://blue-leaf81.net/archives/1377/)
+
++ CloudFlareを噛ませてSSLをFlexibleにする場合は、`ダッシュボード`→`設定`→`一般`→`サイトアドレス`のURLを http**s**:// にする（カスタマイズのプレビュー画面が出てないときの原因はこれ）
+
++ [CLOUD FLARE + WordPress + 共用サーバーでサイトが崩壊したときの処方箋](https://alaki.co.jp/blog/?p=1715)
