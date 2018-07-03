@@ -1,3 +1,5 @@
+<div class="footer-wrapper">
+<img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&margin=5&data={{ site.url }}" alt="QRcode">
 <div class="page__footer-follow">
   <ul class="social-icons">
     {% if site.data.ui-text[site.locale].follow_label %}
@@ -23,3 +25,5 @@
 </div>
 
 <div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+</div>
