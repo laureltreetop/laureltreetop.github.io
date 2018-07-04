@@ -241,7 +241,20 @@ header:
     | Next Selector      | .page-numbers a.next.page-numbers|
     | Item Selector      | article                          |
     | Behavior           | Masonry/Isotope                  |
+    
+    [Jetpack](https://jetpack.com/?from=automattic)を入れている場合、OFFにする箇所あり  
 
+    + `Jetpack`→`ダッシュボード`→`パフォーマンス`→`画像のパフォーマンス`をOFFに  
+    （ONにすると後述の`Serve images from our global CDN`もONになるため）
+    
+    [![Jetpack & Infinite Scroll](/assets/images/wordpress_infinite-scroll_jetpack-dashboard.png)](/assets/images/wordpress_infinite-scroll_jetpack-dashboard.png)
+
+    + `Jetpack`→`設定`→`Performance & speed`  
+      + Serve images from our global CDN  
+      + Enable Lazy Loading for images
+      
+    [![Jetpack & Infinite Scroll](/assets/images/wordpress_infinite-scroll_jetpack-setting.png)](/assets/images/wordpress_infinite-scroll_jetpack-setting.png)
+    
    （無限インストールの話のついでに）[Baskerville 2](https://wordpress.com/theme/baskerville-2)だと、プラグインで[Jetpack by WordPress.com](https://ja.wordpress.org/plugins/jetpack/)を入れておくと、ダッシュボード→Jetpack→執筆→テーマの拡張→無限スクロール→読者のスクロールに合わせて投稿をさらに読み込む（長い…）で無限スクロールに。
     {: .notice--info}
 
@@ -354,14 +367,17 @@ Tumblrの記事に「カテゴリ」という概念がない。
 
 ## まるごとお引越し
 
-アドレスはそのままでサーバ間のお引越し。
+そのままでサーバ間のお引越し。URL変更可能。
 {: .notice}
 
 1. [All-in-One WP Migration](https://ja.wordpress.org/plugins/all-in-one-wp-migration/)というプラグインをインストール
-1. `All-in-One WP Migration`→`エクスポート`より、エクスポート先を選ぶ
+1. `All-in-One WP Migration`→`エクスポート`    
+引っ越し前と引っ越し後で違うURLになる場合、置換設定も必要
+[![All-in-One　export replace](/assets/images/wordpress_all-in-one_export-replace-import.png)](/assets/images/wordpress_all-in-one_export-replace-import.png)
+1. エクスポート先を選ぶ
 [![All-in-One　export 1](/assets/images/wordpress-all-in-one-export-1.png)](/assets/images/wordpress-all-in-one-export-1.png)
 1. エクスポート先は`ファイル`を選択
-[![All-in-One　export 2](/assets/images/wordpress-all-in-one-export-2.png)](/assets/images/wordpress-all-in-one-export-2.png)
+[![All-in-One　export 3](/assets/images/wordpress-all-in-one-export-2.png)](/assets/images/wordpress-all-in-one-export-2.png)
 1. .wpressなファイルのダウンロードをしばし待つ
 1. 終わったら**旧サーバとアドレスの紐付けを切り離す**
 1. **新サーバとアドレスを紐付ける**
@@ -375,6 +391,7 @@ Tumblrの記事に「カテゴリ」という概念がない。
 ## その他
 
 + [mod_rewriteでWordPressの管理画面だけアクセスを許可する設定](https://resource-sharing.co.jp/mod-rewrite-redirect-setting/)
++ [WordPressの管理画面へのアクセスはリダイレクトさせないようにしたい](https://teratail.com/questions/32946)
 + [リダイレクトを使用してWordPressのログイン画面などのセキュリティを向上させる](https://blue-leaf81.net/archives/1377/)
 
 + CloudFlareを噛ませてSSLをFlexibleにする場合は、`ダッシュボード`→`設定`→`一般`→`サイトアドレス`のURLを http**s**:// にする（カスタマイズのプレビュー画面が出てないときの原因はこれ）
