@@ -10,4 +10,5 @@ group :jekyll_plugins do
 	gem 'jekyll-algolia', '~> 1.0'
 #	gem 'jekyll-archives'
 	gem 'jekyll-redirect-from'
+    gem 'jekyll-data'
 end
