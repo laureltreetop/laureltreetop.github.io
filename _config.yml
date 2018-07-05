@@ -72,6 +72,10 @@ algolia:
     - collections.html
     - month-archive/index.html
     - Linux/*.html
+    - month-archive/*
+    - page/*
+    - categories/*
+    - tags/*
 google:
   search_engine_id       : "014151305394849351663:sapnw1h20hy" # YOUR_SEARCH_ENGINE_ID
   instant_search         : true # false (default), true
