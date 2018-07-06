@@ -21,28 +21,65 @@ GitHub Pagesにて既にサイトを公開している場合は、カスタム�
 1. [Netlify](https://www.netlify.com/)のアカウントを作成
 1. `Sites`→`New site from Git`でサイト設定
     1. `Continuous Deployment`でGitHubを選ぶ
+    [![Netlify](/assets/images/netlify_add-sites-git.png)](/assets/images/netlify_add-sites-git.png)
+    [![Netlify](/assets/images/netlify_add-sites_choose.png)](/assets/images/netlify_add-sites_choose.png)
     1. repository一覧が出るので選ぶ
-    1. `Deploy settings for`なんちゃら、を設定して`Deploy site`
-    1. `Build command`に`jekyll build`
-    1. `Publish directory`に`_site`
-	
-    このタイミングでGitHubリポジトリのDeploy keysやwebhooksにNetlifyが追加されてる
+    [![Netlify](/assets/images/netlify_add-sites_git-repository.png)](/assets/images/netlify_add-sites_git-repository.png)
+    1. Build opitionsなどを設定だけど、あとでコマンドなどの設定も追加するんだよね…とりあえずで
+      + `Build command`に`jekyll build && jekyll algolia`
+      + `Publish directory`に`_site`
+    [![Netlify](/assets/images/netlify_add-sites_build-options.png)](/assets/images/netlify_add-sites_build-options.png)
+      + Show advanced
+    [![Netlify](/assets/images/netlify_create-new-site-advanced.png)](/assets/images/netlify_create-new-site-advanced.png)
+      + `ALGOLIA_API_KEY`の値としてAlgoliaの`APPS`→作成したアプリ→`API Keys`→`Admin API Key`を設定
+    [![Netlify](/assets/images/netlify_create-new-site-advanced-value.png)](/assets/images/netlify_create-new-site-advanced-value.png)
+    
+    このタイミングでGitHubリポジトリのSettingsのDeploy keysやwebhooksにNetlifyが追加されてる
 	{: .notice--info}
 1. お好みで`Default subdomain`を分かりやすい名前に変えたり
-1. `Build & deploy`→`Continuous Deployment`→`Build environment variables`に`ALGOLIA_API_KEY
-`を設定。値はAlgoliaの`APPS`→作成したアプリ→`API Keys`→`Admin API Key`
-1. `Dmain management`→`Domains`→`Custom domains`→`Add custom domain`へ
-   1. カスタムドメインを入力
-   1. <i class="fas fa-exclamation-triangle" style="color: orange"></i>`Check DNS configuration`と怒られるが、しばらくすると`Use Netlify DNS`に行けるように
-   1. ボタンをポチポチと押していき、最後に出てくるネームサーバ（複数パターンあり）を設定する
-   1. 自動でDNSにこういうレコードができてる
+1. `Domain management`→`Domains`→`Custom domains`→`Add custom domain`へ
+[![Netlify](/assets/images/netlify_domains.png)](/assets/images/netlify_domains.png)
+   + DNSをNetlifyにする場合
+     1. カスタムドメインを入力
+     1. <i class="fas fa-exclamation-triangle" style="color: orange"></i>`Check DNS configuration`と怒 られるが、しばらくすると`Use Netlify DNS`に行けるように
+     1. ボタンをポチポチと押していき、最後に出てくるネームサーバ（複数パターンあり）を設定する
+     1. NetlifyのDNS設定で自動でこういうレコードができてる
 
-     name | Type    | Target          |
-    ------|---------|-----------------|
-     @    | NETLIFY | www.netlify.com |
-     www  | NETLIFY | www.netlify.com |
+     | name | Type    | Target          |
+     |------|---------|-----------------|
+     | @    | NETLIFY | www.netlify.com |
+     | www  | NETLIFY | www.netlify.com |
+
+   + DNSは今までどおりにする場合（全然まとまってないけど）
+     + GitHub Pagesにカスタムドメインでの設定でDNSはこうなっているかと
+     
+     | name | Type  | Target                    |
+     |------|-------|---------------------------|
+     | @    | A     | 185.199.108.153           |
+     | @    | A     | 185.199.109.153           |
+     | @    | A     | 185.199.110.153           |
+     | @    | A     | 185.199.111.153           |
+     | www  | CNAME | ユーザID.github.io         |
+     | www  | CAA   | 0 issue "letsencrypt.org" |
+     
+     + でもあとどうだったかな…?
+     + これは前に設定したときのDNS設定
+     
+     | name | Type  | Target                    |
+     |------|-------|---------------------------|     
+     | @    | A     | 104.198.14.52             |
+     | www  | CNAME | [サイト名].netlify.com     |
 
 1. `Domain management`→`HTTPS`→`Verify DNS configuration`でLet's Encryptな証明書を作成できる[^lets-encrypt]
+[![Netlify](/assets/images/netlify_domains_add-custom-domain_https-wait-propagation.png)](/assets/images/netlify_domains_add-custom-domain_https-wait-propagation.png)
+1. 設定方法を忘れてしまった…[Troubleshooting](https://www.netlify.com/docs/ssl/#troubleshooting)を見て設定した記憶が
+[![Netlify](/assets/images/netlify_domains_https-dns-verification-ok.png)](/assets/images/netlify_domains_https-dns-verification-ok.png)
+1. _redirectsファイルを作成
+```
+# Redirect default Netlify subdomain to primary domain
+https://<site-name>.netlify.com/* https://<custom-subdomain>/:splat 301!
+```
+[![Netlify](/assets/images/netlify_redirect-subdomain.png)](/assets/images/netlify_redirect-subdomain.png)
 1. netlify.tomlを作成
 ```toml
 # netlify.toml
@@ -52,19 +89,9 @@ GitHub Pagesにて既にサイトを公開している場合は、カスタム�
   publish = "_site"
 ```
 1. `Deploys`→`Trigger deploy`で叩いてみる
+1. うまくいったら、あとはgit pushのたびに良きに計らってくれる
 
 [^lets-encrypt]: DNS設定の流れですぐに設定しようとしたら、最低1時間くらいは待ちやがれ、と怒られた(´・ω・`)
-
-#### 余談
-
-カスタムドメインに関しては[Netlify builds, deploys, and hosts your front end.](https://www.netlify.com/docs/custom-domains/)参照。
-NetlifyのDNSを使わずに設定したい場合はこの設定らしい。
-
-| name | Type  | Target                |
-|------|-------|-----------------------|
-| @    | A     | 104.198.14.52         |
-| www  | CNAME | [サイト名].netlify.com |
-
 
 ## Jekyll
 
@@ -79,7 +106,7 @@ algolia:
 ```ruby
 gem 'github-pages', group: :jekyll_plugins
 group :jekyll_plugins do
-	gem 'jekyll-algolia', '~> 1.0'
+	gem 'jekyll-algolia'
 end
 ```
 1. でもって`bundle update`を叩く
