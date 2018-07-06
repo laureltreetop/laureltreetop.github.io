@@ -8,7 +8,7 @@ gem 'wdm', '~> 0.1.1' if Gem.win_platform?
 group :jekyll_plugins do
     gem 'jekyll-last-modified-at'
 	gem 'jekyll-algolia'
-#	gem 'jekyll-archives'
+##	gem 'jekyll-archives'
 	gem 'jekyll-redirect-from'
     gem 'jekyll-data'
 end
