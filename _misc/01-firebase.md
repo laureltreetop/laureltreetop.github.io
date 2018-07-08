@@ -10,12 +10,7 @@ header:
 {{ page.description }}
 {: .notice}
 
-## 設定
-
-### インストール
-
-1. [Firebase](https://firebase.google.com/)の[コンソール](https://console.firebase.google.com/?hl=ja)より、プロジェクトを作成したりドメイン設定をしたり（謎の優先順位）
-  + クイックセットアップでうまくいかないときは、詳細設定で提示されるTXTレコードを追加
+## インストール
 
 1. [Node.js](https://nodejs.org/ja/)をここからダウンロードして、インストール
 1. （WindowsメニューのNode.jsではなく）`Node.js command prompt`があるので、開く
@@ -31,7 +26,37 @@ $ npm --version
 $ npm install -g firebase-tools
 ```
 
-### 作成
+1. [Firebase](https://firebase.google.com/)の[コンソール](https://console.firebase.google.com/?hl=ja)より、プロジェクトを作成
+
+## カスタムドメイン設定
+
+1. プロジェクトを選んで開発→Hosting→ドメインを接続
+[![Cloud Flare Hosting default](/assets/images/firebase_hosting-default.png)](/assets/images/firebase_hosting-default.png)
+1. ドメインの追加
+[![Cloud Flare Hosting default](/assets/images/firebase_hosting-domain-setting.png)](/assets/images/firebase_hosting-domain-setting.png)
+1. DNSに指定された値をAレコードに追加
+[![Cloud Flare Hosting dns setting](/assets/images/firebase_hosting-domain-dns-setting.png)](/assets/images/firebase_hosting-domain-dns-setting.png)  
+1. 既存のサイトから移行する場合は、詳細設定で提示されるTXTレコードを追加[^add-txt]
+[![Cloud Flare Hosting dns setting](/assets/images/firebase_hosting-domain-dns-setting-txt.png)](/assets/images/firebase_hosting-domain-dns-setting-txt.png)
+1. 設定待ち
+[![Cloud Flare Hosting dns setting](/assets/images/firebase_hosting-waiting.png)](/assets/images/firebase_hosting-waiting.png) 
+1. DNS確認待ち?
+[![Cloud Flare Hosting dns setting](/assets/images/firebase_hosting-pending.png)](/assets/images/firebase_hosting-pending.png) 
+1. 完了
+[![Cloud Flare Hosting dns setting](/assets/images/firebase_hosting-done.png)](/assets/images/firebase_hosting-done.png) 
+  
+[^add-txt]: クイックセットアップでうまくいかないときにも。
+
+### [CloudFlare](https://www.cloudflare.com/)を使っている場合
+  
+DNS onlyにしておくこと。 [CloudFlareな記事](/misc/cloudflare/)も参照。  
+[![Cloud Flare Orange](/assets/images/tumblr-cloudflare-orange.png)](/assets/images/tumblr-cloudflare-orange.png)  
+`DNS and HTTP proxy(CDN)`（オレンジ色の雲アイコン）ではなく、    
+[![Cloud Flare Gray](/assets/images/tumblr-cloudflare-gray.png)](/assets/images/tumblr-cloudflare-gray.png)
+`DNS only`（グレーの雲アイコン）にするべし。  
+（説明画像は過去にTumblrの記事にて使っていたやつ）
+
+## 作成
 
 1. Git Bashでloginしようとすると、エラーが出る
 ```sh
@@ -92,47 +117,11 @@ $ firebase serve
 $ firebase deploy
 ```
 
-とりあえず器だけはできた…
+とりあえず器だけはできた…  
+さっそく無駄に背景やらファビコンやらを仕掛け済み。
 [![Firebase hosting setup complete](/assets/images/firebase_hosting-setup-complete.png)](/assets/images/firebase_hosting-setup-complete.png)
 
-{% comment %}
-## お?
-
-[Firebase Hostingを使って静的Webサイトを独自ドメインかつSSL証明書付きで公開する](https://reservoir.allajah.com/posts/firebase-hosting-jekyll.html)というのを発見。なるほど、GitHubと連携かぁ。
-
-とりあえずさっきのを削除
-```sh
-$ firebase hosting:disable
-```
-GitHubでリポジトリをコマンドで作成する
-```sh
-$ echo "# firebase" >> README.md
-$ git init
-$ git add README.md
-$ git remote add origin git@github.com:<GitHubUserName>/<repository>.git
-$ git push -u origin master
-```
-
-もっかい作り直し、今度はpublicではなく`_site`へ
-
-firebaseなリポジトリをcommitしたり
-
-で、ログイン
-```sh
-$ firebase login:ci
-```
-
-…keyとか出てるのにメモできないので仕切り直し
-```sh
-$ firebase login:ci > key.log
-```
-
-webブラウザに飛ばされた。Firebase CLIに権限を渡す
-
-…保留。
-{% endcomment %}
-
-### 複数のプロジェクトを切り替える
+## 複数のプロジェクトを切り替える
 
 1. 開発環境と切り替えながら使う
 1. 開発用プロジェクトを作成
