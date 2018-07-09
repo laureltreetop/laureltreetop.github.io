@@ -1,8 +1,5 @@
-// $('a').smoothScroll();
-//$('a[href^="#"]:not([href$="#"])').smoothScroll();
-
 $(function(){
-   $('a[href^="#"]').click(function() {
+      $('a[href^="#"]').click(function() {
       var speed = 400;
       var href= $(this).attr('href');
       var target = $(href == '#' || href == '' ? 'html' : href);
@@ -21,7 +18,6 @@ $("h1.page__title").text(
 $(function() {
 	var topBtn = $('#page-top');
 	topBtn.hide();
-	//スクロールが100に達したらボタン表示
 	$(window).scroll(function() {
 		if ($(this).scrollTop() > 100) {
 			topBtn.fadeIn();
@@ -29,12 +25,22 @@ $(function() {
 			topBtn.fadeOut();
 		}
 	});
+    /*
 	topBtn.click(function() {
 		$('body,html').animate({
 			scrollTop: 0
 		}, 500);
 		return false;
 	});
+    */
+    topBtn.click(function() {
+        $.smoothScroll({
+            scrollElement: $('body,html'),
+            scrollTarget: '#page-top',
+            speed: 500,
+        });
+    return false;
+    });
 });
 
 $(document).ready(
