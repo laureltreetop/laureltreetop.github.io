@@ -19,10 +19,10 @@ header:
 #### サーバ設定
 
 1. [XREA](https://www.xrea.com/)への登録方法は端折りますよっと
-1. DNS設定に必要な情報は右上のアカウントから`契約情報`→`サーバースペック`→`IP`  
+1. DNS設定に必要な情報は右上のアカウントから**契約情報→サーバースペック→IP**  
 [![XREA server spec](/assets/images/xrea-server-spec-ip.png)](/assets/images/xrea-server-spec-ip.png)
 1. DNSサーバにAレコードを追加[^cloudflare]
-1. ダッシュボードから`ドメイン設定`→`ドメイン設定の新規作成`  
+1. **ダッシュボード→ドメイン設定→ドメイン設定の新規作成**  
 [![XREA add new domain](/assets/images/xrea-add-new-domain.png)](/assets/images/xrea-add-new-domain.png)
 1. で、ドメインを入力  
 [![XREA add new domain](/assets/images/xrea-add-new-domain-setting.png)](/assets/images/xrea-add-new-domain-setting.png)
@@ -37,7 +37,7 @@ header:
 [![MySql](/assets/images/xrea-wordpress-mysql.png)](/assets/images/xrea-wordpress-mysql.png)
 1. 本当にそうなの? と思いつつ作成  
 [![MySql](/assets/images/xrea-wordpress-mysql-setting.png)](/assets/images/xrea-wordpress-mysql-setting.png)
-1. `サイト設定`→`ツールセキュリティー`→`CMSインストール`→`WordPress`って本当にあった  
+1. **サイト設定→ツールセキュリティー→CMSインストール→WordPress**って本当にあった  
 [![WordPress install](/assets/images/xrea-wordpress-install.png)](/assets/images/xrea-wordpress-install.png)
 1. サイトの選択肢に無い…  
 [![Site setting](/assets/images/xrea-wordpress-install-site-no-select.png)](/assets/images/xrea-wordpress-install-site-no-select.png)
@@ -63,9 +63,9 @@ header:
 #### 403 error
 
 + タイミング的に一般設定の「http://」を「https://」に変えた直後
-+ [CloudFlare](https://www.cloudflare.com/)でPage Rulesに`SSL: Full`に変更したら見えるように
++ [CloudFlare](https://www.cloudflare.com/)でPage Rulesに**SSL: Full**に変更したら見えるように
 + 管理画面には入れない
-+ [Sixcore（シックスコア）に「WordPress国外IPアクセス制限」機能が追加されていた！](https://gori.me/wordpress/29316)によると、`WordPressログイン制限`が怪しそう→OFFにしたら繋がった
++ [Sixcore（シックスコア）に「WordPress国外IPアクセス制限」機能が追加されていた！](https://gori.me/wordpress/29316)によると、**WordPressログイン制限**が怪しそう→OFFにしたら繋がった
 
 ### StarServer編
 
@@ -88,7 +88,7 @@ header:
 
 #### カスタムドメインに
 
-1. `サイトアドレスの変更`→`他社管理のドメインを利用`
+1. **サイトアドレスの変更→他社管理のドメインを利用**
 1. …あとなんだったっけ
 
 とにかく、サクッと完了。
@@ -116,7 +116,7 @@ header:
 [![000webhost password](/assets/images/000webhost-add-website-password.png)](/assets/images/000webhost-add-website-password.png)
 1. 今のうちにカスタムドメインを登録
 [![000webhost custom domain](/assets/images/000webhost-custom-domain.png)](/assets/images/000webhost-custom-domain.png)
-1. `My domains`→`Add domain`から設定
+1. **My domains→Add domain**から設定
 [![000webhost custom domain](/assets/images/000webhost-add-domain.png)](/assets/images/000webhost-add-domain.png)
 1. Point Domainを選択
 [![000webhost point domain](/assets/images/000webhost-point-domain.png)](/assets/images/000webhost-point-domain.png)
@@ -124,7 +124,7 @@ header:
 [![000webhost custom domain](/assets/images/000webhost-point-domain-setting.png)](/assets/images/000webhost-point-domain-setting.png)
 1. どうもwww有り無し両方のレコードが必要?
 [![000webhost domain 2 cname](/assets/images/000webhost-add-domain-2-record.png)](/assets/images/000webhost-add-domain-2-record.png)
-1. `Build website`よりサイトを作成
+1. **Build website**よりサイトを作成
 [![000webhost build website](/assets/images/000webhost-build-website.png)](/assets/images/000webhost-build-website.png)
 1. WordPressをインストール
 [![000webhost build wordpress](/assets/images/000webhost-build-wordpress.png)](/assets/images/000webhost-build-wordpress.png)
@@ -134,9 +134,9 @@ header:
 [![000webhost install wordpress](/assets/images/000webhost-wordpress-conf-start.png)](/assets/images/000webhost-wordpress-conf-start.png)
 
 {% comment %}
-1. うまくいかないので、`Park domain`も試してみる
+1. うまくいかないので**Park domain**も試してみる
 [![000webhost park domain](/assets/images/000webhost-park-domain.png)](/assets/images/000webhost-park-domain.png)
-1. カスタムドメインを設定、ネームサーパを`ns01.000webhost.com`と`ns02.000webhost.com`に変更
+1. カスタムドメインを設定、ネームサーパを**ns01.000webhost.com**と**ns02.000webhost.com**に変更
 [![000webhost park domain](/assets/images/000webhost-park-domain-setting.png)](/assets/images/000webhost-park-domain-setting.png)
 1. ネームサーバ待ち
 [![000webhost park domain](/assets/images/000webhost-park-domain-wait-nameserver.png)](/assets/images/000webhost-park-domain-wait-nameserver.png)
@@ -145,7 +145,7 @@ header:
 1. WordPressインストール待ち
 [![000webhost install wordpress](/assets/images/000webhost-wordpress-install-wait.png)](/assets/images/000webhost-wordpress-install-wait.png)
 1. なんで設定画面に行かないんだろう…?
-1. `Manage`→`SET MX RECORSD`からMXレコードを設定してみる
+1. **Manage→SET MX RECORSD**からMXレコードを設定してみる
 1. Googleの設定はサクッとできるっぽい?
 [![000webhost park domain](/assets/images/000webhost-set-mx-record.png)](/assets/images/000webhost-set-mx-record.png)
 
@@ -170,7 +170,7 @@ header:
 1. FTPでアップロード
 1. その間にMySQLの設定
 
-アップロードが終了すると、`【サイトURL】/wp-admin/setup-config.php`から`有名な5分間`を開始できるように  
+アップロードが終了すると、**【サイトURL】/wp-admin/setup-config.php**から**有名な5分間**を開始できるように  
 [![WordPress Pre-setting](/assets/images/wordpress_pre-setting.png)](/assets/images/wordpress_pre-setting.png)
 {% endcomment %}
 
@@ -185,8 +185,8 @@ header:
 + [Akismet Anti-Spam](https://wordpress.org/plugins/akismet/)
   1. [Akismet Anti-Spam](https://wordpress.org/plugins/akismet/)を入れようとしたら、[アカウントを設定](https://akismet.com/account/)しないといけないらしい
   1. Jetpack経由で連携
-  1. [Account](https://akismet.com/account/)でAdd Subscription
-  1. Personalを選択が正解のなのだろうが、`Name your price`とはなんぞや[^name-your-price]
+  1. [Account](https://akismet.com/account/)で**Add Subscription**
+  1. Personalを選択が正解のなのだろうが、**Name your price**とはなんぞや[^name-your-price]
   1. <i class="fas fa-yen-sign"></i>6,000/YEARだと…?  
 [![WordPress Akismet 6000yen](/assets/images/wordpress_akismet-subscription-personal-6000yen.png)](/assets/images/wordpress_akismet-subscription-personal-6000yen.png)
   1. 価格のスライダーを左端に寄せたら、無料設定になったっぽい  
@@ -198,17 +198,17 @@ header:
 : カテゴリをまとめて編集したり。特にカテゴリがない記事をインポートしたときに便利。
   1. 先に移動先のカテゴリを作っておく
   1. Batch Catプラグインをインストール
-  1. ツール→Batch Cat
+  1. **ツール→Batch Cat**
   1. カテゴリ「未分類」を選んでSearch
-  1. カテゴリを選んで`Set categories to posts`
-  1. カテゴリから「未分類」を削除するには`Drop categories from posts`
+  1. カテゴリを選んで**Set categories to posts**
+  1. カテゴリから「未分類」を削除するには**Drop categories from posts**
 
 + [All-in-One WP Migration](https://ja.wordpress.org/plugins/all-in-one-wp-migration/)
 : 後述の通り、まるっと中身のバックアップを取ってくれる。
 
 + [Automatic Post Thumbnail](http://www.sanisoft.com/blog/2010/04/19/wordpress-plugin-automatic-post-thumbnail/)
 : 記事の最初にある記事をアイキャッチとして設定してくれるのだが、お引越しにも普段遣いにも便利。  
-`設定`→`Automatic Post Thumbnail`で一括設定してくれる。
+**設定→Automatic Post Thumbnail**で一括設定してくれる。
 
 + [Pz-LinkCard](https://wordpress.org/plugins/pz-linkcard/)
 : 使い方は[WordPressでリンクをカード形式で表示する Pz-LinkCard](https://popozure.info/pz-linkcard)
@@ -224,8 +224,8 @@ header:
 > CJT Plugin has been installed throught Wordpress Plugins manager page. In order for CJT Plugin to work correctly you must install it throught	CJT-Instalaltion page.
 > Please or you can go to the installation page directly through the	CSS & Javascript Toolbox page.
 > Dismiss
-  1. `CJT-Instalaltion page`リンクから確認画面が出るのでインストール
-  1. さっそくスクリプトを追加しようと`New Code Block`から作成しようとしたら、カスペルさんがフィッシングサイトへのポップアップということでブロックされた…  
+  1. **CJT-Instalaltion page**リンクから確認画面が出るのでインストール
+  1. さっそくスクリプトを追加しようと**New Code Block**から作成しようとしたら、カスペルさんがフィッシングサイトへのポップアップということでブロックされた…  
   1. と思いきや、設定の下にメニューが追加されてて、先ほど名前をつけたCode Blockもあった
   1. 以降、使い方は[WordPressの記事に、個別にCSSやJSを追加する高機能プラグイン](http://beginnersdomain.net/plugin/css-javascript-toolbox/)を参照
 
@@ -244,18 +244,18 @@ header:
     
     [Jetpack](https://jetpack.com/?from=automattic)を入れている場合、OFFにする箇所あり  
 
-    + `Jetpack`→`ダッシュボード`→`パフォーマンス`→`画像のパフォーマンス`をOFFに  
-    （ONにすると後述の`Serve images from our global CDN`もONになるため）
+    + **Jetpack→ダッシュボード→パフォーマンス→画像のパフォーマンス**をOFFに  
+    （ONにすると後述の**Serve images from our global CDN**もONになるため）
     
     [![Jetpack & Infinite Scroll](/assets/images/wordpress_infinite-scroll_jetpack-dashboard.png)](/assets/images/wordpress_infinite-scroll_jetpack-dashboard.png)
 
-    + `Jetpack`→`設定`→`Performance & speed`  
+    + **Jetpack→設定→Performance & speed**
       + Serve images from our global CDN  
       + Enable Lazy Loading for images
       
     [![Jetpack & Infinite Scroll](/assets/images/wordpress_infinite-scroll_jetpack-setting.png)](/assets/images/wordpress_infinite-scroll_jetpack-setting.png)
     
-   （無限インストールの話のついでに）[Baskerville 2](https://wordpress.com/theme/baskerville-2)だと、プラグインで[Jetpack by WordPress.com](https://ja.wordpress.org/plugins/jetpack/)を入れておくと、ダッシュボード→Jetpack→執筆→テーマの拡張→無限スクロール→読者のスクロールに合わせて投稿をさらに読み込む（長い…）で無限スクロールに。
+   （無限インストールの話のついでに）[Baskerville 2](https://wordpress.com/theme/baskerville-2)だと、プラグインで[Jetpack by WordPress.com](https://ja.wordpress.org/plugins/jetpack/)を入れておくと、**ダッシュボード→Jetpack→執筆→テーマの拡張→無限スクロール→読者のスクロールに合わせて投稿をさらに読み込む**（長い…）で無限スクロールに。
     {: .notice--info}
 
 
@@ -286,25 +286,25 @@ header:
 
 #### ライブドア側
 
-1. `ブログ設定`→`バックアップ`
-1. `改行`だけは`改行をそのまま出力`に変更
-1. `ブログのデータを書き出す`をクリック
+1. **ブログ設定→バックアップ**
+1. **改行**だけは**改行をそのまま出力**に変更
+1. **ブログのデータを書き出す**をクリック
 1. 一呼吸する（一定時間が経過したら、なのだそうで）
-1. `こちらのリンクをクリック`をクリック
+1. **こちらのリンクをクリック**をクリック
 1. 画像を[GetHTMLW](http://www.vector.co.jp/soft/win95/net/se077067.html)などのツールで収集
-1. 必要なのは`livedoor.blogimg.jp`→`【ライブドアアカウント】`→`imgs`のみ
+1. 必要なのは**livedoor.blogimg.jp→【ライブドアアカウント】→imgs**のみ
 
 #### WordPress側
 
-1. 画像が入っている`imgs`フォルダの中身を、WordPressの`public_html`→`wp-content`→`uploads`へ
-1. `【引越し先URL】/wp-content/uploads/imgs/【ディレクトリのいくつか下にあるファイル名】`で画像が見えるか確認
+1. 画像が入っている**imgs**フォルダの中身を、WordPressの**public_html→wp-content→uploads**へ
+1. **【引越し先URL】/wp-content/uploads/imgs/【ディレクトリのいくつか下にあるファイル名】**で画像が見えるか確認
 1. backup.txtを開いて全置換
-: 置換前 `http://livedoor.blogimg.jp/【ライブドアアカウント】/imgs/`
-: 置換後 `【引越し先URL】/wp-content/uploads/imgs/`
+: 置換前 http://livedoor.blogimg.jp/【ライブドアアカウント】/imgs/
+: 置換後 【引越し先URL】/wp-content/uploads/imgs/
 1. 別名で保存しておく
-1. ダッシュボード→設定→パーマリンク設定を変更
-: `カスタム構造`を選択して`/archives/%postname%.html`に書き換え
-1. `ツール`→`インポート`→`Movable Type と TypePad`をインストール
+1. **ダッシュボード→設定→パーマリンク設定**を変更
+: **カスタム構造**を選択して**/archives/%postname%.html**に書き換え
+1. **ツール→インポート→Movable Type と TypePad**をインストール
 1. インポーターを実行して、全置換後のファイルを読み込ませる
 
 …で完了だったかな。  
@@ -320,23 +320,23 @@ header:
 #### アプリを作成してインストール
 
 1. カスタムドメインを設定している場合は解除
-1. `ツール`→`インポート`→`Tumblr`をインストール
+1. **ツール→インポート→Tumblr**をインストール
 1. インポーターを実行
-1. `https://www.tumblr.com/oauth/apps`へ飛ぶ
-1. `アプリを登録する`をクリック
+1. **https://www.tumblr.com/oauth/apps**へ飛ぶ
+1. **アプリを登録する**をクリック
 1. いろいろ記入  
   + アプリケーション名（適当に）
   + アプリケーションの説明（適当に）
   + 管理用の連絡先メール（これは既に入っているかと）
   + アプリケーションウェブサイト（引越し先のURLとか）
   + デフォルトのコールバックURL（同上）
-1. `アプリを登録する`ボタンの上にいろいろ書いてある
+1. **アプリを登録する**ボタンの上にいろいろ書いてある
 1. それぞれインポーターへ入力
   + OAuth Consumer Keyをインポーター画面へ
-  + `Show secret key`をクリックすると表示されるKeyも入力
-1. `Authorize the Application`をクリック
+  + **Show secret key**をクリックすると表示されるKeyも入力
+1. **Authorize the Application**をクリック
 1. さきほどのアプリケーション名で確認が出てくるので、許可
-1. 認証ができたら`このブログをインポート`というボタンがあるのでクリック
+1. 認証ができたら**このブログをインポート**というボタンがあるのでクリック
 
 これでインポート終了。
 
@@ -346,11 +346,11 @@ header:
 {: .notice}
 
 1. [Tumblr2HatenaBlog](http://tumblr2hatenablog.herokuapp.com/)からエクスポート
-1. `Movable TypeとTypePad`を使ってどちらかの方法でインポート
+1. **Movable TypeとTypePad**を使ってどちらかの方法でインポート
 
 [![WordPress Movable Type](/assets/images/wordpress_movable-import.png)](/assets/images/wordpress_movable-import.png)
 + ファイルを選択してインポート
-+ エクスポートしたファイルを`mt-export.txt`にリネームし、FTPで`/wp-content/`にアップロードしてインポート
++ エクスポートしたファイルを**mt-export.txt**にリネームし、FTPで**/wp-content/**にアップロードしてインポート
 
 ただし、この方法だとタグをインポートすることができないっぽい?
 
@@ -360,8 +360,8 @@ Tumblrの記事に「カテゴリ」という概念がない。
 「未分類」になっているのを整理する。
 {: .notice}
 
-1. `ツール`→`インポート`→`カテゴリー・タグ変換ツール`をインストール
-1. `タグをカテゴリーに変換`を使う
+1. **ツール→インポート→カテゴリー・タグ変換ツール**をインストール
+1. **タグをカテゴリーに変換**を使う
 1. すべて選択して、変換実行
 1. あとは前述のBatch Catを使ったり
 
@@ -371,12 +371,12 @@ Tumblrの記事に「カテゴリ」という概念がない。
 {: .notice}
 
 1. [All-in-One WP Migration](https://ja.wordpress.org/plugins/all-in-one-wp-migration/)というプラグインをインストール
-1. `All-in-One WP Migration`→`エクスポート`    
+1. **All-in-One WP Migration→エクスポート**    
 引っ越し前と引っ越し後で違うURLになる場合、置換設定も必要
 [![All-in-One　export replace](/assets/images/wordpress_all-in-one_export-replace-import.png)](/assets/images/wordpress_all-in-one_export-replace-import.png)
 1. エクスポート先を選ぶ
 [![All-in-One　export 1](/assets/images/wordpress-all-in-one-export-1.png)](/assets/images/wordpress-all-in-one-export-1.png)
-1. エクスポート先は`ファイル`を選択
+1. エクスポート先は**ファイル**を選択
 [![All-in-One　export 3](/assets/images/wordpress-all-in-one-export-2.png)](/assets/images/wordpress-all-in-one-export-2.png)
 1. .wpressなファイルのダウンロードをしばし待つ
 1. 終わったら**旧サーバとアドレスの紐付けを切り離す**
@@ -386,7 +386,6 @@ Tumblrの記事に「カテゴリ」という概念がない。
 [![All-in-One import](/assets/images/wordpress-all-in-one-import.png)](/assets/images/wordpress-all-in-one-import.png)
 1. これで中身のお引越し完了
 + 念のため、パーマネントリンクの設定とかをチェック
-+ URLは`http://`なのか`https://`なのか、とか
 
 ## その他
 
@@ -394,6 +393,9 @@ Tumblrの記事に「カテゴリ」という概念がない。
 + [WordPressの管理画面へのアクセスはリダイレクトさせないようにしたい](https://teratail.com/questions/32946)
 + [リダイレクトを使用してWordPressのログイン画面などのセキュリティを向上させる](https://blue-leaf81.net/archives/1377/)
 
-+ CloudFlareを噛ませてSSLをFlexibleにする場合は、`ダッシュボード`→`設定`→`一般`→`サイトアドレス`のURLを http**s**:// にする（カスタマイズのプレビュー画面が出てないときの原因はこれ）
++ CloudFlareを噛ませてSSLをFlexibleにする場合は、**ダッシュボード→設定→一般→サイトアドレス**のURLを http**s**:// にする（カスタマイズのプレビュー画面が出てないときの原因はこれ）
 
 + [CLOUD FLARE + WordPress + 共用サーバーでサイトが崩壊したときの処方箋](https://alaki.co.jp/blog/?p=1715)
++ URLのwww有無は、.htaccessで頑張らずに**ダッシュボード→設定→一般**で大丈夫
+  + 自分は壊してしまうのが得意なので、慎重にサイトアドレスを修正して、サイトがちゃんと表示されたのを見てWordPressアドレスを変えた
++ 投稿記事に日付だけじゃなく時刻も入れたいなぁと調べてたら、**ダッシュボード→設定→一般→日付のフォーマット**に時刻も無理やり入れてしまうという荒業が。
