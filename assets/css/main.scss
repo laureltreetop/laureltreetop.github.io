@@ -243,16 +243,22 @@ li.folder-close {
 */
 
 .toc__items {
-	a:link, a:visited { color: $text-color; }
-	ul > li > ul > li {
-		padding-left: 1em;
-	}
-	:target {
-		font-weight: bold;
-	}
-	:not(:target) {
-		font-weight: italic;
-	}
+    a:link, a:visited { color: $text-color; }
+    ul > li > ul > li {
+        padding-left: 1em;
+    }
+    :target {
+        font-weight: bold;
+    }
+    :not(:target) {
+        font-weight: italic;
+    }
+    > ul > li {
+        font-size: $type-size-7;
+        > ul > li {
+            font-size: $type-size-5;
+        }
+    }
 }
 
 .notice--info li {
