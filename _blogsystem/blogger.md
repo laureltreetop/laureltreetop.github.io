@@ -253,7 +253,8 @@ img{max-width:100%; height:auto;}
 
 #### CSSに追加
 
-`<b:skin>...</b:skin>`の中に置いてもいいし、`<style>...</style>`で囲ってスクリプトの近くに置いても。
+`<b:skin>...</b:skin>`の中に置いてもいいし、`<style>...</style>`で囲ってスクリプトの近くに置いても。  
+`grid-area`を使っているのは、この変更をしたBloggerのテンプレートが「前の投稿」が右側、「次の投稿」が左側にあったため。
 <script src="https://gist.github.com/laureltreetop/c37ac1d538b2d14091ee44031157b8d6.js?file=pager-title.css"></script>
 
 #### スクリプトを追加
