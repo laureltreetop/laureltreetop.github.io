@@ -90,6 +90,7 @@ $("#PopularPosts1,#BlogArchive1,#Label1").addClass("module");
 
 「前の投稿」「次の投稿」リンクを、その記事のタイトルに変更。  
 最初の行にあるJQueryは、他で設定している場合は不要。
+これはガジェットで変更するバージョンですが、直接テンプレートを変更するやり方も後述します。
 
 ```html
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -98,18 +99,18 @@ $("#PopularPosts1,#BlogArchive1,#Label1").addClass("module");
 #blog-pager-older-link {font-size:100%;width:200px;text-align:right;} 
 </style> 
 <script type="text/javascript">
-$(document).ready(function(){ 
-var newerLink = $("a.blog-pager-newer-link").attr("href"); 
-$("a.blog-pager-newer-link").load(newerLink+" .post-title:first", function() { 
-var newerLinkTitle = $("a.blog-pager-newer-link").text(); 
-$("a.blog-pager-newer-link").text("<< " + newerLinkTitle); 
-}); 
-var olderLink = $("a.blog-pager-older-link").attr("href"); 
-$("a.blog-pager-older-link").load(olderLink+" .post-title:first", function() { 
-var olderLinkTitle = $("a.blog-pager-older-link").text(); 
-$("a.blog-pager-older-link").text(olderLinkTitle + " >>");//rgt 
-}); 
-}); 
+$(document).ready(function () {
+    var newerLink = $("a.blog-pager-newer-link").attr("href");
+    $("a.blog-pager-newer-link").load(newerLink + " .post-title:first", function () {
+        var newerLinkTitle = $("a.blog-pager-newer-link").text();
+        $("a.blog-pager-newer-link").text("<< " + newerLinkTitle);
+    });
+    var olderLink = $("a.blog-pager-older-link").attr("href");
+    $("a.blog-pager-older-link").load(olderLink + " .post-title:first", function () {
+        var olderLinkTitle = $("a.blog-pager-older-link").text();
+        $("a.blog-pager-older-link").text(olderLinkTitle + " >>"); //rgt 
+    });
+});
 </script>
 ```
 
@@ -241,6 +242,25 @@ img{max-width:100%; height:auto;}
     <data:post.body/>
 </b:if>
 ```
+
+### 「前の投稿」「次の投稿」
+
+先ほどガジェットバージョンを出しましたが、テンプレートを直接変更するやり方も。  
+[Font Awesome](https://fontawesome.com/)が使えるという前提で。  
+そのあたりは読み替えるか、またはこちらの記事[Fonts](/create-pages/fonts/)を参照に。
+
+ガジェット版を書いた後にGridレイアウトやCSSでFont Awesome 5を使う方法などを覚えたので、書き方や出来上がりがちょっとバージョンアップ。
+
+#### CSSに追加
+
+`<b:skin>...</b:skin>`の中に置いてもいいし、`<style>...</style>`で囲ってスクリプトの近くに置いても。
+<script src="https://gist.github.com/laureltreetop/c37ac1d538b2d14091ee44031157b8d6.js?file=pager-title.css"></script>
+
+#### スクリプトを追加
+
+基本的には`</body>`の上あたりに。  
+スクリプトは`/*<![CDATA[*/`...`/*]]>*/`で囲むんだそうな。
+<script src="https://gist.github.com/laureltreetop/c37ac1d538b2d14091ee44031157b8d6.js?file=pager-title.html"></script>
 
 ## カスタマイズ保留中や削除など
 
