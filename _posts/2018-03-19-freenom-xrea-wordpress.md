@@ -6,6 +6,9 @@ tags:
   - Freenom
   - XREA
   - WordPress
+header:
+  teaser:   /assets/images/freenom-select-plan.png
+  og_image: /assets/images/freenom-select-plan.png
 ---
 この数日ほど「無料でどこまでできるか」というのにハマってて。  
 前からお遊び用とかに[Freenom](http://www.freenom.com/ja/index.html?lang=ja)でカスタムドメインを作ったりしていたのだが、「[怒涛の2日間](/post/2018/03/09/web-1995/)」で[XREA](https://www.xrea.com/)を弄ったあと、つらつらとサービスを見てたら…  
