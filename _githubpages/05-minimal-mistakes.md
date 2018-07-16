@@ -81,6 +81,7 @@ TOCというのはTable Of Contentsの略で、記事の左側（テーマのデ
 <script src="https://gist.github.com/laureltreetop/b067472931d585d8a55f78cad5eeebac.js"></script>
 
 あとはmain.scssで体裁を整えたり、記事のfront matterに`classes: wide`を追加したりなど。  
+元ネタは/_sass/minimal-mistakes_navigation.scssを参考にカスタマイズ。  
 /assets/css/main.scss
 <script src="https://gist.github.com/laureltreetop/344e18e0c7f5aced6caac3f49bf803a6.js"></script>
 
