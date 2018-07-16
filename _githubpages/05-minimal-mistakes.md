@@ -56,31 +56,26 @@ _layouts/home.html
 _includes/archive-title.html
 <script src="https://gist.github.com/laureltreetop/90b30fb52d4041290791485bfc093ab0.js"></script>
 
-## TOC
+## TOCを左サイドバーへ
+
+追記 : ver.4.12.0からは設定で右側固定にできるようになったので、古くなった記事をさっくり削除しました。  
+[Layout: Post with Sticky Table Of Contents](https://mmistakes.github.io/minimal-mistakes/layout-table-of-contents-sticky/)
+{: .notice--info}
 
 TOCというのはTable Of Contentsの略で、記事の左側（テーマのデフォは右側）にある見出し一覧。  
-{% comment %}たとえばこのページだと、front matter（って言うのかぁ）にこういう記述をしてある。
-<script src="https://gist.github.com/laureltreetop/bc20d4d1a9882bb7f85d0a14bc2cb22b.js"></script>
-{% endcomment %}
-
-### TOCを右側に固定
-左側のサイドバーはスクロールしても固定されているので、TOCも同じようにstickyを追加。  
-_layouts/single.html
-<script src="https://gist.github.com/laureltreetop/0da5fd93ec335e5a5c41ca02c86dc31a.js"></script>
-
-追記 : 4.12.0からは設定で右側固定にできるようになった。  
-[Layout: Post with Sticky Table Of Contents](https://mmistakes.github.io/minimal-mistakes/layout-table-of-contents-sticky/)
-
-### TOCを左サイドバーへ
 [Wide Single Layout Page](https://mmistakes.github.io/minimal-mistakes/markup-text-readability-wide-page/)なるレイアウトが出てきたので、便利だけど場所を食ってしまうTOCを左側のサイドバーへ押しやってみる。  
-{: .notice}
-
 [![TOC left side](/assets/images/minimal-mistakes_edit-toc.png)](/assets/images/minimal-mistakes_edit-toc.png)
+
+ある程度できて自己満足しているところに、モバイルだとトグルボタンがなくてTOC丸出し状態になっていたのだが、これも修正してトグル対応も。
+[![TOC mobile](/assets/images/minimal-mistakes_toc-mobile.png)](/assets/images/minimal-mistakes_toc-mobile.png)
+[![TOC mobile](/assets/images/minimal-mistakes_toc-mobile_open.png)](/assets/images/minimal-mistakes_toc-mobile_open.png)
 
 /includes/sidebar.html  
 `{% raw %}{% if page.sidebar.nav %}{% endraw %}`の上あたりに追加する。  
-ページナビなど他のリストとも揃えたいので、`<h3 class="nav__title" style="padding-left: 0;">`にしてみたり。
 <script src="https://gist.github.com/laureltreetop/ceb3edbf1c04ad98a7dec09ee6ad123f.js"></script>
+
+/includes/tocをほぼ書き換える度胸はないので、**/includes/toc_list**というファイルを作成。
+<script src="https://gist.github.com/laureltreetop/3c3213d3fc5a858b420aea8e2210164f.js"></script>
 
 /layouts/single.htmlからTOCをコメントアウト
 <script src="https://gist.github.com/laureltreetop/b067472931d585d8a55f78cad5eeebac.js"></script>
