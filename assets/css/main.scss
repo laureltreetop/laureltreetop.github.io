@@ -128,7 +128,7 @@ blockquote {
 /* toggle TOC */
 .toggle-menu {
     @include breakpoint(max-width ($large - 1px)) {
-        grid-template-columns: repeat(2, max-content) !important;
+        grid-template-columns: repeat(2, 1fr) !important;
         display: grid !important;
     }
 }
