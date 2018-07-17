@@ -66,28 +66,60 @@ TOCというのはTable Of Contentsの略で、記事の左側（テーマのデ
 [Wide Single Layout Page](https://mmistakes.github.io/minimal-mistakes/markup-text-readability-wide-page/)なるレイアウトが出てきたので、便利だけど場所を食ってしまうTOCを左側のサイドバーへ押しやってみる。  
 [![TOC left side](/assets/images/minimal-mistakes_edit-toc.png)](/assets/images/minimal-mistakes_edit-toc.png)
 
-ある程度できて自己満足しているところに、モバイルだとトグルボタンがなくてTOC丸出し状態になっていたのだが、これも修正してトグル対応も。
-[![TOC mobile](/assets/images/minimal-mistakes_toc-mobile.png)](/assets/images/minimal-mistakes_toc-mobile.png)
-[![TOC mobile](/assets/images/minimal-mistakes_toc-mobile_open.png)](/assets/images/minimal-mistakes_toc-mobile_open.png)
-
 /includes/sidebar.html  
-`{% raw %}{% if page.sidebar.nav %}{% endraw %}`の上あたりに追加する。  
+`{% raw %}{% if page.sidebar.nav %}{% endraw %}`あたりを変更[^sidebar]。  
 <script src="https://gist.github.com/laureltreetop/ceb3edbf1c04ad98a7dec09ee6ad123f.js"></script>
+
+[^sidebar]: 後述のモバイル対応のため、classも追加してある。
 
 /includes/tocをほぼ書き換える度胸はないので、**/includes/toc_list**というファイルを作成。
 <script src="https://gist.github.com/laureltreetop/3c3213d3fc5a858b420aea8e2210164f.js"></script>
 
-/layouts/single.htmlからTOCをコメントアウト
+/layouts/single.htmlからTOCをコメントアウト。
 <script src="https://gist.github.com/laureltreetop/b067472931d585d8a55f78cad5eeebac.js"></script>
 
 あとはmain.scssで体裁を整えたり、記事のfront matterに`classes: wide`を追加したりなど。  
 元ネタは/_sass/minimal-mistakes_navigation.scssを参考にカスタマイズ。  
+詳細は後述。
+
+ついでなので「日本語の見出しだとスムーススクロールになってくれない問題」に着手。  
+カスタムスクリプトとして追加。  
+<script src="https://gist.github.com/laureltreetop/bdd7f282f5dee6939fe4a84e547486fd.js"></script>
+
+### モバイル用のボタンを設置
+
+ただ、ここからが困った自体に。  
+ある程度できて自己満足していたところ、モバイルだとトグルボタンがなくてTOC丸出し状態になっていたという。    
+これも修正してトグル対応にしたのだが、さてどれにしたもんだろうかと。  
+各バージョンを作っておいて、後で考える。
+{: .notice--info}
+
+### 縦に並んでいる
+
+まずはこんな感じで。  
+[![TOC mobile](/assets/images/minimal-mistakes_toc-mobile.png)](/assets/images/minimal-mistakes_toc-mobile.png)
+[![TOC mobile](/assets/images/minimal-mistakes_toc-mobile_open.png)](/assets/images/minimal-mistakes_toc-mobile_open.png)
+
+/_sass/minimal-mistakes_navigation.scssをコピってTOC用に書き換えてあるだけ。  
 /assets/css/main.scss
 <script src="https://gist.github.com/laureltreetop/344e18e0c7f5aced6caac3f49bf803a6.js"></script>
 
-ついでなので「日本語の見出しだとスムーススクロールになってくれない問題」に着手。  
-カスタムスクリプトとして追加。
-<script src="https://gist.github.com/laureltreetop/bdd7f282f5dee6939fe4a84e547486fd.js"></script>
+### 横並びで幅いっぱいに
+
+元からあるナビの方も巻き込んで修正してある。  
+sidebar.htmlにclassを足してあるのはこのため。
+[![TOC mobile](/assets/images/minimal-mistakes_toc-mobile-1fr.png)](/assets/images/minimal-mistakes_toc-mobile-1fr.png)
+
+/assets/css/main.scss
+<script src="https://gist.github.com/laureltreetop/0f077c2fe9559657f8f9b84cfaa80918.js"></script>
+
+### 幅をいい感じに（悩み中）
+
+まだ全然いい感じになってない。
+[![TOC mobile](/assets/images/minimal-mistakes_toc-mobile-max-content.png)](/assets/images/minimal-mistakes_toc-mobile-max-content.png)
+
+/assets/css/main.scss
+<script src="https://gist.github.com/laureltreetop/4e3fb72dabfee1757488fa952a744c74.js"></script>
 
 ## QRコード
 
