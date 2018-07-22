@@ -179,6 +179,8 @@ header:
 実はWordPress.comにアカウント作成済みなので、まっさらな状態とはちょっと違ってくるかと。
 {: .notice}
 
+### 常備してるやつ
+
 + [Jetpack](https://jetpack.com/?from=automattic)
 : インストールし、WordPress.comと連携、以上。
 
@@ -194,29 +196,8 @@ header:
 
 [^name-your-price]: これって自由価格設定という意味らしいね。
 
-+ [Batch Cat](https://ja.wordpress.org/plugins/batch-cat/)
-: カテゴリをまとめて編集したり。特にカテゴリがない記事をインポートしたときに便利。
-  1. 先に移動先のカテゴリを作っておく
-  1. Batch Catプラグインをインストール
-  1. **ツール→Batch Cat**
-  1. カテゴリ「未分類」を選んでSearch
-  1. カテゴリを選んで**Set categories to posts**
-  1. カテゴリから「未分類」を削除するには**Drop categories from posts**
-
-+ [All-in-One WP Migration](https://ja.wordpress.org/plugins/all-in-one-wp-migration/)
-: 後述の通り、まるっと中身のバックアップを取ってくれる。
-
-+ [Automatic Post Thumbnail](http://www.sanisoft.com/blog/2010/04/19/wordpress-plugin-automatic-post-thumbnail/)
-: 記事の最初にある記事をアイキャッチとして設定してくれるのだが、お引越しにも普段遣いにも便利。  
-**設定→Automatic Post Thumbnail**で一括設定してくれる。
-
 + [Pz-LinkCard](https://wordpress.org/plugins/pz-linkcard/)
 : 使い方は[WordPressでリンクをカード形式で表示する Pz-LinkCard](https://popozure.info/pz-linkcard)
-
-+ [Featured Image From URL](https://ja.wordpress.org/plugins/featured-image-from-url/)
-
-+ [Browser Shots](https://ja.wordpress.org/plugins/browser-shots/)
-: 外部リンクを貼りたいときにを使うと、リンク先のプレビューを画像で載せてくれるのが便利。
 
 + [CSS & JavaScript Toolbox](https://ja.wordpress.org/plugins/css-javascript-toolbox/)
 : テーマをグリグリカスタマイズするときに便利。
@@ -259,9 +240,6 @@ header:
     {: .notice--info}
 
 
-+ [Google Analytics for WordPress by MonsterInsights](https://wordpress.org/plugins/google-analytics-for-wordpress/)
-: Googleアカウントに紐付けられたやつをするするん、っと。ただし現在は後述のやつを使用中。
-
 + [Google Analytics Dashboard for WP by ExactMetrics (formerly GADWP)](https://ja.wordpress.org/plugins/google-analytics-dashboard-for-wp/)
 : MonsterInsightsではなくこっちのが良さそう。
 
@@ -274,11 +252,42 @@ header:
 + [Pixabay Images](https://ja.wordpress.org/plugins/pixabay-images/)
 : ちょっと画像が欲しいなーというときに[Pixabay](https://pixabay.com/)から引っ張ってくる。
 
-+ [Under Construction](https://ja.wordpress.org/plugins/under-construction-page/)
-: 簡単なので、ちょっとだけ工事中というときに便利。
++ [Easy FancyBox](https://ja.wordpress.org/plugins/easy-fancybox/)
+: 画像をクリックでにゅっと（表現難しい…）。画像がポップアップするやつ。特に設定は必要なくて、画像のリンク先を**メディアファイル**にするくらい。
+
+### たまに役に立つやつ
+
++ [Batch Cat](https://ja.wordpress.org/plugins/batch-cat/)
+: カテゴリをまとめて編集したり。特にカテゴリがない記事をインポートしたときに便利。
+  1. 先に移動先のカテゴリを作っておく
+  1. Batch Catプラグインをインストール
+  1. **ツール→Batch Cat**
+  1. カテゴリ「未分類」を選んでSearch
+  1. カテゴリを選んで**Set categories to posts**
+  1. カテゴリから「未分類」を削除するには**Drop categories from posts**
+
++ [All-in-One WP Migration](https://ja.wordpress.org/plugins/all-in-one-wp-migration/)
+: 後述の通り、まるっと中身のバックアップを取ってくれる。
+
++ [Automatic Post Thumbnail](http://www.sanisoft.com/blog/2010/04/19/wordpress-plugin-automatic-post-thumbnail/)
+: 記事の最初にある記事をアイキャッチとして設定してくれるのだが、お引越しにも普段遣いにも便利。  
+**設定→Automatic Post Thumbnail**で一括設定してくれる。
 
 + [Organize Media Library by Folders](https://ja.wordpress.org/plugins/organize-media-library/)
 : メディアファイルのフォルダを変更できる。各ファイル毎にフォルダを仕分けることも可。
+
+### 試したけど使ってないやつ
+
++ [Featured Image From URL](https://ja.wordpress.org/plugins/featured-image-from-url/)
+
++ [Browser Shots](https://ja.wordpress.org/plugins/browser-shots/)
+: 外部リンクを貼りたいときにを使うと、リンク先のプレビューを画像で載せてくれるのが便利。
+
++ [Google Analytics for WordPress by MonsterInsights](https://wordpress.org/plugins/google-analytics-for-wordpress/)
+: Googleアカウントに紐付けられたやつをするするん、っと。ただし現在は別のやつを使用中。
+
++ [Under Construction](https://ja.wordpress.org/plugins/under-construction-page/)
+: 簡単なので、ちょっとだけ工事中というときに便利。
 
 ## 他から引っ越し
 
