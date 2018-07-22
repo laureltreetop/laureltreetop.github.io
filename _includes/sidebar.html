@@ -16,7 +16,7 @@
       {% if s.text %}{{ s.text | markdownify }}{% endif %}
     {% endfor %}
 
-<div class="toggle-menu">
+  <div class="toggle-menu">
     {% if page.toc %}
       {% include toc_list %}
     {% endif %}
@@ -24,7 +24,7 @@
     {% if page.sidebar.nav %}
       {% include nav_list nav=page.sidebar.nav %}
     {% endif %}
-</div>
+  </div>
 
   {% endif %}
   </div>

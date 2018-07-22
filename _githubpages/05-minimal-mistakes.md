@@ -104,6 +104,9 @@ TOCというのはTable Of Contentsの略で、記事の左側（テーマのデ
 /assets/css/main.scss
 <script src="https://gist.github.com/laureltreetop/344e18e0c7f5aced6caac3f49bf803a6.js"></script>
 
+あと、片方のメニューが開いているときにもう一方を閉じるように、カスタマイズ用スクリプトファイルに追記。
+<script src="https://gist.github.com/laureltreetop/91e41666f723e917edfff0ad78f39323.js"></script>
+
 ### 横並びで幅いっぱいに
 
 元からあるナビの方も巻き込んで修正してある。  

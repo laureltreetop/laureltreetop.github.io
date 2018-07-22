@@ -43,6 +43,21 @@ $(function() {
     });
 });
 
+$(function () {
+    $('input[name="accordion-toc"]').change(function () {
+        if ($(this).prop('checked')) {
+            $('[name="accordion-toclist"]').prop('checked', false);
+        }
+    });
+});
+$(function () {
+    $('input[name="accordion-toclist"]').change(function () {
+        if ($(this).prop('checked')) {
+            $('[name="accordion-toc"]').prop('checked', false);
+        }
+    });
+});
+
 $(document).ready(
 	function() {
 		$.fn.autoKana('#name', '#kana', {});
