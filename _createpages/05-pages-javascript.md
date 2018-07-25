@@ -1,6 +1,6 @@
 ---
 title: "JQuery Plugins"
-description: Tumblrだろうがはてなブログだろうが、とにかくグリグリとJQueryでカスタマイズ。
+description: "BroggerだろうがTumblrだろうがはてなブログだろうが、とにかくグリグリとJQueryでカスタマイズ。"
 permalink: /create-pages/javascript/
 classes: wide
 ---

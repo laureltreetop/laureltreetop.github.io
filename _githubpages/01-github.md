@@ -1,6 +1,6 @@
 ---
 title: "GitHub"
-description: GitHub Pagesなのですから、当然最初はGitHubの準備や設定やら。流れ上、あらゆるGitHub関係の記述あり。
+description: "GitHub Pagesなのですから、当然最初はGitHubの準備や設定やら。流れ上、あらゆるGitHub関係の記述あり。"
 permalink: /githubpages/github/
 classes: wide
 header:

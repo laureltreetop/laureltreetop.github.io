@@ -1,6 +1,6 @@
 ---
 title: "Customize Minimal Mistakes"
-description: Minimal Mistakesをいろいろカスタマイズ。
+description: "Minimal Mistakesをいろいろカスタマイズ。ガリガリとやってますねぇ…"
 permalink: /githubpages/minimal-mistakes/
 classes: wide
 header:

@@ -1,7 +1,7 @@
 ---
 title: "Sass"
 permalink: /create-pages/sass/
-description: CSS書いていると頭が渋滞しがちだけど、これなら便利なのかも。  ただ、コンパイルはめんどい。
+description: "CSS書いていると頭が渋滞しがちだけど、これなら便利なのかも。ただ、コンパイルを手動でチェックしながらなのはめんどい。"
 toc_icon: "fab fa-sass"
 classes: wide
 ---

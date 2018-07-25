@@ -1,6 +1,6 @@
 ---
 title: "Algolia with Javascrpt"
-description: 全文検索できるよ。日本語もOKだったり。
+description: "全文検索できるよ。あいまい検索やヒットした単語の強調などできて、日本語もOKだったり。"
 permalink: /createpages/algolia/
 classes: wide
 ---

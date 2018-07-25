@@ -1,6 +1,6 @@
 ---
 title: "Blogger to Jekyll"
-description: Bloggerの記事をJykillに取り込むのは簡単にできるらしいと知り、無謀にも挑戦。
+description: "Bloggerの記事をJykillに取り込むのは簡単にできるらしいと知り、Rubyのことは欠片も知らずに挑戦。"
 permalink: /githubpages/blogger-to-jekyll/
 classes: wide
 # categories:
@@ -10,8 +10,8 @@ classes: wide
 #   - Blogger
 #   - Ruby
 ---
-今までブログは、ブログなんて呼んでない頃からのHTML直書き→しばらく休止→Bloggerで時々書いたり書かなかったり→Tumblr、という流れ。  
-Bloggerの記事をJykillに取り込むのは簡単にできるらしいと知り、無謀にも挑戦。
+今までブログは、ブログなんて呼んでない頃からのHTML直書き→しばらく休止→Bloggerで時々書いたり書かなかったり→Tumblr、という流れ。
+{{ page.description }}
 {: .notice}
 
 ## 取り込み

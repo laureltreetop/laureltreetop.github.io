@@ -1,6 +1,6 @@
 ---
 title: "Customize Base"
-description: Baseもいろいろカスタマイズしてみる。
+description: "Baseもいろいろカスタマイズしてみる。"
 permalink: /githubpages/theme-base/
 classes: wide
 header:

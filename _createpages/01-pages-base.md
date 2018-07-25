@@ -1,12 +1,11 @@
 ---
 layout: single
 title: "Create Pages"
-description: ブログシステムを使っていても出てくる、タグやちょっとしたページ作成のメモ。
+description: "今はタグ打ちなんてしなくてもできるねーと思っていたら、まさかあちこちのシステムでテーマカスタマイズでのタグ打ち。タグやちょっとしたページ作成のメモ。"
 permalink: /create-pages/base/
 classes: wide
 ---
-今はタグ打ちなんてしなくてもできるねーと思っていたら、まさかの[Tumblrのテーマカスタマイズ](/tumblr/custom-theme/)でのタグ打ち。
-この機会にいろいろメモっておく。
+{{ page.description }}
 {: .notice}
 
 ## まずはfavicon

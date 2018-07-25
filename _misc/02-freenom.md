@@ -1,6 +1,6 @@
 ---
 title: "Freenom & e.t.c."
-description: "無料でカスタムドメインを作成したり、サイト作ったり、メールアドレス作ったり。"
+description: "無料でカスタムドメインを作成したり、サイト作ったり、メールアドレス作ったり。ただ、あまりよろしくないことをあちこちで書かれているみたいなので、やっぱりお遊び用、テスト用なのかな、と。"
 permalink: /misc/freenom/
 classes: wide
 header:

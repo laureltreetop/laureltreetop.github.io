@@ -1,6 +1,6 @@
 ---
 title: "Theme Customize"
-description: テーマ共通のカスタマイズなど。
+description: "（多分）テーマ共通のカスタマイズなど。"
 permalink: /githubpages/theme-custom/
 classes: wide
 header:

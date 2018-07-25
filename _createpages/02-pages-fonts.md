@@ -1,6 +1,6 @@
 ---
 title: "Fonts"
-description: Webフォントとかいろいろ。
+description: "Webフォントとかアイコンフォントなどいろいろ。"
 permalink: /create-pages/fonts/
 classes: wide
 header:
