@@ -1,5 +1,5 @@
 ---
-title: "Algolia"
+title: "Algolia and GitHub"
 description: 全文検索できるよ。日本語もOKだったり。
 permalink: /githubpages/algolia-github/
 classes: wide
