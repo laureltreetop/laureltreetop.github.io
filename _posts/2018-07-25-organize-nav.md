@@ -3,7 +3,7 @@ title: "疲れた…"
 categories:
   - Information
 tags:
-　- Create Pages
+  - Create Pages
   - GitHub Pages
   - Minimal Mistakes
   - misc.
