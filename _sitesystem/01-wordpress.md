@@ -1,7 +1,7 @@
 ---
 title: "WordPress"
 description: "今までWordPress.comしか知らなかった。カスタムドメインでも無料で作れるとは…"
-permalink: /blogsystem/wordpress/
+permalink: /sitesystem/wordpress/
 classes: wide
 header:
   teaser: /assets/images/xrea-wordpress-config.png

@@ -6,8 +6,8 @@ main:
 #    url: /collection-archive/
   - title: "ページ作成"
     url: /createpages/index.html
-  - title: "blogいろいろ"
-    url: /blogsystem/index.html
+  - title: "サイトとかblogとか"
+    url: /sitesystem/index.html
   - title: "GitHub Pages"
     url: /githubpages/index.html
   - title: "misc."
@@ -58,17 +58,19 @@ githubpages:
         url: /githubpages/algolia-github/
       - title: "Blogger to Jekyll"
         url: /githubpages/blogger-to-jekyll/
-blogsystem:
-  - title: "blogいろいろ"
+sitesystem:
+  - title: "サイトとかblogとか"
     children:
       - title: "Blogger"
-        url: /blogsystem/blogger/
+        url: /sitesystem/blogger/
       - title: "はてなブログ"
-        url: /blogsystem/hateblo/
+        url: /sitesystem/hateblo/
       - title: "WordPress"
-        url: /blogsystem/wordpress/
+        url: /sitesystem/wordpress/
       - title: "Tumblr"
-        url: /blogsystem/tumblr/
+        url: /sitesystem/tumblr/
+      - title: "Firebase with Windows"
+        url: /sitesystem/firebase/
 # sidebar navigation
 misc:
 #  - title: "Widget"
@@ -91,8 +93,7 @@ misc:
         url: /misc/xrea-mail/
       - title: "BIZ.NF"
         url: /misc/biz-nf/
-      - title: "Firebase with Windows"
-        url: /misc/firebase/
+
       - title: "QRコード作成"
         url: /misc/generate-qr-code/
 inventory:

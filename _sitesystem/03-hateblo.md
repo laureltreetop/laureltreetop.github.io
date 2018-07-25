@@ -1,7 +1,7 @@
 ---
 title: "はてなブログ"
 description: とりあえずはメモりつつ作業。
-permalink: /blogsystem/hateblo/
+permalink: /sitesystem/hateblo/
 classes: wide
 header:
   teaser: /assets/images/hatebu-share-icons.png

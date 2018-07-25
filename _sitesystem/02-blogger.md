@@ -1,7 +1,7 @@
 ---
 title: "Blogger"
 description: 大幅なカスタマイズは難しいけど、やはり安定のBloggerなのかも?
-permalink: /blogsystem/blogger/
+permalink: /sitesystem/blogger/
 classes: wide
 header:
   teaser: /assets/images/blogger-tabs.gif

@@ -1,7 +1,7 @@
 ---
 title: "Firebase with Windows"
 description: 無料で認証やらデータベースやらが揃ったサイトが作れるが、放置したりまた弄りだしたり。
-permalink: /misc/firebase/
+permalink: /sitesystem/firebase/
 classes: wide
 header:
   teaser: /assets/images/firebase_hosting-setup-complete.png
