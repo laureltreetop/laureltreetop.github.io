@@ -4,26 +4,24 @@ main:
 #    url: /page-archive/
 #  - title: "資料"
 #    url: /collection-archive/
-#  - title: "Widget"
-#    url: /widget/index.html
-#  - title: "misc."
-#    url: /misc/index.html
   - title: "ページ作成"
     url: /createpages/index.html
   - title: "blogいろいろ"
     url: /blogsystem/index.html
   - title: "GitHub Pages"
     url: /githubpages/index.html
-#  - title: "モノ関係"
-#    url: /inventory/index.html
   - title: "misc."
     url: /misc/index.html
+  - title: "モノいろいろ"
+    url: /inventory/index.html
   - title: "ざっくりと全部"
     url: /collections.html
   - title: "愚痴"
     url: /month-archive/
   - title: "自分?"
     url: /about/
+  - title: "Widget"
+    url: /widget/index.html
 
 # documentation links
 createpages:
@@ -87,13 +85,13 @@ misc:
     children:
       - title: "CloudFlare"
         url: /misc/cloudflare/
-      - title: "Freenom"
+      - title: "Freenom & e.t.c."
         url: /misc/freenom/
-      - title: "BIZ.NF"
-        url: /misc/biz-nf/
       - title: "カスタムドメインメール"
         url: /misc/xrea-mail/
-      - title: "Firebase"
+      - title: "BIZ.NF"
+        url: /misc/biz-nf/
+      - title: "Firebase with Windows"
         url: /misc/firebase/
       - title: "QRコード作成"
         url: /misc/generate-qr-code/
