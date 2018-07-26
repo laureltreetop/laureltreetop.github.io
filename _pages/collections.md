@@ -17,7 +17,7 @@ header:
   <div class="collect-box">
     {% capture label %}{{ collection.label }}{% endcapture %}
     {% if label != written_label %}
-      <h2 id="{{ label | slugify }}" class="archive__subtitle"><i class="fas fa-folder-open"></i>&nbsp;{{ collection.title }}</h2>
+      <h2 id="{{ label | slugify }}" class="archive__subtitle"><a href="{{ site.baseurl }}/{{ label }}/index.html"><i class="fas fa-folder-open"></i>&nbsp;{{ collection.title }}</a></h2>
       {% capture written_label %}{{ label }}{% endcapture %}
     {% endif %}
   <ul class="collect-list fa-ul">

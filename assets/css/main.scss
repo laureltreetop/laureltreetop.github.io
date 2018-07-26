@@ -399,22 +399,34 @@ li.triangle, ul.triangle li {
 li.none {
 	list-style-type: none !important;
 }
-.fa-li {
-	color: $light-gray;
-}
 div.collect-box {
   display: inline-grid;
   grid-template-columns: repeat(auto-fit, 300px);
   justify-content: space-between;
   vertical-align: top;
-	&:last-child li {
-		width: max-content;
-	}
+  &:last-child li {
+    width: max-content;
+  }
+  h2 a {
+    &:link, &:visited, &:hover, &:active {
+      color: $gray !important;
+    }
+  }
+  a {
+    &:link, &:visited {
+      color: $gray !important;
+    }
+    &:hover, &:active {
+      color: $dark-gray !important;
+    }
+  }
+  .fa-li {
+	color: $light-gray;
+  }
 }
 ul.collect-list {
 	margin-left: 1.5em;
 }
-
 /*
 li.file {
 	line-height: 1.5;
