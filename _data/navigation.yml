@@ -54,6 +54,8 @@ githubpages:
         url: /githubpages/minimal-mistakes/
       - title: "Customize Base"
         url: /githubpages/theme-base/
+      - title: "GitHub contents"
+        url: /githubpages/github-contents/
       - title: "Algolia and GitHub"
         url: /githubpages/algolia-github/
       - title: "Blogger to Jekyll"
