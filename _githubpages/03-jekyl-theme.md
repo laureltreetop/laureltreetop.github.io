@@ -92,6 +92,8 @@ $ bundle exec jekyll s
 ユーザ環境変数JEKYLL_GITHUB_TOKENの値を追加。  
 当方はWindows7なので、`Windowsメニュー`[^windowskey]→右上にあるユーザアイコン→`環境変数の設定`に。
 
+[^windowskey]: いわゆるスタートキーとかスタートアイコンとか。
+
 動作確認ができたところで`git add`的なことをしようとしたら、かなりのファイルが追加される状況に…
 そういえばまだ`.gitignore`ファイルを作ってなかった。  
 Winodwsでの作成は[.gitignoreファイルの作り方](https://qiita.com/dachis/items/06952f10a7adfeba7fa4)で。
