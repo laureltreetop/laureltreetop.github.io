@@ -297,7 +297,7 @@ defaults:
       read_time: false
       share: true
       comments: true
-      related: true
+      related: false
       sidebar:
         nav: "sidebar"
       #toc: true
@@ -313,7 +313,7 @@ defaults:
       read_time: false
       share: true
       comments: true
-      related: true
+      related: false
       sidebar:
         nav: "createpages"
       toc: true
@@ -328,7 +328,7 @@ defaults:
       read_time: false
       share: true
       comments: true
-      related: true
+      related: false
       sidebar:
         nav: "githubpages"
       toc: true
@@ -343,7 +343,7 @@ defaults:
       read_time: false
       share: true
       comments: true
-      related: true
+      related: false
       sidebar:
         nav: "sitesystem"
       toc: true
@@ -358,7 +358,7 @@ defaults:
       read_time: false
       share: true
       comments: true
-      related: true
+      related: false
       sidebar:
         nav: "misc"
       toc: true
@@ -373,7 +373,7 @@ defaults:
       read_time: false
       share: true
       comments: true
-      related: true
+      related: false
       sidebar:
         nav: "inventory"
       toc: true
