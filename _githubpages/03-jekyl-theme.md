@@ -21,7 +21,7 @@ classes: wide
 
 当方は[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)を使うことに。   
 
-## Minimal Mistakesを導入
+## Minimal Mistakesを導入 手動編
 ### インストール
 [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)からインストール。
 
@@ -59,7 +59,45 @@ _config.ymlに追記。ついでにもう一個手直し。
 
 公式サイトを見ながら_config.ymlの構成を見て設定を確認しつつやってみたら、ブログっぽいものが作れるように。  
 
-## おまけ? soloを導入する場合
+## Minimal Mistakesを導入 Gem編
+
+GitHub Pagesを作ったときの超シンプルなやつに適用してみる。  
+[Jekyll の更新](http://chirimenmonster.github.io/2017/05/20/undate-jekyll.html)を参考にしたというか、ほぼそれしかやってないというか。
+
+Gemfile
+```ruby
+gem "minimal-mistakes-jekyll"
+gem "github-pages", group: :jekyll_plugins
+```
+
+_config.yml
+```yml
+remote_theme: "mmistakes/minimal-mistakes"
+repository: ユーザ名/リポジトリ名
+```
+
+コマンドを叩く。
+```sh
+$ bundle install
+```
+
+まずは動かしてみる。
+```sh
+$ bundle exec jekyll s
+```
+
+エラーが出たので調べていくと、先述の[Jekyll の更新](http://chirimenmonster.github.io/2017/05/20/undate-jekyll.html)に辿り着いた。  
+
+[Personal access tokens](https://github.com/settings/tokens)でtakenを作成。
+ユーザ環境変数JEKYLL_GITHUB_TOKENの値を追加。  
+当方はWindows7なので、`Windowsメニュー`[^windowskey]→右上にあるユーザアイコン→`環境変数の設定`に。
+
+動作確認ができたところで`git add`的なことをしようとしたら、かなりのファイルが追加される状況に…
+そういえばまだ`.gitignore`ファイルを作ってなかった。  
+Winodwsでの作成は[.gitignoreファイルの作り方](https://qiita.com/dachis/items/06952f10a7adfeba7fa4)で。
+内容は[Minimal Mistakesのgit](https://github.com/mmistakes/minimal-mistakes/blob/master/.gitignore)からパクる。
+
+## soloを導入
 [solo](https://chibicode.github.io/solo/)もやってみたので、メモ。  
 [Fork A Repo](https://help.github.com/articles/fork-a-repo/)を見つつ、まずは[Fork](https://github.com/chibicode/solo/fork) （ってよく判ってない）。  
 その後コマンドで引っ張ってくる。  
@@ -74,11 +112,11 @@ $ jekyll new your_repository
 "new"ってくらいなので、既にコンテンツがある場合は怒られる。  
 `jekyll new -f your_repository`で。  
 
-## おまけ? その2 Agus Makmunを導入する場合
+## Agus Makmunを導入
 [Agus Makmun](https://agusmakmun.github.io/)も基本的にはSoloと同じようにいけた。  
-ただ、Jekyllさんに小言を言われないように、`gems:`を`plugins:`に書き換える。
+ただ、Jekyllさんに小言を言われないように、`_config.yaml`の`gems:`を`plugins:`に書き換える。
 
-## おまけ? その3 Baseを導入する場合
+## Baseを導入
 [Base | CloudCannon Academy](https://learn.cloudcannon.com/templates/base/)の「**導入は**」簡単だった。  
 ソースが見やすくて一見カスタマイズしやすそうだけど、癖がすごい。  
 カスタマイズは[Customize Base](/githubpages/theme-base/)に書いてある通り。
