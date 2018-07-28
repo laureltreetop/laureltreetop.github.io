@@ -51,7 +51,7 @@ _config.ymlに追記。ついでにもう一個手直し。
 <script src="https://gist.github.com/laureltreetop/0da5ff11d755d035a5a9120fcc1b2a6c.js"></script>
 
 まだ出る…今度は`invalid byte sequence in Windows-31J...`なエラーが出てきたので、
-[[ruby]jekyll server で 『invalid byte sequence in Windows-31J～』とエラーになった時の対処方法](http://d.hatena.ne.jp/osyo-manga/20140216/1392552409)を参考にし、環境変数`RUBYOPT`に`-Ku`を設定。
+[ruby]jekyll server で 『invalid byte sequence in Windows-31J～』とエラーになった時の対処方法](http://d.hatena.ne.jp/osyo-manga/20140216/1392552409)を参考にし、環境変数`RUBYOPT`に`-Ku`を設定。
 
 
 ### 設定
@@ -68,12 +68,14 @@ Gemfile
 ```ruby
 gem "minimal-mistakes-jekyll"
 gem "github-pages", group: :jekyll_plugins
+gem 'wdm', '~> 0.1.1' if Gem.win_platform?
 ```
 
 _config.yml
 ```yml
 remote_theme: "mmistakes/minimal-mistakes"
 repository: ユーザ名/リポジトリ名
+github: [metadata]
 ```
 
 コマンドを叩く。
