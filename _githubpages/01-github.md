@@ -10,7 +10,8 @@ header:
 {{ page.description }}
 {: .notice}
 
-慌ててHTTPS対応の設定をメモったので、ドメインとリポジトリ名と画像がちぐはぐになってますが、うまく解釈してくれると~~楽、じゃなくて~~助かります。
+慌ててHTTPS対応の設定をメモったので、ドメインとリポジトリ名と画像がちぐはぐになってますが、うまく解釈してくれると~~楽、じゃなくて~~助かります。  
+あと、画像を使いまわしているので、あちこち伏せてあります。あやしいからじゃないですからね。たぶん。
 {: .notice--warning}
 
 ## GitHubの準備から
@@ -18,29 +19,35 @@ header:
 
 ## リポジトリを作成  
 最初からカスタムドメインで運用する前提で書きます。自分がそうだったので。   
-リポジトリ名は`hoehoe`で作成（説明画像では`hogehoge`）[^repogitory]。
-
-[^repogitory]: 古い記事だと"xxx.github.io"で作るように書いてあったのだが、"github.io"を付けなくてもカスタムドメインは作れるっぽいっていうか、作れた。
+どうやらメインのサイトを置くリポジトリは、`ユーザID.github.io`で作るっぽい?  
+その他は自由なリポジトリ名でいけることは確認済み。  
+説明でのリポジトリ名は`hoehoe`で作成（説明画像では`hogehoge`とか伏せたりとか）。
 
 [![GitHub New Repository](/assets/images/github-new-repository.png)](/assets/images/github-new-repository.png)
 
-{% comment %}
-リポジトリを作成したら、とりあえず適当なテーマを設定。
-[![GitHub Clone Repository](/assets/images/github-set-theme.png)](/assets/images/github-set-theme.png)
-{% endcomment %}
+## GitHub Pagesとして稼働
 
-手元に持ってくる。パターンはいくつかある。↓参照（説明画像では`hogehoge`）。
-[![GitHub Set Theme](/assets/images/github-clone-hogehoge.png)](/assets/images/github-clone-hogehoge.png)
+リポジトリを作成したら、手元に持ってくるための手順が書いてあるけど、その前にとりあえず稼働させてしまおうかと。  
+`Code`になっているはずなので、`Settings`に移動する。
+[![GitHub code to settings](/assets/images/github_new-github-pages-code-to-settings.png)](/assets/images/github_new-github-pages-code-to-settings.png)
 
-今回は一番上の案を採用。HTTPSなりSSHなりの文字列をコピーして、`git clone`を実行。
-HTTPSパターンだとこういう感じで。
-```shell
-$ git clone https://github.com/ユーザID/hoehoe.git
-```
-SSHパターン。
-```shell
-$ git clone git@github.com:ユーザID/hoehoe.git
-```
+{% comment %}[![GitHub Clone Repository](/assets/images/github-set-theme.png)](/assets/images/github-set-theme.png){% endcomment %}
+
+で、テーマを適当に選んでおく。
+[![GitHub code to settings](/assets/images/github_new-github-pages-before.png)](/assets/images/github_new-github-pages-before.png)
+
+まぁこのあたりを選んじゃうよね。
+[![GitHub theme](/assets/images/github_new-github-pages-select-theme-hacker.png)](/assets/images/github_new-github-pages-select-theme-hacker.png)
+
+トップページになるやつなので、自分の環境に直したり、保留にしておくなり。
+[![GitHub theme](/assets/images/github_new-github-pages-index.png)](/assets/images/github_new-github-pages-index.png)
+
+GitHub Pagesとして動くように。
+[![GitHub theme](/assets/images/github_new-github-pages-after.png)](/assets/images/github_new-github-pages-after.png)
+
+こんな感じに。
+[![GitHub theme](/assets/images/github_new-github-pages-hacker.png)](/assets/images/github_new-github-pages-hacker.png)
+
 ## DNS設定(HTTPS対応)
 `www.hoehoe.tk`なCNAMEレコードに、`ユーザID.github.io`な値を設定。
 
@@ -81,9 +88,9 @@ CAAレコードが使えないDNSサービスでCAA抜きで設定をしても�
 
 ## 環境構築 on Windows 
 自分がそうなので。オレオレですみません。   
-[GitHub Desktop](https://desktop.github.com/)をインストール[^githubwindows]。  
-[git for windows](https://gitforwindows.org/)をインストールするとコマンド画面で作業できる。  
-USBメモリに持ち歩くために探したのが[Git Portable](https://github.com/sheabunge/GitPortable)とか[Git for Windows Portable](https://portableapps.com/node/36346)とか。
+今のところ2つを確認済み。  
+個人的な好みで言うと、GUIで使うなら[GitHub Desktop](https://desktop.github.com/)で、コマンドでガシガシいくなら[git for windows](https://gitforwindows.org/)かなと。  
+USBメモリで持ち歩くために探したのが[Git Portable](https://github.com/sheabunge/GitPortable)とか[Git for Windows Portable](https://portableapps.com/node/36346)とか。
 
 {% comment %}
 key生成
@@ -93,7 +100,25 @@ ssh-keygen -t rsa -b 4096 -C "mail@domain"
 パスフレーズはお好みで
 {% endcomment %}
 
-[^githubwindows]: でもGit&nbsp;Shellしか使ってないかも。
+## 手元に持ってくる
+
+パターンはいくつかある。↓参照（説明画像では`hoehoehoe`）。
+{% comment %}[![GitHub Set Theme](/assets/images/github-clone-hogehoge.png)](/assets/images/github-clone-hogehoge.png){% endcomment %}
+[![GitHub Set Theme](/assets/images/github_new-repository-code.png)](/assets/images/github_new-repository-code.png)
+
+一番楽なのはGitHub Desktopを使うパターンかな。  
+左上の`Set up in Desktop`をポチッといくと、あとは流れのままにという感じで。
+[![GitHub Set Theme](/assets/images/github_desctop-clone.png)](/assets/images/github_desctop-clone.png)
+
+コマンドラインで突き進むなら、HTTPSなりSSHなりの文字列をコピーして、`git clone`を実行。  
+HTTPSパターンだとこういう感じで。
+```shell
+$ git clone https://github.com/ユーザID/hoehoehoe.git
+```
+SSHパターン。
+```shell
+$ git clone git@github.com:ユーザID/hoehoehoe.git
+```
 
 ## Brackets
 
