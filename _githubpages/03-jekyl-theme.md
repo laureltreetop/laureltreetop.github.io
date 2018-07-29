@@ -1,6 +1,6 @@
 ---
 title: "Jekyll Theme"
-description: "未だに勉強中。とりあえずリンクだけ張っていく。"
+description: "Minimal Mistakesの手動やGemでのインストールや、あと他にもいくつか。"
 permalink: /githubpages/jekyll-theme/
 classes: wide
 # categories:
@@ -69,14 +69,32 @@ Gemfile
 gem "minimal-mistakes-jekyll"
 gem "github-pages", group: :jekyll_plugins
 gem 'wdm', '~> 0.1.1' if Gem.win_platform?
+
+group :jekyll_plugins do
+  gem "jekyll-data"
+end
 ```
 
-_config.yml
+index.html
+```yml
+---
+layout: home
+---
+```
+
+_config.ymlは[Minimal Mistakesのgit](https://github.com/mmistakes/minimal-mistakes/blob/master/_config.yml)からザクッと持ってきて、あちこち書き換える。  
+少なくともこれだけは必須かな。  
 ```yml
 remote_theme: "mmistakes/minimal-mistakes"
 repository: ユーザ名/リポジトリ名
-github: [metadata]
 ```
+もし`theme:`という項目があったら、削除するかコメントアウトで。  
+日本語UIにしたい場合はこれも。デフォルトでは`"en-US"`のようで。
+```yml
+locale: "ja-JP"
+```
+
+GitHub Pagesを稼働させる手順で`index.md`というファイルができていたけど、これは削除で。  
 
 コマンドを叩く。
 ```sh
@@ -96,10 +114,18 @@ $ bundle exec jekyll s
 
 [^windowskey]: いわゆるスタートキーとかスタートアイコンとか。
 
+ナビメニューが必要になったら[^nav]、[Minimal Mistakesのgit](https://github.com/mmistakes/minimal-mistakes/blob/master/_config.yml)から`_data/`配下の`navigation.yml`を持ってきて編集を。  
+`_config.yml`で日本語UIを使うために`locale: "ja-JP"`を設定している場合は、同じく`_data/`配下の`ui-text.yml`を。これは置くだけで。
+
+[^nav]: 普通は必要だと思うけどね。
+
 動作確認ができたところで`git add`的なことをしようとしたら、かなりのファイルが追加される状況に…
 そういえばまだ`.gitignore`ファイルを作ってなかった。  
 Winodwsでの作成は[.gitignoreファイルの作り方](https://qiita.com/dachis/items/06952f10a7adfeba7fa4)で。
 内容は[Minimal Mistakesのgit](https://github.com/mmistakes/minimal-mistakes/blob/master/.gitignore)からパクる。
+
+あとは`_posts`とか`_pages`とか、あとcollection的なのを追加していけばいいかと。  
+Gem化されたテーマというのも、準備はいろいろ面倒くさかったという。
 
 ## soloを導入
 [solo](https://chibicode.github.io/solo/)もやってみたので、メモ。  
