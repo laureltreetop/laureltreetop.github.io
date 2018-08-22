@@ -16,6 +16,28 @@ header:
 
 ### ドメインを追加
 
+先にDNSの設定を。  
+必要な情報は、ダッシュボード右上のアカウントから`契約情報`→`サーバースペック`→`IP`と`サーバー`
+[![XREA server spec](/assets/images/xrea-server-spec-ip-servername.png)](/assets/images/xrea-server-spec-ip-servername.png)
+
+AレコードとMXレコードを追加して`Save Changes`（以下の例は[Freenom](http://www.freenom.com/ja/index.html?lang=ja)の設定）  
+
+| name | Type | TTL | Target | Priority |
+|---|----|---|---|
+| 空白（@不要） | A    | 14440（変更不可） | （IP） |  |
+| 空白（@不要） | MX   | 14440（変更不可） | （サーバー） | 10 |
+
+ダッシュボードから`ドメイン設定`→`ドメイン設定の新規作成`  
+[![XREA add new domain](/assets/images/xrea-add-new-domain.png)](/assets/images/xrea-add-new-domain.png)
+
+で、ドメインを入力  
+[![XREA add new domain](/assets/images/xrea-add-new-domain-setting.png)](/assets/images/xrea-add-new-domain-setting.png)
+
+登録できた  
+[![XREA add new domain ok](/assets/images/xrea-add-new-domain-setting-ok.png)](/assets/images/xrea-add-new-domain-setting-ok.png)
+
+
+{% comment %}
 1. ダッシュボードから`ドメイン設定`→`ドメイン設定の新規作成`  
 [![XREA add new domain](/assets/images/xrea-add-new-domain.png)](/assets/images/xrea-add-new-domain.png)
 1. で、ドメインを入力  
@@ -24,22 +46,27 @@ header:
 [![XREA add new domain error](/assets/images/xrea-add-new-domain-setting-error.png)](/assets/images/xrea-add-new-domain-setting-error.png)
 1. 必要な情報は右上のアカウントから`契約情報`→`サーバースペック`→`IP`  
 [![XREA server spec](/assets/images/xrea-server-spec-ip.png)](/assets/images/xrea-server-spec-ip.png)
-1. Aレコードを追加して`Save Changes`  
+1. もうひとつ、MXレコードの設定用に`契約情報`→`サーバーアカウント情報`→`サーバー`
+1. AレコードとMXレコードを追加して`Save Changes`（以下の例は[Freenom](http://www.freenom.com/ja/index.html?lang=ja)の設定）  
 
-| name | Type | TTL | Target |
-|---|:----:|---|---|
-| 空白（@不要） | A    | 14440（変更不可） | （IP） |  
+| name | Type | TTL | Target | Priority |
+|---|----|---|---|
+| 空白（@不要） | A    | 14440（変更不可） | （IP） |  |
+| 空白（@不要） | MX   | 14440（変更不可） | （サーバー名） | 10 |
 
 `ドメイン設定の新規作成`をやり直すと、登録できた  
 [![XREA add new domain ok](/assets/images/xrea-add-new-domain-setting-ok.png)](/assets/images/xrea-add-new-domain-setting-ok.png)
+{% endcomment %}
 
 ## メール設定
 
-1. ダッシュボードから`メール`→`メールの新規作成`  
+ダッシュボードから`メール`→`メールの新規作成`  
 [![XREA add new mail](/assets/images/xrea-add-new-mail.png)](/assets/images/xrea-add-new-mail.png)
-1. ドメインを選択しーの、ユーザ名入れーの、その他いろいろ  
+
+ドメインを選択しーの、ユーザ名入れーの、その他いろいろ  
 [![XREA add new mail setting](/assets/images/xrea-add-new-mail-setting.png)](/assets/images/xrea-add-new-mail-setting.png)
-1. 作成完了  
+
+作成完了  
 [![XREA add new mail setting ok](/assets/images/xrea-add-new-mail-setting-ok.png)](/assets/images/xrea-add-new-mail-setting-ok.png)
 
 ### webメール送受信
@@ -50,6 +77,20 @@ header:
 [![Roundcube](/assets/images/roundcube-login.png)](/assets/images/roundcube-login.png)
 
 どちらも普通に使える。
+…と思ったら、XREAからSquirrelMailしか使えないような?
+[![XREA Control Panel New](/assets/images/xrea-mail-new-control-panel.png)](/assets/images/xrea-mail-new-control-panel.png)
+
+旧コンパネからだと入れた。
+[![XREA Control Panel Old](/assets/images/xrea-mail-old-control-panel.png)](/assets/images/xrea-mail-old-control-panel.png)
+
+なので、個人的なメモ。
+
++ SquirrelMail
+: https://サーバ名/mail/src/login.php
+
++ Roundcube
+: https://サーバ名/mailr/index.php  
+メールアドレスとパスワードの他に、サーバーに`localhost`の記述が必要
 
 ### Roundcubeアプリを使う
 
@@ -77,7 +118,9 @@ header:
     <div class="appreach-footer" style="margin-bottom:10px; clear: left;"></div>
 </div>
 
+{% comment %}
 [![Roundcube Android setting](/assets/images/roundcube-android-setting.png)](/assets/images/roundcube-android-setting.png)
+{% endcomment %}
 
 ### myMailを使う
 
