@@ -43,16 +43,6 @@ header:
 
 [^register]: 実験中に作った`.ml`なアドレスだと、"a user already exists with that email address"と怒られた。
 
-### デメリット
-
-+ ある程度のアクセス数がないとドメインが抹消される
-+ 契約時に12か月（1年ではないことに注意）で取得できるが、14日前からしか更新できない[^renew]
-+ やっぱり少し抵抗があったり?
-  + [.tk ドメインが乗っ取られたっぽい](https://blog.kksg.net/posts/tk-domain-fraud)
-  + [FREENOM is a scam and thiefs](https://www.namepros.com/threads/freenom-is-a-scam-and-thiefs.938824/)
-  
-[^renew]: [Domain Renewals](https://my.freenom.com/domains.php?a=renewals)（要ログイン）でチェックすべし。
-
 ## メールも使いたいよね
 
 長くなったので、詳細は[無料でカスタムドメインメール](/misc/xrea-mail/)にて。
@@ -60,5 +50,20 @@ header:
 ## WordPressを導入
 
 最初は無料でどこまでできるかの一環で作っていたが、なんだかちゃんとしたサイトが作れるようなので、ふざけたドメインじゃないやつに作り直す。  
-なので、詳細は[WordPress](/blogsystem/wordpress/)なページにて。  
+なので、詳細は[WordPress](/sitesystem/wordpress/)なページにて。  
 無料でここまでできた、ってことで。
+
+## 注意点
+
+あちこちに書かれていることですが、あくまでもテストとかお遊び程度に使う方が。
+
++ ある程度のアクセス数がないとドメインが抹消される
++ 契約時に12か月（1年ではないことに注意）で取得できるが、14日前からしか更新できない[^renew]
++ ある日突然ドメイン管理が**SUSPENDED**になったり
++ 自分が使用中のドメインも販売中になっているんですけど?
++ 特に.tkドメインはあちこちで使えなかったり
++ やっぱり少し抵抗があったり?
+  + [.tk ドメインが乗っ取られたっぽい](https://blog.kksg.net/posts/tk-domain-fraud)
+  + [FREENOM is a scam and thiefs](https://www.namepros.com/threads/freenom-is-a-scam-and-thiefs.938824/)
+  
+[^renew]: [Domain Renewals](https://my.freenom.com/domains.php?a=renewals)（要ログイン）でチェックすべし。
