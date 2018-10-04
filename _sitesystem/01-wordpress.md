@@ -374,7 +374,7 @@ Tumblrの記事に「カテゴリ」という概念がない。
 1. すべて選択して、変換実行
 1. あとは前述のBatch Catを使ったり
 
-## まるごとお引越し
+## プラグインでお引越し
 
 そのままでサーバ間のお引越し。URL変更可能。
 {: .notice}
@@ -395,6 +395,43 @@ Tumblrの記事に「カテゴリ」という概念がない。
 [![All-in-One import](/assets/images/wordpress-all-in-one-import.png)](/assets/images/wordpress-all-in-one-import.png)
 1. これで中身のお引越し完了
 + 念のため、パーマネントリンクの設定とかをチェック
+
+## 手動でお引越し
+
+いきなりカスタムドメインが使えなくなった。さすがFreenomという感じ。
+{: .notice}
+
++ 新しい方にWordpressをインストール
++ 古い方からFTPで`wp-content`配下と`wp-config.php`のバックアップを取る  
+  下記は必須
+  + plugins
+  + themes
+  + uploads
++ 新しい方にFTPで`wp-content`配下**のみ**更新
++ 古い方と新しい方、それぞれで`wp-config.php`をbackup
++ 古い方の`wp-config.php`を新しい値に変更
+
+```php
+// ** MySQL settings ** //
+/** The name of the database for WordPress */
+define( 'DB_NAME', '新しい方のデータベース名' );
+
+/** MySQL database username */
+define( 'DB_USER', '新しい方のデータベースユーザ' );
+
+/** MySQL database password */
+define( 'DB_PASSWORD', 'データベースのパスワード' );
+```
+
++ `wp-config.php`をアップ
++ レンタルサーバ上で`phpMyAdmin`を開く
++ エクスポート
++ 新しいところにインポート
++ `wp_options`配下にある以下の値を変更
+  + siteurl
+  + home
+
+これで全部かな?
 
 ## その他
 
