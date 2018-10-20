@@ -374,6 +374,24 @@ Tumblrの記事に「カテゴリ」という概念がない。
 1. すべて選択して、変換実行
 1. あとは前述のBatch Catを使ったり
 
+### Bloggerより
+
+`Blogger`→`設定`→`その他`→`インポートとバックアップ`→`コンテンツをバックアップ`
+[![Blogger backup](/assets/images/blogger-backup.png)](/assets/images/blogger-backup.png)
+
+WordPressの`ダッシュボード`→`ツール`→`インポート`→`Blogger`をインストール
+[![WordPress import](/assets/images/wordpress-import.png)](/assets/images/wordpress-import.png)
+
+インポーターを実行し、バックアップしてあるファイルをアップ
+[![WordPress import Blogger](/assets/images/wordpress-import-blogger.png)](/assets/images/wordpress-import-blogger.png)
+
+Authorsを紐付ける
+[![Import Blogger](/assets/images/blogger-to-wordpress-assign-authors.png)](/assets/images/blogger-to-wordpress-assign-authors.png)
+
+BloggerのタグはWordPressのカテゴリに移されてる  
+`ツール`→`インポート`→`カテゴリーとタグの変換ツール`で変換する  
+下の方に変換スタートのボタンがあるので注意
+
 ## プラグインでお引越し
 
 そのままでサーバ間のお引越し。URL変更可能。
