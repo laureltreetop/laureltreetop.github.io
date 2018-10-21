@@ -68,4 +68,18 @@ $ gem update && gem cleanup
 ```
 とすれば片付けてくれる、のかな?
 
+時々↓とかしてあげないと、
+```sh
+$ rm Gemfile.lock
+$ bundle clean --force
+$ bundle install
+```
++ `jekyll s`ができなくなってたり  
+（`bundle exec jekyll s`は素直に実行してくれる）
++ 修正してもregenateしてくれなかったり（じわじわと痛い）
++ Ctrl + Cで停止しようとしたら終了確認してきたり  
+（しかも都合により日本語で…あとyでもnでも終わっちゃってるよ?）
+
+などなど、変な動作になっちゃってました。
+
 試行錯誤中。思いついたらorぶち当たったら書こうっと。
