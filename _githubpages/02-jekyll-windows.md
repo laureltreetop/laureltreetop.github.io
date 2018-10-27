@@ -53,6 +53,26 @@ $ jekyll s
 
 ```sh
 $ jekyll s
+Configuration file: xxxxx.github.io/_config.yml
+            Source: xxxxx.github.io
+       Destination: xxxxx.github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+  Conversion error: Jekyll::Converters::Scss encountered an error while converting 'assets/css/main.scss':
+                    Invalid Windows-31J character "\xE2" on line 6
+jekyll 3.7.4 | Error:  Invalid Windows-31J character "\xE2" on line 6
+```
+`Invalid Windows-31J character "\xE2"`的なエラーは、ファイルにUTF-8な文字が入っているからだそうな。  
+ユーザ環境変数`RUBYOPT`に`--encoding=UTF-8`を設定する。
+
+前は`jekyll s`で動かしている時にファイルを修正したら自動的に再作成されてた。  
+いつの間にかできなくなってる。  
+`jekyll s --watch`もダメ。  
+対処法として見つかったのが、Rubyのバージョンアップ。  
+2.4.xから2.5.xに上げたら`jekyll s`だけで再作成されるように。
+
+```sh
+$ jekyll s
 WARN: Unresolved specs during Gem::Specification.reset:
       rouge (< 3, >= 1.7)
 WARN: Clearing out unresolved specs.
@@ -68,18 +88,11 @@ $ gem update && gem cleanup
 ```
 とすれば片付けてくれる、のかな?
 
-時々↓とかしてあげないと、
+時々↓とかしてあげないと、変な動作になっちゃってたり。
 ```sh
 $ rm Gemfile.lock
 $ bundle clean --force
 $ bundle install
 ```
-+ `jekyll s`ができなくなってたり  
-（`bundle exec jekyll s`は素直に実行してくれる）
-+ 修正してもregenateしてくれなかったり（じわじわと痛い）
-+ Ctrl + Cで停止しようとしたら終了確認してきたり  
-（しかも都合により日本語で…あとyでもnでも終わっちゃってるよ?）
-
-などなど、変な動作になっちゃってました。
 
 試行錯誤中。思いついたらorぶち当たったら書こうっと。
