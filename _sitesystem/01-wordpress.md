@@ -467,6 +467,26 @@ define( 'DB_PASSWORD', 'データベースのパスワード' );
 
 これで全部かな?
 
+## サイトを手動で削除したい
+
+なかなか探せなかったのと、結構手間がかかるようなかからないような。
+{: .notice}
+
+1. FTPソフトやWebFTPツールを使ってWordPressが設置されてるフォルダを確認
+1. 設置されてるフォルダの`wp-config`ファイルからいろいろと設定項目を確認
+  + define( 'DB_NAME', 'データベース名' );
+  + $table_prefix = 'テーブル接頭辞';
+  
+1. 設置先のフォルダをざっくりと削除
+1. データベースの削除、なのですが
+  + 1つのデータベースに1つのWordPressサイトの場合  
+  : データベースをさっくり削除
+  + 1つのデータベースに複数のWordPressサイトやら何やらいろいろある場合  
+  : レンタルサーバ上で`phpMyAdmin`を開き、テーブル接頭辞が付いているやつをざくざくと削除[^gimptext]
+
+[^gimptext]: ものすごく関係ないけど、GIMP2.10からプラグイン無しでテキストの縦書きができるようになってる。
+[![phpMyAdmin](/assets/images/phpmyadmin_table-list.png)](/assets/images/phpmyadmin_table-list.png)
+
 ## その他
 
 + [mod_rewriteでWordPressの管理画面だけアクセスを許可する設定](https://resource-sharing.co.jp/mod-rewrite-redirect-setting/)
