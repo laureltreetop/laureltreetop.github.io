@@ -52,6 +52,7 @@ header:
 1. ここでデータベース設定が必要になってくるわけだねぇ  
 [![MySql config](/assets/images/xrea-wordpress-mysql-list.png)](/assets/images/xrea-wordpress-mysql-list.png)
 1. 情報を入力、と（これは入力前）  
+テーブル接続詞を変えるなら最後を`_`にしておかないと、あとでメンテナンスする時に美しくないのが分かっちゃうよ
 [![WordPress config](/assets/images/xrea-wordpress-config.png)](/assets/images/xrea-wordpress-config.png)
 1. 準備ができている、なら?  
 [![WordPress step2](/assets/images/xrea-wordpress-config-step2.png)](/assets/images/xrea-wordpress-config-step2.png)
@@ -210,6 +211,9 @@ header:
   1. と思いきや、設定の下にメニューが追加されてて、先ほど名前をつけたCode Blockもあった
   1. 以降、使い方は[WordPressの記事に、個別にCSSやJSを追加する高機能プラグイン](http://beginnersdomain.net/plugin/css-javascript-toolbox/)を参照
 
++ [All-in-One WP Migration](https://ja.wordpress.org/plugins/all-in-one-wp-migration/)
+: 後述の通り、まるっと中身のバックアップを取ってくれる。
+
 + [Infinite-Scroll](https://wordpress.org/plugins/infinite-scroll/)
 : 無限インストールプラグインは何種類かあるけど、JQueryで仕込んだことがある人には、こっちのほうが判りやすいかも。
 
@@ -235,10 +239,25 @@ header:
       + Enable Lazy Loading for images
       
     [![Jetpack & Infinite Scroll](/assets/images/wordpress_infinite-scroll_jetpack-setting.png)](/assets/images/wordpress_infinite-scroll_jetpack-setting.png)
-    
-   （無限インストールの話のついでに）[Baskerville 2](https://wordpress.com/theme/baskerville-2)だと、プラグインで[Jetpack by WordPress.com](https://ja.wordpress.org/plugins/jetpack/)を入れておくと、**ダッシュボード→Jetpack→執筆→テーマの拡張→無限スクロール→読者のスクロールに合わせて投稿をさらに読み込む**（長い…）で無限スクロールに。
-    {: .notice--info}
 
+  + [Iconic One](https://themonic.com/)  
+    何も変えずにいけたけど、一応。
+  
+    | item               | value               |
+    |--------------------|---------------------|
+    | Content Selector   | #content            |
+    | Navigation Selector| #nav-below          |
+    | Next Selector      | #nav-below a:first  |
+    | Item Selector      | .post               |
+    | Behavior           | Default             |  
+
+
+無限スクロールの話が出たついでに。  
+[Baskerville 2](https://wordpress.com/theme/baskerville-2)だと、プラグインで[Jetpack by WordPress.com](https://ja.wordpress.org/plugins/jetpack/)を入れておくと、**ダッシュボード→Jetpack→執筆→テーマの拡張→無限スクロール→読者のスクロールに合わせて投稿をさらに読み込む**（長い…）で無限スクロールに。
+{: .notice--info}
+
++ [WPFront Scroll Top](https://ja.wordpress.org/plugins/wpfront-scroll-top/)
+: 最初の位置にひゅっって戻るやつ。コードは[CSS & JavaScript Toolbox](https://ja.wordpress.org/plugins/css-javascript-toolbox/)とか使ってでも簡単に書けるけどめんどくさい時に。画像もいろいろ選べるし。
 
 + [Google Analytics Dashboard for WP by ExactMetrics (formerly GADWP)](https://ja.wordpress.org/plugins/google-analytics-dashboard-for-wp/)
 : MonsterInsightsではなくこっちのが良さそう。
@@ -265,9 +284,6 @@ header:
   1. カテゴリ「未分類」を選んでSearch
   1. カテゴリを選んで**Set categories to posts**
   1. カテゴリから「未分類」を削除するには**Drop categories from posts**
-
-+ [All-in-One WP Migration](https://ja.wordpress.org/plugins/all-in-one-wp-migration/)
-: 後述の通り、まるっと中身のバックアップを取ってくれる。
 
 + [Automatic Post Thumbnail](http://www.sanisoft.com/blog/2010/04/19/wordpress-plugin-automatic-post-thumbnail/)
 : 記事の最初にある記事をアイキャッチとして設定してくれるのだが、お引越しにも普段遣いにも便利。  
