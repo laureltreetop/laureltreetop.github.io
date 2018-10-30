@@ -1,6 +1,7 @@
 ---
 title: "WordPress"
-description: "今までWordPress.comしか知らなかった。カスタムドメインでも無料で作れるとは…"
+description: "今までWordPress.comしか知らなかった。カスタムドメインでも無料で作れるとは…  
+いろいろなレンタルサーバにインストールしてみたり。"
 permalink: /sitesystem/wordpress/
 classes: wide
 header:
