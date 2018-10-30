@@ -48,13 +48,9 @@ _includes/author-profile-custom-links.html
 
 ## 過去記事まとめに月ごとの見出し
 トップでやってるやつ。  
+スタイルシート周りなどを修正すれば他のテーマでも使えるかと。  
 _layouts/home.html
 <script src="https://gist.github.com/laureltreetop/24f0acf4480f4eef8f6c027001b41dd0.js"></script>
-
-タイトル一覧もいじってあるんでした。  
-リスト表示用の`class="triangle"`も込み。  
-_includes/archive-title.html
-<script src="https://gist.github.com/laureltreetop/90b30fb52d4041290791485bfc093ab0.js"></script>
 
 ## TOCを左サイドバーへ
 
