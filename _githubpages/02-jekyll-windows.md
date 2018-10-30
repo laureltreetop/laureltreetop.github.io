@@ -95,7 +95,6 @@ $ gem update && gem cleanup
 ```sh
 $ rm Gemfile.lock
 $ bundle clean --force
-$ bundle install
 ```
 
 試行錯誤中。思いついたらorぶち当たったら書こうっと。
