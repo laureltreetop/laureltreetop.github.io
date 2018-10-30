@@ -61,11 +61,9 @@ header:
 1. 終わってるし、始まってるし…「有名な5分間」って何だったんだ…?  
 [![WordPress start](/assets/images/xrea-wordpress-start.png)](/assets/images/xrea-wordpress-start.png)
 
-#### 403 error
-
 + タイミング的に一般設定の「http://」を「https://」に変えた直後にエラーが
 : [CloudFlare](https://www.cloudflare.com/)でPage Rulesに**SSL: Full**に変更したら見えるように
-+ 管理画面には入れない
++ 管理画面に入れない
 : [Sixcore（シックスコア）に「WordPress国外IPアクセス制限」機能が追加されていた！](https://gori.me/wordpress/29316)によると、**WordPressログイン制限**が怪しそう→OFFにしたら繋がった
 
 ### StarServer編
@@ -167,23 +165,12 @@ header:
 
 [BIZ.NF](/misc/biz-nf/)にまとめておきます。
 
-{% comment %}
-## その他試したやつ
-
-1. [WordPress.org 日本語](https://ja.wordpress.org/)よりダウンロード
-1. FTPでアップロード
-1. その間にMySQLの設定
-
-アップロードが終了すると、**【サイトURL】/wp-admin/setup-config.php**から**有名な5分間**を開始できるように  
-[![WordPress Pre-setting](/assets/images/wordpress_pre-setting.png)](/assets/images/wordpress_pre-setting.png)
-{% endcomment %}
-
 ## プラグイン
 
 ### 常備してるやつ
 
 + [Jetpack](https://jetpack.com/?from=automattic)
-: WordPress.comにアカウント作成済みなので、インストールし、WordPress.comと連携、以上。
+: WordPress.comにアカウント作成済みなので、インストールしWordPress.comと連携、以上。
 
 + [Akismet Anti-Spam](https://wordpress.org/plugins/akismet/)
   1. [Akismet Anti-Spam](https://wordpress.org/plugins/akismet/)を入れようとしたら、[アカウントを設定](https://akismet.com/account/)しないといけないらしい
