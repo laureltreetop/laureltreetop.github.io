@@ -12,14 +12,14 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "default" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "ja-JP"
 title                    : "K's website"
 title_separator          : "-"
 name                     : &name "Treetop"
-description              : &description "前線から完全撤退して…のはずが、技術系なものを試してつらつらとメモを書いておく。ブログには愚痴多数。"
+description              : &description "前線から完全撤退して…のはずが、技術系なものを試してつらつらとメモを書いておく。愚痴多数。"
 url                      : "https://www.treetop.to" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "laureltreetop/laureltreetop.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -40,7 +40,7 @@ comments:
 staticman:
   allowedFields          : # ['name', 'email', 'url', 'message']
   branch                 : # "master"
-  commitMessage          : # "New comment."
+  commitMessage          : # "New comment by {fields.name}"
   filename               : # comment-{@timestamp}
   format                 : # "yml"
   moderation             : # true
@@ -53,6 +53,7 @@ staticman:
       type               : # "date"
       options:
         format           : # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
+  endpoint               : # URL of your own deployment with trailing slash, will fallback to the public instance
 reCaptcha:
   siteKey                :
   secret                 :
@@ -106,44 +107,47 @@ social:
 
 # Analytics
 analytics:
-  provider               : "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider               : "google" # false (default), "google", "google-universal", "custom"
   google:
     tracking_id          : "UA-26784782-6"
+    anonymize_ip         : # true, false (default)
 
 
 # Site Author
 author:
   name             : "Treetop"
   avatar           : "/assets/images/avatar-treetop.png"
-  bio              : "I am tired."
+  bio              : "I am bored."
   location         : "Japan"
   email            :
-  uri              : "https://www.treetop.to"
-  bitbucket        :
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      # url: mailto:your.name@email.com
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://www.treetop.to"
+    - label: "Blog"
+      icon: "fab fa-fw fa-wordpress"
+      url: "https://blog.treetop.to/"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      # url: "https://twitter.com/ginkgoTreetop"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      # url: "https://facebook.com/ginkgotreetop"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      # url: "https://github.com/"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      # url: "https://instagram.com/"
   codepen          : # "laurel-treetop"
-  dribbble         :
-  flickr           :
-  facebook         : # "ginkgotreetop"
-  foursquare       :
   github           : # "laureltreetop"
-  gitlab           :
   google_plus      : # "102882771271321040109"
-  keybase          :
   instagram        : # "laureltreetop"
-  lastfm           :
   linkedin         : # "kozue-kuninaka" # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
   pinterest        : # "treetop8383"
-  soundcloud       :
-  stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
-  steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
-  tumblr           : # "laurel-treetop"
-  twitter          : # "ginkgoTreetop"
-  vine             :
-  weibo            :
-  xing             :
-  youtube          : # "https://youtube.com/c/MichaelRoseDesign"
-
-  wordpress		   : "https://blog.treetop.to/"
 
 
 # Reading Files
@@ -223,8 +227,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jemoji
-# - jekyll-data
-  - jekyll-seo-tag
+  - jekyll-include-cache
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -233,8 +236,8 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jemoji
-# - jekyll-data
-  - jekyll-seo-tag
+  - jekyll-include-cache
+
 
 # Archives
 #  Type
@@ -253,16 +256,17 @@ tag_archive:
   type: liquid
   path: /tags/
 # https://github.com/jekyll/jekyll-archives
-#jekyll-archives:
-#  enabled:
-#    - categories
-#    - tags
-#  layouts:
-#    category: archive-taxonomy
-#    tag: archive-taxonomy
-#  permalinks:
-#    category: /categories/:name/
-#    tag: /tags/:name/
+# jekyll-archives:
+#   enabled:
+#     - categories
+#     - tags
+#   layouts:
+#     category: archive-taxonomy
+#     tag: archive-taxonomy
+#   permalinks:
+#     category: /categories/:name/
+#     tag: /tags/:name/
+
 
 # HTML Compression
 # - http://jch.penibelst.de/
