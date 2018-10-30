@@ -69,11 +69,14 @@ jekyll 3.7.4 | Error:  Invalid Windows-31J character "\xE2" on line 6
 いつの間にかできなくなってる。  
 `jekyll s --watch`もダメ。  
 対処法として見つかったのが、Rubyのバージョンアップ。  
-2.4.xから2.5.xに上げたら`jekyll s`だけで再作成されるように。
+2.4.xから2.5.xに上げたら`jekyll s`だけで再作成されるように。  
+→嘘です、やっぱり再作成できてない。保留。  
+[Let Jekyll --watch](http://jekyll-windows.juthilo.com/4-wdm-gem/)にも--watchが効かない事例があった。  
+→ファイルによって効いたり効いてなかったり? 違いと対処方法は?
 
 ```sh
 $ jekyll s
-WARN: Unresolved specs during Gem::Specification.reset:
+WARN: Unresolved specs during Gem::Specifiation.reset:
       rouge (< 3, >= 1.7)
 WARN: Clearing out unresolved specs.
 Please report a bug if this causes problems.

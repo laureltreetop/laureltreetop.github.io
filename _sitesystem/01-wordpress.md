@@ -274,6 +274,9 @@ header:
 + [Easy FancyBox](https://ja.wordpress.org/plugins/easy-fancybox/)
 : 画像をクリックでにゅっと（表現難しい…）。画像がポップアップするやつ。特に設定は必要なくて、画像のリンク先を**メディアファイル**にするくらい。
 
++ [WP Last Modified Info](https://ja.wordpress.org/plugins/wp-last-modified-info/)
+: 更新日を表示する。コードを弄らなくてもいいのと、設定がいろいろできるのが便利。
+
 ### たまに役に立つやつ
 
 + [Batch Cat](https://ja.wordpress.org/plugins/batch-cat/)
@@ -473,7 +476,7 @@ define( 'DB_PASSWORD', 'データベースのパスワード' );
 {: .notice}
 
 1. FTPソフトやWebFTPツールを使ってWordPressが設置されてるフォルダを確認
-1. 設置されてるフォルダの`wp-config`ファイルからいろいろと設定項目を確認
+1. 設置されてるフォルダの`wp-config.php`ファイルからいろいろと設定項目を確認
   + define( 'DB_NAME', 'データベース名' );
   + $table_prefix = 'テーブル接頭辞';
   
