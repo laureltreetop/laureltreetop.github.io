@@ -22,51 +22,51 @@ header:
 1. DNS設定に必要な情報は右上のアカウントから**契約情報→サーバースペック→IP**  
 [![XREA server spec](/assets/images/xrea-server-spec-ip.png)](/assets/images/xrea-server-spec-ip.png)
 1. DNSサーバにAレコードを追加[^cloudflare]
-1. **ダッシュボード→ドメイン設定→ドメイン設定の新規作成**  
-[![XREA add new domain](/assets/images/xrea-add-new-domain.png)](/assets/images/xrea-add-new-domain.png)
-1. で、ドメインを入力  
+1. **ダッシュボード→ドメイン設定→ドメイン設定の新規作成**で、ドメインを入力
+{% comment %}[![XREA add new domain](/assets/images/xrea-add-new-domain.png)](/assets/images/xrea-add-new-domain.png)
 [![XREA add new domain](/assets/images/xrea-add-new-domain-setting.png)](/assets/images/xrea-add-new-domain-setting.png)
 1. 登録できた  
-[![XREA add new domain ok](/assets/images/xrea-add-new-domain-setting-ok.png)](/assets/images/xrea-add-new-domain-setting-ok.png)
+[![XREA add new domain ok](/assets/images/xrea-add-new-domain-setting-ok.png)](/assets/images/xrea-add-new-domain-setting-ok.png){% endcomment %}
 
 [^cloudflare]: [CloudFlare](https://www.cloudflare.com/)を使っている場合、認識するまではDNS Onlyにしたほうがいいっぽい。
 
 #### WordPress導入
 
-1. まずはMySqlでデータベースを作ってから…だと…?  
+1. まずはMySqlでデータベースを作ってから  
 [![MySql](/assets/images/xrea-wordpress-mysql.png)](/assets/images/xrea-wordpress-mysql.png)
-1. 本当にそうなの? と思いつつ作成  
-[![MySql](/assets/images/xrea-wordpress-mysql-setting.png)](/assets/images/xrea-wordpress-mysql-setting.png)
-1. **サイト設定→ツールセキュリティー→CMSインストール→WordPress**って本当にあった  
+{% comment %}1. 本当にそうなの? と思いつつ作成  
+[![MySql](/assets/images/xrea-wordpress-mysql-setting.png)](/assets/images/xrea-wordpress-mysql-setting.png){% endcomment %}
+1. サイトの新規作成  
+{% comment %}[![Site setting](/assets/images/xrea-server-site-setting.png)](/assets/images/xrea-server-site-setting.png){% endcomment %}
+1. **サイト設定→ツールセキュリティー→CMSインストール→WordPress**  
 [![WordPress install](/assets/images/xrea-wordpress-install.png)](/assets/images/xrea-wordpress-install.png)
-1. サイトの選択肢に無い…  
-[![Site setting](/assets/images/xrea-wordpress-install-site-no-select.png)](/assets/images/xrea-wordpress-install-site-no-select.png)
-1. サイトの新規作成もしないといけないっぽい  
-[![Site setting](/assets/images/xrea-server-site-setting.png)](/assets/images/xrea-server-site-setting.png)
-1. 選択できるようになったので、インストール  
-[![WordPress install go](/assets/images/xrea-wordpress-install-go.png)](/assets/images/xrea-wordpress-install-go.png)
+{% comment %}1. サイトの選択肢に無い…  
+[![Site setting](/assets/images/xrea-wordpress-install-site-no-select.png)](/assets/images/xrea-wordpress-install-site-no-select.png){% endcomment %}
+1. `CMSインストール`でサイトを選択してインストール  
+{% comment %}[![WordPress install go](/assets/images/xrea-wordpress-install-go.png)](/assets/images/xrea-wordpress-install-go.png){% endcomment %}
 1. 座して待つ  
 [![WordPress install waiting](/assets/images/xrea-wordpress-install-wait.png)](/assets/images/xrea-wordpress-install-wait.png)
 1. 予定地を覗いてみたら、いた  
 [![WordPress first](/assets/images/xrea-wordpress-first.png)](/assets/images/xrea-wordpress-first.png)
-1. ここでデータベース設定が必要になってくるわけだねぇ  
+1. ここでデータベース設定が必要になる  
 [![MySql config](/assets/images/xrea-wordpress-mysql-list.png)](/assets/images/xrea-wordpress-mysql-list.png)
-1. 情報を入力、と（これは入力前）  
-テーブル接続詞を変えるなら最後を`_`にしておかないと、あとでメンテナンスする時に美しくないのが分かっちゃうよ
+1. 情報を入力、と（これは入力前）[^tableprefix]  
 [![WordPress config](/assets/images/xrea-wordpress-config.png)](/assets/images/xrea-wordpress-config.png)
+
+[^tableprefix]: テーブル接続詞を変えるなら最後を`_`にしておかないと、あとでメンテナンスする時に美しくないことに気づく。
 1. 準備ができている、なら?  
 [![WordPress step2](/assets/images/xrea-wordpress-config-step2.png)](/assets/images/xrea-wordpress-config-step2.png)
-1. ここから「5分間」だったのか…  
+1. ここから「5分間」だったのか  
 [![WordPress install start](/assets/images/xrea-wordpress-install-start.png)](/assets/images/xrea-wordpress-install-start.png)
 1. 終わってるし、始まってるし…「有名な5分間」って何だったんだ…?  
 [![WordPress start](/assets/images/xrea-wordpress-start.png)](/assets/images/xrea-wordpress-start.png)
 
 #### 403 error
 
-+ タイミング的に一般設定の「http://」を「https://」に変えた直後
-+ [CloudFlare](https://www.cloudflare.com/)でPage Rulesに**SSL: Full**に変更したら見えるように
++ タイミング的に一般設定の「http://」を「https://」に変えた直後にエラーが
+: [CloudFlare](https://www.cloudflare.com/)でPage Rulesに**SSL: Full**に変更したら見えるように
 + 管理画面には入れない
-+ [Sixcore（シックスコア）に「WordPress国外IPアクセス制限」機能が追加されていた！](https://gori.me/wordpress/29316)によると、**WordPressログイン制限**が怪しそう→OFFにしたら繋がった
+: [Sixcore（シックスコア）に「WordPress国外IPアクセス制限」機能が追加されていた！](https://gori.me/wordpress/29316)によると、**WordPressログイン制限**が怪しそう→OFFにしたら繋がった
 
 ### StarServer編
 
@@ -106,34 +106,37 @@ header:
 1. カスタムドメイン追加（サブドメインは後から）
 1. WordPress新規インストール（ここでサブドメインを指定可能）
 
-### 000webhost
+### 000webhost編
 
 海外サイトで[000webhost](https://www.000webhost.com/)というのもある。
 
 1. 例のごとくユーザ登録略
-1. website登録へ
-[![000webhost add site](/assets/images/000webhost-add-website.png)](/assets/images/000webhost-add-website.png)
-1. パスワード設定
-[![000webhost password](/assets/images/000webhost-add-website-password.png)](/assets/images/000webhost-add-website-password.png)
-1. 今のうちにカスタムドメインを登録
-[![000webhost custom domain](/assets/images/000webhost-custom-domain.png)](/assets/images/000webhost-custom-domain.png)
-1. **My domains→Add domain**から設定
+1. website登録からパスワード設定などを  
+   名前は自動で割り当てられるが、自分で設定することも可
+{% comment %}[![000webhost add site](/assets/images/000webhost-add-website.png)](/assets/images/000webhost-add-website.png)
+[![000webhost password](/assets/images/000webhost-add-website-password.png)](/assets/images/000webhost-add-website-password.png){% endcomment %}
+1. 今のうちに`Set web address`からカスタムドメインを登録
+   1. **My domains→Add domain**から設定
+   1. Point Domainを選択
+   1. カスタムドメインの設定、DNSにも指示通りにCNAMEを追加  
+      どうもwww有り無し両方のレコードが必須?
+{% comment %}[![000webhost custom domain](/assets/images/000webhost-custom-domain.png)](/assets/images/000webhost-custom-domain.png)
 [![000webhost custom domain](/assets/images/000webhost-add-domain.png)](/assets/images/000webhost-add-domain.png)
-1. Point Domainを選択
+
 [![000webhost point domain](/assets/images/000webhost-point-domain.png)](/assets/images/000webhost-point-domain.png)
-1. カスタムドメインの設定、DNSにも指示通りにCNAMEを追加  
+  
 [![000webhost custom domain](/assets/images/000webhost-point-domain-setting.png)](/assets/images/000webhost-point-domain-setting.png)
-1. どうもwww有り無し両方のレコードが必要?
-[![000webhost domain 2 cname](/assets/images/000webhost-add-domain-2-record.png)](/assets/images/000webhost-add-domain-2-record.png)
+
+[![000webhost domain 2 cname](/assets/images/000webhost-add-domain-2-record.png)](/assets/images/000webhost-add-domain-2-record.png){% endcomment %}
 1. **Build website**よりサイトを作成
-[![000webhost build website](/assets/images/000webhost-build-website.png)](/assets/images/000webhost-build-website.png)
+{% comment %}[![000webhost build website](/assets/images/000webhost-build-website.png)](/assets/images/000webhost-build-website.png)
 1. WordPressをインストール
 [![000webhost build wordpress](/assets/images/000webhost-build-wordpress.png)](/assets/images/000webhost-build-wordpress.png)
 1. 実はここでハマった。パスワードは**15文字以内**（usernameも変更可）
 [![000webhost install wordpress](/assets/images/000webhost-wordpress-install.png)](/assets/images/000webhost-wordpress-install.png)
 1. しばらく待つと設定画面に行くボタンが
 [![000webhost install wordpress](/assets/images/000webhost-wordpress-conf-start.png)](/assets/images/000webhost-wordpress-conf-start.png)
-
+{% endcomment %}
 {% comment %}
 1. うまくいかないので**Park domain**も試してみる
 [![000webhost park domain](/assets/images/000webhost-park-domain.png)](/assets/images/000webhost-park-domain.png)
@@ -177,13 +180,10 @@ header:
 
 ## プラグイン
 
-実はWordPress.comにアカウント作成済みなので、まっさらな状態とはちょっと違ってくるかと。
-{: .notice}
-
 ### 常備してるやつ
 
 + [Jetpack](https://jetpack.com/?from=automattic)
-: インストールし、WordPress.comと連携、以上。
+: WordPress.comにアカウント作成済みなので、インストールし、WordPress.comと連携、以上。
 
 + [Akismet Anti-Spam](https://wordpress.org/plugins/akismet/)
   1. [Akismet Anti-Spam](https://wordpress.org/plugins/akismet/)を入れようとしたら、[アカウントを設定](https://akismet.com/account/)しないといけないらしい
@@ -209,7 +209,7 @@ header:
   1. **CJT-Instalaltion page**リンクから確認画面が出るのでインストール
   1. さっそくスクリプトを追加しようと**New Code Block**から作成しようとしたら、カスペルさんがフィッシングサイトへのポップアップということでブロックされた…  
   1. と思いきや、設定の下にメニューが追加されてて、先ほど名前をつけたCode Blockもあった
-  1. 以降、使い方は[WordPressの記事に、個別にCSSやJSを追加する高機能プラグイン](http://beginnersdomain.net/plugin/css-javascript-toolbox/)を参照
+  1. 使い方は[WordPressの記事に、個別にCSSやJSを追加する高機能プラグイン](http://beginnersdomain.net/plugin/css-javascript-toolbox/)という記事を参照
 
 + [All-in-One WP Migration](https://ja.wordpress.org/plugins/all-in-one-wp-migration/)
 : 後述の通り、まるっと中身のバックアップを取ってくれる。
@@ -252,9 +252,9 @@ header:
     | Behavior           | Default             |  
 
 
-無限スクロールの話が出たついでに。  
-[Baskerville 2](https://wordpress.com/theme/baskerville-2)だと、プラグインで[Jetpack by WordPress.com](https://ja.wordpress.org/plugins/jetpack/)を入れておくと、**ダッシュボード→Jetpack→執筆→テーマの拡張→無限スクロール→読者のスクロールに合わせて投稿をさらに読み込む**（長い…）で無限スクロールに。
-{: .notice--info}
+  無限スクロールの話が出たついでに。  
+  [Baskerville 2](https://wordpress.com/theme/baskerville-2)だと、プラグインで[Jetpack by WordPress.com](https://ja.wordpress.org/plugins/jetpack/)を入れておくと、**ダッシュボード→Jetpack→執筆→テーマの拡張→無限スクロール→読者のスクロールに合わせて投稿をさらに読み込む**（長い…）で無限スクロールに。
+  {: .notice--info}
 
 + [WPFront Scroll Top](https://ja.wordpress.org/plugins/wpfront-scroll-top/)
 : 最初の位置にひゅっって戻るやつ。コードは[CSS & JavaScript Toolbox](https://ja.wordpress.org/plugins/css-javascript-toolbox/)とか使ってでも簡単に書けるけどめんどくさい時に。画像もいろいろ選べるし。
@@ -272,11 +272,21 @@ header:
 : ちょっと画像が欲しいなーというときに[Pixabay](https://pixabay.com/)から引っ張ってくる。
 
 + [Easy FancyBox](https://ja.wordpress.org/plugins/easy-fancybox/)
-: 画像をクリックでにゅっと（表現難しい…）。画像がポップアップするやつ。特に設定は必要なくて、画像のリンク先を**メディアファイル**にするくらい。
+: 画像をクリックでにゅっと（表現難しい…）画像がポップアップするやつ。特に設定は必要なくて、画像のリンク先を**メディアファイル**にするくらい。
 
 + [WP Last Modified Info](https://ja.wordpress.org/plugins/wp-last-modified-info/)
 : 更新日を表示する。コードを弄らなくてもいいのと、設定がいろいろできるのが便利。
 
++ [Search by Algolia – Instant & Relevant results](https://ja.wordpress.org/plugins/search-by-algolia-instant-relevant-results/)
+: [Algolia](/createpages/algolia/)（サイト内記事）で触れた[Algolia](https://www.algolia.com/)好きとしては必須なやつ。  
+標準のサイト内検索で検索候補がつらっと出てくるように。
+
++ [Tabber Tabs Widget](https://ja.wordpress.org/plugins/tabber-tabs-widget/)
+: [Bloggerのカスタマイズでサイドバーをタブに](/sitesystem/blogger/)していたのだが、同じようなことができる。  
+  インストールするとウィジェットカスタマイズに`Tabber Tabs Widget Area`が追加されるので、入れたいウィジェットをそこに放り込む。  
+  あとはCSSでカスタマイズを頑張れば、テーマに合ったタブになるかと。
+  [![Tabber Tabs Widget setting](/assets/images/tabbertab-setting.png)](/assets/images/tabbertab-setting.png)
+  
 ### たまに役に立つやつ
 
 + [Batch Cat](https://ja.wordpress.org/plugins/batch-cat/)
@@ -395,21 +405,17 @@ Tumblrの記事に「カテゴリ」という概念がない。
 
 ### Bloggerより
 
-`Blogger`→`設定`→`その他`→`インポートとバックアップ`→`コンテンツをバックアップ`
-[![Blogger backup](/assets/images/blogger-backup.png)](/assets/images/blogger-backup.png)
-
-WordPressの`ダッシュボード`→`ツール`→`インポート`→`Blogger`をインストール
-[![WordPress import](/assets/images/wordpress-import.png)](/assets/images/wordpress-import.png)
-
-インポーターを実行し、バックアップしてあるファイルをアップ
-[![WordPress import Blogger](/assets/images/wordpress-import-blogger.png)](/assets/images/wordpress-import-blogger.png)
-
-Authorsを紐付ける
-[![Import Blogger](/assets/images/blogger-to-wordpress-assign-authors.png)](/assets/images/blogger-to-wordpress-assign-authors.png)
-
-BloggerのタグはWordPressのカテゴリに移されてる  
-`ツール`→`インポート`→`カテゴリーとタグの変換ツール`で変換する  
-下の方に変換スタートのボタンがあるので注意
+1. `Blogger`→`設定`→`その他`→`インポートとバックアップ`→`コンテンツをバックアップ`
+{% comment %}[![Blogger backup](/assets/images/blogger-backup.png)](/assets/images/blogger-backup.png){% endcomment %}
+1. WordPressの`ダッシュボード`→`ツール`→`インポート`→`Blogger`をインストール
+{% comment %}[![WordPress import](/assets/images/wordpress-import.png)](/assets/images/wordpress-import.png){% endcomment %}
+1. インポーターを実行し、バックアップしてあるファイルをアップ
+{% comment %}[![WordPress import Blogger](/assets/images/wordpress-import-blogger.png)](/assets/images/wordpress-import-blogger.png){% endcomment %}
+1. `Assign Authors`で投稿者を紐付ける
+{% comment %}[![Import Blogger](/assets/images/blogger-to-wordpress-assign-authors.png)](/assets/images/blogger-to-wordpress-assign-authors.png){% endcomment %}
+1. BloggerのタグはWordPressのカテゴリに移されてる  
+  `ツール`→`インポート`→`カテゴリーとタグの変換ツール`で変換する  
+  下の方に変換スタートのボタンがあるので注意
 
 ## プラグインでお引越し
 
@@ -477,15 +483,16 @@ define( 'DB_PASSWORD', 'データベースのパスワード' );
 
 1. FTPソフトやWebFTPツールを使ってWordPressが設置されてるフォルダを確認
 1. 設置されてるフォルダの`wp-config.php`ファイルからいろいろと設定項目を確認
-  + define( 'DB_NAME', 'データベース名' );
-  + $table_prefix = 'テーブル接頭辞';
+  + define( 'DB_NAME', '**データベース名**' );
+  + $table_prefix = '**テーブル接頭辞**';
   
 1. 設置先のフォルダをざっくりと削除
 1. データベースの削除、なのですが
   + 1つのデータベースに1つのWordPressサイトの場合  
   : データベースをさっくり削除
   + 1つのデータベースに複数のWordPressサイトやら何やらいろいろある場合  
-  : レンタルサーバ上で`phpMyAdmin`を開き、テーブル接頭辞が付いているやつをざくざくと削除[^gimptext]
+  : [XREA](https://www.xrea.com/)がそのパターン  
+    レンタルサーバ上で`phpMyAdmin`を開き、テーブル接頭辞が付いているやつをざくざくと削除[^gimptext]
 
 [^gimptext]: ものすごく関係ないけど、GIMP2.10からプラグイン無しでテキストの縦書きができるようになってる。
 [![phpMyAdmin](/assets/images/phpmyadmin_table-list.png)](/assets/images/phpmyadmin_table-list.png)
