@@ -194,7 +194,7 @@ header:
 > Please or you can go to the installation page directly through the	CSS & Javascript Toolbox page.
 > Dismiss
   1. **CJT-Instalaltion page**リンクから確認画面が出るのでインストール
-  1. さっそくスクリプトを追加しようと**New Code Block**から作成しようとしたら、カスペルさんがフィッシングサイトへのポップアップということでブロックされた…  
+  1. **New Code Block**からスクリプトを追加しようとしたら、カスペルさんがフィッシングサイトへのポップアップということでブロックしてきた…  
   1. と思いきや、設定の下にメニューが追加されてて、先ほど名前をつけたCode Blockもあった
   1. 使い方は[WordPressの記事に、個別にCSSやJSを追加する高機能プラグイン](http://beginnersdomain.net/plugin/css-javascript-toolbox/)という記事を参照
 
