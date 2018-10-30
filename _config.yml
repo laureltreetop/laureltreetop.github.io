@@ -295,15 +295,15 @@ defaults:
       path: ""
       type: widget
     values:
-      layout: single
+      layout: splash
       classes: wide
       author_profile: false
       read_time: false
       share: true
       comments: true
       related: false
-      sidebar:
-        nav: "sidebar"
+      #sidebar:
+      #  nav: "sidebar"
       #toc: true
       # toc_label:
       #toc_icon: "gears"
