@@ -63,15 +63,14 @@ Configuration file: xxxxx.github.io/_config.yml
 jekyll 3.7.4 | Error:  Invalid Windows-31J character "\xE2" on line 6
 ```
 `Invalid Windows-31J character "\xE2"`的なエラーは、ファイルにUTF-8な文字が入っているからだそうな。  
-ユーザ環境変数`RUBYOPT`に`--encoding=UTF-8`を設定する。
+ユーザ環境変数`RUBYOPT`に`--encoding=UTF-8`を設定する。  
+Ruby2.5.xインストール時に指定しておけば`-Eutf-8`が設定されてたり。
 
 前は`jekyll s`で動かしている時にファイルを修正したら自動的に再作成されてた。  
 いつの間にかできなくなってる。  
 `jekyll s --watch`もダメ。  
 対処法として見つかったのが、Rubyのバージョンアップ。  
 2.4.xから2.5.xに上げたら`jekyll s`だけで再作成されるように。  
-→嘘です、やっぱり再作成できてない。保留。  
-[Let Jekyll --watch](http://jekyll-windows.juthilo.com/4-wdm-gem/)にも--watchが効かない事例があった。  
 →ファイルによって効いたり効いてなかったり? 違いと対処方法は?
 
 ```sh
