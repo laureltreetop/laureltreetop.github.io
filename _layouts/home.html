@@ -4,15 +4,15 @@ layout: splash
 
 {{ content }}
 
-<h2 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
-{% for item in paginator.posts %}
-  {% capture year-month %}{{ item.date | date: '%Y-%m' }}{% endcapture %}
+{% for post in paginator.posts %}
+  {% capture year-month %}{{ post.date | date: '%Y-%m' }}{% endcapture %}
   {% if year-month != written_year-month %}
-    <h3 id="{{ year-month | slugify }}" class="archive__subtitle">{{ year-month }}</h3>
+    <h2 id="{{ year-month | slugify }}" class="archive__subtitle">{{ year-month }}</h2>
     {% capture written_year-month %}{{ year-month }}{% endcapture %}
   {% endif %}
-  <dt><a href="{{ item.url }}">{{ item.title }}</a></dt>
-  <dd>{{ item.excerpt | markdownify | strip_html | truncate: 120 }}</dd>
+  {% include archive-single.html %}
 {% endfor %}
+
 {% include paginator.html %}
