@@ -1,6 +1,6 @@
 ---
 title: "Blogger"
-description: 大幅なカスタマイズは難しいけど、やはり安定のBloggerなのかも?
+description: 大幅なカスタマイズは難しい。面倒くさくなってきた。
 permalink: /sitesystem/blogger/
 classes: wide
 header:
