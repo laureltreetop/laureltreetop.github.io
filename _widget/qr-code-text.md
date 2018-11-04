@@ -9,9 +9,11 @@ sidebar:
 # tags:
 #   - QRcode
 ---
+## {{ page.title }}
+
 {{ page.description }}
 {: .notice}
-<div id="qr-code-text" class="form-mimic">
+<form id="qr-code-text" class="form-mimic">
 <div>
 	<label for="note">テキスト:</label>
 	<textarea type="textarea" id="note" value="" placeholder="メモ、URLなど"></textarea>
@@ -27,15 +29,17 @@ sidebar:
 	<option value="svg">SVG形式（印刷物に最適）</option>
 	</select>
 </div>
+<div id="g-recaptcha"></div>
 <div>
-	<input id="create_qr_text" type="button" value="QRコード生成" class="generate btn btn--primary">
+    <input id="create_qr_text" type="button" value="QRコード生成" class="recaptcha generate btn btn--primary" disabled>
+    <!--input id="reset_qr_text" type="reset" value="クリア" class="generate btn btn--inverse"-->
 </div>
 <div id="qr_text">
 </div>
-</div>
+</form>
 
-**Internet ExplorerではSVG形式で保存できないようです。PNG形式でご利用ください。**
-+ 電話番号の前にTEL:をつけると、そのまま発信できます
+**Internet Explorerなど、環境によってはSVG形式で保存できないようです。PNG形式でご利用ください。**
++ 電話番号の前に**TEL:**をつけると、読み込みデータから発信できます
 + URLやメールアドレスはそのままで表示、送信できます
 + 画像を保存する前に、必ず読み取りテストを行ってください
 {: .notice--info}

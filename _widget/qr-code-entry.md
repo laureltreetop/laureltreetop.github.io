@@ -9,8 +9,11 @@ sidebar:
 # tags:
 #   - QRcode
 ---
+## {{ page.title }}
+
 {{ page.description }}
 {: .notice}
+
 <div id="qr-code-entry" class="form-mimic">
 <div>
 	<label for="NAME1">名前:</label>

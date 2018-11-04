@@ -25,14 +25,6 @@ $(function() {
 			topBtn.fadeOut();
 		}
 	});
-    /*
-	topBtn.click(function() {
-		$('body,html').animate({
-			scrollTop: 0
-		}, 500);
-		return false;
-	});
-    */
     topBtn.click(function() {
         $.smoothScroll({
             scrollElement: $('body,html'),
@@ -106,20 +98,44 @@ function make_address_qr(data) {
 
 function make_url(data_string) {
 	var data_encoded = encodeURI(data_string);
-	//var url = "http://chart.apis.google.com/chart?cht=qr&chs="+ $("#qrsize").val()+ "x"+ $("#qrsize").val()+ "&chld=M|5&choe=Shift_JIS&chl=";
 	var url = "https://api.qrserver.com/v1/create-qr-code/?size=" + $("#qrsize").val() + "x"+ $("#qrsize").val() + "&qzone=3&format=" + $("#qrformat").val() + "&data=";
 	url += data_encoded;
 	return url;
 }
 
-$(function() {
-	$("#create_qr_text").click(make_qr_text);
-});
-function make_qr_text() {
-	var data = new Array();
-	data['note'] = $("#note").val();
-	data['qrsize'] = $("#qrsize").val();
-	data['qrformat'] = $("#qrformat").val();
+var secret = '6LeZoncUAAAAACG01JyS3zq94Q5Qh7rqoTfeqcJL';
 
-	$("#qr_text").html('<img src="' + make_url(data['note']) + '"&format=' + data['qrformat'] + '>');
-}
+$(function() {
+    $('#create_qr_text').click(function(){
+        var response = grecaptcha.getResponse();
+        if ( !!response ) {
+            var data = new Array();
+            if ( !!$('#note').val() ) {
+                data['note'] = $('#note').val();
+                data['qrsize'] = $('#qrsize').val();
+                data['qrformat'] = $('#qrformat').val();
+
+                $('#qr_text').html('<img src="' + make_url(data['note']) + '"&format=' + data['qrformat'] + '>');
+               //$('#qr_text').html('<img src="' + make_url(data['note']) + '"&format=' + data['qrformat'] + '>https://www.google.com/recaptcha/api/siteverify?secret='+secret+'&response='+ grecaptcha.getResponse() +'</span>');
+            } else {
+                $('#qr_text').html('<span>テキストを入力してください。</span>');
+            }
+        } else {
+            $('#qr_text').html('<span>認証をやり直してください。</span>');
+            $('.recaptcha').prop('disabled', true);
+            grecaptcha.reset();
+        }
+    });
+});
+
+var onloadCallback = function() {
+    grecaptcha.render('g-recaptcha', {
+        'callback' : function(response) {
+            $('.recaptcha').prop('disabled', false);
+        },
+        'expired-callback' : function(response) {
+            $('.recaptcha').prop('disabled', true);
+        },
+        'sitekey' : '6LeZoncUAAAAAM1VQsbprrg6tTuj3-1Zsv2pX4ls'
+    });
+};
