@@ -76,7 +76,13 @@ function make_qr() {
 	data['qrsize'] = $("#qrsize").val();
 	data['qrformat'] = $("#qrformat").val();
 
-	$("#qr_add").html('<img src="' + make_url(make_address_qr(data)) + '">');
+    if (data['name']=="") {
+        $("#qr_add").html('<span>名前は必ず入力してください。</span>');
+    } else if (data['tel']+data['mail']+data['add']+data['note']=="") {
+        $("#qr_add").html('<span>項目は必ず1つ以上入力してください。</span>');
+    } else {
+        $("#qr_add").html('<img src="' + make_url(make_address_qr(data)) + '">');
+    }
 }
 
 function make_address_qr(data) {

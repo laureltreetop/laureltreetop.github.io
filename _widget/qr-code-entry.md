@@ -57,14 +57,15 @@ sidebar:
 	<option value="svg">SVG形式（印刷物に最適）</option>
 	</select>
 </div>
+<div id="g-recaptcha"></div>
 <div>
-	<input id="create_qr_entry" type="button" value="QRコード生成" class="generate btn btn--primary">
+	<input id="create_qr_entry" type="button" value="QRコード生成" class="recaptcha generate btn btn--primary" disabled>
 </div>
 <div id="qr_add">
 </div>
 </div>
 
-**Internet ExplorerではSVG形式で保存できないようです。PNG形式でご利用ください。**
+**Internet Explorerなど、環境によってはSVG形式で保存できないようです。PNG形式でご利用ください。**
 + 画像を保存する前に、必ず読み取りテストを行ってください
 + 環境により、読み取りはできても登録されない項目もあります（メモなど）
 + 名前は姓名まとめて姓または名に登録されます
