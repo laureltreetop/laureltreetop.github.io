@@ -37,6 +37,8 @@ createpages:
         url: /create-pages/sass/
       - title: "JQuery Plugins"
         url: /create-pages/javascript/
+      - title: "reCAPTCHA"
+        url: /createpages/recaptcha/
       - title: "Algolia with Javascrpt"
         url: /createpages/algolia/
 githubpages:
