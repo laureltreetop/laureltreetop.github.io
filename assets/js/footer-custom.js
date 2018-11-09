@@ -1,37 +1,31 @@
-$(function(){
-      $('a[href^="#"]').click(function() {
-      var speed = 400;
-      var href= $(this).attr('href');
-      var target = $(href == '#' || href == '' ? 'html' : href);
-      var position = target.offset().top;
-      $('body,html').animate({scrollTop:position}, speed, 'swing');
-      return false;
-   });
+$(function () {
+    $('a[href^="#"]').click(function () {
+        var speed = 400;
+        var href = $(this).attr('href');
+        var target = $(href == '#' || href == '' ? 'html' : href);
+        var position = target.offset().top;
+        $('body,html').animate({
+            scrollTop: position
+        }, speed, 'swing');
+        return false;
+    });
 });
 
 $("h1.page__title").text(
-	$.trim(
-		$("h1.page__title").text()
-	)
+    $.trim(
+        $("h1.page__title").text()
+    )
 ).lettering();
 
-$(function() {
-	var topBtn = $('#page-top');
-	topBtn.hide();
-	$(window).scroll(function() {
-		if ($(this).scrollTop() > 100) {
-			topBtn.fadeIn();
-		} else {
-			topBtn.fadeOut();
-		}
-	});
-    topBtn.click(function() {
-        $.smoothScroll({
-            scrollElement: $('body,html'),
-            scrollTarget: '#page-top',
-            speed: 500,
-        });
-    return false;
+$(function () {
+    var topBtn = $('#page-top');
+    topBtn.hide();
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            topBtn.fadeIn();
+        } else {
+            topBtn.fadeOut();
+        }
     });
 });
 
@@ -50,35 +44,25 @@ $(function () {
     });
 });
 
-$(document).ready(
-	function() {
-		$.fn.autoKana('#name', '#kana', {});
-});
-
-$(document).ready(function(){
-	$('textarea').autosize({
-		append: "\n"
-	});
-})
-
-$(function() {
-	$("#create_qr_entry").click(make_qr);
+$(function () {
+    $("#create_qr_entry").click(make_qr);
+    $.fn.autoKana('#name', '#kana');
 });
 
 function make_qr() {
-	var data = new Array();
-	data['name'] = $("#name").val();
-	data['kana'] = $("#kana").val();
-	data['tel'] = $("#tel").val();
-	data['mail'] = $("#mail").val();
-	data['add'] = $("#pref").val() + $("#city").val() + $("#street").val() + $("#extend-add").val();
-	data['note'] = $("#note").val();
-	data['qrsize'] = $("#qrsize").val();
-	data['qrformat'] = $("#qrformat").val();
+    var data = new Array();
+    data['name'] = $("#name").val();
+    data['kana'] = $("#kana").val();
+    data['tel'] = $("#tel").val();
+    data['mail'] = $("#mail").val();
+    data['add'] = $("#pref").val() + $("#city").val() + $("#street").val() + $("#extend-add").val();
+    data['note'] = $("#note").val();
+    data['qrsize'] = $("#qrsize").val();
+    data['qrformat'] = $("#qrformat").val();
 
-    if (data['name']=="") {
+    if (data['name'] == "") {
         $("#qr_add").html('<span>名前は必ず入力してください。</span>');
-    } else if (data['tel']+data['mail']+data['add']+data['note']=="") {
+    } else if (data['tel'] + data['mail'] + data['add'] + data['note'] == "") {
         $("#qr_add").html('<span>項目は必ず1つ以上入力してください。</span>');
     } else {
         $("#qr_add").html('<img src="' + make_url(make_address_qr(data)) + '">');
@@ -86,43 +70,43 @@ function make_qr() {
 }
 
 function make_address_qr(data) {
-	var result = "";
-	result += "MECARD:N:" + data['name'] + ";";
-	result += "SOUND:" + data['kana'] + ";";
-	result += "TEL:" + data['tel'] + ";";
-	result += "ADR:" + data['add'] + ";";
-	result += "EMAIL:" + data['mail'] + ";";
-	result += "NOTE:" + data['note'] + ";;\r\n";
-	result += "MEMORY:" + data['note'] + "\r\n";
-	result += "NAME1:" + data['name'] + "\r\n";
-	result += "NAME2:" + data['kana'] + "\r\n";
-	result += "TEL1:" + data['tel'] + "\r\n";
-	result += "ADD:" + data['add'] + "\r\n";
-	result += "MAIL1:" + data['mail'] + "\r\n";
-	return result;
+    var result = "";
+    result += "MECARD:N:" + data['name'] + ";";
+    result += "SOUND:" + data['kana'] + ";";
+    result += "TEL:" + data['tel'] + ";";
+    result += "ADR:" + data['add'] + ";";
+    result += "EMAIL:" + data['mail'] + ";";
+    result += "NOTE:" + data['note'] + ";;\r\n";
+    result += "MEMORY:" + data['note'] + "\r\n";
+    result += "NAME1:" + data['name'] + "\r\n";
+    result += "NAME2:" + data['kana'] + "\r\n";
+    result += "TEL1:" + data['tel'] + "\r\n";
+    result += "ADD:" + data['add'] + "\r\n";
+    result += "MAIL1:" + data['mail'] + "\r\n";
+    return result;
 }
 
 function make_url(data_string) {
-	var data_encoded = encodeURI(data_string);
-	var url = "https://api.qrserver.com/v1/create-qr-code/?size=" + $("#qrsize").val() + "x"+ $("#qrsize").val() + "&qzone=3&format=" + $("#qrformat").val() + "&data=";
-	url += data_encoded;
-	return url;
+    var data_encoded = encodeURI(data_string);
+    var url = "https://api.qrserver.com/v1/create-qr-code/?size=" + $("#qrsize").val() + "x" + $("#qrsize").val() + "&qzone=3&format=" + $("#qrformat").val() + "&data=";
+    url += data_encoded;
+    return url;
 }
 
-var secret = '6LeZoncUAAAAACG01JyS3zq94Q5Qh7rqoTfeqcJL';
+//var secret = '6LeZoncUAAAAACG01JyS3zq94Q5Qh7rqoTfeqcJL';
 
-$(function() {
-    $('#create_qr_text').click(function(){
+$(function () {
+    $('#create_qr_text').click(function () {
         var response = grecaptcha.getResponse();
-        if ( !!response ) {
+        if (!!response) {
             var data = new Array();
-            if ( !!$('#note').val() ) {
+            if (!!$('#note').val()) {
                 data['note'] = $('#note').val();
                 data['qrsize'] = $('#qrsize').val();
                 data['qrformat'] = $('#qrformat').val();
 
                 $('#qr_text').html('<img src="' + make_url(data['note']) + '"&format=' + data['qrformat'] + '>');
-               //$('#qr_text').html('<img src="' + make_url(data['note']) + '"&format=' + data['qrformat'] + '>https://www.google.com/recaptcha/api/siteverify?secret='+secret+'&response='+ grecaptcha.getResponse() +'</span>');
+                //$('#qr_text').html('<img src="' + make_url(data['note']) + '"&format=' + data['qrformat'] + '>https://www.google.com/recaptcha/api/siteverify?secret='+secret+'&response='+ grecaptcha.getResponse() +'</span>');
             } else {
                 $('#qr_text').html('<span>テキストを入力してください。</span>');
             }
@@ -134,14 +118,14 @@ $(function() {
     });
 });
 
-var onloadCallback = function() {
+var onloadCallback = function () {
     grecaptcha.render('g-recaptcha', {
-        'callback' : function(response) {
+        'callback': function (response) {
             $('.recaptcha').prop('disabled', false);
         },
-        'expired-callback' : function(response) {
+        'expired-callback': function (response) {
             $('.recaptcha').prop('disabled', true);
         },
-        'sitekey' : '6LeZoncUAAAAAM1VQsbprrg6tTuj3-1Zsv2pX4ls'
+        'sitekey': '6LeZoncUAAAAAM1VQsbprrg6tTuj3-1Zsv2pX4ls'
     });
 };

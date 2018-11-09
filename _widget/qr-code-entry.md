@@ -4,10 +4,6 @@ description: 読み取ると携帯・スマホのアドレス帳に登録でき�
 permalink: /widget/qr-code-entry.html
 sidebar:
   nav: "sidebar"
-# categories:
-#   - Widget
-# tags:
-#   - QRcode
 ---
 ## {{ page.title }}
 
@@ -61,8 +57,7 @@ sidebar:
 <div>
 	<input id="create_qr_entry" type="button" value="QRコード生成" class="recaptcha generate btn btn--primary" disabled>
 </div>
-<div id="qr_add">
-</div>
+<div id="qr_add"></div>
 </div>
 
 **Internet Explorerなど、環境によってはSVG形式で保存できないようです。PNG形式でご利用ください。**
