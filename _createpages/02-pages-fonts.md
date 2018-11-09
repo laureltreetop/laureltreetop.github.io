@@ -158,7 +158,7 @@ CSSで各色を設定。
 #### cssやscssで使う
 
 下の方に古い記事も残しておくけど、こっちのほうが簡単に使えるので。  
-[Getting Started on the We](https://fontawesome.com/how-to-use/on-the-web/setup/getting-started?using=web-fonts-with-css)にあるように、`<head>`に
+[Getting Started on the Web](https://fontawesome.com/how-to-use/on-the-web/setup/getting-started?using=web-fonts-with-css)にあるように、`<head>`に
 ```html
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 ```
