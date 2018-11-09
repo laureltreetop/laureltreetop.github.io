@@ -157,6 +157,38 @@ CSSで各色を設定。
 
 #### cssやscssで使う
 
+下の方に古い記事も残しておくけど、こっちのほうが簡単に使えるので。  
+[Getting Started on the We](https://fontawesome.com/how-to-use/on-the-web/setup/getting-started?using=web-fonts-with-css)にあるように、`<head>`に
+```html
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+```
+と入れていおいて、[CSS Pseudo-elements](https://fontawesome.com/how-to-use/on-the-web/advanced/css-pseudo-elements)にあるように、
+```scss
+blockquote {
+    &::before {
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        content: '\f10d';
+    }
+    &::after {
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        content: '\f10e';
+    }
+}
+```
+とcssなりscssに突っ込んでおけばいいかと。  
+（<i class="far fa-hand-point-up"></i>はあとから出てくるblockquoteでのscssを端折ってあるやつ）  
+ブランドロゴは`font-family: "Font Awesome 5 Brands";`だけでいいけど、矢印だったりの普通の(?)アイコンを使う時は、
+```css
+font-family: "Font Awesome 5 Free";
+font-weight: 900;
+```
+というふうにfont-weightを900に設定するのが必須。  
+そうじゃないとお豆腐になっちゃいます。
+
+#### cssやscssで使う（古くなった）
+
 引用に使えないかなーと思って苦労したが、下記の記事が参考になった。
 + [【保存版】Font Awesomeの使い方：Webアイコンフォントを使おう](https://saruwakakun.com/html-css/basic/font-awesome)
 + [Font Awesome 5 Freeで疑似要素(:after,:before)のcontent指定する場合](https://qiita.com/Garyuten/items/6d68da5cdac6dab9ba26)

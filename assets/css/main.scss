@@ -86,14 +86,24 @@ blockquote {
 	margin: 0 !important;
     font-size: $type-size-6;
 	&::before {
-		display: none;
-		font-family: 'Font Awesome 5 Solid';
+		font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
 		content: '\f10d';
+		position: absolute;
+        font-size: $type-size-1;
+		opacity: 0.1;
+        top: 10px;
+        left: 10px;
 	}
 	&::after {
-		display: none;
-		font-family: 'Font Awesome 5 Solid';
+		position: absolute;
+        font-size: $type-size-1;
+		opacity: 0.1;
+		font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
 		content: '\f10e';
+        bottom: 10px;
+        right: 10px;
 	}
 	p {
 		padding: 0 !important;
@@ -105,41 +115,7 @@ blockquote {
 		text-align: right;
 		color: #888888;
 	}
-	.svg-inline--fa {
-		position: absolute;
-        font-size: $type-size-1;
-		opacity: 0.1;
-		&:first-of-type {
-			top: 10px;
-			left: 10px;
-		}
-		&:last-of-type {
-			bottom: 10px;
-			right: 10px;
-		}
-	}
-	a[href*="twitter"]::before {
-		display: none;
-		font-family: 'Font Awesome 5 Brands';
-		content: '\f099';
-	}
-	.svg-inline--fa.fa-twitter {
-		color: #1da1f2;
-		top: 10px;
-		right: 10px;
-	}
-	a[href*="wikipedia"]::before {
-		display: none;
-		font-family: 'Font Awesome 5 Brands';
-		content: '\f266';
-	}
-	.svg-inline--fa.fa-wikipedia-w {
-		color: #636466;
-		top: 10px;
-		right: 10px;
-	}
 }
-
 /* toggle TOC */
 .toggle-menu {
     @include breakpoint(max-width ($large - 1px)) {
