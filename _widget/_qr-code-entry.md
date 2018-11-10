@@ -11,12 +11,13 @@ sidebar:
     {% include head/custom.html %}
   </head>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--script src="/assets/js/main.min.js"></script-->
 <script src="/assets/js/jquery.autoKana.js"></script>
 <script src="https://ajaxzip3.github.io/ajaxzip3.js"></script>
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+<!--link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<!--script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script-->
 
   <body class="layout--splash">
 
@@ -83,7 +84,7 @@ sidebar:
 </div>
 <div id="g-recaptcha"></div>
 <div>
-	<input id="create_qr_entry" type="button" value="QRコード生成" class="recaptcha generate btn btn--primary" disabled>
+	<input id="create_qr_entry" type="button" value="QRコード生成" class="recaptcha generate btn btn--primary">
 </div>
 <div id="qr_add"></div>
 </div>
@@ -110,5 +111,5 @@ sidebar:
       </footer>
     </div>
 
-<script src="/assets/js/footer-custom.js"></script>
+<!--script src="/assets/js/custom.js"></script-->
 </body>
