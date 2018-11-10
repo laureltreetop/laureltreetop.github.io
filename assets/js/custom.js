@@ -30,18 +30,17 @@ $(function () {
         }
     });
 });
-/*
-    $('input[name="accordion-toc"]').change(function () {
-        if ($(this).prop('checked')) {
-            $('[name="accordion-toclist"]').prop('checked', false);
-        }
-    });
-    $('input[name="accordion-toclist"]').change(function () {
-        if ($(this).prop('checked')) {
-            $('[name="accordion-toc"]').prop('checked', false);
-        }
-    });
-*/
+
+$('input[name="accordion-toc"]').change(function () {
+    if ($(this).prop('checked')) {
+        $('[name="accordion-toclist"]').prop('checked', false);
+    }
+});
+$('input[name="accordion-toclist"]').change(function () {
+    if ($(this).prop('checked')) {
+        $('[name="accordion-toc"]').prop('checked', false);
+    }
+});
 
 $(function () {
     $('#create_qr_entry').click(function () {
