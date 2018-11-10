@@ -2,7 +2,7 @@
 layout: compress
 title: 電話帳登録用QRコード作成
 description: 読み取ると携帯・スマホのアドレス帳に登録できるQRコードを作成できます。
-permalink: /widget/_qr-code-entry.html
+permalink: /widget/temp_qr-code-entry.html
 sidebar:
   nav: "sidebar"
 ---
@@ -11,17 +11,12 @@ sidebar:
     {% include head/custom.html %}
   </head>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="/assets/js/jquery.autoKana.js"></script>
-<script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+<script src="https://ajaxzip3.github.io/ajaxzip3.js"></script>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
-
-<script>
-  FontAwesomeConfig = { searchPseudoElements: true };
-</script>
-<script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
-
-
 
   <body class="layout--splash">
 
