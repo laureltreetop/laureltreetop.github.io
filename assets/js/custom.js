@@ -44,6 +44,13 @@ $('input[name="accordion-toclist"]').change(function () {
     }
 });
 
+$('#reset_qr_entry').click(function () {
+    $("#qr_add").html('');
+});
+$('#reset_qr_text').click(function () {
+    $("#qr_text").html('');
+});
+
 $('#create_qr_entry').click(function () {
     var response = grecaptcha.getResponse();
     if (!!response) {

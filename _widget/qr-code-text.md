@@ -2,12 +2,6 @@
 title: テキスト用QRコード作成
 description: 雑多なテキストをやり取りするためのQRコードを作成できます。
 permalink: /widget/qr-code-text.html
-sidebar:
-  nav: "sidebar"
-# categories:
-#   - Widget
-# tags:
-#   - QRcode
 ---
 ## {{ page.title }}
 
@@ -20,7 +14,7 @@ sidebar:
 </div>
 <div>
 	<label for="qrsize">QRコードサイズ:</label>
-	<input type="text" id="qrsize" value="200">
+	<input type="text" id="qrsize" value="200" />
 </div>
 <div>
 	<label for="qrformat">画像形式:</label>
@@ -31,8 +25,8 @@ sidebar:
 </div>
 <div id="g-recaptcha"></div>
 <div>
-    <input id="create_qr_text" type="button" value="QRコード生成" class="recaptcha generate btn btn--primary" disabled>
-    <!--input id="reset_qr_text" type="reset" value="クリア" class="generate btn btn--inverse"-->
+    <input id="create_qr_text" type="button" value="QRコード生成" class="recaptcha generate btn btn--primary" disabled />
+    <input id="reset_qr_text" type="reset" value="クリア" class="generate btn btn--inverse" />
 </div>
 <div id="qr_text">
 </div>
