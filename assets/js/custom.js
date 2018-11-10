@@ -44,30 +44,37 @@ $(function () {
     });
 });
 
-$(function () {
-    $("#create_qr_entry").click(make_qr);
-    $.fn.autoKana('#name', '#kana');
+$(document).ready( function() {
+    $.fn.autoKana('#name', '#kana', {});
 });
 
-function make_qr() {
-    var data = new Array();
-    data['name'] = $("#name").val();
-    data['kana'] = $("#kana").val();
-    data['tel'] = $("#tel").val();
-    data['mail'] = $("#mail").val();
-    data['add'] = $("#pref").val() + $("#city").val() + $("#street").val() + $("#extend-add").val();
-    data['note'] = $("#note").val();
-    data['qrsize'] = $("#qrsize").val();
-    data['qrformat'] = $("#qrformat").val();
+$(function () {
+    $('#create_qr_entry').click(function () {
+        var response = grecaptcha.getResponse();
+        if (!!response) {
+            var data = new Array();
+            data['name'] = $("#name").val();
+            data['kana'] = $("#kana").val();
+            data['tel'] = $("#tel").val();
+            data['mail'] = $("#mail").val();
+            data['add'] = $("#pref").val() + $("#city").val() + $("#street").val() + $("#extend-add").val();
+            data['note'] = $("#note").val();
+            data['qrsize'] = $("#qrsize").val();
 
-    if (data['name'] == "") {
-        $("#qr_add").html('<span>名前は必ず入力してください。</span>');
-    } else if (data['tel'] + data['mail'] + data['add'] + data['note'] == "") {
-        $("#qr_add").html('<span>項目は必ず1つ以上入力してください。</span>');
-    } else {
-        $("#qr_add").html('<img src="' + make_url(make_address_qr(data)) + '">');
-    }
-}
+            if (data['name'] == "") {
+                $("#qr_add").html('<span>名前は必ず入力してください。</span>');
+            } else if (data['tel'] + data['mail'] + data['add'] + data['note'] == "") {
+                $("#qr_add").html('<span>項目は必ず1つ以上入力してください。</span>');
+            } else {
+                $("#qr_add").html('<img src="' + make_url(make_address_qr(data)) + '">');
+            }
+        } else {
+            $('#qr_add').html('<span>認証をやり直してください。</span>');
+            $('.recaptcha').prop('disabled', true);
+            grecaptcha.reset();
+        }
+    });
+});
 
 function make_address_qr(data) {
     var result = "";

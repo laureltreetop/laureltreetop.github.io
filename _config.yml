@@ -428,8 +428,10 @@ collections:
 github: [metadata]
 
 head_scripts:
-#  - https://apis.google.com/js/platform.js
-#  - /assets/js/custom_head.js
-#  - https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js # NG?
+  - https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js
+  - https://ajaxzip3.github.io/ajaxzip3.js
+  - /assets/js/jquery.autoKana.js
+#  - /assets/js/custom.js
 footer_scripts:
-#  - /assets/js/footer-custom.js # NG
+#  - /assets/js/custom.js
