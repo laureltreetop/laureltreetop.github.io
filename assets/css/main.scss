@@ -292,9 +292,8 @@ blockquote {
 #qrsize {
 	width: 5em;
 }
-#create_qr_entry, #reset_qr_entry, #create_qr_text, #reset_qr_text {
+#section-button {
     margin-top: 10px;
-    margin-right: 5px;
 }
 
 @media only screen and (min-width: $large) {

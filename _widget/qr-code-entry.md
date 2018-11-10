@@ -9,15 +9,15 @@ permalink: /widget/qr-code-entry.html
 {: .notice}
 
 <form id="qr-code-entry" class="form-mimic">
-<div>
+<div id="section-name">
     <label for="NAME1">名前:</label>
 	<input type="text" id="name" value="" placeholder="" />
 </div>
-<div>
+<div id="section-kana">
 	<label for="NAME2">名前ふりがな:</label>
 	<input type="text" id="kana" value="" placeholder="" />
 </div>
-<div>
+<div id="section-tel">
 	<label for="TEL1">電話番号:</label>
 	<input type="text" id="tel" value="" placeholder="" />
 </div>
@@ -25,24 +25,30 @@ permalink: /widget/qr-code-entry.html
   <span class="p-country-name" style="display:none;">Japan</span>
 	住所:
   〒<input type="text" id="zipcode" name="zipcode" class="p-postal-code" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','pref','city','street');" />（自動入力用）<br>
+<div id="section-adr1">
   <input type="text" id="pref" name="pref" class="p-region" placeholder="（都道府県）" />
   <input type="text" id="city" name="city" class="p-locality" placeholder="（市区町村）" /><br>
+</div>
+<div id="section-adr2">
   <input type="text" id="street" name="street" class="p-street-address" placeholder="（番地）" /><br>
+</div>
+<div id="section-adr3">
   <input type="text" id="extend-add" class="p-extended-address" placeholder="（建物名など）" />
 </div>
-<div>
+</div>
+<div id="section-mail">
 	<label for="MAIL1">E-mail:</label>
 	<input type="text" id="mail" value="" placeholder="" />
 </div>
-<div>
+<div id="section-memo">
 	<label for="note">その他:</label>
 	<textarea type="textarea" id="note" value="" placeholder="メモ、URLなど"></textarea>
 </div>
-<div>
+<div id="section-qrsize">
 	<label for="qrsize">QRコードサイズ:</label>
 	<input type="text" id="qrsize" value="200" />
 </div>
-<div>
+<div id="section-qrformat">
 	<label for="qrformat">画像形式:</label>
 	<select id="qrformat" name="qrformat">
 	<option value="png">PNG形式（Webに最適）</option>
@@ -50,7 +56,7 @@ permalink: /widget/qr-code-entry.html
 	</select>
 </div>
 <div id="g-recaptcha"></div>
-<div>
+<div id="section-button">
 	<input id="create_qr_entry" type="button" value="QRコード生成" class="recaptcha generate btn btn--primary" disabled />
     <input id="reset_qr_entry" type="reset" value="クリア" class="btn" />
 </div>

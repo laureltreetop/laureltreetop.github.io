@@ -8,15 +8,15 @@ permalink: /widget/qr-code-text.html
 {{ page.description }}
 {: .notice}
 <form id="qr-code-text" class="form-mimic">
-<div>
+<div id="section-memo">
 	<label for="note">テキスト:</label>
 	<textarea type="textarea" id="note" value="" placeholder="メモ、URLなど"></textarea>
 </div>
-<div>
+<div id="section-qrsize">
 	<label for="qrsize">QRコードサイズ:</label>
 	<input type="text" id="qrsize" value="200" />
 </div>
-<div>
+<div id="section-qrformat">
 	<label for="qrformat">画像形式:</label>
 	<select id="qrformat" name="qrformat">
 	<option value="png">PNG形式（Webに最適）</option>
@@ -24,7 +24,7 @@ permalink: /widget/qr-code-text.html
 	</select>
 </div>
 <div id="g-recaptcha"></div>
-<div>
+<div id="section-button">
     <input id="create_qr_text" type="button" value="QRコード生成" class="recaptcha generate btn btn--primary" disabled />
     <input id="reset_qr_text" type="reset" value="クリア" class="generate btn btn--inverse" />
 </div>
