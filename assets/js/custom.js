@@ -19,6 +19,8 @@ $("h1.page__title").text(
 
 $.fn.autoKana('#name', '#kana');
 
+autosize($('textarea'));
+
 $(function () {
     var topBtn = $('#page-top');
     topBtn.hide();
@@ -42,32 +44,30 @@ $('input[name="accordion-toclist"]').change(function () {
     }
 });
 
-$(function () {
-    $('#create_qr_entry').click(function () {
-        var response = grecaptcha.getResponse();
-        if (!!response) {
-            var data = new Array();
-            data['name'] = $("#name").val();
-            data['kana'] = $("#kana").val();
-            data['tel'] = $("#tel").val();
-            data['mail'] = $("#mail").val();
-            data['add'] = $("#pref").val() + $("#city").val() + $("#street").val() + $("#extend-add").val();
-            data['note'] = $("#note").val();
-            data['qrsize'] = $("#qrsize").val();
+$('#create_qr_entry').click(function () {
+    var response = grecaptcha.getResponse();
+    if (!!response) {
+        var data = new Array();
+        data['name'] = $("#name").val();
+        data['kana'] = $("#kana").val();
+        data['tel'] = $("#tel").val();
+        data['mail'] = $("#mail").val();
+        data['add'] = $("#pref").val() + $("#city").val() + $("#street").val() + $("#extend-add").val();
+        data['note'] = $("#note").val();
+        data['qrsize'] = $("#qrsize").val();
 
-            if (data['name'] == "") {
-                $("#qr_add").html('<span>名前は必ず入力してください。</span>');
-            } else if (data['tel'] + data['mail'] + data['add'] + data['note'] == "") {
-                $("#qr_add").html('<span>項目は必ず1つ以上入力してください。</span>');
-            } else {
-                $("#qr_add").html('<img src="' + make_url(make_address_qr(data)) + '">');
-            }
+        if (data['name'] == "") {
+            $("#qr_add").html('<span>名前は必ず入力してください。</span>');
+        } else if (data['tel'] + data['mail'] + data['add'] + data['note'] == "") {
+            $("#qr_add").html('<span>項目は必ず1つ以上入力してください。</span>');
         } else {
-            $('#qr_add').html('<span>認証をやり直してください。</span>');
-            $('.recaptcha').prop('disabled', true);
-            grecaptcha.reset();
+            $("#qr_add").html('<img src="' + make_url(make_address_qr(data)) + '">');
         }
-    });
+    } else {
+        $('#qr_add').html('<span>認証をやり直してください。</span>');
+        $('.recaptcha').prop('disabled', true);
+        grecaptcha.reset();
+    }
 });
 
 function make_address_qr(data) {
@@ -94,26 +94,24 @@ function make_url(data_string) {
     return url;
 }
 
-$(function () {
-    $('#create_qr_text').click(function () {
-        var response = grecaptcha.getResponse();
-        if (!!response) {
-            var data = new Array();
-            if (!!$('#note').val()) {
-                data['note'] = $('#note').val();
-                data['qrsize'] = $('#qrsize').val();
-                data['qrformat'] = $('#qrformat').val();
+$('#create_qr_text').click(function () {
+    var response = grecaptcha.getResponse();
+    if (!!response) {
+        var data = new Array();
+        if (!!$('#note').val()) {
+            data['note'] = $('#note').val();
+            data['qrsize'] = $('#qrsize').val();
+            data['qrformat'] = $('#qrformat').val();
 
-                $('#qr_text').html('<img src="' + make_url(data['note']) + '"&format=' + data['qrformat'] + '>');
-            } else {
-                $('#qr_text').html('<span>テキストを入力してください。</span>');
-            }
+            $('#qr_text').html('<img src="' + make_url(data['note']) + '"&format=' + data['qrformat'] + '>');
         } else {
-            $('#qr_text').html('<span>認証をやり直してください。</span>');
-            $('.recaptcha').prop('disabled', true);
-            grecaptcha.reset();
+            $('#qr_text').html('<span>テキストを入力してください。</span>');
         }
-    });
+    } else {
+        $('#qr_text').html('<span>認証をやり直してください。</span>');
+        $('.recaptcha').prop('disabled', true);
+        grecaptcha.reset();
+    }
 });
 
 var onloadCallback = function () {

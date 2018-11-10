@@ -430,6 +430,7 @@ github: [metadata]
 head_scripts:
   - https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/autosize.js/4.0.2/autosize.min.js
   - https://ajaxzip3.github.io/ajaxzip3.js
   - /assets/js/jquery.autoKana.js
 #  - /assets/js/custom.js
