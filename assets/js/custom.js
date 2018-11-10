@@ -17,6 +17,8 @@ $("h1.page__title").text(
     )
 ).lettering();
 
+$.fn.autoKana('#name', '#kana');
+
 $(function () {
     var topBtn = $('#page-top');
     topBtn.hide();
@@ -28,25 +30,18 @@ $(function () {
         }
     });
 });
-
-$(function () {
+/*
     $('input[name="accordion-toc"]').change(function () {
         if ($(this).prop('checked')) {
             $('[name="accordion-toclist"]').prop('checked', false);
         }
     });
-});
-$(function () {
     $('input[name="accordion-toclist"]').change(function () {
         if ($(this).prop('checked')) {
             $('[name="accordion-toc"]').prop('checked', false);
         }
     });
-});
-
-$(document).ready( function() {
-    $.fn.autoKana('#name', '#kana', {});
-});
+*/
 
 $(function () {
     $('#create_qr_entry').click(function () {
@@ -100,8 +95,6 @@ function make_url(data_string) {
     return url;
 }
 
-//var secret = '6LeZoncUAAAAACG01JyS3zq94Q5Qh7rqoTfeqcJL';
-
 $(function () {
     $('#create_qr_text').click(function () {
         var response = grecaptcha.getResponse();
@@ -113,7 +106,6 @@ $(function () {
                 data['qrformat'] = $('#qrformat').val();
 
                 $('#qr_text').html('<img src="' + make_url(data['note']) + '"&format=' + data['qrformat'] + '>');
-                //$('#qr_text').html('<img src="' + make_url(data['note']) + '"&format=' + data['qrformat'] + '>https://www.google.com/recaptcha/api/siteverify?secret='+secret+'&response='+ grecaptcha.getResponse() +'</span>');
             } else {
                 $('#qr_text').html('<span>テキストを入力してください。</span>');
             }
