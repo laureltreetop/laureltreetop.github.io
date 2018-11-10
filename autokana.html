@@ -1,9 +1,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/assets/js/jquery.autoKana.js"></script>
-<!--script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script-->
-<script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+<script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+<!--script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script-->
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 
-<div id="qr-code-entry" class="form-mimic">
+<form id="qr-code-entry" class="form-mimic">
 <div>
 	<label for="NAME1">名前:</label>
 	<input type="text" id="name" value="" placeholder="">
@@ -16,7 +17,7 @@
 	<label for="TEL1">電話番号:</label>
 	<input type="text" id="tel" value="" placeholder="">
 </div>
-<form class="h-adr">
+<div class="h-adr">
   <span class="p-country-name" style="display:none;">Japan</span>
 	住所:
   <!--〒<input type="text" class="p-postal-code" maxlength="8"><br-->
@@ -25,8 +26,8 @@
   <input type="text" id="city" name="city" class="p-locality" placeholder="（市区町村）" /><br>
   <input type="text" id="street" name="street" class="p-street-address" placeholder="（番地）" /><br>
   <input type="text" id="extend-add" class="p-extended-address" placeholder="（建物名など）" />
-  <input type="reset" value="住所クリア" class="btn">
-</form>
+  <!--input type="reset" value="住所クリア" class="btn"-->
+</div>
 <div>
 	<label for="MAIL1">E-mail:</label>
 	<input type="text" id="mail" value="" placeholder="">
@@ -36,39 +37,49 @@
 	<textarea type="textarea" id="note" value="" placeholder="メモ、URLなど"></textarea>
 </div>
 <div>
-	<label for="qrsize">QRコードサイズ（上限547px）:</label>
+	<label for="qrsize">QRコードサイズ:</label>
 	<input type="text" id="qrsize" value="200">px
 </div>
+<div id="g-recaptcha"></div>
 <div>
-	<input id="create_qr_entry" type="button" value="QRコード生成" class="generate btn btn--primary">
+	<input id="create_qr_entry" type="button" value="QRコード生成" class="generate btn btn--primary" disabled>
 </div>
 <div id="qr_add">
 </div>
-</div>
+</form>
 
 <script type="text/javascript">
-    $(document).ready(
-        function() {
-            $.fn.autoKana('#name', '#kana', {});
-    });
-
-$(function() {
-	$("#create_qr_entry").click(make_qr);
+$(document).ready( function() {
+    $.fn.autoKana('#name', '#kana', {});
 });
 
-function make_qr() {
-	var data = new Array();
-	data['name'] = $("#name").val();
-	data['kana'] = $("#kana").val();
-	data['tel'] = $("#tel").val();
-	data['mail'] = $("#mail").val();
-	data['add'] = $("#pref").val() + $("#city").val() + $("#street").val() + $("#extend-add").val();
-	data['note'] = $("#note").val();
-	data['qrsize'] = $("#qrsize").val();
+$(function () {
+    $('#create_qr_entry').click(function () {
+        var response = grecaptcha.getResponse();
+        if (!!response) {
+            var data = new Array();
+            data['name'] = $("#name").val();
+            data['kana'] = $("#kana").val();
+            data['tel'] = $("#tel").val();
+            data['mail'] = $("#mail").val();
+            data['add'] = $("#pref").val() + $("#city").val() + $("#street").val() + $("#extend-add").val();
+            data['note'] = $("#note").val();
+            data['qrsize'] = $("#qrsize").val();
 
-	$("#qr_add").html('<img src="' + make_url(make_address_qr(data)) + '">');
-}
-
+            if (data['name'] == "") {
+                $("#qr_add").html('<span>名前は必ず入力してください。</span>');
+            } else if (data['tel'] + data['mail'] + data['add'] + data['note'] == "") {
+                $("#qr_add").html('<span>項目は必ず1つ以上入力してください。</span>');
+            } else {
+                $("#qr_add").html('<img src="' + make_url(make_address_qr(data)) + '">');
+            }
+        } else {
+            $('#qr_add').html('<span>認証をやり直してください。</span>');
+            $('.recaptcha').prop('disabled', true);
+            grecaptcha.reset();
+        }
+    });
+});
 function make_address_qr(data) {
 	var result = "";
 	result += "MECARD:N:" + data['name'] + ";";
@@ -87,10 +98,10 @@ function make_address_qr(data) {
 }
 
 function make_url(data_string) {
-	var data_encoded = encodeURI(data_string);
-	var url = "http://chart.apis.google.com/chart?cht=qr&chs="+ $("#qrsize").val()+ "x"+ $("#qrsize").val()+ "&chld=M|5&choe=Shift_JIS&chl=";
-	url += data_encoded;
-	return url;
+    var data_encoded = encodeURI(data_string);
+    var url = "https://api.qrserver.com/v1/create-qr-code/?size=" + $("#qrsize").val() + "x" + $("#qrsize").val() + "&qzone=3&format=" + $("#qrformat").val() + "&data=";
+    url += data_encoded;
+    return url;
 }
 
 $(function() {
@@ -103,5 +114,17 @@ function make_qr_text() {
 
 	$("#qr_text").html('<img src="' + make_url(data['note']) + '">');
 }
+
+var onloadCallback = function () {
+    grecaptcha.render('g-recaptcha', {
+        'callback': function (response) {
+            $('.recaptcha').prop('disabled', false);
+        },
+        'expired-callback': function (response) {
+            $('.recaptcha').prop('disabled', true);
+        },
+        'sitekey': '6LeZoncUAAAAAM1VQsbprrg6tTuj3-1Zsv2pX4ls'
+    });
+};
 
 </script>
