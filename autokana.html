@@ -1,7 +1,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/assets/js/jquery.autoKana.js"></script>
 <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
-<!--script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script-->
 <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 
 <form id="qr-code-entry" class="form-mimic">
@@ -26,7 +25,6 @@
   <input type="text" id="city" name="city" class="p-locality" placeholder="（市区町村）" /><br>
   <input type="text" id="street" name="street" class="p-street-address" placeholder="（番地）" /><br>
   <input type="text" id="extend-add" class="p-extended-address" placeholder="（建物名など）" />
-  <!--input type="reset" value="住所クリア" class="btn"-->
 </div>
 <div>
 	<label for="MAIL1">E-mail:</label>
@@ -43,6 +41,7 @@
 <div id="g-recaptcha"></div>
 <div>
 	<input id="create_qr_entry" type="button" value="QRコード生成" class="generate btn btn--primary">
+    <input type="reset" value="クリア" class="btn">
 </div>
 <div id="qr_add">
 </div>
