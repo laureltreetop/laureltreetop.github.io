@@ -63,10 +63,8 @@ TOCというのはTable Of Contentsの略で、記事の左側（テーマのデ
 [![TOC left side](/assets/images/minimal-mistakes_edit-toc.png)](/assets/images/minimal-mistakes_edit-toc.png)
 
 /includes/sidebar.html  
-`{% raw %}{% if page.sidebar.nav %}{% endraw %}`あたりを変更[^sidebar]。  
+`{% raw %}{% if page.sidebar.nav %}{% endraw %}`に追加。  
 <script src="https://gist.github.com/laureltreetop/ceb3edbf1c04ad98a7dec09ee6ad123f.js"></script>
-
-[^sidebar]: 後述のモバイル対応のため、classも追加してある。
 
 /includes/tocをほぼ書き換える度胸はないので、**/includes/toc_list**というファイルを作成。
 <script src="https://gist.github.com/laureltreetop/3c3213d3fc5a858b420aea8e2210164f.js"></script>
@@ -75,8 +73,9 @@ TOCというのはTable Of Contentsの略で、記事の左側（テーマのデ
 <script src="https://gist.github.com/laureltreetop/b067472931d585d8a55f78cad5eeebac.js"></script>
 
 あとはmain.scssで体裁を整えたり、記事のfront matterに`classes: wide`を追加したりなど。  
-元ネタは/_sass/minimal-mistakes_navigation.scssを参考にカスタマイズ。  
-詳細は後述。
+詳しくは後述。
+
+### スムーススクロール
 
 ついでなので「日本語の見出しだとスムーススクロールになってくれない問題」に着手。  
 カスタムスクリプトとして追加。  
@@ -84,24 +83,30 @@ TOCというのはTable Of Contentsの略で、記事の左側（テーマのデ
 
 ### モバイル用のボタンを設置
 
-ただ、ここからが困った自体に。  
-ある程度できて自己満足していたところ、モバイルだとトグルボタンがなくてTOC丸出し状態になっていたという。    
-これも修正してトグル対応にしたのだが、さてどれにしたもんだろうかと。  
-各バージョンを作っておいて、後で考える。
-{: .notice--info}
+このままだとモバイルで見たときにTOC丸出しになってしまっている。  
+トグルボタンを追加。
 
-### 縦に並んでいる
+[![TOC mobile](/assets/images/minimal-mistakes-toggle-toc.png)](/assets/images/minimal-mistakes-toggle-toc.png)
 
-まずはこんな感じで。  
-[![TOC mobile](/assets/images/minimal-mistakes_toc-mobile.png)](/assets/images/minimal-mistakes_toc-mobile.png)
-[![TOC mobile](/assets/images/minimal-mistakes_toc-mobile_open.png)](/assets/images/minimal-mistakes_toc-mobile_open.png)
+/assets/css/main.scssに追加していく。  
+まずモバイルでのトグルボタンを並べるように。
+<script src="https://gist.github.com/laureltreetop/4e3fb72dabfee1757488fa952a744c74.js?file=minimal-mistakes-toc-align-toggle.scss"></script>
 
-/_sass/minimal-mistakes_navigation.scssをコピってTOC用に書き換えてあるだけ。  
-/assets/css/main.scss
-<script src="https://gist.github.com/laureltreetop/344e18e0c7f5aced6caac3f49bf803a6.js"></script>
+メインは**/_sass/minimal-mistakes/_navigation.scss**をコピってTOC用に書き換えてある。
+<script src="https://gist.github.com/laureltreetop/4e3fb72dabfee1757488fa952a744c74.js?file=minimal-mistakes-toc-from-navigation.scss"></script>
+
+でもってリストを整える。
+<script src="https://gist.github.com/laureltreetop/4e3fb72dabfee1757488fa952a744c74.js?file=minimal-mistakes-toc-prepare.scss"></script>
 
 あと、片方のメニューが開いているときにもう一方を閉じるように、カスタマイズ用スクリプトファイルに追記。
 <script src="https://gist.github.com/laureltreetop/91e41666f723e917edfff0ad78f39323.js"></script>
+
+{% comment %}
+### ボタンを縦に並べる
+[![TOC mobile](/assets/images/minimal-mistakes_toc-mobile.png)](/assets/images/minimal-mistakes_toc-mobile.png)
+[![TOC mobile](/assets/images/minimal-mistakes_toc-mobile_open.png)](/assets/images/minimal-mistakes_toc-mobile_open.png)
+
+<script src="https://gist.github.com/laureltreetop/344e18e0c7f5aced6caac3f49bf803a6.js"></script>
 
 ### 横並びで幅いっぱいに
 
@@ -112,13 +117,7 @@ sidebar.htmlにclassを足してあるのはこのため。
 /assets/css/main.scss
 <script src="https://gist.github.com/laureltreetop/0f077c2fe9559657f8f9b84cfaa80918.js"></script>
 
-### 幅をいい感じに（悩み中）
-
-まだ全然いい感じになってない。
-[![TOC mobile](/assets/images/minimal-mistakes_toc-mobile-max-content.png)](/assets/images/minimal-mistakes_toc-mobile-max-content.png)
-
-/assets/css/main.scss
-<script src="https://gist.github.com/laureltreetop/4e3fb72dabfee1757488fa952a744c74.js"></script>
+{% endcomment %}
 
 ## QRコード
 
