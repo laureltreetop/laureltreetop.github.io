@@ -27,3 +27,18 @@ header:
 <script src="https://gist.github.com/laureltreetop/747f2e2c0885dec15df0c7604bf0cf7e.js"></script>
 
 [^gist]: 撤去しましたが、一応記録として。あと[GitHub Pages - Theme Customize](/githubpages/theme-custom/)でSCSSを紹介してますが、ここではCSSにコンパイルしてあります。SCSSに関しては[SCSS](/create-pages/sass/)の記事参照。
+
+## 紙が重なっている感じに
+
+元ネタどこ行ったんだろ…  
+こんな感じに数枚の紙を重ねた感じになります。  
+一番上の紙の内側に薄く影を入れてありますので、不要な場合は最後の`inset 0 0 15px rgba(0,0,0,0.05)`を削除してください。  
+影の濃さは`0.05`で微調整を。
+{: .pile-up}
+
+```css
+.pile-up {
+    box-shadow:1px 1px 1px 1px rgba(0,0,0,0.1),10px 10px 0 -5px #ffffff,10px 10px 4px -5px rgba(0,0,0,0.3),13px 13px 0 -5px #ffffff,13px 13px 8px -5px rgba(0,0,0,0.5),16px 16px 0 -5px #ffffff,16px 16px 12px -5px rgba(0,0,0,0.7),19px 19px 0 -5px #ffffff,19px 19px 16px -5px rgba(0,0,0,0.9), inset 0 0 15px rgba(0,0,0,0.05);
+    padding:30px;
+}
+```

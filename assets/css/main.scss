@@ -483,3 +483,8 @@ body .gist .gist-meta {
 /* https://github.com/lonekorean/gist-syntax-themes */
 @import url('https://cdn.rawgit.com/lonekorean/gist-syntax-themes/848d6580/stylesheets/monokai.css');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+.pile-up {
+    box-shadow:1px 1px 1px 1px rgba(0,0,0,0.1),10px 10px 0 -5px #ffffff,10px 10px 4px -5px rgba(0,0,0,0.3),13px 13px 0 -5px #ffffff,13px 13px 8px -5px rgba(0,0,0,0.5),16px 16px 0 -5px #ffffff,16px 16px 12px -5px rgba(0,0,0,0.7),19px 19px 0 -5px #ffffff,19px 19px 16px -5px rgba(0,0,0,0.9), inset 0 0 15px rgba(0,0,0,0.05);
+    padding:30px;
+}
