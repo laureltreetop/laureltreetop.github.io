@@ -422,8 +422,9 @@ Tumblrの記事に「カテゴリ」という概念がない。
 1. 終わったら**旧サーバとアドレスの紐付けを切り離す**
 1. **新サーバとアドレスを紐付ける**
 1. WordPressをインストール
-1. 最低限で[All-in-One WP Migration](https://ja.wordpress.org/plugins/all-in-one-wp-migration/)だけインストール
+1. 最低限で[All-in-One WP Migration](https://ja.wordpress.org/plugins/all-in-one-wp-migration/)だけインストールし、インポート
 [![All-in-One import](/assets/images/wordpress-all-in-one-import.png)](/assets/images/wordpress-all-in-one-import.png)
++ ファイルアップロードのサイズ制限にかかってしまう場合は[All-in-One WP Migration Import](https://import.wp-migration.com/)からBasicなやつをダウンロードしてプラグイン→新規追加→プラグインのアップロード、でインストールすると512MBまで大丈夫になる
 1. これで中身のお引越し完了
 + 念のため、パーマネントリンクの設定とかをチェック
 
