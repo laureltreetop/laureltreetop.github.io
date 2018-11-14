@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "Collections"
+title: "一覧"
 permalink: /collections.html
 share: false
 comments: false
@@ -35,6 +35,5 @@ header:
   </ul>
   </div>
   {% endunless %}
-
 
 {% endfor %}

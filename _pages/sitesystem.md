@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "サイトとかblogとか"
+title: "サイトとか"
 permalink: /sitesystem/index.html
 share: false
 comments: false

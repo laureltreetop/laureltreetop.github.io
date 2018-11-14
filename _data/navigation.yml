@@ -6,7 +6,7 @@ main:
 #    url: /collection-archive/
   - title: "ページ作成"
     url: /createpages/index.html
-  - title: "サイトとかblogとか"
+  - title: "サイトとか"
     url: /sitesystem/index.html
   - title: "GitHub Pages"
     url: /githubpages/index.html
@@ -14,7 +14,7 @@ main:
     url: /misc/index.html
   - title: "モノいろいろ"
     url: /inventory/index.html
-  - title: "ざっくりと全部"
+  - title: "一覧"
     url: /collections.html
   - title: "愚痴"
     url: /month-archive/
@@ -63,7 +63,7 @@ githubpages:
       - title: "Blogger to Jekyll"
         url: /githubpages/blogger-to-jekyll/
 sitesystem:
-  - title: "サイトとかblogとか"
+  - title: "サイトとか"
     children:
       - title: "Blogger"
         url: /sitesystem/blogger/
@@ -85,7 +85,7 @@ misc:
 #        url: /widget/qr-code-text.html
   - title: "memo"
     children:
-      - title: "ざっくりと全部"
+      - title: "一覧"
         url: /collections.html
   - title: "misc"
     children:
@@ -103,7 +103,7 @@ misc:
 inventory:
   - title: "memo"
     children:
-      - title: "ざっくりと全部"
+      - title: "一覧"
         url: /collections.html
   - title: "Inventory"
     children:

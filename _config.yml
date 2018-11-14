@@ -278,7 +278,7 @@ compress_html:
 
 # Defaults
 defaults:
-  # _posts
+# _posts
   - scope:
       path: ""
       type: posts
@@ -290,24 +290,20 @@ defaults:
       comments: # true
       share: true
       related: true
-  # widget
+# _pages
   - scope:
       path: ""
-      type: widget
+      type: pages
     values:
       layout: splash
-      classes: wide
       author_profile: false
       read_time: false
       share: true
       comments: true
       related: false
-      #sidebar:
-      #  nav: "sidebar"
-      #toc: true
-      # toc_label:
-      #toc_icon: "gears"
-  # _createpages
+      # sidebar:
+      #   nav: "sidebar"
+# _createpages
   - scope:
       path: ""
       type: createpages
@@ -322,7 +318,7 @@ defaults:
         nav: "createpages"
       toc: true
       toc_icon: "cogs" 
-  # _githubpages
+# _githubpages
   - scope:
       path: ""
       type: githubpages
@@ -335,36 +331,6 @@ defaults:
       related: false
       sidebar:
         nav: "githubpages"
-      toc: true
-      toc_icon: "cogs"
-  # sitesystem
-  - scope:
-      path: ""
-      type: sitesystem
-    values:
-      layout: single
-      author_profile: false
-      read_time: false
-      share: true
-      comments: true
-      related: false
-      sidebar:
-        nav: "sitesystem"
-      toc: true
-      toc_icon: "cogs"
-# _misc
-  - scope:
-      path: ""
-      type: misc
-    values:
-      layout: single
-      author_profile: false
-      read_time: false
-      share: true
-      comments: true
-      related: false
-      sidebar:
-        nav: "misc"
       toc: true
       toc_icon: "cogs"
 # _inventory
@@ -382,25 +348,58 @@ defaults:
         nav: "inventory"
       toc: true
       toc_icon: "cogs"
-  # _pages
+# _misc
   - scope:
       path: ""
-      type: pages
+      type: misc
     values:
-      layout: splash
+      layout: single
       author_profile: false
       read_time: false
       share: true
       comments: true
       related: false
-      # sidebar:
-      #   nav: "sidebar"
+      sidebar:
+        nav: "misc"
+      toc: true
+      toc_icon: "cogs"
+# sitesystem
+  - scope:
+      path: ""
+      type: sitesystem
+    values:
+      layout: single
+      author_profile: false
+      read_time: false
+      share: true
+      comments: true
+      related: false
+      sidebar:
+        nav: "sitesystem"
+      toc: true
+      toc_icon: "cogs"
+# widget
+  - scope:
+      path: ""
+      type: widget
+    values:
+      layout: splash
+      classes: wide
+      author_profile: false
+      read_time: false
+      share: true
+      comments: true
+      related: false
+      #sidebar:
+      #  nav: "sidebar"
+      #toc: true
+      # toc_label:
+      #toc_icon: "gears"
 
 collections:
-  widget:
-    permalink: /:collection/:path/
+  posts:
+    permalink: /post/:year/:month/:day/:title/
     output: true
-    title: "Widget"
   createpages:
     permalink: /:collection/:path/
     output: true
@@ -409,21 +408,22 @@ collections:
     permalink: /:collection/:path/
     output: true
     title: "GitHub Pages"
-  sitesystem:
-    permalink: /:collection/:path/
-    output: true
-    title: "サイトとかblogとか"
-  misc:
-    permalink: /:collection/:path/
-    output: true
-    title: "misc."
   inventory:
     permalink: /:collection/:path/
     output: true
     title: "モノいろいろ"
-  posts:
-    permalink: /post/:year/:month/:day/:title/
+  misc:
+    permalink: /:collection/:path/
     output: true
+    title: "misc."
+  sitesystem:
+    permalink: /:collection/:path/
+    output: true
+    title: "サイトとか"
+  widget:
+    permalink: /:collection/:path/
+    output: true
+    title: "Widget"
     
 github: [metadata]
 

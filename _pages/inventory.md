@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "モノ関係"
+title: "モノいろいろ"
 permalink: /inventory/index.html
 share: false
 comments: false
