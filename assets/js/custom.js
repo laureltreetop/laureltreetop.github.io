@@ -11,7 +11,7 @@ $(function () {
     });
 });
 
-$("h1.page__title").text(
+$(".page__hero--overlay h1.page__title").text(
     $.trim(
         $("h1.page__title").text()
     )
