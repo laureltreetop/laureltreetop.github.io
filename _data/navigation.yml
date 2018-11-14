@@ -1,9 +1,5 @@
 # main links
 main:
-#  - title: "Pages"
-#    url: /page-archive/
-#  - title: "資料"
-#    url: /collection-archive/
   - title: "ページ作成"
     url: /createpages/index.html
   - title: "サイトとか"
@@ -77,16 +73,18 @@ sitesystem:
         url: /sitesystem/firebase/
 # sidebar navigation
 misc:
-#  - title: "Widget"
-#    children:
-#      - title: "電話帳登録用QRコード作成"
-#        url: /widget/qr-code-entry.html
-#      - title: "テキスト用QRコード作成"
-#        url: /widget/qr-code-text.html
   - title: "memo"
     children:
-      - title: "一覧"
-        url: /collections.html
+      - title: "ページ作成"
+        url: /createpages/index.html
+      - title: "サイトとか"
+        url: /sitesystem/index.html
+      - title: "GitHub Pages"
+        url: /githubpages/index.html
+      - title: "misc."
+        url: /misc/index.html
+      - title: "モノいろいろ"
+        url: /inventory/index.html
   - title: "misc"
     children:
       - title: "CloudFlare"
@@ -97,14 +95,21 @@ misc:
         url: /misc/xrea-mail/
       - title: "BIZ.NF"
         url: /misc/biz-nf/
-
       - title: "QRコード作成"
         url: /misc/generate-qr-code/
 inventory:
   - title: "memo"
     children:
-      - title: "一覧"
-        url: /collections.html
+      - title: "ページ作成"
+        url: /createpages/index.html
+      - title: "サイトとか"
+        url: /sitesystem/index.html
+      - title: "GitHub Pages"
+        url: /githubpages/index.html
+      - title: "misc."
+        url: /misc/index.html
+      - title: "モノいろいろ"
+        url: /inventory/index.html
   - title: "Inventory"
     children:
       - title: "KingWear KW88"
