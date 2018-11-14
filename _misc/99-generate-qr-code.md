@@ -55,3 +55,5 @@ classes: wide
 : 日本語入力のときに自動的にかなを入力するやつ。
 + [YubinBango](https://github.com/yubinbango/yubinbango)
 : 郵便番号を入れると自動的に住所を入力するやつ。
++ [reCAPTCHA](https://www.google.com/recaptcha/intro/v3.html)
+: フォームを送信するときに「ロボットじゃないよね?」と聞いてくるやつ。
