@@ -289,6 +289,10 @@ Generate Fontから、判りやすいようにラベルを変更してダウン�
 数がかなり多いので、右側のCategoriesで絞っていくと吉。
 [![Google Fonts list](/assets/images/fonts_google-list.png)](/assets/images/fonts_google-list.png)
 
+いつの間にか日本語フォントも。  
+後述の「[Google Fonts + 日本語 早期アクセス](https://googlefonts.github.io/japanese/)」も一部含まれている。
+[![Google Fonts list Japanese](/assets/images/fonts_google-japanese.png)](/assets/images/fonts_google-japanese.png)
+
 選んだら下の方にこういうのが出てくる。
 [![Google Fonts list](/assets/images/fonts_google-pickup.png)](/assets/images/fonts_google-pickup.png)
 
@@ -300,6 +304,7 @@ Generate Fontから、判りやすいようにラベルを変更してダウン�
 
 ### [Google Fonts + 日本語 早期アクセス](https://googlefonts.github.io/japanese/)
 
+一部は[Google Fonts](https://fonts.google.com/)に含まれてるけど、飛び道具的なフォントはこっち側にしかない。  
 一覧からフォントを選ぶ。
 [![Google Fonts japanese list](/assets/images/fonts_google-japanese-list.png)](/assets/images/fonts_google-japanese-list.png)
 
