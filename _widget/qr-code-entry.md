@@ -9,6 +9,7 @@ permalink: /widget/qr-code-entry.html
 {: .notice}
 
 <form id="qr-code-entry" class="form-mimic">
+<div class="fullname">
 <div id="section-name">
     <label for="NAME1">名前:</label>
 	<input type="text" id="name" value="" placeholder="" />
@@ -17,29 +18,30 @@ permalink: /widget/qr-code-entry.html
 	<label for="NAME2">名前ふりがな:</label>
 	<input type="text" id="kana" value="" placeholder="" />
 </div>
+</div>
 <div id="section-tel">
 	<label for="TEL1">電話番号:</label>
 	<input type="text" id="tel" value="" placeholder="" />
 </div>
-<!--div id="h-adr"-->
+<div class="h-adr">
 <div id="section-zip">
     <span class="p-country-name" style="display:none;">Japan</span>
 	住所:
-  〒<input type="text" id="zipcode" name="zipcode" class="p-postal-code" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','pref','city','street');" />（自動入力用）<br>
+  〒<input type="text" id="zipcode" class="p-postal-code" maxlength="8" />（自動入力用）<br>
 </div>
 <div id="section-adr1">
-  <input type="text" id="pref" name="pref" class="p-region" placeholder="（都道府県）" />
+  <input type="text" id="pref" class="p-region" placeholder="（都道府県）" />
 </div>
 <div id="section-adr2">
-    <input type="text" id="city" name="city" class="p-locality" placeholder="（市区町村）" />
+    <input type="text" id="city" class="p-locality" placeholder="（市区町村）" />
 </div>
 <div id="section-adr3">
-  <input type="text" id="street" name="street" class="p-street-address" placeholder="（番地）" />
+  <input type="text" id="street" class="p-street-address" placeholder="（番地）" />
 </div>
 <div id="section-adr4">
   <input type="text" id="extend-add" class="p-extended-address" placeholder="（建物名など）" />
 </div>
-<!--/div-->
+</div>
 <div id="section-mail">
 	<label for="MAIL1">E-mail:</label>
 	<input type="text" id="mail" value="" placeholder="" />

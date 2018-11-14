@@ -9,7 +9,7 @@ classes: wide
 
 ## QRコード作成の取っかかり
 
-[電話帳登録用QRコード作成](/gadget/qr-code-entry.html)というのを作ってみました。  
+[電話帳登録用QRコード作成](/widget/qr-code-entry.html)というのを作ってみました。  
 
 ### 簡単にQRコード作成
 もともとQRコードをさくっと作れるのは知っていたんですよね。
@@ -51,7 +51,7 @@ classes: wide
 ## おまけ。
 
 作成フォームを作るにあたり、欲が出て搭載しちゃった機能もあります。
-+ [ajaxzip3](https://github.com/ajaxzip3/ajaxzip3.github.io)
-: [超簡単！たった2行だけで郵便番号から住所自動表示する方法：ajaxzip3](http://www.webdesign-fan.com/ajaxzip3)が判りやすい。
++ [autoKana](https://github.com/harisenbon/autokana)
+: 日本語入力のときに自動的にかなを入力するやつ。
 + [YubinBango](https://github.com/yubinbango/yubinbango)
-: 本当はこちらのほうがいいみたいですが、これだとうまく動かないパターンが出てきたので、ajaxzip3を使ってます。
+: 郵便番号を入れると自動的に住所を入力するやつ。

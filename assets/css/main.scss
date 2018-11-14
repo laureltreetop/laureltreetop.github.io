@@ -304,16 +304,19 @@ blockquote {
 
 @media only screen and (min-width: $small) {
     #qr-code-entry {
-        display: grid;
-        grid-template-columns: 1fr 20px 1fr;
+        .fullname {
+            display: grid;
+            grid-template-columns: 1fr 20px 1fr;
+        }
         #section-name {
             grid-column: 1/2;
         }
         #section-kana{
             grid-column: 3/4;
         }
-        #section-tel {
-            grid-column: 1/4;
+        .h-adr {
+            display: grid;
+            grid-template-columns: 1fr 20px 1fr;
         }
         #section-zip {
             grid-column: 1/4;
@@ -328,27 +331,6 @@ blockquote {
             grid-column: 1/4;
         }
         #section-adr4 {
-            grid-column: 1/4;
-        }
-        #section-mail {
-            grid-column: 1/4;
-        }
-        #section-memo {
-            grid-column: 1/4;
-        }
-        #section-qrsize {
-            grid-column: 1/4;
-        }
-        #section-qrformat {
-            grid-column: 1/4;
-        }
-        #g-recaptcha {
-            grid-column: 1/4;
-        }
-        #section-button {
-            grid-column: 1/4;
-        }
-        #qr_add {
             grid-column: 1/4;
         }
     }
