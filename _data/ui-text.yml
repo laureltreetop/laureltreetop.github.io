@@ -1015,7 +1015,7 @@ ja-JP:
   comment_form_website_label : "URL (任意)"
   comment_btn_submit         : "コメントを送信"
   comment_btn_submitted      : "送信しました"
-  comment_success_msg        : "コメントありがとうございます！　コメントは承認されるとページに表示されます。"
+  comment_success_msg        : "コメントありがとうございます。コメントは承認されるとページに表示されます。"
   comment_error_msg          : "送信エラーです。必須項目がすべて入力されていることを確認して再送信してください。"
   loading_label              : "Loading..."
   search_placeholder_text    : "Enter your search term..."
