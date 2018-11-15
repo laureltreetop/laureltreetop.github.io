@@ -64,7 +64,6 @@ algolia:
     - index.html
     - index.md
     - collections.html
-    - month-archive/index.html
     - Linux/*.html
     - month-archive/*
     - page/*
