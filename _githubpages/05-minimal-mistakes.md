@@ -142,7 +142,38 @@ header:
 
 [Facebookシェアデバッガー](https://developers.facebook.com/tools/debug/sharing/)で確認できるかと。
 
+## あちこちの一覧を広々と
+
+### カテゴリ・タグ一覧
+
+_layouts/archive.htmlに`classes: wide`を追加するだけ。
+```md
+---
+layout: default
+classes: wide
+---
+```
+
+### 検索結果一覧
+
+デフォ。
+[![search before](/assets/images/minimal-mistakes-search-before.png)](/assets/images/minimal-mistakes-search-before.png)
+
+assets/css/main.scssに追加。
+```scss
+.search-content {
+    .archive__item {
+        width: 100% !important;
+    }
+}
+```
+これで広々と。
+[![search after](/assets/images/minimal-mistakes-search-after.png)](/assets/images/minimal-mistakes-search-after.png)
+
 ## 検索エンジンをGoogleに
+
+完全にAlgoriaに頼りまくってるので、この設定はしていないんだけどね。
+{: .notice--info}
 
 1. [Googleカスタム検索](https://cse.google.com/cse/all)（要Googleログイン）にサイトを登録
 1. 検索エンジンの編集→デザイン→レイアウトで「結果のみ」を設定

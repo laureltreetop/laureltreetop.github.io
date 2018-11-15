@@ -71,6 +71,12 @@ div.page__footer-copyright {
     grid-column-end: 2;
 }
 
+.search-content {
+    .archive__item {
+        width: 100% !important;
+    }
+}
+
 blockquote {
 	position: relative;
 	font-style: italic;
