@@ -76,15 +76,15 @@ misc:
   - title: "memo"
     children:
       - title: "ページ作成"
-        url: /createpages/index.html
+        url: /createpages/
       - title: "サイトとか"
-        url: /sitesystem/index.html
+        url: /sitesystem/
       - title: "GitHub Pages"
-        url: /githubpages/index.html
+        url: /githubpages/
       - title: "misc."
-        url: /misc/index.html
+        url: /misc/
       - title: "モノいろいろ"
-        url: /inventory/index.html
+        url: /inventory/
   - title: "misc"
     children:
       - title: "CloudFlare"
@@ -101,15 +101,15 @@ inventory:
   - title: "memo"
     children:
       - title: "ページ作成"
-        url: /createpages/index.html
+        url: /createpages/
       - title: "サイトとか"
-        url: /sitesystem/index.html
+        url: /sitesystem/
       - title: "GitHub Pages"
-        url: /githubpages/index.html
+        url: /githubpages/
       - title: "misc."
-        url: /misc/index.html
+        url: /misc/
       - title: "モノいろいろ"
-        url: /inventory/index.html
+        url: /inventory/
   - title: "Inventory"
     children:
       - title: "KingWear KW88"
