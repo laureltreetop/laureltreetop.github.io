@@ -2,8 +2,6 @@
 layout: splash
 title: "モノいろいろ"
 permalink: /inventory/index.html
-share: false
-comments: false
 sitemap: false
 header:
   overlay_image: /assets/images/github-header.png

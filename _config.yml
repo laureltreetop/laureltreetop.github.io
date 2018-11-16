@@ -313,8 +313,8 @@ defaults:
       layout: splash
       author_profile: false
       read_time: false
-      share: true
-      comments: true
+      share: false
+      comments: false
       related: false
       # sidebar:
       #   nav: "sidebar"

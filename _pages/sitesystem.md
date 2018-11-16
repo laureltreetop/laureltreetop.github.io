@@ -2,8 +2,6 @@
 layout: splash
 title: "サイトとか"
 permalink: /sitesystem/index.html
-share: false
-comments: false
 sitemap: false
 header:
   overlay_image: /assets/images/github-header.png
