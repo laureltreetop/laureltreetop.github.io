@@ -45,3 +45,13 @@ header:
 リストアイコンに[Font Awesome 5](https://fontawesome.com/)も組み込んであるので、そのあたりはてきとーに。  
 
 できあがったのが[これ](/collections.html)。
+
+## 記事一覧
+
+[Customize Minimal Mistakes](/githubpages/minimal-mistakes/)でやったやつの元ネタ的な。  
+年月ベースで書き出したい場合、ページネーション込みだったらこんな感じに。
+<script src="https://gist.github.com/laureltreetop/e03b7c6f020bdf23822e48b51ce8fc6b.js"></script>
+
+一覧ならこういう感じに。  
+年月でのカウントは[Github Pages の Jekyll でアーカイブ機能を実装する](https://stmy.github.io/2016/08/02/Post-Archive-In-Jekyll-Safe-Mode.html)より。
+<script src="https://gist.github.com/laureltreetop/d17fce734eea7dd5fbb653916d296022.js"></script>

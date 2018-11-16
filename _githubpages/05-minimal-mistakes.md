@@ -47,10 +47,17 @@ _includes/author-profile-custom-links.html
 ```
 
 ## 過去記事まとめに月ごとの見出し
+
 トップでやってるやつ。  
-スタイルシート周りなどを修正すれば他のテーマでも使えるかと。  
 _layouts/home.html
 <script src="https://gist.github.com/laureltreetop/24f0acf4480f4eef8f6c027001b41dd0.js"></script>
+
+固有の部分を削り落としたら他のテーマでも使えるかと。  
+そのあたりは[Theme Customize](/githubpages/theme-custom/)に置いておく。
+
+一覧でがーっと見せてしまうページも作ってみる。  
+年月でのカウントは[Github Pages の Jekyll でアーカイブ機能を実装する](https://stmy.github.io/2016/08/02/Post-Archive-In-Jekyll-Safe-Mode.html)が役に立ってる。
+<script src="https://gist.github.com/laureltreetop/9e7bf158ee15d0e1bdbb5f6e3cb305aa.js"></script>
 
 ## TOCを左サイドバーへ
 
