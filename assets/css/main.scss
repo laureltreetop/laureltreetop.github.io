@@ -443,6 +443,15 @@ ul.collect-list {
     margin-left: 1.0em;
 }
 
+.taxonomy__index {
+    @include breakpoint($medium) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include breakpoint($large) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
 #page-top {
     position: fixed;
     bottom: 20px;
