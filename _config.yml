@@ -311,6 +311,7 @@ defaults:
       type: pages
     values:
       layout: splash
+      search: false
       author_profile: false
       read_time: false
       share: false
