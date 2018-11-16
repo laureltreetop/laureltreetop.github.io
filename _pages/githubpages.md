@@ -1,7 +1,7 @@
 ---
 layout: splash
 title: "GitHub Pages"
-permalink: /githubpages/index.html
+permalink: /githubpages/
 sitemap: false
 header:
   overlay_image: /assets/images/github-header.png

@@ -5,7 +5,7 @@ author_profile: true
 share: true
 comments: true
 title: "自分のことかい?"
-permalink: /about/
+permalink: /about.html
 header:
   overlay_image: /assets/images/github-header.png
   overlay_filter: rgba(255, 255, 255, 0.5)

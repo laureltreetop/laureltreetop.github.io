@@ -1,7 +1,7 @@
 ---
 layout: splash
 title: "ページ作成"
-permalink: /createpages/index.html
+permalink: /createpages/
 sitemap: false
 header:
   overlay_image: /assets/images/github-header.png

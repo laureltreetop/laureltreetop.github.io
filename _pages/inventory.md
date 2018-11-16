@@ -1,7 +1,7 @@
 ---
 layout: splash
 title: "モノいろいろ"
-permalink: /inventory/index.html
+permalink: /inventory/
 sitemap: false
 header:
   overlay_image: /assets/images/github-header.png

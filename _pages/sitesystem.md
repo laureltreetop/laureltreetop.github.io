@@ -1,7 +1,7 @@
 ---
 layout: splash
 title: "サイトとか"
-permalink: /sitesystem/index.html
+permalink: /sitesystem/
 sitemap: false
 header:
   overlay_image: /assets/images/github-header.png

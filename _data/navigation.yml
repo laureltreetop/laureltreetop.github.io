@@ -1,23 +1,23 @@
 # main links
 main:
   - title: "ページ作成"
-    url: /createpages/index.html
+    url: /createpages/
   - title: "サイトとか"
-    url: /sitesystem/index.html
+    url: /sitesystem/
   - title: "GitHub Pages"
-    url: /githubpages/index.html
+    url: /githubpages/
   - title: "misc."
-    url: /misc/index.html
+    url: /misc/
   - title: "モノいろいろ"
-    url: /inventory/index.html
+    url: /inventory/
   - title: "一覧"
     url: /collections.html
   - title: "愚痴"
     url: /month-archive.html
   - title: "自分?"
-    url: /about/
+    url: /about.html
   - title: "Widget"
-    url: /widget/index.html
+    url: /widget
 
 # documentation links
 createpages:

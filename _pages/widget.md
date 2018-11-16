@@ -1,7 +1,7 @@
 ---
 layout: splash
 title: "Widget"
-permalink: /widget/index.html
+permalink: /widget/
 sitemap: false
 header:
   overlay_image: /assets/images/github-header.png

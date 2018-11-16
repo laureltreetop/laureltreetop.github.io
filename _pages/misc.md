@@ -1,7 +1,7 @@
 ---
 layout: splash
 title: "misc."
-permalink: /misc/index.html
+permalink: /misc/
 sitemap: false
 header:
   overlay_image: /assets/images/github-header.png
