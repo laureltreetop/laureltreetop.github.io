@@ -66,6 +66,7 @@ algolia:
     - collections.html
     - month-archive.html
     - _pages/*
+    - redirected/*
 google:
   search_engine_id       : "014151305394849351663:sapnw1h20hy" # YOUR_SEARCH_ENGINE_ID
   instant_search         : true # false (default), true
