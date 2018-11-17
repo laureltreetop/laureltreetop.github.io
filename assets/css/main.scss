@@ -34,7 +34,9 @@ li.none {
         font-weight: bold;
     }
 }
-
+.pagination a {
+    color: $gray;
+}
 .page__share {
 	.btn {
 		width : calc(96% / 6);
