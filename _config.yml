@@ -61,12 +61,7 @@ algolia:
   search_only_api_key    : "427722d5f092087b5283f91ca1d247ec" # YOUR_SEARCH_ONLY_API_KEY
   powered_by             : # true (default), false
   files_to_exclude:
-    - index.html
-    - index.md
-    - collections.html
-    - month-archive.html
     - _pages/*
-    - redirected/*
 google:
   search_engine_id       : "014151305394849351663:sapnw1h20hy" # YOUR_SEARCH_ENGINE_ID
   instant_search         : true # false (default), true
