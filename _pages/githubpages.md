@@ -10,5 +10,5 @@ header:
 
 {% for item in site.githubpages %}
   [{{ item.title }}]({{ item.url }})
-  : {{ item.description }}
+  : {{ item.description | markdownify | strip_html }}
 {% endfor %}

@@ -12,23 +12,23 @@ header:
 {% for collection in site.collections %}
 
   {% unless collection.output == false or collection.label == "posts" %}
-  <div class="collect-box">
+  <div class="collections">
     {% capture label %}{{ collection.label }}{% endcapture %}
     {% if label != written_label %}
       <h2 id="{{ label | slugify }}" class="archive__subtitle"><a href="{{ site.baseurl }}/{{ label }}/index.html"><i class="fas fa-folder-open"></i>&nbsp;{{ collection.title }}</a></h2>
       {% capture written_label %}{{ label }}{% endcapture %}
     {% endif %}
-  <ul class="collect-list fa-ul">
+  <ul class="fa-ul">
   {% assign collections = collection.docs %}
-  {% for post in collections limit: 4 %}
+  {% for post in collections limit: 5 %}
     {% unless collection.output == false or collection.label == "posts" %}
 	  <li><span class="fa-li"><i class="fas fa-file-alt"></i></span><a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endunless %}
   {% endfor %}
 
   {% assign size = collection.docs | size %}
-  {% if size > 4 %}
-    <li><span class="fa-li"><i class="fas fa-folder-open"></i></span><a href="{{ site.baseurl }}/{{ label }}/index.html">{{ size | minus: 4 }} more...</a></li>
+  {% if size > 5 %}
+    <li><span class="fa-li"><i class="fas fa-folder-open"></i></span><a href="{{ site.baseurl }}/{{ label }}/index.html">{{ size | minus: 5 }} more...</a></li>
   {% endif %}
   </ul>
   </div>

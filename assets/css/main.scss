@@ -12,17 +12,17 @@
 @import url('/assets/icomoon/style.css');
 
 a {
-	text-decoration: none !important;
-	&:hover {
-		text-decoration: underline;
-	}
+	text-decoration: none;
 }
-h2 a, dt a {
-	text-decoration: none !important;
+.archive__item-title a, dt a {
     color: $text-color !important;
-	&:hover {
-		text-decoration: underline !important;
-	}
+    font-weight: bold;
+}
+.notice--info li {
+    margin-left: 1.0em;
+}
+li.none {
+	list-style-type: none !important;
 }
 
 // Font Awesome like hatena bookmark
@@ -42,9 +42,9 @@ h2 a, dt a {
 }
 
 img {
-    margin-top: 5px; /* 画像の上の余白*/
+    margin-top: 5px;
     display: inline-block;
-    box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.8); /*横方向　下方向　ぼかし　広がり　色 */
+    box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.8);
 }
 
 footer {
@@ -74,6 +74,49 @@ div.page__footer-copyright {
 .search-content {
     .archive__item {
         width: 100% !important;
+    }
+}
+
+#page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+
+    a {
+        background: $dark-gray;
+        text-decoration: none;
+        color: $background-color;
+        width: 60px;
+        padding: 5px 0;
+        text-align: center;
+        display: block;
+        border-radius: 5px;
+
+        &:hover {
+            background: $gray;
+        }
+    }
+}
+
+.taxonomy__index {
+    @include breakpoint($medium) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include breakpoint($large) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.taxonomy__index.narrow {
+    grid-template-columns: repeat(3, 1fr);
+    @include breakpoint($small) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    @include breakpoint($medium-wide) {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    @include breakpoint($x-large) {
+        grid-template-columns: repeat(6, 1fr);
     }
 }
 
@@ -139,6 +182,7 @@ blockquote {
 		right: 20px;
 	}
 }
+
 /* toggle TOC */
 @include breakpoint(max-width ($large - 1px)) {
     .toc__list, .nav__list {
@@ -401,10 +445,7 @@ blockquote {
 	}
 }
 
-li.none {
-	list-style-type: none !important;
-}
-div.collect-box {
+div.collections {
     display: inline-grid;
     grid-template-columns: repeat(auto-fit, 300px);
     justify-content: space-between;
@@ -430,66 +471,17 @@ div.collect-box {
             color: $dark-gray !important;
         }
     }
-    .fa-li {
+    ul {
+        margin: 0.5em 0.5em 0 1.5em;
+    }
+    li {
         color: $light-gray;
-    }
-}
-
-ul.collect-list {
-    margin-left: 1.5em;
-}
-
-.notice--info li {
-    margin-left: 1.0em;
-}
-
-.taxonomy__index {
-    @include breakpoint($medium) {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    @include breakpoint($large) {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-.taxonomy__index.narrow {
-    grid-template-columns: repeat(3, 1fr);
-    @include breakpoint($small) {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    @include breakpoint($medium-wide) {
-        grid-template-columns: repeat(5, 1fr);
-    }
-    @include breakpoint($x-large) {
-        grid-template-columns: repeat(6, 1fr);
-    }
-}
-
-#page-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999;
-
-    a {
-        background: $dark-gray;
-        text-decoration: none;
-        color: $background-color;
-        width: 60px;
-        padding: 5px 0;
-        text-align: center;
-        display: block;
-        border-radius: 5px;
-
-        &:hover {
-            background: $gray;
-        }
     }
 }
 
 body .gist .gist-data {
     max-height: 400px;
     overflow:auto;
-	box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 }
 
 body .gist .gist-meta {
