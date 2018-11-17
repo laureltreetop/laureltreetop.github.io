@@ -29,7 +29,7 @@ sitemap: false
 {% assign item = "" | split: "" | push: ym | push: count %}
 {% assign yearmonths = yearmonths | push: item %}
 
-<ul class="taxonomy__index">
+<ul class="taxonomy__index narrow">
 {% for post in yearmonths %}
     <li><a href="#{{ post[0] }}"><strong>{{ post[0] }}</strong> <span class="taxonomy__count">{{ post[1] }}</span></a></li>
 {% endfor %}
