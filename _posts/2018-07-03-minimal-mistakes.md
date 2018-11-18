@@ -1,10 +1,11 @@
 ---
 title: "Update Minimal Mistakes"
 categories:
-  - Information
+  - What's New
 tags:
   - GitHub Pages
   - Minimal Mistakes
+  - Algolia
 ---
 久々にテーマのアップデートなどを。  
 新しもの好きなのでサイト内検索を[algolia](https://www.algolia.com/)にしてたのだが、Minimal Mistakes 4.12.0でGoogleサイト内検索ができるようになったので、さっそく採用。  

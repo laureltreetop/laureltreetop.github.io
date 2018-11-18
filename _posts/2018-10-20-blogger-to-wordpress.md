@@ -1,7 +1,7 @@
 ---
 title: "BloggerからWordPressに引っ越そうかなぁ"
 categories:
-  - Information
+  - What's New
 tags:
   - WordPress
   - Blogger

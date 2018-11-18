@@ -1,7 +1,7 @@
 ---
 title: "無料でいろいろ遊べるんだねぇ"
 categories:
-  - Information
+  - What's New
 tags:
   - Freenom
   - XREA
@@ -17,6 +17,6 @@ header:
 そこからがーっと設定して出来上がった過程が、これ。
 + [Freenom](/misc/freenom/)
 + [カスタムドメインメール](/misc/xrea-mail/)
-+ [WordPress](/blogsystem/wordpress/)
++ [WordPress](/sitesystem/wordpress/)
 
 経緯とか雑多な事は[K's blog](https://blog.treetop.to/2018/03/blog-post_19.html)の方に、と。

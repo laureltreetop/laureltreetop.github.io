@@ -1,7 +1,7 @@
 ---
 title: "やっと探し当てた"
 categories:
-  - Information
+  - What's New
 tags:
   - Minimal Mistakes
 header:

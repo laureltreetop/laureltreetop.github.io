@@ -1,7 +1,7 @@
 ---
 title: "横道にそれても止まらない"
 categories:
-  - Information
+  - What's New
 tags:
   - GitHub Pages
 header:

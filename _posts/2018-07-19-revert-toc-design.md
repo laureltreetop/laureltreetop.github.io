@@ -1,7 +1,7 @@
 ---
 title: "全然いい感じにならねぇ"
 categories:
-  - Complaints
+  - 愚痴
 tags:
   - Minimal Mistakes
 header:

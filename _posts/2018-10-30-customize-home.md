@@ -1,7 +1,7 @@
 ---
 title: "最新記事ぐるぐる"
 categories:
-  - Information
+  - What's New
 tags:
   - GitHub Pages
   - Jekyll

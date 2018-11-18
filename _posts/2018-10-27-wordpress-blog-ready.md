@@ -1,7 +1,7 @@
 ---
 title: "ブログをWordPressへ引っ越し一段落"
 categories:
-  - Information
+  - 独り言
 tags:
   - WordPress
 # header:

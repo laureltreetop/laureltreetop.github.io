@@ -1,7 +1,7 @@
 ---
 title: "Freenomよ、そうくるかぁ"
 categories:
-  - Information
+  - What's New
 tags:
   - Freenom
   - WordPress

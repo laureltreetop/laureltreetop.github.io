@@ -1,10 +1,10 @@
 ---
 title: "遊んでみる"
 categories:
-  - sandbox
+  - 砂場
 tags:
   - Minimal Mistakes
-  - Font Awesome
+  - Fonts
   - YouTube
 ---
 [Fonts](/create-pages/fonts/)の中で[Font Awesome](https://fontawesome.com/)を使って遊んでみたり。

@@ -1,7 +1,7 @@
 ---
 title: "TOCの引っ越しとかレスポンシブ対応とか"
 categories:
-  - Information
+  - What's New
 tags:
   - Minimal Mistakes
 header:

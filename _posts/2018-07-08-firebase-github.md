@@ -1,7 +1,7 @@
 ---
 title: "FirebaseやGitやら"
 categories:
-  - Information
+  - What's New
 tags:
   - GitHub
   - Firebase

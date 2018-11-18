@@ -1,7 +1,7 @@
 ---
 title: "アップデート早すぎ"
 categories:
-  - Complaints
+  - 愚痴
 tags:
   - Minimal Mistakes
 ---

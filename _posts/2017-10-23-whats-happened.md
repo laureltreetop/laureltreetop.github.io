@@ -1,9 +1,9 @@
 ---
 title: "あっという間に"
 categories:
-  - GitHub Pages
+  - 愚痴
 tags:
-  - GitHub
+  - GitHub Pages
   - Jekyll
 ---
 Jekyllが動くようになったついでに、うっかりBloggerから記事をインポートしてみた。  

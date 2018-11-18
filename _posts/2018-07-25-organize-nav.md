@@ -1,13 +1,12 @@
 ---
 title: "疲れた…"
 categories:
-  - Information
+  - What's New
 tags:
-  - Create Pages
+  - ページ作成
   - GitHub Pages
   - Minimal Mistakes
-  - misc.
-  - Site System
+  - Firebase
 header:
   teaser:   /assets/images/minimal-mistakes_toc-mobile-max-content.png
   og_image: /assets/images/minimal-mistakes_toc-mobile-max-content.png

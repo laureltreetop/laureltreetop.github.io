@@ -1,12 +1,12 @@
 ---
 title: "「はてなブログ + Tumblr = blogいろいろ」ということに"
 categories:
-  - Information
+  - What's New
 tags:
-  - blog
   - はてなブログ
   - Tumblr
+  - Blogger
 ---
 最近、ブログをTumblrからBloggerに戻した。  
 で、いろいろメモべきことがあるなーと思い、記事にしようとする前に、ブログ関係の記事が乱立していることに気づく。  
-なので、[blogいろいろ](/blogsystem/)に統合。
+なので、[サイトとか](/sitesystem/)に統合。

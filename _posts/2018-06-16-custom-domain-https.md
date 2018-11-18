@@ -1,11 +1,11 @@
 ---
 title: "HTTPS対応"
 categories:
-  - Information
+  - What's New
 tags:
   - GitHub Pages
-  - https
-  - custom domain
+  - Domain
+  - HTTPS
 ---
 GitHub PagesでカスタムドメインでHTTPSってのが出来なかったわけですよ。  
 でも世の中はだんだんと「普通、対応でしょ?」って流れになっていて、GoogleサイトもBloggerも（って、どっちもGoogle系か）今年に入ってから対応してきてるわけですよ。  

@@ -1,7 +1,7 @@
 ---
 title: "WordPressいいなぁ"
 categories:
-  - Information
+  - What's New
 tags:
   - WordPress
 header:
