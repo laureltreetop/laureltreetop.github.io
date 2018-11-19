@@ -7,7 +7,7 @@ sitemap: false
 ---
 
 <ul class="taxonomy__index narrow">
-{% assign postsByMonth = site.posts | group_by_exp:"post", "post.date | date: '%Y-%m'" %}
+{% assign postsByMonth = site.posts | group_by_exp:"post", "post.date | date: '%Y-%m'" | sort: 'date' %}
 {% for month in postsByMonth %}
     <li><a href="#{{ month.name }}"><strong>{{ month.name }}</strong> <span class="taxonomy__count">{{ month.size }}</span></a></li>
 {% endfor %}
