@@ -48,11 +48,11 @@ _includes/author-profile-custom-links.html
 
 ## 過去記事まとめに月ごとの見出し
 
-### トップでやってるやつ
-
-最初はcaptureを、その次はforloopとかを駆使していたけど、`group_by_exp`を使えばコードがコンパクトに。  
+最初はcaptureを、その次はforloopとかを駆使していたけど、`group_by_exp`を使えばコードがコンパクトになった。  
 件数をカウントする部分もどうにかなるのかな?
 {: .notice--info}
+
+### トップでやってるやつ
 
 ページネーションと一緒に。  
 _layouts/home.html
