@@ -48,8 +48,7 @@ _includes/author-profile-custom-links.html
 
 ## 過去記事まとめに月ごとの見出し
 
-最初はcaptureを、その次はforloopとかを駆使していたけど、`group_by_exp`を使えばコードがコンパクトになった。  
-件数をカウントする部分もどうにかなるのかな?
+最初はcaptureを、その次はforloopとかを駆使していたけど、`group_by_exp`を使えばコードがコンパクトになった。
 {: .notice--info}
 
 ### トップでやってるやつ
@@ -64,7 +63,7 @@ _layouts/home.html
 ### 一覧でがーっと
 
 メニューの「愚痴」なページ。  
-年月でのカウントは[Github Pages の Jekyll でアーカイブ機能を実装する](https://stmy.github.io/2016/08/02/Post-Archive-In-Jekyll-Safe-Mode.html)が役に立ってる。  
+`group_by_exp:"post", "post.date | date: '%Y-%m'"`で束ねられたので、件数の取得もすっきりと。  
 各年月リストごとの最後にCategoriesやTagsみたいに"Back to Top&uarr;"[^arrowup]を付けてそれっぽく見えるように。  
 <script src="https://gist.github.com/laureltreetop/83edaa7abe4797e9ca51397573d60684.js"></script>
 
