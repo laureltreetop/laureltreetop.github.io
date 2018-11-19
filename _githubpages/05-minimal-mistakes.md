@@ -56,8 +56,17 @@ _layouts/home.html
 そのあたりは[Theme Customize](/githubpages/theme-custom/)に置いておく。
 
 一覧でがーっと見せてしまうページも作ってみる。  
-年月でのカウントは[Github Pages の Jekyll でアーカイブ機能を実装する](https://stmy.github.io/2016/08/02/Post-Archive-In-Jekyll-Safe-Mode.html)が役に立ってる。
-<script src="https://gist.github.com/laureltreetop/9e7bf158ee15d0e1bdbb5f6e3cb305aa.js"></script>
+年月でのカウントは[Github Pages の Jekyll でアーカイブ機能を実装する](https://stmy.github.io/2016/08/02/Post-Archive-In-Jekyll-Safe-Mode.html)が役に立ってる。  
+各年月リストごとの最後にCategoriesやTagsみたいに"Back to Top&uarr;"[^arrowup]を付けたいのだがうまい方法が見つからない。
++ 年月を書き出すときに手前で"Back to Top&uarr;"を書き出す
++ リスト全体の先頭では`{% raw %}{% if forloop.first == false %}{% endraw %}`で判定して書き出さない
++ 最後は`{% raw %}{% if forloop.last == true %}{% endraw %}`で判定して書き出す
+
+って感じでそれっぽく見えるようにした。  
+もっとスマートな書き方ってないのかな…
+<script src="https://gist.github.com/laureltreetop/83edaa7abe4797e9ca51397573d60684.js"></script>
+
+[^arrowup]: 上矢印が`&uarr;`で書けるのは初めて知った。
 
 ## TOCを左サイドバーへ
 
