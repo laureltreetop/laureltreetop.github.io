@@ -36,11 +36,19 @@ sitemap: false
 </ul>
 
 {% capture written_year-month %}'None'{% endcapture %}
+<div class="posts-entries-list">
 {% for post in site.posts %}
   {% capture year-month %}{{ post.date | date: '%Y-%m' }}{% endcapture %}
   {% if year-month != written_year-month %}
+    {% if forloop.first == false %}
+      <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
+    {% endif %}
     <h3 id="{{ year-month | slugify }}" class="archive__subtitle">{{ year-month }}</h3>
     {% capture written_year-month %}{{ year-month }}{% endcapture %}
   {% endif %}
   {% include archive-single.html %}
+  {% if forloop.last == true %}
+    <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
+  {% endif %}
 {% endfor %}
+</div>
