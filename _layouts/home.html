@@ -6,13 +6,12 @@ layout: splash
 
 <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
-{% for post in paginator.posts %}
-  {% capture year-month %}{{ post.date | date: '%Y-%m' }}{% endcapture %}
-  {% if year-month != written_year-month %}
-    <h2 id="{{ year-month | slugify }}" class="archive__subtitle">{{ year-month }}</h2>
-    {% capture written_year-month %}{{ year-month }}{% endcapture %}
-  {% endif %}
-  {% include archive-single.html %}
+{% assign postsByMonth = paginator.posts | group_by_exp:"post", "post.date | date: '%Y-%m'" %}
+{% for month in postsByMonth %}
+    <h2 class="archive__subtitle">{{ month.name }}</h2>
+    {% for post in month.items %}
+        {% include archive-single.html %}
+    {% endfor %}
 {% endfor %}
 
 {% include paginator.html %}

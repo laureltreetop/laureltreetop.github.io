@@ -48,25 +48,34 @@ _includes/author-profile-custom-links.html
 
 ## 過去記事まとめに月ごとの見出し
 
-トップでやってるやつ。  
+### トップでやってるやつ
+
+最初はcaptureを、その次はforloopとかを駆使していたけど、`group_by_exp`を使えばコードがコンパクトに。  
+件数をカウントする部分もどうにかなるのかな?
+{: .notice--info}
+
+ページネーションと一緒に。  
 _layouts/home.html
 <script src="https://gist.github.com/laureltreetop/24f0acf4480f4eef8f6c027001b41dd0.js"></script>
 
 固有の部分を削り落としたら他のテーマでも使えるかと。  
 そのあたりは[Theme Customize](/githubpages/theme-custom/)に置いておく。
 
-一覧でがーっと見せてしまうページも作ってみる。  
-年月でのカウントは[Github Pages の Jekyll でアーカイブ機能を実装する](https://stmy.github.io/2016/08/02/Post-Archive-In-Jekyll-Safe-Mode.html)が役に立ってる。  
-各年月リストごとの最後にCategoriesやTagsみたいに"Back to Top&uarr;"[^arrowup]を付けたいのだがうまい方法が見つからない。
-+ 年月を書き出すときに手前で"Back to Top&uarr;"を書き出す
-+ リスト全体の先頭では`{% raw %}{% if forloop.first == false %}{% endraw %}`で判定して書き出さない
-+ 最後は`{% raw %}{% if forloop.last == true %}{% endraw %}`で判定して書き出す
+### 一覧でがーっと
 
-って感じでそれっぽく見えるようにした。  
-もっとスマートな書き方ってないのかな…
+メニューの「愚痴」なページ。  
+年月でのカウントは[Github Pages の Jekyll でアーカイブ機能を実装する](https://stmy.github.io/2016/08/02/Post-Archive-In-Jekyll-Safe-Mode.html)が役に立ってる。  
+各年月リストごとの最後にCategoriesやTagsみたいに"Back to Top&uarr;"[^arrowup]を付けてそれっぽく見えるように。  
 <script src="https://gist.github.com/laureltreetop/83edaa7abe4797e9ca51397573d60684.js"></script>
 
 [^arrowup]: 上矢印が`&uarr;`で書けるのは初めて知った。
+
+下記を参照にしまくり。
++ [Jekyll & Liquid Cheatsheet](https://gist.github.com/magicznyleszek/9803727)
++ [The forloop object](https://help.shopify.com/en/themes/liquid/objects/for-loops)
++ [Control flow tags](https://help.shopify.com/en/themes/liquid/tags/control-flow-tags)
++ [Jekyll Cheat Sheet](https://learn.cloudcannon.com/jekyll-cheat-sheet/)
++ [Jekyll/Liquid Templating: How to group blog posts by year?](https://stackoverflow.com/questions/19086284/jekyll-liquid-templating-how-to-group-blog-posts-by-year/20777475)
 
 ## TOCを左サイドバーへ
 

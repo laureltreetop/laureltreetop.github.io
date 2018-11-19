@@ -35,20 +35,13 @@ sitemap: false
 {% endfor %}
 </ul>
 
-{% capture written_year-month %}'None'{% endcapture %}
 <div class="posts-entries-list">
-{% for post in site.posts %}
-  {% capture year-month %}{{ post.date | date: '%Y-%m' }}{% endcapture %}
-  {% if year-month != written_year-month %}
-    {% if forloop.first == false %}
-      <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
-    {% endif %}
-    <h3 id="{{ year-month | slugify }}" class="archive__subtitle">{{ year-month }}</h3>
-    {% capture written_year-month %}{{ year-month }}{% endcapture %}
-  {% endif %}
-  {% include archive-single.html %}
-  {% if forloop.last == true %}
+{% assign postsByMonth = site.posts | group_by_exp:"post", "post.date | date: '%Y-%m'" %}
+{% for month in postsByMonth %}
+    <h3 id="{{ month.name }}" class="archive__subtitle">{{ month.name }}</h3>
+    {% for post in month.items %}
+        {% include archive-single.html %}
+    {% endfor %}
     <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
-  {% endif %}
 {% endfor %}
 </div>
