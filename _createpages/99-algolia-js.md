@@ -11,12 +11,16 @@ classes: wide
 
 1. [Algolia](https://www.algolia.com/)のアカウント作成
 1. `New Appligacion`からAPPSを作成
-  + アプリ名はあとからでも変えられるが、混乱しそうだったらアプリ名を入れるのも可
-  + 地域を選んで`CONTINUE WITH JAPAN AS MAIN DATA CENTER`へ
+  + アプリ名はあとからでも変えられる
+  + Community(free) planで問題ないかと（ロゴ表示必須）
+   + 地域を選んで`CONTINUE WITH JAPAN AS MAIN DATA CENTER`へ
   + Dashbordが出てくるが、Community(free) planを使うには[Brand Assets](https://www.algolia.com/press#resources)が必須
-1. algoliaのダッシュボードに戻ってindex（というか判りやすい名前でOK）を作成。先に入っているgetstarted_actorsは消してもいいというか、消さないと混乱するかも?
+1. APPS→API keysに必要な情報が
+  + Application ID
+  + Search-Only API Key
+  + Admin API Key
 
-続きは、[Jekyll](/githubpages/algolia-github/)や[Blogger](/blogsystem/blogger/)などへ。  
+続きは、[Jekyll](/githubpages/algolia-github/)や[Blogger](/sitesystem/blogger/)などへ。  
 の予定だったのだが。
 
 ## サイトからindexを作成
@@ -25,22 +29,30 @@ classes: wide
 sitemap.xmlなどを潜って行くタイプなので、ページネーションやら何やらを気にしなくても可能。
 
 1. （無ければ）[Xml Sitemap Generator](https://xmlsitemapgenerator.org/)などでsitemap.xmlを作成し、FTPで放り込んでおく
-1. npmでインストール[^npm]
+1. npmでインストール
 ```sh
 $ npm i algolia-webcrawler -g
 ```
 
-1. configファイルを作る[^config]（[config.json](https://github.com/DeuxHuitHuit/algolia-webcrawler/blob/master/config.json)のサンプルもある）
+1. [config.json](https://github.com/DeuxHuitHuit/algolia-webcrawler/blob/master/config.json)のサンプルなどを参照にconfigファイルを作る
+<script src="https://gist.github.com/laureltreetop/9d0e2202717e7c5a8d0d746c44275c34.js"></script>
+  + APPSを作成したときのキーなどが必要
+  + titleとかhタグ各種とか
+  + 本文は面倒なのでbodyで取り込み
+  + その他いろいろ取り込んだり[^date]
+
 1. 実行
 ```sh
 algolia-webcrawler --config <jsonな設定ファイル>
 ```
 
-[^npm]: そのうち、Node.jsとかその周辺も書いたほうがいいのかなぁ。
-[^config]: 自分のは特殊すぎる例なので晒せないです。ヒントとしては、h1などのタグを追加したり、textの方にもタグを追加したりなど、項目は増やせます。
-
-で、あっけなく登録完了。  
+で、ずらずら～っと登録完了。  
 自分みたいに破綻しまくりなサイト[^table]じゃない限り、これで大丈夫かと。
+
+[^date]:日記の日付が時期によってバラバラだったのでうまい具合に拾ってみた
+    + bタグで囲っていた期（1990年代）
+    + h4タグで囲っていた期（1990年代）
+    + div.dateで囲っていた期（2000年以降）
 
 [^table]: 昔はtableやblockquoteタグでレイアウトしているのもありましたし…
 
@@ -50,3 +62,8 @@ CloudflareのPage Rulesで`Email Obfuscation: Off`にしたり、見知らぬ言
 
 [^nkf]: コマンドが面倒or苦手なら、Windows的に[KanjiTranslator](http://www.kashim.com/kanjitranslator/index.html)などを使ったり。
 [^sed]: 同じく、[TextSS](http://textss.sakura.ne.jp/)を使ったり。って、そもそも古くから携わっている人で「黒い画面」が苦手な人って少ない気がする。
+
+## 検索
+
+こんな感じで検索画面を。随時更新。
+<script src="https://gist.github.com/laureltreetop/07092dcbd8c9dda2e024452f3ce9033f.js"></script>
