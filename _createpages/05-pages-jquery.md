@@ -1,7 +1,7 @@
 ---
 title: "JQuery Plugins"
 description: "BroggerだろうがTumblrだろうがはてなブログだろうが、とにかくグリグリとJQueryでカスタマイズ。"
-permalink: /create-pages/javascript/
+permalink: /create-pages/jquery/
 classes: wide
 ---
 {{ page.description }}
