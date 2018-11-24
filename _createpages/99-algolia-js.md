@@ -40,10 +40,11 @@ $ npm i algolia-webcrawler -g
   + titleとかhタグ各種とか
   + 本文は面倒なのでbodyで取り込み
   + その他いろいろ取り込んだり[^date]
+  + "blacklist"にセットできるのはURL（キーワードではない）
 
 1. 実行
 ```sh
-algolia-webcrawler --config <jsonな設定ファイル>
+$ algolia-webcrawler --config <jsonな設定ファイル>
 ```
 
 で、ずらずら～っと登録完了。  
@@ -65,5 +66,11 @@ CloudflareのPage Rulesで`Email Obfuscation: Off`にしたり、見知らぬ言
 
 ## 検索
 
+本文データがぶつ切りになっているため、全部`join('')`で繋げたりなど特殊な仕上がりになっております。
+{: .notice}
+
 こんな感じで検索画面を。随時更新。
-<script src="https://gist.github.com/laureltreetop/07092dcbd8c9dda2e024452f3ce9033f.js"></script>
+<script src="https://gist.github.com/laureltreetop/07092dcbd8c9dda2e024452f3ce9033f.js">
+</script>
+こっちはスクリプト。
+<script src="https://gist.github.com/laureltreetop/de97f3a802129e26c1cef9ef1a5d68b5.js"></script>
