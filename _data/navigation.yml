@@ -58,20 +58,27 @@ githubpages:
         url: /githubpages/algolia-github/
       - title: "Blogger to Jekyll"
         url: /githubpages/blogger-to-jekyll/
-sitesystem:
-  - title: "サイトとか"
+inventory:
+  - title: "memo"
     children:
-      - title: "Blogger"
-        url: /sitesystem/blogger/
-      - title: "はてなブログ"
-        url: /sitesystem/hateblo/
-      - title: "WordPress"
-        url: /sitesystem/wordpress/
-      - title: "Tumblr"
-        url: /sitesystem/tumblr/
-      - title: "Firebase with Windows"
-        url: /sitesystem/firebase/
-# sidebar navigation
+      - title: "ページ作成"
+        url: /createpages/
+      - title: "サイトとか"
+        url: /sitesystem/
+      - title: "GitHub Pages"
+        url: /githubpages/
+      - title: "misc."
+        url: /misc/
+      - title: "モノいろいろ"
+        url: /inventory/
+  - title: "Inventory"
+    children:
+      - title: "KingWear KW88"
+        url: /inventory/kw88/
+      - title: "USBドライブ"
+        url: /inventory/usb-drive/
+      - title: "Bluetooth USBアダブタ"
+        url: /inventory/bl-v40/
 misc:
   - title: "memo"
     children:
@@ -97,22 +104,16 @@ misc:
         url: /misc/biz-nf/
       - title: "QRコード作成"
         url: /misc/generate-qr-code/
-inventory:
-  - title: "memo"
+sitesystem:
+  - title: "サイトとか"
     children:
-      - title: "ページ作成"
-        url: /createpages/
-      - title: "サイトとか"
-        url: /sitesystem/
-      - title: "GitHub Pages"
-        url: /githubpages/
-      - title: "misc."
-        url: /misc/
-      - title: "モノいろいろ"
-        url: /inventory/
-  - title: "Inventory"
-    children:
-      - title: "KingWear KW88"
-        url: /inventory/kw88/
-      - title: "USBドライブ"
-        url: /inventory/usb-drive/
+      - title: "Blogger"
+        url: /sitesystem/blogger/
+      - title: "はてなブログ"
+        url: /sitesystem/hateblo/
+      - title: "WordPress"
+        url: /sitesystem/wordpress/
+      - title: "Tumblr"
+        url: /sitesystem/tumblr/
+      - title: "Firebase with Windows"
+        url: /sitesystem/firebase/
