@@ -445,3 +445,4 @@ head_scripts:
 #  - /assets/js/custom.js
 footer_scripts:
 #  - /assets/js/custom.js
+#  - /assets/js/custom.js
