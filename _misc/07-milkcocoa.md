@@ -11,5 +11,5 @@ classes: wide
 
 + [Milkcocoa](https://mlkcca.com/)
 + [チュートリアル](https://mlkcca.com/tutorial/page1.html)
-+ [カテゴリー: frontend | Milkcocoa Engineers' Blog](http://blog.mlkcca.com/category/frontend/)
++ [Milkcocoa Engineers' Blog](http://blog.mlkcca.com/category/frontend/)
 + [Milkcocoa client for Node.js](https://www.npmjs.com/package/milkcocoa)
