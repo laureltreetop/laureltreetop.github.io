@@ -17,7 +17,6 @@ header:
 あちこちにサイトを作りちらしています。
 
 - [K's blog](https://blog.treetop.to)
-- [K's web ver.2017](https://2017.treetop.to/)（さて、どうしよう…）
 - [K's web contents ver.1995](https://1995.treetop.to/)
 
 他にも、上記以上に放置しているサイトあり。

@@ -131,3 +131,18 @@ $ git clone git@github.com:ユーザID/hoehoehoe.git
 既にGit for Windowsなどでコマンドでのgitが使えていることが前提。  
 最初にgit.exeが見当たらないって怒られたけど、whereで調べた結果、`~\AppData\Local\`なフォルダにあったせい。いつもGit Shellで立ち上げてたから気にならなかった。  
 それをうまく設定してあげれば、かなり便利。  
+
+## 参考にしたリンク
+
+リンク群なサイトから持ってきただけなので、あとでもう少し整理する…のかなぁ?
+
++ [Bloggerで外部ファイルを使うならGithubで決まり！](http://blogger.weblix.net/2014/07/blogger-external-file-github-pages.html)
++ [Github Pagesでウェブサイトを構築する方法](http://blogger.weblix.net/2014/01/github-pages-create-web-site.html)
++ [Git サーバー - SSH 公開鍵の作成](https://git-scm.com/book/ja/v1/Git-%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC-SSH-%E5%85%AC%E9%96%8B%E9%8D%B5%E3%81%AE%E4%BD%9C%E6%88%90)
++ [Git初心者でも大丈夫！完全無料でGithub PagesにWebページを公開する方法](https://liginc.co.jp/web/html-css/html/96453)
++ [Configuring a publishing source for GitHub Pages](https://help.github.com/articles/configuring-a-publishing-source-for-github-pages/)
++ [GitHub Help | Categories / GitHub Pages Basics](https://help.github.com/categories/github-pages-basics/)
++ [GitHubでディレクトリ作成](http://maeokaka.hatenablog.jp/entry/2016/07/07/001441)
++ [Git をはじめからていねいに](https://github.com/Shinpeim/introduction-to-git)
++ [GitHubの複数アカウントを使い分けるならSSHよりhttpsの方がいいんじゃね？という話](https://qiita.com/zaki-yama/items/bfb0c2bef516af58c3fa)
++ [git を https 経由で使うときのパスワードを保存する](https://qiita.com/usamik26/items/c655abcaeee02ea59695)

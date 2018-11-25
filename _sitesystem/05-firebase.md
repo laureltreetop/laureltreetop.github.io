@@ -11,6 +11,8 @@ header:
 {{ page.description }}
 {: .notice}
 
+[Firebase価格表](https://firebase.google.com/pricing/)
+
 ## インストール
 
 1. [Node.js](https://nodejs.org/ja/)をここからダウンロードして、インストール
