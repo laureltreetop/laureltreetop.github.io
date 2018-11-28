@@ -43,7 +43,8 @@ CloudFlareの設定としては、以下が必須。
 ## 番外編
 
 調べてみると、CloudFlareの力を借りずに独自SSL証明書有りになっているサービスが。  
-これらは**DNS only**（グレーの雲アイコン）にすべし。
+これらは**SSL: Full**にすべし。  
+そのあたり一番判りやすかったのは[Cloudflareを使ってWordPressサイトをHTTPS化する時の流れとポイント](https://1design.jp/web-development/1873)かな。
 
 + [GitHub Pages](https://pages.github.com/)
   + とうとうカスタムドメインでhttps化できるように
