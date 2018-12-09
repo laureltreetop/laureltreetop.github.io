@@ -75,6 +75,8 @@ inventory:
     children:
       - title: "KingWear KW88"
         url: /inventory/kw88/
+      - title: "tadpole Z02"
+        url: /inventory/tadpole-z02/
       - title: "USBドライブ"
         url: /inventory/usb-drive/
       - title: "Bluetooth USBアダブタ"
