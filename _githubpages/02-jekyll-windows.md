@@ -3,12 +3,6 @@ title: "Jekyll on Windows"
 description: "ほんとに苦労したので。しかもこの記事をまとめるために、いったんuninstallしました…"
 permalink: /githubpages/jekyll-windows/
 classes: wide
-# categories:
-#   - GitHub Pages
-# tags:
-#   - Jekyll
-#   - Windows
-#   - Ruby
 ---
 {{ page.description }}
 {: .notice}

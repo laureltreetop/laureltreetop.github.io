@@ -3,11 +3,6 @@ title: "Jekyll Theme"
 description: "Minimal Mistakesの手動やGemでのインストールや、あと他にもいくつか。"
 permalink: /githubpages/jekyll-theme/
 classes: wide
-# categories:
-#   - GitHub Pages
-# tags:
-#   - Jekyll
-#   - Theme Customize
 ---
 {{ page.description }}
 {: .notice}
