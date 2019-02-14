@@ -65,5 +65,10 @@ header:
 + やっぱり少し抵抗があったり?
   + [.tk ドメインが乗っ取られたっぽい](https://blog.kksg.net/posts/tk-domain-fraud)
   + [FREENOM is a scam and thiefs](https://www.namepros.com/threads/freenom-is-a-scam-and-thiefs.938824/)
++ ドメインを抱えすぎたせいか怒られた
+> At this moment we are unable to register any domains or other services in this account.  
+> Please contact support for more information. Error code 0x08823.  
++ [Error code 0x08823](https://my.freenom.com/knowledgebase.php?action=displayarticle&id=9)ということらしい  
+（*too many domain names without actively using them*に心当たりありすぎ）
   
 [^renew]: [Domain Renewals](https://my.freenom.com/domains.php?a=renewals)（要ログイン）でチェックすべし。
