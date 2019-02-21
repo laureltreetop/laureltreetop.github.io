@@ -10,20 +10,19 @@ header:
 {{ page.description }}
 {: .notice}
 
-## アイコン
-
-### [Font Awesome 5](https://fontawesome.com/)
+## [Font Awesome 5](https://fontawesome.com/)
 
 いろいろ変わったようで…  
 <i class="fab fa-line fa-3x"></i>とか使えるようになってますね。
 {: .notice}
 
-#### 使い方
+### 使い方
 
 新規で使い始める場合、この1行を`</body>`の直前や`<head>`内に追加。  
-最新は[How to Use](https://fontawesome.com/how-to-use/on-the-web/setup/getting-started?using=svg-with-js)より確認。
+最新は[Start a New Project](https://fontawesome.com/start)より確認。  
+Freeで、なおかつ推奨されてるSGVでだとこういう設定。  
 ```html
-<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
 ```
 
 あとは使いたいフォントを[Icons](https://fontawesome.com/icons)から探して、使いたいところにこんな感じで貼るだけ。  
@@ -42,7 +41,7 @@ classの`fa-2x`は大きさ指定。
 <i class="fab fa-2x fa-pinterest"></i> 
 <i class="fab fa-2x fa-get-pocket"></i>
 
-#### 色
+### 色
 
 TwitterとかFacebookのアイコンだと、やっぱり公式カラーにしたくなったり。[BrandColors](https://brandcolors.net/)のような資料もあるし。  
 CSSで各色を設定。
@@ -94,7 +93,7 @@ CSSで各色を設定。
 
 [^brand-colors]:都合上、ここでの実際のソースでは直に`i class="fab fa-twitter" style="color:#1da1f2;"></i>`という感じで指定してます。
 
-#### 文字幅を揃える
+### 文字幅を揃える
 
 アイコンによって幅が違う。  
 <i class="fab fa-2x fa-twitter twitter" style="color:#1da1f2;"></i> Twitter  
@@ -110,7 +109,7 @@ CSSで各色を設定。
 <i class="fab fa-2x fa-fw fa-pinterest pintest" style="color:#bd081c;"></i> Pintest  
 <i class="fab fa-2x fa-fw fa-get-pocket pocket" style="color:#ef4056;"></i> Pocket  
 
-#### 合わせ技
+### 合わせ技
 
 ```html
 <div class="fa-layers fa-fw fa-4x">
@@ -155,16 +154,31 @@ CSSで各色を設定。
 
 …なんか嫌ですなぁ。
 
-#### cssやscssで使う
+### CSSやSCSSで使う
 
-下の方に古い記事も残しておくけど、こっちのほうが簡単に使えるので。  
-[Getting Started on the Web](https://fontawesome.com/how-to-use/on-the-web/setup/getting-started?using=web-fonts-with-css)にあるように、`<head>`に
-```html
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-```
-と入れていおいて、[CSS Pseudo-elements](https://fontawesome.com/how-to-use/on-the-web/advanced/css-pseudo-elements)にあるように、
+ここでの説明も二転三転してますが、現時点で。
+{: .notice--info}
+
+今回はこういうのを作るための設定で。  
+引用部分を引用符で囲ってしまいたいというやつです。  
+> display: none;で消すのは、先ほど説明したようにSVGに置換されるため疑似要素があると2重でアイコンが表示されるため。SVGとセットで`<i>`タグも生成されるため、一緒に消しておくことを忘れずに！
+>
+> スタイルを当てるときはSVGタグ（.svg-inline--fa）に色なりマージンなり追加して下さい。  
+> <cite><a href="https://creatorclip.info/2018/02/fontawesome-5-change/">アイコン読み込みがJavaScript+SVG描画に変わった「Font Awesome 5」に変更してみた</a></cite>  
+
+
+まずはblockquoteの前後を。  
+SCSSなので、CSSで使いたい人は[Sass maister](https://www.sassmeister.com/)で変換すると吉。
 ```scss
 blockquote {
+    position: relative;
+    font-style: italic;
+    background: #f5f5f5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.14);
+    padding: 20px !important;
+    border-left: 0 !important;
+    margin: 0 !important;
+    font-size: $type-size-6;
     &::before {
         font-family: 'Font Awesome 5 Free';
         font-weight: 900;
@@ -177,53 +191,36 @@ blockquote {
     }
 }
 ```
-とcssなりscssに突っ込んでおけばいいかと。  
-（<i class="far fa-hand-point-up"></i>はあとから出てくるblockquoteでのscssを端折ってあるやつ）  
+普通にやればここに書式設定を入れてしまえばいいのですが、一筋縄ではいかないのがSVGというやつなので。  
+さっきの設定でFontAwesomeのほうでアイコンに変換してくれてるので、それに書式設定を。  
+```scss
+   .fa-quote-left {
+        position: absolute;
+         opacity: 0.1;
+        top: 0px;
+        left: 10px;
+    }
+    .fa-quote-right {
+        position: absolute;
+        opacity: 0.1;
+        bottom: 0px;
+        right: 20px;
+    }
+}
+```
+最初の説明に出てきた`::before`と`::after`には`display: none;`を追加し、生成前のは見せないようにしないといけないのです。  
+それプラス、その他書式を整えたり、WikipediaやTwitterの引用だとアイコンを出すように付けたりして、こんな感じになりました。  
+一部、使用しているテーマで使われてる変数があるので、適当に読み替えてください。
+<script src="https://gist.github.com/laureltreetop/eef8b632478eb6affd587b015ba6260e.js"></script>
+
 ブランドロゴは`font-family: "Font Awesome 5 Brands";`だけでいいけど、矢印だったりの普通の(?)アイコンを使う時は、
 ```css
 font-family: "Font Awesome 5 Free";
 font-weight: 900;
 ```
 というふうにfont-weightを900に設定するのが必須。  
-そうじゃないとお豆腐になっちゃいます。
 
-#### cssやscssで使う（古くなった）
-
-引用に使えないかなーと思って苦労したが、下記の記事が参考になった。
-+ [【保存版】Font Awesomeの使い方：Webアイコンフォントを使おう](https://saruwakakun.com/html-css/basic/font-awesome)
-+ [Font Awesome 5 Freeで疑似要素(:after,:before)のcontent指定する場合](https://qiita.com/Garyuten/items/6d68da5cdac6dab9ba26)
-+ [アイコン読み込みがJavaScript+SVG描画に変わった「Font Awesome 5」に変更してみた](https://creatorclip.info/2018/02/fontawesome-5-change/)
-
-まずはhead内に少し追加。  
-SGV描画を推奨しているらしく、それに沿ってやってみる。
-```html
-<script>
-    FontAwesomeConfig = { searchPseudoElements: true };
-</script>
-<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
-```
-で、引用に使いたい場合は、scssやcssではこんな感じで[^mm-blockquote]。  
-TwitterやWikipediaからの引用だったら右上にアイコンを入れたりしてます。
-
-[^mm-blockquote]: 当方が使っているテーマ[Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)の依存部分を上書きしたり、変数がそのまま使われているので、そのあたりは読み替えてください。
-
-cssバージョン。
-<script src="https://gist.github.com/laureltreetop/85655027ff1846841ec8e8d48e1ec37f.js?file=SassMeister-output.css"></script>
-sassだと少しすっきり書けるかな。
-<script src="https://gist.github.com/laureltreetop/85655027ff1846841ec8e8d48e1ec37f.js?file=SassMeister-input.scss"></script>
-
-> We’ve seen a lot of examples where adding markup like &lt;i class=&quot;fas fa-user&quot; /&gt; allows you to easily add icons to any site. But what if changing the markup or HTML is not possible?  
-
-右下にも記号を入れるのに苦労した…  
-
-> display: none;で消すのは、先ほど説明したようにSVGに置換されるため疑似要素があると2重でアイコンが表示されるため。SVGとセットで`<i>`タグも生成されるため、一緒に消しておくことを忘れずに！
->
-> スタイルを当てるときはSVGタグ（.svg-inline--fa）に色なりマージンなり追加して下さい。  
-> <cite><a href="https://creatorclip.info/2018/02/fontawesome-5-change/">アイコン読み込みがJavaScript+SVG描画に変わった「Font Awesome 5」に変更してみた</a></cite>  
-
-…というのがキーポイントに。
-
-### [Material Icon](https://material.io/icons/)
+## [Material Icon](https://material.io/icons/)
 
 Font Awesomeに無いアイコンもいろいろ。  
 <i class="material-icons">cast</i>
@@ -247,7 +244,7 @@ Font Awesomeに無いアイコンもいろいろ。
 <i class="material-icons">g_translate</i>
 ```
 
-### [IcoMoon](https://icomoon.io/)
+## [IcoMoon](https://icomoon.io/)
 
 Font Awesome, Material Iconにもないブランドフォントがあったりする。しかも色付き。  
 <span class="icon-hatebu"></span>
@@ -278,12 +275,12 @@ Generate Fontから、判りやすいようにラベルを変更してダウン�
 <span class="icon-playstation"></span>
 ```
 
-## Webフォント
-
 前述のMaterial Iconと、Google Fonts, Google Font + 日本語早期アクセスと全てGoogle系なので、要領は一緒かと。
 {: .notice}
 
-### [Google Fonts](https://fonts.google.com/)
+## [Google Fonts](https://fonts.google.com/)
+
+ここからFebフォントを。  
 
 一覧からフォントを選ぶ（複数可）。  
 数がかなり多いので、右側のCategoriesで絞っていくと吉。
@@ -302,7 +299,7 @@ Generate Fontから、判りやすいようにラベルを変更してダウン�
 @importなやり方で埋め込んでみたり。
 [![Google Fonts import](/assets/images/fonts_google-import.png)](/assets/images/fonts_google-import.png)
 
-### [Google Fonts + 日本語 早期アクセス](https://googlefonts.github.io/japanese/)
+## [Google Fonts + 日本語 早期アクセス](https://googlefonts.github.io/japanese/)
 
 一部は[Google Fonts](https://fonts.google.com/)に含まれてるけど、飛び道具的なフォントはこっち側にしかない。  
 一覧からフォントを選ぶ。
