@@ -11,6 +11,13 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('/assets/icomoon/style.css');
 
+.ais-pagination {
+    padding: 0 !important;
+    font-size: $type-size-6;
+    li.ais-pagination--item {
+        margin: 0.2em !important;
+    }
+}
 a {
 	text-decoration: none;
 }
