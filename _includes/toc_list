@@ -1,4 +1,4 @@
-<nav class="toc__list" markdown="1">
+<nav class="toc__list toc" markdown="1">
 <input id="ac-toclist" name="accordion-toclist" type="checkbox" />
 <label for="ac-toclist">{{ page.toc_label | default: site.data.ui-text[site.locale].toc_label }}</label>
 <div class="toc__items">
