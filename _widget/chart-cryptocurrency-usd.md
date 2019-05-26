@@ -14,7 +14,7 @@ new TradingView.widget({
   "interval": "D",
   "timezone": "Etc/UTC",
   "theme": "Light",
-  "style": "1",
+  "style": "9",
   "locale": "ja",
   "toolbar_bg": "#f1f3f6",
   "enable_publishing": false,
