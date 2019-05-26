@@ -25,7 +25,6 @@ new TradingView.widget({
     "COINBASE:ETHUSD",
     "POLONIEX:BCNBTC",
     "BITTREX:MONAUSD",
-    "POLONIEX:BCHUSD",
     "BITFINEX:BTGUSD",
     "POLONIEX:LSKBTC",
     "POLONIEX:FCTUSD",
@@ -33,8 +32,7 @@ new TradingView.widget({
     "POLONIEX:ZECUSD",
     "POLONIEX:XEMUSD",
     "POLONIEX:LTCUSD",
-    "POLONIEX:DASHUSD",
-    "BITFINEX:BCCUSD"
+    "POLONIEX:DASHUSD"
   ],
   "hideideas": true,
   "show_popup_button": true,

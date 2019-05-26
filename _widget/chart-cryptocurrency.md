@@ -27,15 +27,13 @@ new TradingView.widget({
     "POLONIEX:BCNBTC",
     "BITTREX:MONABTC",
     "BITFLYER:BCHBTC",
-    "BITTREX:BTGBTC",
     "POLONIEX:LSKBTC",
     "POLONIEX:FCTBTC",
     "POLONIEX:REPBTC",
     "POLONIEX:ZECBTC",
     "POLONIEX:XEMBTC",
     "POLONIEX:LTCBTC",
-    "POLONIEX:DASHBTC",
-    "BITTREX:BCCBTC"
+    "POLONIEX:DASHBTC"
   ],
   "hideideas": true,
   "show_popup_button": true,
