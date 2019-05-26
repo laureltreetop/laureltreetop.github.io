@@ -19,7 +19,7 @@ new TradingView.widget({
   "toolbar_bg": "#f1f3f6",
   "enable_publishing": false,
   "withdateranges": true,
-  "allow_symbol_change": true,
+  "allow_symbol_change": false,
   "watchlist": [
     "BITFINEX:XMRUSD",
     "COINBASE:ETHUSD",
@@ -34,7 +34,6 @@ new TradingView.widget({
     "POLONIEX:LTCUSD",
     "POLONIEX:DASHUSD"
   ],
-  "hideideas": true,
   "show_popup_button": true,
   "popup_width": "1200",
   "popup_height": "700",
@@ -42,5 +41,4 @@ new TradingView.widget({
 });
 </script>
 <!-- TradingView Widget END -->
-
 </div>

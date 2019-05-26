@@ -4,7 +4,7 @@ title: 貴金属チャート
 permalink: /widget/chart-metal.html
 search: false
 ---
-<div id="rate_pc" style="height:80vh;">
+<div id="rate_pc" style="height:85vh;">
 <!-- TradingView Widget BEGIN -->
 <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 <script type="text/javascript">
@@ -19,13 +19,11 @@ new TradingView.widget({
   "toolbar_bg": "#f1f3f6",
   "enable_publishing": false,
   "withdateranges": true,
-  "allow_symbol_change": true,
+  "allow_symbol_change": false,
   "watchlist": [
     "XAUUSD/31.1035*USDJPY",
-    "XPTUSD/31.1035*USDJPY",
-    "XAGUSD/31.1035*USDJPY"
+    "XPTUSD/31.1035*USDJPY"
   ],
-  "hideideas": true,
   "show_popup_button": true,
   "popup_width": "1200",
   "popup_height": "700",
