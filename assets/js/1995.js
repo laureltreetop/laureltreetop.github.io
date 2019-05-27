@@ -13,24 +13,6 @@ var resultStr = `${hit.text.join('')}`;
   `;
 }
 
-var client = algoliasearch('IA90805VYI', '9e30d633e7ae5597b0ddb7744f621017');
-var index = client.initIndex('index');
-/*
-autocomplete('#aa-search-input',
-{ hint: false }, {
-    source: autocomplete.sources.hits(index, {hitsPerPage: 5}),
-    //value to be displayed in input control after user's suggestion selection
-    displayKey: 'text',
-    //hash of templates used when rendering dataset
-    templates: {
-        //'suggestion' templating function used to render a single suggestion
-        suggestion: function(suggestion) {
-          return '<span>' +
-            suggestion._highlightResult.title.value + '</span>';
-        }
-    }
-});
-*/
 const search = instantsearch({
     appId: 'IA90805VYI',
     apiKey: '9e30d633e7ae5597b0ddb7744f621017',
