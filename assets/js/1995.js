@@ -1,36 +1,15 @@
 function hitTemplate(hit) {
 var resultStr = `${hit.text.join('')}`;
      return `
-<div class="hit">
-<div class="hit-content">
     <dl>
-    <dt class="hit-title"><a href="${hit.url}" target="_blank">${hit._highlightResult.title.value}</a></dt>
-    <dd class="hit-text">
+    <dt><a href="${hit.url}" target="_blank">${hit._highlightResult.title.value}</a></dt>
+    <dd>
         ${resultStr.slice(0, 160)}&hellip;
     </dd>
     </dl>
-</div>
   `;
 }
 
-var client = algoliasearch('IA90805VYI', '9e30d633e7ae5597b0ddb7744f621017');
-var index = client.initIndex('index');
-/*
-autocomplete('#aa-search-input',
-{ hint: false }, {
-    source: autocomplete.sources.hits(index, {hitsPerPage: 5}),
-    //value to be displayed in input control after user's suggestion selection
-    displayKey: 'text',
-    //hash of templates used when rendering dataset
-    templates: {
-        //'suggestion' templating function used to render a single suggestion
-        suggestion: function(suggestion) {
-          return '<span>' +
-            suggestion._highlightResult.title.value + '</span>';
-        }
-    }
-});
-*/
 const search = instantsearch({
     appId: 'IA90805VYI',
     apiKey: '9e30d633e7ae5597b0ddb7744f621017',
@@ -44,7 +23,7 @@ const search = instantsearch({
 // initialize SearchBox
 search.addWidget(
     instantsearch.widgets.searchBox({
-        container: '#aa-search-input',
+        container: '#searchbox',
         placeholder: 'ver.1995を検索…',
         poweredBy: true,
     })
@@ -60,7 +39,6 @@ search.addWidget(
                 return hitTemplate(hit);
             }
         },
-        escapeHits: true,
     })
 );
 
