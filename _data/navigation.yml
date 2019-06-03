@@ -16,8 +16,8 @@ main:
     url: /month-archive.html
   - title: "自分?"
     url: /about.html
-  - title: "Widget"
-    url: /widget
+#  - title: "Widget"
+#    url: /widget
 
 # documentation links
 createpages:
