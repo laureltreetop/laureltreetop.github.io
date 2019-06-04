@@ -11,7 +11,7 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('/assets/icomoon/style.css');
 
-.ais-pagination {
+.ais-pagination:not(.pagination-nagisa) {
     padding: 0 !important;
     font-size: $type-size-6;
     li.ais-pagination--item {
@@ -19,6 +19,45 @@
     }
 }
 
+.ais-SearchBox-form.search-nagisa {
+    padding: 0;
+    margin: 0;
+    input {
+        margin: 0;
+    }
+    button {
+        margin: auto 0.3em;
+    }
+    .ais-SearchBox-submitIcon, .ais-SearchBox-resetIcon {
+        width: 0.7em;
+        height: 0.7em;
+    }
+}
+.ais-PoweredBy-link {
+    margin: 0.5em 0 0 auto;
+}
+.ais-PoweredBy-logo {
+    height: 1.0em !important;
+    top: 0;
+}
+.ais-Hits-item.item-nagisa {
+    width: 100%;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    margin: 0 0 0 1em;
+    color: $text-color;
+}
+.pagination-nagisa {
+    margin: 0 !important;
+    border: 0 !important;
+}
+.ais-Pagination-link:not(a) {
+    padding-top: 0 !important;
+}
+.pagination li {
+    border: 0 !important;
+}
 a {
 	text-decoration: none;
 }
