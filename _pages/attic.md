@@ -16,6 +16,7 @@ header:
 {% endfor %}
 
 {{ page.last_modified_at }}
+{{ page.date }}
 
 {% if page.last_modified_at %}
   <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].date_label | default: "Updated:" }}</strong> <time datetime="{{ page.last_modified_at | date: "%Y-%m-%d" }}">{{ page.last_modified_at | date: "%B %d, %Y" }}</time></p>
