@@ -315,6 +315,7 @@ defaults:
       type: pages
     values:
       layout: splash
+      classes: wide
       search: false
       author_profile: false
       read_time: false
@@ -329,6 +330,7 @@ defaults:
       type: createpages
     values:
       layout: single
+      classes: wide
       author_profile: false
       read_time: false
       share: true
@@ -344,6 +346,7 @@ defaults:
       type: githubpages
     values:
       layout: single
+      classes: wide
       author_profile: false
       read_time: false
       share: true
@@ -359,6 +362,7 @@ defaults:
       type: inventory
     values:
       layout: single
+      classes: wide
       author_profile: false
       read_time: false
       share: true
@@ -374,6 +378,7 @@ defaults:
       type: misc
     values:
       layout: single
+      classes: wide
       author_profile: false
       read_time: false
       share: true
@@ -389,6 +394,7 @@ defaults:
       type: sitesystem
     values:
       layout: single
+      classes: wide
       author_profile: false
       read_time: false
       share: true
