@@ -1,8 +1,10 @@
 ---
 layout: splash
 title: Portfolio
-permalink: /widget/portfolio.html
+permalink: /attic/portfolio.html
 search: false
+sitemap: false
+metatags: noindex, nofollow
 ---
 <div id="rate_pc" style="height:85vh;">
 <!-- TradingView Widget BEGIN -->

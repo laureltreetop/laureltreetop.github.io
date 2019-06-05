@@ -398,10 +398,10 @@ defaults:
         nav: "sitesystem"
       toc: true
       toc_icon: "cogs"
-# widget
+# attic
   - scope:
       path: ""
-      type: widget
+      type: attic
     values:
       layout: splash
       classes: wide
@@ -440,10 +440,10 @@ collections:
     permalink: /:collection/:path/
     output: true
     title: "サイトとか"
-  widget:
+  attic:
     permalink: /:collection/:path/
     output: true
-    title: "Widget"
+    title: "Attic"
     
 github: [metadata]
 

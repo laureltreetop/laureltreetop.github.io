@@ -1,7 +1,10 @@
 ---
 title: テキスト用QRコード作成
 description: 雑多なテキストをやり取りするためのQRコードを作成できます。
-permalink: /widget/qr-code-text.html
+permalink: /attic/qr-code-text.html
+search: false
+sitemap: false
+metatags: noindex, nofollow
 ---
 ## {{ page.title }}
 

@@ -1,7 +1,10 @@
 ---
 title: 電話帳登録用QRコード作成
 description: 読み取ると携帯・スマホのアドレス帳に登録できるQRコードを作成できます。
-permalink: /widget/qr-code-entry.html
+permalink: /attic/qr-code-entry.html
+search: false
+sitemap: false
+metatags: noindex, nofollow
 ---
 ## {{ page.title }}
 

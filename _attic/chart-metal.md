@@ -1,8 +1,10 @@
 ---
 layout: splash
 title: 貴金属チャート
-permalink: /widget/chart-metal.html
+permalink: /attic/chart-metal.html
 search: false
+sitemap: false
+metatags: noindex, nofollow
 ---
 <div id="rate_pc" style="height:85vh;">
 <!-- TradingView Widget BEGIN -->
