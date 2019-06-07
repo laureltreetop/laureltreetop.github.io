@@ -1,11 +1,6 @@
 const search = instantsearch({
-    indexName: 'index',
-    routing: true,
-    searchParameters: {
-        hitsPerPage: 6,
-        distinct: true,
-    },
     searchClient: algoliasearch('IA90805VYI', '9e30d633e7ae5597b0ddb7744f621017'),
+    indexName: 'index',
 });
 
 search.addWidget(
@@ -18,6 +13,24 @@ search.addWidget(
         },
     })
 );
+
+/*
+search.addWidget(
+    instantsearch.widgets.refinementList({
+        container: '#refinement-list',
+        attribute: 'text',
+        //searchable: true,
+        templates: {
+            item(item) {
+                var resultStr = `${item.value}`;
+                return `
+                👉 ${resultStr} (${item.count})
+                `;
+            }
+        }
+    })
+);
+*/
 
 search.addWidget(
     instantsearch.widgets.poweredBy({
@@ -38,10 +51,9 @@ search.addWidget(
             empty: "キーワード<em>「{{query}}」</em>では探せませんでした。",
              item(hit) {
                 var resultStr = `${hit.text.join('')}`;
-                //var resultStr = `${hit._highlightResult.text.value}`;
                 return `
                 <dt><a href="${hit.url}" target="_blank">${hit._highlightResult.title.value}</a></dt>
-                <dd>${resultStr.slice(0, 160)}&hellip;</dd>
+                <dd>${resultStr.slice(0, 120)}&hellip;</dd>
                 `;
             }
         },
