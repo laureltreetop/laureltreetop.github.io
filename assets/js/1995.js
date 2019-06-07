@@ -1,12 +1,13 @@
 const search = instantsearch({
     searchClient: algoliasearch('IA90805VYI', '9e30d633e7ae5597b0ddb7744f621017'),
     indexName: 'index',
+    routing: true,
 });
 
 search.addWidget(
     instantsearch.widgets.searchBox({
         container: '#searchbox',
-        placeholder: ' ver.1995を検索…',
+        placeholder: 'ver.1995を検索…',
         poweredBy: true,
         cssClasses: {
             form: 'search-nagisa',
@@ -19,7 +20,6 @@ search.addWidget(
     instantsearch.widgets.refinementList({
         container: '#refinement-list',
         attribute: 'text',
-        //searchable: true,
         templates: {
             item(item) {
                 var resultStr = `${item.value}`;

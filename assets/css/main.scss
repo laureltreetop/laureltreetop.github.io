@@ -28,7 +28,11 @@
     button {
         margin: auto 0.3em;
     }
-    .ais-SearchBox-submitIcon, .ais-SearchBox-resetIcon {
+    .ais-SearchBox-submitIcon {
+        width: 0.9em;
+        height: 0.9em;
+    }
+    .ais-SearchBox-resetIcon {
         width: 0.7em;
         height: 0.7em;
     }
