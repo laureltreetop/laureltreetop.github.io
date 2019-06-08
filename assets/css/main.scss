@@ -44,7 +44,17 @@
     height: 1.0em !important;
     top: 0;
 }
+
 .ais-Hits-item.item-nagisa {
+    width: 100%;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+    margin: 0 0 0 1em;
+    color: $text-color;
+}
+
+.ais-InfiniteHits-item.infinite-nagisa {
     width: 100%;
     border: 0;
     box-shadow: none;

@@ -40,7 +40,7 @@ search.addWidget(
         },
     })
 );
-
+/*
 search.addWidget(
     instantsearch.widgets.hits({
         container: '#hits',
@@ -59,21 +59,55 @@ search.addWidget(
         },
     })
 );
+*/
 
+search.addWidget(
+    instantsearch.widgets.infiniteHits({
+        container: '#infinite-hits',
+        showPrevious: true,
+        disabledLoadMore: true,
+        cssClasses: {
+            item: 'infinite-nagisa',
+        },
+        templates: {
+            showPreviousText: 'Show previous',
+            empty: "キーワード<em>「{{query}}」</em>では探せませんでした。",
+            item(hit) {
+                var resultStr = `${hit.text.join('')}`;
+                return `
+                <dt><a href="${hit.url}" target="_blank">${hit._highlightResult.title.value}</a></dt>
+                <dd>${resultStr.slice(0, 120)}&hellip;</dd>
+                `;
+            }
+
+            /*
+            item:
+            `
+                <h2>{{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}</h2>
+                <p>{{ text }}</p>
+            `,
+            }
+            */
+        }
+
+    })
+);
+
+/*
 // initialize pagination
 search.addWidget(
     instantsearch.widgets.pagination({
         container: '#pagination',
-        maxPages: 20,
         // default is to scroll to 'body', here we disable this behavior
-        scrollTo: false,
-		showFirstLast: true,
+        showFirst: true,
+        showLast: true,
+        showNext: true,
+        showPrevious: true,
 		collapsible: true,
-		//autoHideContainer: true,
         cssClasses: {
             item: 'pagination-nagisa',
         },
     })
 );
-
+*/
 search.start();
