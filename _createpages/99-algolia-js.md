@@ -10,12 +10,12 @@ classes: wide
 ## Algolia登録
 
 1. [Algolia](https://www.algolia.com/)のアカウント作成
-1. `New Appligacion`からAPPSを作成
+1. `New Appligacion`からAppsを作成
   + アプリ名はあとからでも変えられる
   + Community(free) planで問題ないかと（ロゴ表示必須）
    + 地域を選んで`CONTINUE WITH JAPAN AS MAIN DATA CENTER`へ
   + Dashbordが出てくるが、Community(free) planを使うには[Brand Assets](https://www.algolia.com/press#resources)が必須
-1. APPS→API keysに必要な情報が
+1. Apps→API keysに必要な情報が
   + Application ID
   + Search-Only API Key
   + Admin API Key
@@ -26,7 +26,9 @@ classes: wide
 ## サイトからindexを作成
 
 古すぎて（しかも構造がめちゃくちゃ）無理だろうと諦めていたサイトがあるのだが、[algolia-webcrawler](https://www.npmjs.com/package/algolia-webcrawler)なるものを発見。  
-sitemap.xmlなどを潜って行くタイプなので、ページネーションやら何やらを気にしなくても可能。
+sitemap.xmlなどを潜って行くタイプなので、ページネーションやら何やらを気にしなくても可能。  
+ただ、なにぶんWindowsにGit Bashを突っ込んでいる環境なので、この説明は完全に誰得。
+{: .notice}
 
 1. （無ければ）[Xml Sitemap Generator](https://xmlsitemapgenerator.org/)などでsitemap.xmlを作成し、FTPで放り込んでおく
 1. npmでインストール
@@ -37,7 +39,6 @@ $ npm i algolia-webcrawler -g
 1. [config.json](https://github.com/DeuxHuitHuit/algolia-webcrawler/blob/master/config.json)のサンプルなどを参照にconfigファイルを作る
 <script src="https://gist.github.com/laureltreetop/9d0e2202717e7c5a8d0d746c44275c34.js"></script>
   + APPSを作成したときのキーなどが必要
-  + titleとかhタグ各種とか
   + 本文は面倒なのでbodyで取り込み
   + その他いろいろ取り込んだり[^date]
   + "blacklist"にセットできるのはURL（キーワードではない）
@@ -66,11 +67,37 @@ CloudflareのPage Rulesで`Email Obfuscation: Off`にしたり、見知らぬ言
 
 ## 検索
 
-本文データがぶつ切りになっているため、全部`join('')`で繋げたりなど特殊な仕上がりになっております。
+本文データがぶつ切りになっているため、全部`join('')`で繋げたりなど特殊な仕上がりになっております。  
+instantsearchのバージョンが2から3に上がったので、いろいろ変わったようです。
 {: .notice}
 
-こんな感じで検索画面を。随時更新。
-<script src="https://gist.github.com/laureltreetop/07092dcbd8c9dda2e024452f3ce9033f.js">
-</script>
-こっちはスクリプト。
+### ページネーションあり
+
+まずはページをこんな感じで。
+<script src="https://gist.github.com/laureltreetop/07092dcbd8c9dda2e024452f3ce9033f.js"></script>
+イチから見た目を整えるのなら、こっちの.cssを呼び出す。
+```css
+@import url('https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css');
+```
+スクリプトの最新情報は[Installation
+](https://www.algolia.com/doc/guides/building-search-ui/installation/js/)を、cssは[Customize an Existing Widget
+](https://www.algolia.com/doc/guides/building-search-ui/widgets/customize-an-existing-widget/js/)を確認。
+
+スクリプト。
+ぐりぐりカスタマイズするなら、`cssClasses`でclassを追加できる。
 <script src="https://gist.github.com/laureltreetop/de97f3a802129e26c1cef9ef1a5d68b5.js"></script>
+
+### 無限スクロール
+
+ついでに無限スクロールバージョンも。  
+ページは「ページネーションあり」のやつを一部書き換え[^infinite]。
+```html
+<div id="searchbox"></div>
+<div id="powered-by"></div>
+<div id="infinite-hits"></div>
+```
+
+スクリプトはこうなる。
+<script src="https://gist.github.com/laureltreetop/b7e3c10b8db53a6b0eed47df9f0fef43.js"></script>
+
+[^infinite]: 単に区別するためなので、把握できるのならidはお任せで。
