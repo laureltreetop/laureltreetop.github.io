@@ -322,6 +322,7 @@ defaults:
       share: false
       comments: false
       related: false
+      robots: "noindex, nofollow"
       # sidebar:
       #   nav: "sidebar"
 # _createpages
@@ -416,6 +417,7 @@ defaults:
       share: false
       comments: false
       related: false
+      robots: "noindex, nofollow"
       #sidebar:
       #  nav: "sidebar"
       #toc: true
