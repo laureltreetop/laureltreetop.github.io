@@ -156,3 +156,23 @@ To https://github.com/<username>/<repository>.git
  * [new branch]      master -> master
 Branch 'master' set up to track remote branch 'master' from 'origin'.
 ```
+
+## noindex, nofollow
+
+各記事のFront Matterか、または`_config.yml`の記事生成設定に追加
+```
+robots: "noindex, nofollow"
+```
+
+`_includes/head.html`に追加
+```
+{% raw %}{% if page.robots %}
+<meta name="robots" content="{{page.robots}}" />
+{% endif %}{% endraw %}
+```
+
+これだけで、生成したらタグが追加されるように。
+```html
+<meta name="robots" content="noindex, nofollow" />
+```
+robotsに限らず、metaタグを増やせそうな。
