@@ -59,3 +59,8 @@ classes: wide
 <div id="appreach-box" style="text-align: left;"><img src="https://is1-ssl.mzstatic.com/image/thumb/Purple118/v4/df/79/db/df79db8a-32a6-9975-b6d2-d582a9b2f471/source/512x512bb.jpg" alt="WearHealth" id="appreach-image" style="float: left; margin: 10px; width: 25%; max-width: 120px; border-radius: 10%;"><div class="appreach-info" style="margin: 10px;"><div id="appreach-appname">WearHealth</div><div id="appreach-developer" style="font-size: 80%; display: inline-block;">開発元:<span id="appreach-developerurl">tengfei wang</span></div><div id="appreach-price" style="font-size: 80%; display: inline-block;">無料</div><div class="appreach-powered" style="font-size: 80%; display: inline-block;">posted with<a href="http://mama-hack.com/app-reach/" title="アプリーチ" target="_blank" rel="nofollow">アプリーチ</a></div><div class="appreach-links" style="float: left;"><div id="appreach-itunes-link" style="display: inline-block;"><a id="appreach-itunes" href="https://itunes.apple.com/jp/app/wearhealth/id1265052549?mt=8&amp;uo=4" target="_blank" rel="nofollow"><img src="https://nabettu.github.io/appreach/img/itune_ja.svg" style="height: 40px; width: 135px;"></a></div><div id="appreach-gplay-link" style="display: inline-block;"><a id="appreach-gplay" href="https://play.google.com/store/apps/details?id=com.zjw.wearhealth" target="_blank" rel="nofollow"><img src="https://nabettu.github.io/appreach/img/gplay_ja.png" style="height: 40px; width: 134.5px;"></a></div></div></div><div class="appreach-footer" style="margin-bottom: 10px; clear: left;"></div></div>
 + ボタンは一つだけなので、普通のタッチと長押しとを使い分ける感じ
 + 日付がdd-mm-yyyyなのは困った
+
+## 顛末
+
+ベルトが破損したけど、替えのベルトは売ってないっぽい。  
+サイズが近いベルトに交換するというのもあるけど。そこまでは? ということで使わなくなりました。  
