@@ -33,7 +33,7 @@ createpages:
         url: /create-pages/jquery/
       - title: "reCAPTCHA"
         url: /createpages/recaptcha/
-      - title: "Algolia with Javascrpt"
+      - title: "Algolia"
         url: /createpages/algolia/
 githubpages:
   - title: "GitHub Pages"
@@ -79,6 +79,8 @@ inventory:
         url: /inventory/usb-drive/
       - title: "Bluetooth USBアダブタ"
         url: /inventory/bl-v40/
+      - title: "TOSHIBA DBR-M4008"
+        url: /inventory/dbr-m4008/
 misc:
   - title: "memo"
     children:
