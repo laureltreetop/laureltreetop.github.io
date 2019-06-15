@@ -1,5 +1,5 @@
 ---
-title: "Algolia with Javascrpt"
+title: "Algolia"
 description: "全文検索できるよ。あいまい検索やヒットした単語の強調などできて、日本語もOKだったり。"
 permalink: /createpages/algolia/
 classes: wide
@@ -49,7 +49,7 @@ $ algolia-webcrawler --config <jsonな設定ファイル>
 ```
 
 で、ずらずら～っと登録完了。  
-自分みたいに破綻しまくりなサイト[^table]じゃない限り、これで大丈夫かと。
+~~自分みたいに破綻しまくりなサイト[^table]じゃない限り、これで大丈夫かと。~~
 
 [^date]:日記の日付が時期によってバラバラだったのでうまい具合に拾ってみた
     + bタグで囲っていた期（1990年代）
@@ -58,16 +58,24 @@ $ algolia-webcrawler --config <jsonな設定ファイル>
 
 [^table]: 昔はtableやblockquoteタグでレイアウトしているのもありましたし…
 
-あ、過去にiso-2022-jpで作ってて、しかも[Cloudflare](https://www.cloudflare.com)を噛ませていると、文字化け地獄になります。  
+実は本文を[サンプル](https://github.com/DeuxHuitHuit/algolia-webcrawler/blob/master/config.json)のようにタグを指定したり、またはbodyでざっくり取得していたのですが、そうすると本文データが分割されてしまってたんですよね。  
+pluginでjsなスクリプトを作って実行すると解決できた。  
+スクリプトのpath指定が面倒[^bothersome]なら、`AppData\Roaming\npm\node_modules\algolia-webcrawler`にスクリプトを。
 
-CloudflareのPage Rulesで`Email Obfuscation: Off`にしたり、見知らぬ言語でpluginsを作ろうとしたりあがいてみましたが、最終的には全部UTF-8な文字コードに変換[^nkf]し、中途半端に書いてあったcharsetも置換[^sed]し、.htaccessに`AddDefaultCharset UTF-8`を追加しました。
+config_plugin.js
+<script src="https://gist.github.com/laureltreetop/7f9b0d9be4f3a781214b2bd477b441e2.js"></script>
 
+[^bothersome]: それは自分だ。
+
+余談ですが、過去にiso-2022-jpで作ってて、しかも[Cloudflare](https://www.cloudflare.com)を噛ませていると、文字化け地獄になります。  
+CloudflareのPage Rulesで`Email Obfuscation: Off`にしたり、~~見知らぬ言語[^past]で~~pluginsを作ろうとしたりあがいてみましたが、最終的には全部UTF-8な文字コードに変換[^nkf]し、中途半端に書いてあったcharsetも置換[^sed]し、.htaccessに`AddDefaultCharset UTF-8`を追加しました。
+
+[^past]: 当時。しかもちゃんと調べてみたらJavascriptでコードを書いてnodeで処理すればいいと判明。
 [^nkf]: コマンドが面倒or苦手なら、Windows的に[KanjiTranslator](http://www.kashim.com/kanjitranslator/index.html)などを使ったり。
 [^sed]: 同じく、[TextSS](http://textss.sakura.ne.jp/)を使ったり。って、そもそも古くから携わっている人で「黒い画面」が苦手な人って少ない気がする。
 
 ## 検索
 
-本文データがぶつ切りになっているため、全部`join('')`で繋げたりなど特殊な仕上がりになっております。  
 instantsearchのバージョンが2から3に上がったので、いろいろ変わったようです。
 {: .notice}
 
@@ -101,3 +109,65 @@ instantsearchのバージョンが2から3に上がったので、いろいろ�
 <script src="https://gist.github.com/laureltreetop/b7e3c10b8db53a6b0eed47df9f0fef43.js"></script>
 
 [^infinite]: 単に区別するためなので、把握できるのならidはお任せで。
+
+## データバックアップ
+
+コマンドプロンプトが使えて、その他いろいろ導入済みという前提の誰得記録。
+{: .notice}
+
+### 前準備
+
+```sh
+$ npm install --save algoliasearch
+$ npm install --save json
+```
+
+### Rubyの場合
+
+```ruby
+require 'json'
+require 'algoliasearch'
+
+Algolia.init(application_id: 'アプリケーションID',
+             api_key:        'API Key')
+
+index = Algolia::Index.new('インデックス名')
+
+hits = []
+
+index.browse do |hit|
+  hits.push(hit)
+end
+
+File.write('index_filename.json', hits.to_json)
+```
+
+### Node.jsの場合
+
+```js
+const algoliasearch = require('algoliasearch');
+
+const client = algoliasearch('アプリケーションID', 'API Key');
+const index = client.initIndex('インデックス名');
+
+const fs = require('fs');
+const browser = index.browseAll();
+let hits = [];
+
+browser.on('result', content => {
+  hits = hits.concat(content.hits);
+});
+
+browser.on('end', () => {
+  console.log('Finished!');
+  console.log('We got %d hits', hits.length);
+  fs.writeFile('index_filename.json', JSON.stringify(hits, null, 2), 'utf-8', err => {
+    if (err) throw err;
+    console.log('Your index has been exported!');
+  });
+});
+
+browser.on('error', err => {
+  throw err;
+});
+```
