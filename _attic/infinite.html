@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <meta name="robots" content="noindex, nofollow" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css" integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8=" crossorigin="anonymous">
+<style>
+ul {
+    list-style: none;
+    padding: 0;
+}
+.ais-Hits-item {
+    width: 100%;
+    border: 0;
+    box-shadow: none;
+    margin: 0 !important;
+    padding: 10px 0;
+}
+</style>
+
+  <title>InstantSearch.js - Infinite Scroll</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>InstantSearch.js - Infinite Scroll</h1>
+    <div id="searchbox"></div>
+    <div id="powered-by"></div>
+    <div id="stats"></div>
+    <div id="hits"></div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.33.0/dist/algoliasearchLite.min.js" integrity="sha256-3Laj91VXexjTlFLgL8+vvIq27laXdRmFIcO2miulgEs=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@3.4.0/dist/instantsearch.production.min.js" integrity="sha256-pM0n88cBFRHpSn0N26ETsQdwpA7WAXJDvkHeCLh3ujI=" crossorigin="anonymous"></script>
+
+ <script>
+
+/* global instantsearch algoliasearch */
+
+let lastRenderArgs;
+
+const infiniteHits = instantsearch.connectors.connectInfiniteHits(
+    (renderArgs, isFirstRender) => {
+    const { hits, showMore, widgetParams } = renderArgs;
+    const { container } = widgetParams;
+
+    lastRenderArgs = renderArgs;
+
+    if (isFirstRender) {
+        const sentinel = document.createElement('div');
+        container.appendChild(document.createElement('ul'));
+        container.appendChild(sentinel);
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !lastRenderArgs.isLastPage) {
+                    showMore();
+                }
+            });
+        });
+
+        observer.observe(sentinel);
+
+        return;
+    }
+
+    container.querySelector('ul').innerHTML = hits
+        .map(
+            hit =>
+                `
+                <li>
+                <div class="ais-Hits-item">
+                <dt class="hit-name">
+                ${instantsearch.highlight({ attribute: 'title', hit })}
+                </dt>
+                <dd class="hit-description">
+                ${instantsearch.snippet({ attribute: 'content', hit })}
+                </dd>
+                </div>
+                </li>
+                `
+            )
+        .join('');
+    }
+);
+
+const search = instantsearch({
+    searchClient: algoliasearch('IA90805VYI', '9e30d633e7ae5597b0ddb7744f621017'),
+    indexName: 'index',
+    routing: true,
+});
+
+search.addWidget(
+    instantsearch.widgets.searchBox({
+        container: '#searchbox',
+        placeholder: 'ver.1995を検索…',
+    })
+);
+
+search.addWidget(
+    instantsearch.widgets.poweredBy({
+        container: '#powered-by',
+    })
+);
+
+search.addWidget(
+    instantsearch.widgets.stats({
+        container: '#stats',
+        templates: {
+            text(data) {
+                let count = '';
+
+                if (data.hasManyResults) {
+                    count += `${data.nbHits} results`;
+                } else if (data.hasOneResult) {
+                    count += `1 result`;
+                } else {
+                    count += `no result`;
+                }
+                if (data.query == "") {
+                    document.getElementById("stats").style.visibility="hidden";
+                    document.getElementById("hits").style.visibility="hidden";
+                } else {
+                    document.getElementById("stats").style.visibility="visible";
+                    document.getElementById("hits").style.visibility="visible";
+                }
+                return `${count} found in ${data.processingTimeMS}ms`;
+            },
+        },
+    })
+);
+
+search.addWidget(
+    infiniteHits({
+        container: document.querySelector('#hits'),
+    })
+);
+
+search.start();
+
+</script>
+
+</body>
+
+</html>

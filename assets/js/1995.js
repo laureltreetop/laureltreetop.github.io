@@ -25,8 +25,35 @@ search.addWidget(
 );
 
 search.addWidget(
+    instantsearch.widgets.stats({
+        container: '#stats',
+        templates: {
+            text(data) {
+                let count = '';
+
+                if (data.hasManyResults) {
+                    count += `${data.nbHits} results`;
+                } else if (data.hasOneResult) {
+                    count += `1 result`;
+                } else {
+                    count += `no result`;
+                }
+                if (data.query == "") {
+                    document.getElementById("stats").style.visibility="hidden";
+                    document.getElementById("hits").style.visibility="hidden";
+                } else {
+                    document.getElementById("stats").style.visibility="visible";
+                    document.getElementById("hits").style.visibility="visible";
+                }
+                return `${count} found in ${data.processingTimeMS}ms`;
+            },
+        },
+    })
+);
+
+search.addWidget(
     instantsearch.widgets.infiniteHits({
-        container: '#infinite-hits',
+        container: '#hits',
         cssClasses: {
             item: 'infinite-nagisa',
         },
