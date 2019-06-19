@@ -98,17 +98,15 @@ instantsearchのバージョンが2から3に上がったので、いろいろ�
 ### 無限スクロール
 
 ついでに無限スクロールバージョンも。  
-ページは「ページネーションあり」のやつを一部書き換え[^infinite]。
+ページは「ページネーションあり」から一部削除してこんな感じに。
 ```html
 <div id="searchbox"></div>
 <div id="powered-by"></div>
-<div id="infinite-hits"></div>
+<div id="stats"></div>
+<div id="hits"></div>
 ```
-
 スクリプトはこうなる。
 <script src="https://gist.github.com/laureltreetop/b7e3c10b8db53a6b0eed47df9f0fef43.js"></script>
-
-[^infinite]: 単に区別するためなので、把握できるのならidはお任せで。
 
 ## データバックアップ
 
