@@ -13,4 +13,5 @@ group :jekyll_plugins do
 	gem 'jekyll-redirect-from'
     gem 'jekyll-data'
     gem 'jekyll-include-cache'
+    gem 'jekyll-auto-image'
 end
