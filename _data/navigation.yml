@@ -104,6 +104,18 @@ misc:
         url: /misc/xrea-mail/
       - title: "BIZ.NF"
         url: /misc/biz-nf/
+      - title: "bitly"
+        url: /misc/bitly/
+      - title: "PubNub"
+        url: /misc/pubnub/
+      - title: "Milkcocoa"
+        url: /misc/milkcocoa/
+      - title: "Node.js"
+        url: /misc/nodejs/
+      - title: "Google Charts"
+        url: /misc/google-charts/
+      - title: "Auth0"
+        url: /misc/auth0/
       - title: "QRコード作成"
         url: /misc/generate-qr-code/
 sitesystem:
