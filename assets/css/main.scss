@@ -11,68 +11,6 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('/assets/icomoon/style.css');
 
-.ais-pagination:not(.pagination-nagisa) {
-    padding: 0 !important;
-    font-size: $type-size-6;
-    li.ais-pagination--item {
-        margin: 0.2em !important;
-    }
-}
-
-.ais-SearchBox-form.search-nagisa {
-    padding: 0;
-    margin: 0;
-    input {
-        margin: 0;
-    }
-    button {
-        margin: auto 0.3em;
-    }
-    .ais-SearchBox-submitIcon {
-        width: 0.9em;
-        height: 0.9em;
-    }
-    .ais-SearchBox-resetIcon {
-        width: 0.7em;
-        height: 0.7em;
-    }
-}
-.ais-PoweredBy-link {
-    margin: 0.5em 0 0 auto;
-}
-.ais-PoweredBy-logo {
-    height: 1.0em !important;
-    top: 0;
-}
-
-.ais-Hits-item.item-nagisa {
-    width: 100%;
-    border: 0;
-    box-shadow: none;
-    padding: 0;
-    margin: 0 0 0 1em;
-    color: $text-color;
-}
-
-.ais-InfiniteHits-item.infinite-nagisa {
-    width: 100%;
-    border: 0;
-    box-shadow: none;
-    padding: 0;
-    margin: 0 0 0 1em;
-    color: $text-color;
-}
-.pagination-nagisa {
-    margin: 0 !important;
-    border: 0 !important;
-}
-.ais-Pagination-link:not(a) {
-    padding-top: 0 !important;
-}
-.pagination li {
-    border: 0 !important;
-}
-
 .appreach-info {
     width: 75%;
 }
@@ -582,7 +520,7 @@ body .gist .gist-meta {
 }
 
 /* https://github.com/lonekorean/gist-syntax-themes */
-@import url('https://cdn.rawgit.com/lonekorean/gist-syntax-themes/848d6580/stylesheets/monokai.css');
+@import url('https://cdn.rawgit.com/lonekorean/gist-syntax-themes/b737b139/stylesheets/solarized-dark.css');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 .pile-up {
