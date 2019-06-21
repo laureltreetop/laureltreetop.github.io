@@ -7,19 +7,66 @@
   <meta name="theme-color" content="#000000">
   <meta name="robots" content="noindex, nofollow" />
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css" integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.0/themes/algolia.css" />
+
 <style>
+body,
+h1 {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  padding: 1em;
+}
+
 ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
+
+.container {
+  max-width: 960px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.ais-PoweredBy-link {
+    margin: 0 0 0 auto;
+}
+.ais-PoweredBy-logo {
+    height: 1.0em !important;
+    top: 0;
+}
+.state {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ais-SearchBox {
+  margin: 1em 0;
+}
+
 .ais-Hits-item {
-    width: 100%;
-    border: 0;
-    box-shadow: none;
-    margin: 0 !important;
-    padding: 10px 0;
+  margin-bottom: 1em;
+  width: 100%;
+  margin: 16px 0;
 }
+
+.ais-Hits-item img {
+  margin-right: 1em;
+}
+
+.hit-name {
+  margin-bottom: 0.5em;
+}
+
+.hit-description {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 0.5em;
+}
+
 </style>
 
   <title>InstantSearch.js - Infinite Scroll</title>
@@ -28,23 +75,24 @@ ul {
 <body>
   <div class="container">
     <h1>InstantSearch.js - Infinite Scroll</h1>
-    <div id="searchbox"></div>
-    <div id="powered-by"></div>
-    <div id="stats"></div>
-    <div id="hits"></div>
+      <div id="searchbox" class="ais-SearchBox"></div>
+      <div class="state">
+        <div id="stats"></div>
+        <div id="powered-by"></div>
+      </div>
+      <div id="hits"></div>
   </div>
 
-<script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.33.0/dist/algoliasearchLite.min.js" integrity="sha256-3Laj91VXexjTlFLgL8+vvIq27laXdRmFIcO2miulgEs=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@3.4.0/dist/instantsearch.production.min.js" integrity="sha256-pM0n88cBFRHpSn0N26ETsQdwpA7WAXJDvkHeCLh3ujI=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.30.0/dist/algoliasearchLite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@beta"></script>
 
- <script>
-
+<script>
 /* global instantsearch algoliasearch */
 
 let lastRenderArgs;
 
 const infiniteHits = instantsearch.connectors.connectInfiniteHits(
-    (renderArgs, isFirstRender) => {
+  (renderArgs, isFirstRender) => {
     const { hits, showMore, widgetParams } = renderArgs;
     const { container } = widgetParams;
 
@@ -69,23 +117,21 @@ const infiniteHits = instantsearch.connectors.connectInfiniteHits(
     }
 
     container.querySelector('ul').innerHTML = hits
-        .map(
-            hit =>
-                `
-                <li>
-                <div class="ais-Hits-item">
-                <dt class="hit-name">
+      .map(
+        hit =>
+          `<li>
+            <div class="ais-Hits-item">
+              <header class="hit-name">
                 ${instantsearch.highlight({ attribute: 'title', hit })}
-                </dt>
-                <dd class="hit-description">
+              </header>
+              <p class="hit-description">
                 ${instantsearch.snippet({ attribute: 'content', hit })}
-                </dd>
-                </div>
-                </li>
-                `
-            )
-        .join('');
-    }
+              </p>
+            </div>
+          </li>`
+      )
+      .join('');
+  }
 );
 
 const search = instantsearch({
@@ -141,7 +187,6 @@ search.addWidget(
 );
 
 search.start();
-
 </script>
 
 </body>
