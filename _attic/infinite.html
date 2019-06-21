@@ -7,29 +7,29 @@
   <meta name="theme-color" content="#000000">
   <meta name="robots" content="noindex, nofollow" />
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.1.0/themes/algolia.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css" integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8=" crossorigin="anonymous">
 
 <style>
 body,
 h1 {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
     Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  padding: 1em;
+    padding: 1em;
 }
 
 ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 .container {
-  max-width: 960px;
-  overflow: hidden;
-  margin: 0 auto;
+    max-width: 960px;
+    overflow: hidden;
+    margin: 0 auto;
 }
 .ais-PoweredBy-link {
     margin: 0 0 0 auto;
@@ -44,37 +44,47 @@ ul {
 }
 
 .ais-SearchBox {
-  margin: 1em 0;
+    margin: 1em 0;
+}
+.ais-SearchBox-input {
+    padding: 0.75em 2em;
+}
+.ais-SearchBox-form button {
+    margin: auto 0.4em;
+}
+.ais-SearchBox-submitIcon {
+    width: 1em;
+    height: 1em;
+}
+.ais-SearchBox-resetIcon {
+    width: 0.9em;
+    height: 0.9em;
 }
 
 .ais-Hits-item {
-  margin-bottom: 1em;
-  width: 100%;
-  margin: 16px 0;
-}
-
-.ais-Hits-item img {
-  margin-right: 1em;
+    margin-bottom: 1em;
+    width: 100%;
+    margin: 16px 0;
 }
 
 .hit-name {
-  margin-bottom: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 .hit-description {
-  color: #888;
-  font-size: 14px;
-  margin-bottom: 0.5em;
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 0.5em;
 }
 
 </style>
 
-  <title>InstantSearch.js - Infinite Scroll</title>
+<title>Version 1995 site search</title>
 </head>
 
 <body>
   <div class="container">
-    <h1>InstantSearch.js - Infinite Scroll</h1>
+    <h1>Ver.1995 site search</h1>
       <div id="searchbox" class="ais-SearchBox"></div>
       <div class="state">
         <div id="stats"></div>
@@ -83,8 +93,8 @@ ul {
       <div id="hits"></div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.30.0/dist/algoliasearchLite.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@beta"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.33.0/dist/algoliasearchLite.min.js" integrity="sha256-3Laj91VXexjTlFLgL8+vvIq27laXdRmFIcO2miulgEs=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@3.4.0/dist/instantsearch.production.min.js" integrity="sha256-pM0n88cBFRHpSn0N26ETsQdwpA7WAXJDvkHeCLh3ujI=" crossorigin="anonymous"></script>
 
 <script>
 /* global instantsearch algoliasearch */
@@ -143,7 +153,7 @@ const search = instantsearch({
 search.addWidget(
     instantsearch.widgets.searchBox({
         container: '#searchbox',
-        placeholder: 'ver.1995を検索…',
+        placeholder: 'ver.1995 site search…',
     })
 );
 
