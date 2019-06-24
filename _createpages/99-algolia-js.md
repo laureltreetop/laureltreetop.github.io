@@ -108,6 +108,11 @@ instantsearchのバージョンが2から3に上がったので、いろいろ�
 スクリプトはこうなる。
 <script src="https://gist.github.com/laureltreetop/b7e3c10b8db53a6b0eed47df9f0fef43.js"></script>
 
+### 無限スクロール(connectors無し)
+
+上記の方法だとページによっては無限スクロールにしてくれないので、スクリプト的に頑張ってみた。
+<script src="https://gist.github.com/laureltreetop/4436ebaeff80c3b59f351a5c17915bc5.js"></script>
+
 ## データバックアップ
 
 コマンドプロンプトが使えて、その他いろいろ導入済みという前提の誰得記録。
