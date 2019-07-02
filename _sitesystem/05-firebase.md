@@ -275,7 +275,6 @@ Hosting URL: https://プロジェクトID.firebaseapp.com
 さっそく無駄に背景やらファビコンやらを仕掛け済み。
 [![Firebase hosting setup complete](/assets/images/firebase_hosting-setup-complete.png)](/assets/images/firebase_hosting-setup-complete.png)
 
-
 ## カスタムドメイン設定
 
 1. プロジェクトを選んで開発→Hosting→ドメインを接続
@@ -301,23 +300,140 @@ Hosting URL: https://プロジェクトID.firebaseapp.com
 認識されたあとはFullかFull(Strict)にしないと、無限リダイレクトループに。  
 [CloudFlareな記事](/misc/cloudflare/)も参照。  
 
-{% comment %}
-## その他?
+## 初期化プロセスとか
 
-カスタムドメインの場合、一部スクリプトを書き換え
+知らないうちに、初期化プロセスが簡単になってる。
+これを貼り付ければOKに。  
+トッピングを全部呼び出しているけど、使うものだけ呼び出したほうがいいかと。
 ```html
-<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "<API_KEY>",
-    authDomain: "【カスタムドメイン】",
-    databaseURL: "https://<DATABASE_NAME>.firebaseio.com",
-    projectId: "<DATABASE_ID>",
-    storageBucket: "<DATABASE_NAME>.appspot.com",
-    messagingSenderId: "<SENDER_ID>"
-  };
-  firebase.initializeApp(config);
-</script>
+<!-- update the version number as needed -->
+<script defer src="/__/firebase/6.2.4/firebase-app.js"></script>
+<!-- include only the Firebase features as you need -->
+<script defer src="/__/firebase/6.2.4/firebase-auth.js"></script>
+
+<script defer src="/__/firebase/6.2.4/firebase-database.js"></script>
+<script defer src="/__/firebase/6.2.4/firebase-messaging.js"></script>
+<script defer src="/__/firebase/6.2.4/firebase-storage.js"></script>
+
+<!-- initialize the SDK after all desired features are loaded -->
+<script defer src="/__/firebase/init.js"></script>
 ```
-{% endcomment %}
+
+## メールテンプレート
+
+そのままだとfirebase丸出しのメールアドレスになるので、メールテンプレートのカスタムドメインを。
+[![Firebase custom mail](/assets/images/firebase-custom-mail-domain.png)](/assets/images/firebase-custom-mail-domain.png) 
+
+|ホスト|タイプ |値|
+|----------------|----------------|----------------|
+|ドメイン|TXT|v=spf1 include:_spf.firebasemail.com ~all|
+|ドメイン|TXT|firebase=プロジェクト名|
+|firebase1._domainkey.ドメイン|CNAME|mail-ドメイン.dkim1._domainkey.firebasemail.com.|
+|firebase2._domainkey.ドメイン|CNAME|mail-ドメイン.dkim2._domainkey.firebasemail.com.|
+
+ドメインの所有権を確認するまで、最大48時間かかるんだそうな。
+
+## 立ち上げるとエラーが出る
+
+ローカルで確認しようとしたら、こんなエラーが。
+```sh
+$ firebase serve
+
+Error: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+```
+認証してみた。
+```sh
+$ firebase login:ci --no-localhost
+
+Error: Cannot run login:ci in non-interactive mode.
+```
+`non-interactive`がダメなら、オプションを追加してみた。
+```sh
+$ firebase login:ci --no-localhost --interactive
+
+Visit this URL on any device to log in:
+（やたらと長いURLが出てくる）
+```
+
+Googleさんから認証が出るので、貼り付けた。
+```sh
+? Paste authorization code here: （出てきた文字列を貼り付け）
+```
+
+認証ができたはずなのに、やっぱり立ち上げられない。
+```sh
+$ firebase serve
+
+Error: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+```
+いろいろ調べてコマンドを叩く。
+ただ、また`non-interactive`と怒られたので、こちらにも`--interactive`オプションを追加。
+```sh
+$ firebase login --reauth --interactive
+? Allow Firebase to collect anonymous CLI usage and error reporting information?
+ Yes
+Visit this URL on any device to log in:
+（略）
+
+Waiting for authentication...
+
++  Success! Logged in as メールアドレス
+```
+
+そしたら、できるようになったみたい。
+```sh
+$ firebase serve
+
+=== Serving from 'ファイルのパス'...
+
+i  hosting: Serving hosting files from: アプリ名
++  hosting: Local server: http://localhost:5000
+```
+参考
++ [firebase initしたらError: HTTP Error: 401が出た](https://haayaaa.hatenablog.com/entry/2019/05/04/180633)
++ [firebase deploy時に起きたエラー](https://qiita.com/camomile_cafe/items/7420a88db56e266dd05e)
+
+## メール・パスワード認証
+
+さて、ここからが本題。
+{: .notice}
+
+### FirebaseUIで作る
+
+[FirebaseUI](https://github.com/firebase/firebaseui-web)が手間なく作れるらしくて手を出したけど、認証後のほうが大変だったという…  
+かなり大量のサイトを参照にしたので、何がどこでどうなったのやら。
+
+まずは手元の環境設定を。  
+```sh
+$ npm install firebaseui -g
+```
+
+そして認証用ページ。  
+認証しか使わないなら、呼び出すのは`firebase-app.js`と`firebase-auth.js`と`init.js`だけでいい。
+<script src="https://gist.github.com/laureltreetop/084eb3b8c3c85fb5418921194b86e260.js"></script>
+`firebase-ui-auth__ja.js`の部分を変えると言語を選べるので、下記リストを参考に`ja`の部分を書き換え。  
+[Supported Languages](https://github.com/firebase/firebaseui-web/blob/master/LANGUAGES.md)
+
+さらに認証画面のスクリプト。
+<script src="https://gist.github.com/laureltreetop/25040ce60d8bf81e0ea894023400bc22.js"></script>
+
+こういう感じに。
+[![FirebaseUI sign](/assets/images/firebaseui-sign.png)](/assets/images/firebaseui-sign.png)
+
+次に認証後のページ。  
+FirebaseUIっぽいボタンが欲しかったので、こちらでもcssを呼び出す。
+<script src="https://gist.github.com/laureltreetop/ed37ed2b35c4e1263aefc9dd9574a7b4.js"></script>
+
+認証後のスクリプト。
+<script src="https://gist.github.com/laureltreetop/b6b15ec0a87308f8c6a5027a72de6fc9.js"></script>
+
+あとはCSSを頑張って書くと、こんな感じに。
+[![FirebaseUI done](/assets/images/firebaseui-done.png)](/assets/images/firebaseui-done.png)
+
+ボタンは`firebaseui-id-submit firebaseui-button mdl-button mdl-js-button mdl-button--raised mdl-button--colored`をクラス指定するとFirebaseUIっぽい感じになる。  
+あとはボタンの下に表示したいものを書く。  
+
+標準だとメールアドレスとパスワードを登録すると中身が見えてしまうので、メール認証が済むまでは登録画面に追い出される。  
+もちろんログインしていない状態で飛び先のURLを直接開いた場合も追い出される。  
+
+ただ、困ったことにパスワードリセットもアカウント削除も確認無しで処理されるんですよねぇ…  
