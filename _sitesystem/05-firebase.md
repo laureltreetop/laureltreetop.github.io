@@ -283,7 +283,7 @@ Hosting URL: https://プロジェクトID.firebaseapp.com
 [![Firebase Hosting Add Domain](/assets/images/firebase_hosting-domain-setting.png)](/assets/images/firebase_hosting-domain-setting.png)
 1. DNSに指定された値をAレコードに追加
 [![Firabase A record](/assets/images/firebase_hosting-domain-dns-setting.png)](/assets/images/firebase_hosting-domain-dns-setting.png)  
-1. 既存のサイトから移行する場合は、詳細設定で提示されるTXTレコードを追加[^add-txt]
+1. 既存のサイトから移行する場合は、詳細設定で提示されるTXTレコードを追加
 [![Firebase TXT record](/assets/images/firebase_hosting-domain-dns-setting-txt.png)](/assets/images/firebase_hosting-domain-dns-setting-txt.png)
 1. 設定待ち
 [![Firebase Hosting Waiting](/assets/images/firebase_hosting-waiting.png)](/assets/images/firebase_hosting-waiting.png) 
@@ -292,9 +292,7 @@ Hosting URL: https://プロジェクトID.firebaseapp.com
 1. 完了
 [![Firebase Hosting OK](/assets/images/firebase_hosting-done.png)](/assets/images/firebase_hosting-done.png) 
   
-[^add-txt]: クイックセットアップでうまくいかないときにも。
-
-[CloudFlare](https://www.cloudflare.com/)を使っている場合
+### [CloudFlare](https://www.cloudflare.com/)を使っている場合
   
 認識されるまではDNS onlyにしておくこと。  
 認識されたあとはFullかFull(Strict)にしないと、無限リダイレクトループに。  
@@ -398,6 +396,12 @@ i  hosting: Serving hosting files from: アプリ名
 さて、ここからが本題。
 {: .notice}
 
+### クリアした目標
+
++ メールアドレスとパスワードを登録すると未認証でも画面が見えるので、それは避けたい
++ メール認証が済むまでは登録画面へ追い出す
++ ログインしていない状態で飛び先のURLを直接開いた場合も追い出す
+
 ### FirebaseUIで作る
 
 [FirebaseUI](https://github.com/firebase/firebaseui-web)が手間なく作れるらしくて手を出したけど、認証後のほうが大変だったという…  
@@ -409,7 +413,8 @@ $ npm install firebaseui -g
 ```
 
 そして認証用ページ。  
-認証しか使わないなら、呼び出すのは`firebase-app.js`と`firebase-auth.js`と`init.js`だけでいい。
+認証しか使わないなら、呼び出すのは`firebase-app.js`と`firebase-auth.js`と`init.js`だけでいい。  
+あと`<div id="firebaseui-auth-container"></div>`は必須。
 <script src="https://gist.github.com/laureltreetop/084eb3b8c3c85fb5418921194b86e260.js"></script>
 `firebase-ui-auth__ja.js`の部分を変えると言語を選べるので、下記リストを参考に`ja`の部分を書き換え。  
 [Supported Languages](https://github.com/firebase/firebaseui-web/blob/master/LANGUAGES.md)
@@ -421,19 +426,58 @@ $ npm install firebaseui -g
 [![FirebaseUI sign](/assets/images/firebaseui-sign.png)](/assets/images/firebaseui-sign.png)
 
 次に認証後のページ。  
-FirebaseUIっぽいボタンが欲しかったので、こちらでもcssを呼び出す。
+FirebaseUIっぽいボタンが欲しかったので、こちらでもcssを呼び出す。  
 <script src="https://gist.github.com/laureltreetop/ed37ed2b35c4e1263aefc9dd9574a7b4.js"></script>
+画面を整えるために[Materialize](https://materializecss.com/)も使ってみた。
 
 認証後のスクリプト。
 <script src="https://gist.github.com/laureltreetop/b6b15ec0a87308f8c6a5027a72de6fc9.js"></script>
+認証後に表示されるやつは別スクリプトにしたかったので、こういうやつ↓を呼び出して、
+```js
+function appendScript(URL) {
+	var el = document.createElement('script');
+	el.src = URL;
+	document.body.appendChild(el);
+};
+```
+処理をしたいところで呼び出して、その中にある関数を呼び出している。
+```js
+appendScript(外部ファイル名);
+（外部ファイルでの関数名）
+```
 
 あとはCSSを頑張って書くと、こんな感じに。
 [![FirebaseUI done](/assets/images/firebaseui-done.png)](/assets/images/firebaseui-done.png)
 
-ボタンは`firebaseui-id-submit firebaseui-button mdl-button mdl-js-button mdl-button--raised mdl-button--colored`をクラス指定するとFirebaseUIっぽい感じになる。  
-あとはボタンの下に表示したいものを書く。  
+ボタンは`mdl-button mdl-button--raised mdl-button--colored`をクラス指定するとFirebaseUIっぽい感じになる。  
+Algoliaの検索画面を認証式にしたかったので、これで実現できたかな。  
 
-標準だとメールアドレスとパスワードを登録すると中身が見えてしまうので、メール認証が済むまでは登録画面に追い出される。  
-もちろんログインしていない状態で飛び先のURLを直接開いた場合も追い出される。  
+### FirebaseUIなしで作る
 
-ただ、困ったことにパスワードリセットもアカウント削除も確認無しで処理されるんですよねぇ…  
+元ネタは[Firebase Auth Quickstarts](https://github.com/firebase/quickstart-js/tree/7d514fb4700d3a1681c47bf3e0ff0fa3d7c91910/auth)。  
+FirebaseUIを使わず、同じ画面で遷移する感じ。  
+
+まずはこういうページを。
+<script src="https://gist.github.com/laureltreetop/0600ebaad0a3b88fb45981291dc72c2f.js"></script>
+この部分を削除したりコメントアウトにすると、コケるんですよね…
+```html
+<!-- Container where we'll display the user details -->
+<div class="quickstart-user-details-container">
+    Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
+</div>
+```
+
+そしてスクリプト。
+<script src="https://gist.github.com/laureltreetop/a61d450456044babb13d966720ee77db.js"></script>
+
+ログイン画面。Sign inとSign upが別のボタンになってる。
+[![Firebase before sign in](/assets/images/firebase_no-ui-auth.png)](/assets/images/firebase_no-ui-auth.png)
+
+ログイン後。入力欄を隠してボタンの下に表示させたいやつを。  
+こちらもAlgoliaでの検索画面を。
+[![Firebase after sign in](/assets/images/firebase_no-ui-auth-login.png)](/assets/images/firebase_no-ui-auth-login.png)
+
+### 課題
+
++ パスワードリセットもアカウント削除も確認無しで処理される
++ UIなしで作った方の謎コードを解明しないと、なんか気持ち悪い…
