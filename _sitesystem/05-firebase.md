@@ -396,6 +396,16 @@ i  hosting: Serving hosting files from: アプリ名
 さて、ここからが本題。
 {: .notice}
 
+ブロジェクトのAuthenticasin→ログイン方法に、ログイン方法一覧が。
+
+[![Firebase auth sign in list](/assets/images/firebase-auth-sign-in-list.png)](/assets/images/firebase-auth-sign-in-list.png)
+
+[JavaScript でパスワード ベースのアカウントを使用して Firebase 認証を行う](https://firebase.google.com/docs/auth/web/password-auth?authuser=0)
+
+`メール / パスワード`を設定。  
+今回の目的はメール確認までさせたいので、メールリンクは無効に。
+[![Firebase auth sign in list](/assets/images/firebase-auth-mail-password.png)](/assets/images/firebase-auth-mail-password.png)
+
 ### クリアした目標
 
 + メールアドレスとパスワードを登録すると未認証でも画面が見えるので、それは避けたい
@@ -481,3 +491,24 @@ FirebaseUIを使わず、同じ画面で遷移する感じ。
 
 + パスワードリセットもアカウント削除も確認無しで処理される
 + UIなしで作った方の謎コードを解明しないと、なんか気持ち悪い…
+
+{% comment %}
+### GitHub認証
+
+ログイン方法一覧からGitHubを選んで有効にすると、こういう画面に。
+
+[![Firebase auth sign in GitHub](/assets/images/firebase-auth-sign-in-github.png)](/assets/images/firebase-auth-sign-in-github.png)
+
+[JavaScript による GitHub を使用した認証](https://firebase.google.com/docs/auth/web/github-auth?authuser=0)
+
+Setting→Developer setting→OAuth Appsへ。  
+平たく言えば下記リンクを。  
+[OAuth Apps](https://github.com/settings/developers)（要・GitHubログイン）から登録
+
+[![GitHub new OAuth app](/assets/images/github-new-oauth-app.png)](/assets/images/github-new-oauth-app.png)
+
+`Authorization callback URL`に、Firebaseから取得した`https://プロジェクト名.firebaseapp.com/__/auth/handler`を追加。  
+あとはアプリ名やサイトURLとか。  
+
+作成したアプリを開くとClient IDとClient Secretが表示されているので、それをFirebase側に登録。  
+{% endcomment %}
