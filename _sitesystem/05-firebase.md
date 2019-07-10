@@ -230,6 +230,65 @@ Project aliases for ディレクトリ:
 Run firebase use --add to define a new project alias.
 ```
 
+## カスタムドメイン設定
+
+1. プロジェクトを選んで開発→Hosting→ドメインを接続
+[![Firebase Hosting Domain](/assets/images/firebase_hosting-default.png)](/assets/images/firebase_hosting-default.png)
+1. ドメインの追加
+[![Firebase Hosting Add Domain](/assets/images/firebase_hosting-domain-setting.png)](/assets/images/firebase_hosting-domain-setting.png)
+1. DNSに指定された値をAレコードに追加
+[![Firabase A record](/assets/images/firebase_hosting-domain-dns-setting.png)](/assets/images/firebase_hosting-domain-dns-setting.png)  
+1. 既存のサイトから移行する場合は、詳細設定で提示されるTXTレコードを追加
+[![Firebase TXT record](/assets/images/firebase_hosting-domain-dns-setting-txt.png)](/assets/images/firebase_hosting-domain-dns-setting-txt.png)
+1. 設定待ち
+[![Firebase Hosting Waiting](/assets/images/firebase_hosting-waiting.png)](/assets/images/firebase_hosting-waiting.png) 
+1. DNS確認待ち?
+[![Firebase Hosting Waiting](/assets/images/firebase_hosting-pending.png)](/assets/images/firebase_hosting-pending.png) 
+1. 完了
+[![Firebase Hosting OK](/assets/images/firebase_hosting-done.png)](/assets/images/firebase_hosting-done.png) 
+  
+## 作る
+
+### アプリを作成
+
+左上にある<i class="fas fa-cog"></i>からプロジェクトの設定→全般にいろいろ情報が。  
+[![Firebase settings general](/assets/images/firebase-settings-general.png)](/assets/images/firebase-settings-general.png)
+
+下にある`マイアプリ`から<i class="fas fa-code"></i>を選ぶとWebアプリ作成画面が。
+[![Firebase settings general add web app](/assets/images/firebase-settings-general-add-app.png)](/assets/images/firebase-settings-general-add-app.png)
+
+いろいろ入力して`アプリを登録`を押すと、作成に必要な情報が。
+[![Firebase settings general add web app](/assets/images/firebase-settings-general-add-app-code.png)](/assets/images/firebase-settings-general-add-app-code.png)
+
+このコードはマイアプリから確認できるし、変更できるし、追加できるし。
+[![Firebase settings general add web app](/assets/images/firebase-settings-web-app.png)](/assets/images/firebase-settings-web-app.png)
+
+これを貼り付ければ使えるように。
+```html
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/6.2.4/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#reserved-urls -->
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+```
+上記のやつだと認証もデータベース弄りもできないので、使うものだけ呼び出すと良いかなと。
+```html
+<!-- update the version number as needed -->
+<script defer src="/__/firebase/6.2.4/firebase-app.js"></script>
+<!-- include only the Firebase features as you need -->
+<script defer src="/__/firebase/6.2.4/firebase-auth.js"></script>
+<script defer src="/__/firebase/6.2.4/firebase-database.js"></script>
+<script defer src="/__/firebase/6.2.4/firebase-messaging.js"></script>
+<script defer src="/__/firebase/6.2.4/firebase-storage.js"></script>
+
+<!-- initialize the SDK after all desired features are loaded -->
+<script defer src="/__/firebase/init.js"></script>
+```
+トッピングの情報は[Firebase を JavaScript プロジェクトに追加する](https://firebase.google.com/docs/web/setup?hl=ja)を参照に。
+
 ## 見たい
 
 ### ローカルで確認
@@ -274,62 +333,6 @@ Hosting URL: https://プロジェクトID.firebaseapp.com
 とりあえず器だけはできた…  
 さっそく無駄に背景やらファビコンやらを仕掛け済み。
 [![Firebase hosting setup complete](/assets/images/firebase_hosting-setup-complete.png)](/assets/images/firebase_hosting-setup-complete.png)
-
-## カスタムドメイン設定
-
-1. プロジェクトを選んで開発→Hosting→ドメインを接続
-[![Firebase Hosting Domain](/assets/images/firebase_hosting-default.png)](/assets/images/firebase_hosting-default.png)
-1. ドメインの追加
-[![Firebase Hosting Add Domain](/assets/images/firebase_hosting-domain-setting.png)](/assets/images/firebase_hosting-domain-setting.png)
-1. DNSに指定された値をAレコードに追加
-[![Firabase A record](/assets/images/firebase_hosting-domain-dns-setting.png)](/assets/images/firebase_hosting-domain-dns-setting.png)  
-1. 既存のサイトから移行する場合は、詳細設定で提示されるTXTレコードを追加
-[![Firebase TXT record](/assets/images/firebase_hosting-domain-dns-setting-txt.png)](/assets/images/firebase_hosting-domain-dns-setting-txt.png)
-1. 設定待ち
-[![Firebase Hosting Waiting](/assets/images/firebase_hosting-waiting.png)](/assets/images/firebase_hosting-waiting.png) 
-1. DNS確認待ち?
-[![Firebase Hosting Waiting](/assets/images/firebase_hosting-pending.png)](/assets/images/firebase_hosting-pending.png) 
-1. 完了
-[![Firebase Hosting OK](/assets/images/firebase_hosting-done.png)](/assets/images/firebase_hosting-done.png) 
-  
-### [CloudFlare](https://www.cloudflare.com/)を使っている場合
-  
-認識されるまではDNS onlyにしておくこと。  
-認識されたあとはFullかFull(Strict)にしないと、無限リダイレクトループに。  
-[CloudFlareな記事](/misc/cloudflare/)も参照。  
-
-## 初期化プロセスとか
-
-知らないうちに、初期化プロセスが簡単になってる。
-これを貼り付ければOKに。  
-トッピングを全部呼び出しているけど、使うものだけ呼び出したほうがいいかと。
-```html
-<!-- update the version number as needed -->
-<script defer src="/__/firebase/6.2.4/firebase-app.js"></script>
-<!-- include only the Firebase features as you need -->
-<script defer src="/__/firebase/6.2.4/firebase-auth.js"></script>
-
-<script defer src="/__/firebase/6.2.4/firebase-database.js"></script>
-<script defer src="/__/firebase/6.2.4/firebase-messaging.js"></script>
-<script defer src="/__/firebase/6.2.4/firebase-storage.js"></script>
-
-<!-- initialize the SDK after all desired features are loaded -->
-<script defer src="/__/firebase/init.js"></script>
-```
-
-## メールテンプレート
-
-そのままだとfirebase丸出しのメールアドレスになるので、メールテンプレートのカスタムドメインを。
-[![Firebase custom mail](/assets/images/firebase-custom-mail-domain.png)](/assets/images/firebase-custom-mail-domain.png) 
-
-|ホスト|タイプ |値|
-|----------------|----------------|----------------|
-|ドメイン|TXT|v=spf1 include:_spf.firebasemail.com ~all|
-|ドメイン|TXT|firebase=プロジェクト名|
-|firebase1._domainkey.ドメイン|CNAME|mail-ドメイン.dkim1._domainkey.firebasemail.com.|
-|firebase2._domainkey.ドメイン|CNAME|mail-ドメイン.dkim2._domainkey.firebasemail.com.|
-
-ドメインの所有権を確認するまで、最大48時間かかるんだそうな。
 
 ## 立ち上げるとエラーが出る
 
@@ -391,7 +394,7 @@ i  hosting: Serving hosting files from: アプリ名
 + [firebase initしたらError: HTTP Error: 401が出た](https://haayaaa.hatenablog.com/entry/2019/05/04/180633)
 + [firebase deploy時に起きたエラー](https://qiita.com/camomile_cafe/items/7420a88db56e266dd05e)
 
-## メール・パスワード認証
+## 認証
 
 さて、ここからが本題。
 {: .notice}
@@ -400,19 +403,20 @@ i  hosting: Serving hosting files from: アプリ名
 
 [![Firebase auth sign in list](/assets/images/firebase-auth-sign-in-list.png)](/assets/images/firebase-auth-sign-in-list.png)
 
+### メール・パスワード認証
 [JavaScript でパスワード ベースのアカウントを使用して Firebase 認証を行う](https://firebase.google.com/docs/auth/web/password-auth?authuser=0)
 
 `メール / パスワード`を設定。  
 今回の目的はメール確認までさせたいので、メールリンクは無効に。
 [![Firebase auth sign in list](/assets/images/firebase-auth-mail-password.png)](/assets/images/firebase-auth-mail-password.png)
 
-### クリアした目標
+#### クリアした目標
 
 + メールアドレスとパスワードを登録すると未認証でも画面が見えるので、それは避けたい
 + メール認証が済むまでは登録画面へ追い出す
 + ログインしていない状態で飛び先のURLを直接開いた場合も追い出す
 
-### FirebaseUIで作る
+#### FirebaseUIで作る
 
 [FirebaseUI](https://github.com/firebase/firebaseui-web)が手間なく作れるらしくて手を出したけど、認証後のほうが大変だったという…  
 かなり大量のサイトを参照にしたので、何がどこでどうなったのやら。
@@ -462,7 +466,7 @@ appendScript(外部ファイル名);
 ボタンは`mdl-button mdl-button--raised mdl-button--colored`をクラス指定するとFirebaseUIっぽい感じになる。  
 Algoliaの検索画面を認証式にしたかったので、これで実現できたかな。  
 
-### FirebaseUIなしで作る
+#### FirebaseUIなしで作る
 
 元ネタは[Firebase Auth Quickstarts](https://github.com/firebase/quickstart-js/tree/7d514fb4700d3a1681c47bf3e0ff0fa3d7c91910/auth)。  
 FirebaseUIを使わず、同じ画面で遷移する感じ。  
@@ -487,12 +491,68 @@ FirebaseUIを使わず、同じ画面で遷移する感じ。
 こちらもAlgoliaでの検索画面を。
 [![Firebase after sign in](/assets/images/firebase_no-ui-auth-login.png)](/assets/images/firebase_no-ui-auth-login.png)
 
-### 課題
+#### 課題
 
 + パスワードリセットもアカウント削除も確認無しで処理される
 + UIなしで作った方の謎コードを解明しないと、なんか気持ち悪い…
 
-{% comment %}
+### Google認証
+
+ログイン方法としてGoogleを追加
+[![Google new OAuth app](/assets/images/firebase-auth-google.png)](/assets/images/firebase-auth-google.png)
+
+`ウェブSDK設定`の横にある疑問符から設定画面に飛べる
+[![Google how-to-OAuth app](/assets/images/firebase-auth-google-web-sdk.png)](/assets/images/firebase-auth-google-web-sdk.png)
+
+`認証情報`→`認証情報を作成`→`OAuthクライアントID`→`OAuthクライアントIDの作成`→`ウェブアプリケーション`でOAuthクライアントのIDとシークレットキーを作成
+[![Google how-to-OAuth](/assets/images/firebase_google-new-oauth-id.png)](/assets/images/firebase_google-new-oauth-id.png)
+
+`認証情報`→`ドメインの確認`でドメインを追加
+[![Google how-to-OAuth](/assets/images/firebase_google-new-oauth-domain.png)](/assets/images/firebase_google-new-oauth-domain.png)
+
+`認証情報`→`OAuth同意画面`→`承認済みドメイン`に必要なやつを追加
+
+保存すると`認証情報`の`OAuth 2.0 クライアント ID`に追加されてる  
+追加したやつの名前を選ぶと、`ウェブアプリケーションのクライアントID`が確認できるので、Firebaseのログイン方法に追加
+[![Google how-to-OAuth](/assets/images/firebase_google-oauth-cliant-id.png)](/assets/images/firebase_google-oauth-cliant-id.png)
+
+下の方にある`承認済みのJavascript生成元`や`承認済みのリダイレクトURI`にドメインを追加  
+
+アプリを実際に使ってみると、Unverified appsと怒られた。  
+[Unverified apps](https://support.google.com/cloud/answer/7454865)  
+[アカウントにアクセスできるサードパーティのサイトやアプリ](https://support.google.com/accounts/answer/3466521?p=app_notverified&visit_id=636983520673087657-4115966372&rd=2)  
+個人的に使いたいだけなので、プロジェクトをGsuiteのドメインの組織として登録したら使えるように[^gafyd]。 
+[組織へのプロジェクトの移行](https://cloud.google.com/resource-manager/docs/migrating-projects-billing?hl=ja)
+
+[^gafyd]:Google Apps for Your Domain万歳。
+
+### Facebook認証
+
+[facebook for developers](https://developers.facebook.com/apps/)にてアプリを作成  
+[JavaScript で Facebook ログインを使用して認証する](https://firebase.google.com/docs/auth/web/facebook-login)  
+`アプリのプロダクト`→`Facebookログイン`→`設定`→`クライアントOAuth設定`→`有効なOAuthリダイレクトURI`を取得し、Firebaseに貼り付ける
+[![Facebook OAuth app](/assets/images/firebase_auth-facebook.png)](/assets/images/firebase_auth-facebook.png)
+
+Firebase側から取得した`https://プロジェクト名.firebaseapp.com/__/auth/handler`なOAuthリダイレクトURIを貼り付ける  
+[![Facebook OAuth app](/assets/images/facebook_auth-login_settings.png)](/assets/images/facebook_auth-login_settings.png)
+
+だいぶ前にアプリを作っていて放置してたけど、その間に権限が一部削除されてたり（ただし承認やOGPに関係ないやつ）、個人認証ってことで証明証を送らないと作業が進められなかったり…
+
+### Twitter認証
+
+まずはログイン方法一覧から設定を。
+[![Firebase auth sign in Twitter](/assets/images/firebase_auth-twitter.png)](/assets/images/firebase_auth-twitter.png)
+
+[Twitter Developer](https://developer.twitter.com/en/apps)からアプリ作成  
+（すでに作ってあって、複数作るには開発者アカウントを申請しないといけないみたいので割愛）
+
+`App details`のCallbackURLsに、Firebaseから取得した`https://プロジェクト名.firebaseapp.com/__/auth/handler`を追加  
+`Tell us how this app will be used`も必須だけど、短すぎるとエラーになるのでどうやって埋めようかと…
+[![Twitter app App details](/assets/images/twitter_auth-login_settings.png)](/assets/images/twitter_auth-login_settings.png)
+
+`Keys and tokens`から取得したキーをFirebase側に貼り付ける
+[![Twitter app Keys and tokens](/assets/images/twitter_auth-keys-and-tokens.png)](/assets/images/twitter_auth-keys-and-tokens.png)
+
 ### GitHub認証
 
 ログイン方法一覧からGitHubを選んで有効にすると、こういう画面に。
@@ -500,6 +560,8 @@ FirebaseUIを使わず、同じ画面で遷移する感じ。
 [![Firebase auth sign in GitHub](/assets/images/firebase-auth-sign-in-github.png)](/assets/images/firebase-auth-sign-in-github.png)
 
 [JavaScript による GitHub を使用した認証](https://firebase.google.com/docs/auth/web/github-auth?authuser=0)
+[FirebaseUI でウェブアプリに簡単にログイン機能を追加する](https://firebase.google.com/docs/auth/web/firebaseui)
+[Firebase | Authenticationで複数の認証プロバイダへ同時対応する (Web編)](https://blog.katsubemakito.net/firebase/firebase-authentication-multi-web1)
 
 Setting→Developer setting→OAuth Appsへ。  
 平たく言えば下記リンクを。  
@@ -511,4 +573,17 @@ Setting→Developer setting→OAuth Appsへ。
 あとはアプリ名やサイトURLとか。  
 
 作成したアプリを開くとClient IDとClient Secretが表示されているので、それをFirebase側に登録。  
-{% endcomment %}
+
+### メールテンプレート
+
+そのままだとfirebase丸出しのメールアドレスになるので、メールテンプレートのカスタムドメインを。
+[![Firebase custom mail](/assets/images/firebase-custom-mail-domain.png)](/assets/images/firebase-custom-mail-domain.png) 
+
+|ホスト|タイプ |値|
+|----------------|----------------|----------------|
+|ドメイン|TXT|v=spf1 include:_spf.firebasemail.com ~all|
+|ドメイン|TXT|firebase=プロジェクト名|
+|firebase1._domainkey.ドメイン|CNAME|mail-ドメイン.dkim1._domainkey.firebasemail.com.|
+|firebase2._domainkey.ドメイン|CNAME|mail-ドメイン.dkim2._domainkey.firebasemail.com.|
+
+ドメインの所有権を確認するまで、最大48時間かかるんだそうな。
