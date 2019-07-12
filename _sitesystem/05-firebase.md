@@ -410,91 +410,6 @@ i  hosting: Serving hosting files from: アプリ名
 今回の目的はメール確認までさせたいので、メールリンクは無効に。
 [![Firebase auth sign in list](/assets/images/firebase-auth-mail-password.png)](/assets/images/firebase-auth-mail-password.png)
 
-#### クリアした目標
-
-+ メールアドレスとパスワードを登録すると未認証でも画面が見えるので、それは避けたい
-+ メール認証が済むまでは登録画面へ追い出す
-+ ログインしていない状態で飛び先のURLを直接開いた場合も追い出す
-
-#### FirebaseUIで作る
-
-[FirebaseUI](https://github.com/firebase/firebaseui-web)が手間なく作れるらしくて手を出したけど、認証後のほうが大変だったという…  
-かなり大量のサイトを参照にしたので、何がどこでどうなったのやら。
-
-まずは手元の環境設定を。  
-```sh
-$ npm install firebaseui -g
-```
-
-そして認証用ページ。  
-認証しか使わないなら、呼び出すのは`firebase-app.js`と`firebase-auth.js`と`init.js`だけでいい。  
-あと`<div id="firebaseui-auth-container"></div>`は必須。
-<script src="https://gist.github.com/laureltreetop/084eb3b8c3c85fb5418921194b86e260.js"></script>
-`firebase-ui-auth__ja.js`の部分を変えると言語を選べるので、下記リストを参考に`ja`の部分を書き換え。  
-[Supported Languages](https://github.com/firebase/firebaseui-web/blob/master/LANGUAGES.md)
-
-さらに認証画面のスクリプト。
-<script src="https://gist.github.com/laureltreetop/25040ce60d8bf81e0ea894023400bc22.js"></script>
-
-こういう感じに。
-[![FirebaseUI sign](/assets/images/firebaseui-sign.png)](/assets/images/firebaseui-sign.png)
-
-次に認証後のページ。  
-FirebaseUIっぽいボタンが欲しかったので、こちらでもcssを呼び出す。  
-<script src="https://gist.github.com/laureltreetop/ed37ed2b35c4e1263aefc9dd9574a7b4.js"></script>
-画面を整えるために[Materialize](https://materializecss.com/)も使ってみた。
-
-認証後のスクリプト。
-<script src="https://gist.github.com/laureltreetop/b6b15ec0a87308f8c6a5027a72de6fc9.js"></script>
-認証後に表示されるやつは別スクリプトにしたかったので、こういうやつ↓を呼び出して、
-```js
-function appendScript(URL) {
-	var el = document.createElement('script');
-	el.src = URL;
-	document.body.appendChild(el);
-};
-```
-処理をしたいところで呼び出して、その中にある関数を呼び出している。
-```js
-appendScript(外部ファイル名);
-（外部ファイルでの関数名）
-```
-
-あとはCSSを頑張って書くと、こんな感じに。
-[![FirebaseUI done](/assets/images/firebaseui-done.png)](/assets/images/firebaseui-done.png)
-
-ボタンは`mdl-button mdl-button--raised mdl-button--colored`をクラス指定するとFirebaseUIっぽい感じになる。  
-Algoliaの検索画面を認証式にしたかったので、これで実現できたかな。  
-
-#### FirebaseUIなしで作る
-
-元ネタは[Firebase Auth Quickstarts](https://github.com/firebase/quickstart-js/tree/7d514fb4700d3a1681c47bf3e0ff0fa3d7c91910/auth)。  
-FirebaseUIを使わず、同じ画面で遷移する感じ。  
-
-まずはこういうページを。
-<script src="https://gist.github.com/laureltreetop/0600ebaad0a3b88fb45981291dc72c2f.js"></script>
-この部分を削除したりコメントアウトにすると、コケるんですよね…
-```html
-<!-- Container where we'll display the user details -->
-<div class="quickstart-user-details-container">
-    Firebase sign-in status: <span id="quickstart-sign-in-status">Unknown</span>
-</div>
-```
-
-そしてスクリプト。
-<script src="https://gist.github.com/laureltreetop/a61d450456044babb13d966720ee77db.js"></script>
-
-ログイン画面。Sign inとSign upが別のボタンになってる。
-[![Firebase before sign in](/assets/images/firebase_no-ui-auth.png)](/assets/images/firebase_no-ui-auth.png)
-
-ログイン後。入力欄を隠してボタンの下に表示させたいやつを。  
-こちらもAlgoliaでの検索画面を。
-[![Firebase after sign in](/assets/images/firebase_no-ui-auth-login.png)](/assets/images/firebase_no-ui-auth-login.png)
-
-#### 課題
-
-+ パスワードリセットもアカウント削除も確認無しで処理される
-+ UIなしで作った方の謎コードを解明しないと、なんか気持ち悪い…
 
 ### Google認証
 
@@ -521,7 +436,7 @@ FirebaseUIを使わず、同じ画面で遷移する感じ。
 アプリを実際に使ってみると、Unverified appsと怒られた。  
 [Unverified apps](https://support.google.com/cloud/answer/7454865)  
 [アカウントにアクセスできるサードパーティのサイトやアプリ](https://support.google.com/accounts/answer/3466521?p=app_notverified&visit_id=636983520673087657-4115966372&rd=2)  
-個人的に使いたいだけなので、プロジェクトをGsuiteのドメインの組織として登録したら使えるように[^gafyd]。 
+個人的に使いたいだけなので、プロジェクトをGsuiteのドメインの組織として登録したら使えるように[^gafyd]。  
 [組織へのプロジェクトの移行](https://cloud.google.com/resource-manager/docs/migrating-projects-billing?hl=ja)
 
 [^gafyd]:Google Apps for Your Domain万歳。
@@ -573,6 +488,93 @@ Setting→Developer setting→OAuth Appsへ。
 あとはアプリ名やサイトURLとか。  
 
 作成したアプリを開くとClient IDとClient Secretが表示されているので、それをFirebase側に登録。  
+
+### FirebaseUIで作る
+
++ メールアドレスとパスワードを登録すると未認証でも画面が見えるので、それは避けたい
++ メール認証が済むまでは登録画面へ追い出す
++ ログインしていない状態で飛び先のURLを直接開いた場合も追い出す
+
+[FirebaseUI](https://github.com/firebase/firebaseui-web)が手間なく作れるらしくて手を出したけど、認証後のほうが大変だったという…  
+かなり大量のサイトを参照にしたので、何がどこでどうなったのやら。
+
+まずは手元の環境設定を。  
+```sh
+$ npm install firebaseui -g
+```
+
+そして認証用ページ。  
+認証しか使わないなら、呼び出すのは`firebase-app.js`と`firebase-auth.js`と`init.js`だけでいい。  
+あと`<div id="firebaseui-auth-container"></div>`は必須。
+<script src="https://gist.github.com/laureltreetop/084eb3b8c3c85fb5418921194b86e260.js"></script>
+`firebase-ui-auth__ja.js`の部分を変えると言語を選べるので、下記リストを参考に`ja`の部分を書き換え。  
+[Supported Languages](https://github.com/firebase/firebaseui-web/blob/master/LANGUAGES.md)
+
+さらに認証画面のスクリプト。
+<script src="https://gist.github.com/laureltreetop/25040ce60d8bf81e0ea894023400bc22.js"></script>
+
+こういう感じに。
+[![FirebaseUI sign](/assets/images/firebaseui-sign.png)](/assets/images/firebaseui-sign.png)
+
+次に認証後のページ。  
+FirebaseUIっぽいボタンが欲しかったので、こちらでもcssを呼び出す。  
+<script src="https://gist.github.com/laureltreetop/ed37ed2b35c4e1263aefc9dd9574a7b4.js"></script>
+画面を整えるために[Materialize](https://materializecss.com/)も使ってみた。
+
+認証後のスクリプト。
+<script src="https://gist.github.com/laureltreetop/b6b15ec0a87308f8c6a5027a72de6fc9.js"></script>
+認証後に表示されるやつは別スクリプトにしたかったので、こういうやつ↓を呼び出して、
+```js
+function appendScript(URL) {
+	var el = document.createElement('script');
+	el.src = URL;
+	document.body.appendChild(el);
+};
+```
+処理をしたいところで呼び出して、その中にある関数を呼び出している。
+```js
+appendScript(外部ファイル名);
+（外部ファイルでの関数名）
+```
+
+あとはCSSを頑張って書くと、こんな感じに。
+[![FirebaseUI done](/assets/images/firebaseui-done.png)](/assets/images/firebaseui-done.png)
+
+ボタンは`mdl-button mdl-button--raised mdl-button--colored`をクラス指定するとFirebaseUIっぽい感じになる。  
+Algoliaの検索画面を認証式にしたかったので、これで実現できたかな。  
+
+### FirebaseUIなしで作る
+
+元ネタは[Firebase Auth Quickstarts](https://github.com/firebase/quickstart-js/tree/7d514fb4700d3a1681c47bf3e0ff0fa3d7c91910/auth)。  
+FirebaseUIを使わず、同じ画面で遷移する感じ。  
+
+まずはこういうページを。
+<script src="https://gist.github.com/laureltreetop/0600ebaad0a3b88fb45981291dc72c2f.js"></script>
+
+そしてスクリプト。
+<script src="https://gist.github.com/laureltreetop/a61d450456044babb13d966720ee77db.js"></script>
+
+ログイン画面の初期状態はSNS認証用の画面。  
+各種SNSの設定をしてあれば使える。  
+{% comment %}
+[![Firebase before sign in](/assets/images/firebase_no-ui-auth.png)](/assets/images/firebase_no-ui-auth.png)
+{% endcomment %}
+[![Firebase before sign in](/assets/images/firebase_no-ui-sns.png)](/assets/images/firebase_no-ui-sns.png)
+
+GitHub認証をするとこんな感じに。  
+Algoliaの検索フォームを出してる。
+[![Firebase sign in with GitHub](/assets/images/firebase_no-ui-sns-login.png)](/assets/images/firebase_no-ui-sns-login.png)
+
+Email/Passwordボタンでメール認証モードに。 
+登録もパスワード再設定もできる。  
+SNS Buttonsで、さっきのSNS認証モードに戻れる。 
+{% comment %}
+[![Firebase after sign in](/assets/images/firebase_no-ui-auth-login.png)](/assets/images/firebase_no-ui-auth-login.png)
+{% endcomment %}
+[![Firebase after sign in](/assets/images/firebase_no-ui-mail-login.png)](/assets/images/firebase_no-ui-mail-login.png)
+
+サインインでフォーム部分を隠して、Algoliaの検索画面を。  
+[![Firebase after sign in](/assets/images/firebase_no-ui-mail-sign-in.png)](/assets/images/firebase_no-ui-mail-sign-in.png)
 
 ### メールテンプレート
 
