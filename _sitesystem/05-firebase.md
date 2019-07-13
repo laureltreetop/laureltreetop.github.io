@@ -546,7 +546,8 @@ Algoliaの検索画面を認証式にしたかったので、これで実現で�
 ### FirebaseUIなしで作る
 
 元ネタは[Firebase Auth Quickstarts](https://github.com/firebase/quickstart-js/tree/7d514fb4700d3a1681c47bf3e0ff0fa3d7c91910/auth)。  
-FirebaseUIを使わず、同じ画面で遷移する感じ。  
+
+#### 同じ画面で遷移
 
 まずはこういうページを。
 <script src="https://gist.github.com/laureltreetop/0600ebaad0a3b88fb45981291dc72c2f.js"></script>
@@ -575,6 +576,17 @@ SNS Buttonsで、さっきのSNS認証モードに戻れる。
 
 サインインでフォーム部分を隠して、Algoliaの検索画面を。  
 [![Firebase after sign in](/assets/images/firebase_no-ui-mail-sign-in.png)](/assets/images/firebase_no-ui-mail-sign-in.png)
+
+#### サインイン→認証後のページへ
+
+同じ画面で遷移するやつを分解手術したら、別ページへ飛ばすことも。  
+ポイントとしては、  
+
++ サインインページから認証後、`location.href`で飛ばす
++ 飛び先のページで`onAuthStateChanged`を使って情報を受け取る
++ 飛び先のページを直接開いても`location.replace`でサインインページへ追い出す
+
+というところかな。
 
 ### メールテンプレート
 
