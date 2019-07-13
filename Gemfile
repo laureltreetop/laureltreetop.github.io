@@ -11,6 +11,6 @@ group :jekyll_plugins do
     gem 'jekyll-last-modified-at'
 	gem 'jekyll-algolia'
 	gem 'jekyll-redirect-from'
-    gem 'jekyll-data'
+    # gem 'jekyll-data'
     gem 'jekyll-include-cache'
 end

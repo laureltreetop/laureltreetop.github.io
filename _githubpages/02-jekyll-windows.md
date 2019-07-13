@@ -43,7 +43,7 @@ $ bundle update
 $ jekyll s
 ```
 
-### errorなど対処
+### Invalid Windows-31J character
 
 ```sh
 $ jekyll s
@@ -67,6 +67,8 @@ Ruby2.5.xインストール時に指定しておけば`-Eutf-8`が設定され�
 2.4.xから2.5.xに上げたら`jekyll s`だけで再作成されるように。  
 →ファイルによって効いたり効いてなかったり? 違いと対処方法は?
 
+### Unresolved specs during
+
 ```sh
 $ jekyll s
 WARN: Unresolved specs during Gem::Specifiation.reset:
@@ -89,5 +91,39 @@ $ gem update && gem cleanup
 $ rm Gemfile.lock
 $ bundle clean --force
 ```
+### Invalid theme folder
 
-試行錯誤中。思いついたらorぶち当たったら書こうっと。
+動作に関係ないけど、なんか気になる…
+
+```sh
+$ jekyll s
+Configuration file: E:/treetop/GitHub/(repository name)/_config.yml
+            Source: E:/treetop/GitHub/(repository name).github.io
+       Destination: E:/treetop/GitHub/(repository name).github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+Invalid theme folder: _data
+       Jekyll Feed: Generating feed for posts
+                    done in 23.828 seconds.
+ Auto-regeneration: enabled for '(local GitHub folder)/(repository name).github.io'
+    Server address: http://127.0.0.1:4000
+  Server running... press ctrl-c to stop.
+```
+
+Gemfileから1行コメントアウトしておまじないを。
+```sh
+$ bundle update
+$ bundle clean --force
+```
+
+これで警告なしで起動するように。
+```
+# If you have any other plugins, put them here!
+group :jekyll_plugins do
+    gem 'jekyll-last-modified-at'
+	gem 'jekyll-algolia'
+	gem 'jekyll-redirect-from'
+    # gem 'jekyll-data'
+    gem 'jekyll-include-cache'
+end
+```
