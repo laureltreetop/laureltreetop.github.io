@@ -110,20 +110,15 @@ Invalid theme folder: _data
   Server running... press ctrl-c to stop.
 ```
 
-Gemfileから1行コメントアウトしておまじないを。
+Gemfileから`jekyll-data`の1行をコメントアウト。  
+```
+# gem 'jekyll-data'
+```
+
+そしておまじないを。
 ```sh
 $ bundle update
 $ bundle clean --force
 ```
 
 これで警告なしで起動するように。
-```
-# If you have any other plugins, put them here!
-group :jekyll_plugins do
-    gem 'jekyll-last-modified-at'
-	gem 'jekyll-algolia'
-	gem 'jekyll-redirect-from'
-    # gem 'jekyll-data'
-    gem 'jekyll-include-cache'
-end
-```
