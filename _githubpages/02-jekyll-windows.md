@@ -97,9 +97,9 @@ $ bundle clean --force
 
 ```sh
 $ jekyll s
-Configuration file: E:/treetop/GitHub/(repository name)/_config.yml
-            Source: E:/treetop/GitHub/(repository name).github.io
-       Destination: E:/treetop/GitHub/(repository name).github.io/_site
+Configuration file: （ローカルのディレクトリ）/_config.yml
+            Source: （ローカルのディレクトリ/（リポジトリ名）.github.io
+       Destination: （ローカルのディレクトリ/（リポジトリ名）.github.io/_site
  Incremental build: disabled. Enable with --incremental
       Generating...
 Invalid theme folder: _data
