@@ -489,8 +489,62 @@ Setting→Developer setting→OAuth Appsへ。
 
 作成したアプリを開くとClient IDとClient Secretが表示されているので、それをFirebase側に登録。  
 
-### FirebaseUIで作る
 
+### 認証画面を作ってみる
+
+元ネタは[Firebase Auth Quickstarts](https://github.com/firebase/quickstart-js/tree/7d514fb4700d3a1681c47bf3e0ff0fa3d7c91910/auth)。  
+サインインしたあとは別ページに飛ばしたいので、そのあたりを変えてみた。
+
+{% comment %}
+#### 同じ画面で遷移
+
+まずはこういうページを。
+<script src="https://gist.github.com/laureltreetop/0600ebaad0a3b88fb45981291dc72c2f.js"></script>
+
+そしてスクリプト。
+<script src="https://gist.github.com/laureltreetop/a61d450456044babb13d966720ee77db.js"></script>
+{% endcomment %}
+
+まずはサインインのページを。  
+認証しか使わないなら、呼び出すのは`firebase-app.js`と`firebase-auth.js`と`init.js`だけでいい。  
+画面を整えるために[Materialize](https://materializecss.com/)や[Material Design Lite](https://getmdl.io/)も使ってみた。
+<script src="https://gist.github.com/laureltreetop/5ba0786dd680d310b0a853252fb9ac52.js"></script>
+
+そしてスクリプト。  
+サインイン・サインアップ周りは元ネタから取ってきたコードほぼそのまま。
+<script src="https://gist.github.com/laureltreetop/b9c2f5401b588feb826dd99b416e5ef6.js"></script>
+
+サインイン後のページ。
+<script src="https://gist.github.com/laureltreetop/325b231e157682ad806564b687d4c5aa.js"></script>
+
+そしてスクリプト。
+<script src="https://gist.github.com/laureltreetop/00bf783e762aa9c8cb63b33a23bfff3a.js"></script>
+
+ログイン画面の初期状態はSNS認証用の画面。  
+各種SNSの設定をしてあれば使える。  
+[![Firebase sign in](/assets/images/firebase_no-ui-sns.png)](/assets/images/firebase_no-ui-sns.png)
+
+GitHub認証をするとこんな感じに。  
+Algoliaの検索フォームを出してる。
+[![Firebase sign in with GitHub](/assets/images/firebase_no-ui-sns-login.png)](/assets/images/firebase_no-ui-sns-login.png)
+
+Email/Passwordボタンでメール認証モードに。 
+登録もパスワード再設定もできる。  
+SNS Buttonsで、さっきのSNS認証モードに戻れる。 
+[![Firebase mail sign](/assets/images/firebase_no-ui-mail-login.png)](/assets/images/firebase_no-ui-mail-login.png)
+
+サインインでパスワードリセットボタンとAlgoliaの検索画面を。  
+[![Firebase mail done](/assets/images/firebase_no-ui-mail-sign-in.png)](/assets/images/firebase_no-ui-mail-sign-in.png)
+
+ポイントとしては、  
+
++ サインインページから認証後`location.href`で飛ばす
++ 飛び先のページで`onAuthStateChanged`を使って情報を受け取る
++ サインインせずに飛び先のページを直接開いても`location.replace`で追い出す
+
+というところかな。
+
+{% comment %}
 + メールアドレスとパスワードを登録すると未認証でも画面が見えるので、それは避けたい
 + メール認証が済むまでは登録画面へ追い出す
 + ログインしていない状態で飛び先のURLを直接開いた場合も追い出す
@@ -504,8 +558,7 @@ $ npm install firebaseui -g
 ```
 
 そして認証用ページ。  
-認証しか使わないなら、呼び出すのは`firebase-app.js`と`firebase-auth.js`と`init.js`だけでいい。  
-あと`<div id="firebaseui-auth-container"></div>`は必須。
+`<div id="firebaseui-auth-container"></div>`は必須。
 <script src="https://gist.github.com/laureltreetop/084eb3b8c3c85fb5418921194b86e260.js"></script>
 `firebase-ui-auth__ja.js`の部分を変えると言語を選べるので、下記リストを参考に`ja`の部分を書き換え。  
 [Supported Languages](https://github.com/firebase/firebaseui-web/blob/master/LANGUAGES.md)
@@ -519,7 +572,6 @@ $ npm install firebaseui -g
 次に認証後のページ。  
 FirebaseUIっぽいボタンが欲しかったので、こちらでもcssを呼び出す。  
 <script src="https://gist.github.com/laureltreetop/ed37ed2b35c4e1263aefc9dd9574a7b4.js"></script>
-画面を整えるために[Materialize](https://materializecss.com/)も使ってみた。
 
 認証後のスクリプト。
 <script src="https://gist.github.com/laureltreetop/b6b15ec0a87308f8c6a5027a72de6fc9.js"></script>
@@ -539,54 +591,7 @@ appendScript(外部ファイル名);
 
 あとはCSSを頑張って書くと、こんな感じに。
 [![FirebaseUI done](/assets/images/firebaseui-done.png)](/assets/images/firebaseui-done.png)
-
-ボタンは`mdl-button mdl-button--raised mdl-button--colored`をクラス指定するとFirebaseUIっぽい感じになる。  
-Algoliaの検索画面を認証式にしたかったので、これで実現できたかな。  
-
-### FirebaseUIなしで作る
-
-元ネタは[Firebase Auth Quickstarts](https://github.com/firebase/quickstart-js/tree/7d514fb4700d3a1681c47bf3e0ff0fa3d7c91910/auth)。  
-
-#### 同じ画面で遷移
-
-まずはこういうページを。
-<script src="https://gist.github.com/laureltreetop/0600ebaad0a3b88fb45981291dc72c2f.js"></script>
-
-そしてスクリプト。
-<script src="https://gist.github.com/laureltreetop/a61d450456044babb13d966720ee77db.js"></script>
-
-ログイン画面の初期状態はSNS認証用の画面。  
-各種SNSの設定をしてあれば使える。  
-{% comment %}
-[![Firebase before sign in](/assets/images/firebase_no-ui-auth.png)](/assets/images/firebase_no-ui-auth.png)
 {% endcomment %}
-[![Firebase before sign in](/assets/images/firebase_no-ui-sns.png)](/assets/images/firebase_no-ui-sns.png)
-
-GitHub認証をするとこんな感じに。  
-Algoliaの検索フォームを出してる。
-[![Firebase sign in with GitHub](/assets/images/firebase_no-ui-sns-login.png)](/assets/images/firebase_no-ui-sns-login.png)
-
-Email/Passwordボタンでメール認証モードに。 
-登録もパスワード再設定もできる。  
-SNS Buttonsで、さっきのSNS認証モードに戻れる。 
-{% comment %}
-[![Firebase after sign in](/assets/images/firebase_no-ui-auth-login.png)](/assets/images/firebase_no-ui-auth-login.png)
-{% endcomment %}
-[![Firebase after sign in](/assets/images/firebase_no-ui-mail-login.png)](/assets/images/firebase_no-ui-mail-login.png)
-
-サインインでフォーム部分を隠して、Algoliaの検索画面を。  
-[![Firebase after sign in](/assets/images/firebase_no-ui-mail-sign-in.png)](/assets/images/firebase_no-ui-mail-sign-in.png)
-
-#### サインイン→認証後のページへ
-
-同じ画面で遷移するやつを分解手術したら、別ページへ飛ばすことも。  
-ポイントとしては、  
-
-+ サインインページから認証後、`location.href`で飛ばす
-+ 飛び先のページで`onAuthStateChanged`を使って情報を受け取る
-+ 飛び先のページを直接開いても`location.replace`でサインインページへ追い出す
-
-というところかな。
 
 ### メールテンプレート
 
