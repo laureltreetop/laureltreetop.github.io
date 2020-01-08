@@ -340,7 +340,7 @@ defaults:
       sidebar:
         nav: "createpages"
       toc: true
-      toc_icon: "cogs" 
+      toc_icon: "cogs"
 # _githubpages
   - scope:
       path: ""
@@ -452,11 +452,11 @@ collections:
     permalink: /:collection/:path/
     output: true
     title: "Attic"
-    
+
 github: [metadata]
 
 head_scripts:
-  - https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
+  - https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/autosize.js/4.0.2/autosize.min.js
   - https://yubinbango.github.io/yubinbango/yubinbango.js
